@@ -55,7 +55,8 @@ echo "Navigation to the Downloads successful."
 # Get machine's platform from OS
 MACHINE_HARDWARE_NAME=$(uname -m)
 
-if echo "$MACHINE_HARDWARE_NAME" | grep -q "_x64"; then
+# If it contains _x64, its a 64-bit system.
+if echo "$MACHINE_HARDWARE_NAME" | grep -q "_64"; then
    PLATFORM=64;
 fi
 
