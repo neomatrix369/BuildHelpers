@@ -31,11 +31,10 @@ set -eu
 #                                                                                                                #
 # usage:                                                                                                         #
 #                                                                                                                #
-# $ bash installEclipseJunoCDTForUbuntu12.04.sh <platform>                                                       #
+# $ bash installEclipseJunoCDTForUbuntu12.04.sh                                                                  #
 #                                                                                                                #
-#  <platform> can be:                                                                                            #
-#  32 - to run 32-bit version of the package for Ubuntu                                                          #
-#  64 - to run 64-bit version of the package for Ubuntu                                                          #
+#  automatically detects which system i.e. 32- or 64-bits and downloads and run the appropriate system           #
+#  *** Currently only tested under Ubuntu 12.04 ***                                                              #
 #                                                                                                                #
 ##################################################################################################################
 # To do the rest of the optional steps i.e. create a icon in the Unity Dashboard, etc... please refer to the last#
@@ -53,28 +52,30 @@ echo "Navigation to the Downloads successful."
 # Find out whether you are running a 32- or 64-bits system using  
 # file /bin/bash
 
-if [ "$#" -eq "0" ]; then
-  echo "No platform information has been provided, hence default $PLATFORM-bits platform will be chosen."
-else
-  PLATFORM=$1
-  echo "Platform: $1-bits has been passed in."
+# Get machine's platform from OS
+MACHINE_HARDWARE_NAME=$(uname -m)
+
+if echo "$MACHINE_HARDWARE_NAME" | grep -q "_x64"; then
+   PLATFORM=64;
 fi
 
+echo "Platform: $PLATFORM-bits system detected."
+
 if [ "$PLATFORM" == "32" ]; then
-   echo "Downloading $1-bits binary package of Eclipse Juno for Ubuntu 12.04."
+   echo "Downloading $PLATFORM-bits binary package of Eclipse Juno for Ubuntu 12.04."
    wget http://mirrors.ibiblio.org/eclipse/technology/epp/downloads/release/juno/SR1/eclipse-cpp-juno-SR1-linux-gtk.tar.gz
 else if [ "$PLATFORM" == "64" ]; then
-   echo "Downloading $1-bits binary package of Eclipse Juno for Ubuntu 12.04."
+   echo "Downloading $PLATFORM-bits binary package of Eclipse Juno for Ubuntu 12.04."
    wget http://mirrors.ibiblio.org/eclipse/technology/epp/downloads/release/juno/SR1/eclipse-cpp-juno-SR1-linux-gtk-x86_64.tar.gz
 fi
 echo "Download finished."
 
 # Untar the downloaded file
 if [ "$PLATFORM" == "32" ]; then
-   echo "Untar-ing the $1-bits downloaded binary."
+   echo "Untar-ing the $PLATFORM-bits downloaded binary."
    tar -zxvf eclipse-cpp-juno-SR1-linux-gtk.tar.gz
 else if [ "$PLATFORM" == "64" ]; then
-   echo "Untar-ing the $1-bits downloaded binary."
+   echo "Untar-ing the $PLATFORM-bits downloaded binary."
    tar -zxvf eclipse-cpp-juno-SR1-linux-gtk-x86_64.tar.gz</blockquote>
 fi
 echo "Untar-ing of binary successful."
@@ -88,5 +89,3 @@ echo "Move successful."
 echo "Creating symbolic link at /opt/eclipse/eclipse for /usr/bin/eclipse"
 sudo ln -s "/opt/eclipse/eclipse" /usr/bin/eclipse
 echo "Link creation was successful."
-
-
