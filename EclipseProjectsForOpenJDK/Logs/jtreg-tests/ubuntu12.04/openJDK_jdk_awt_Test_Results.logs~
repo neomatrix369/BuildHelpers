@@ -1,0 +1,2957 @@
+make -k -C  ../jdk/test  jdk_awt
+make[1]: Entering directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
+echo "Running tests in othervm mode: com/sun/awt java/awt sun/awt javax/imageio javax/print sun/pisces"
+Running tests in othervm mode: com/sun/awt java/awt sun/awt javax/imageio javax/print sun/pisces
+make TEST_DEPENDENCIES="com/sun/awt java/awt sun/awt javax/imageio javax/print sun/pisces" TESTDIRS="com/sun/awt java/awt sun/awt javax/imageio javax/print sun/pisces" USE_JTREG_AGENTVM=false UNIQUE_DIR=jdk_awt jtreg_tests
+make[2]: Entering directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
+Excluding list contains 0 items
+(                                                                    \
+	  ( JT_HOME=/home/saiubuntu/jtreg/;                   \
+            export JT_HOME;                                                  \
+            /home/saiubuntu/jtreg//win32/bin/jtreg                              \
+               -a -ea -esa -v:fail,error,time -retain:fail,error -ignore:quiet -timeoutFactor:4 -J-Xmx512m                                         \
+              -r:/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/JTreport  \
+              -w:/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/JTwork    \
+              -jdk:/home/saiubuntu/sources//jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image/                \
+              -exclude:/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/excludelist.txt             \
+                                                         \
+              com/sun/awt java/awt sun/awt javax/imageio javax/print sun/pisces                                                    \
+	  ) ; ( jtregExitCode=$? && _summary="/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/JTreport/text/summary.txt"; rm -f -f /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/Stats.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/runlist.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/passlist.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/faillist.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/exitcode.txt; echo "${jtregExitCode}" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/exitcode.txt; if [ -r "${_summary}" ] ; then echo "Summary: jdk_awt" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/Stats.txt; expand ${_summary} | egrep -v ' Not run\.' > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/runlist.txt; egrep ' Passed\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/runlist.txt | egrep -v ' Error\.' | egrep -v ' Failed\.' > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/passlist.txt; ( egrep ' Failed\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/runlist.txt; egrep ' Error\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/runlist.txt; egrep -v ' Passed\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/runlist.txt ) | sort | uniq > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/faillist.txt; if [ ${jtregExitCode} != 0 -o -s /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/faillist.txt ] ; then expand /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/faillist.txt | cut -d' ' -f1 | sed -e 's@^@FAILED: @' >> /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/Stats.txt; if [ ${jtregExitCode} = 0 ] ; then jtregExitCode=1; fi; fi; runc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/runlist.txt      | wc -l | awk '{print $1;}'`"; passc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/passlist.txt    | wc -l | awk '{print $1;}'`"; failc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/faillist.txt    | wc -l | awk '{print $1;}'`"; exclc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/excludelist.txt | wc -l | awk '{print $1;}'`"; echo "TEST STATS: name=jdk_awt  run=${runc}  pass=${passc}  fail=${failc}  excluded=${exclc}" >> /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/Stats.txt; else echo "Missing file: ${_summary}" >> /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/Stats.txt; fi; if [ -f /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/Stats.txt ] ; then cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/Stats.txt; fi; ( mkdir -p `dirname /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/ARCHIVE_BUNDLE.zip` && cd /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt && chmod -R a+r . && zip -q -r /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/ARCHIVE_BUNDLE.zip . ) ; if [ ! -s /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/exitcode.txt; fi ; testExitCode=`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode} )                                          \
+	) 2>&1 | tee /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/output.txt ; if [ ! -s /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/exitcode.txt; fi ; testExitCode=`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode}
+Directory "/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/JTreport" not found: creating
+Directory "/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/JTwork" not found: creating
+Directory "/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/JTwork/scratch" not found: creating
+--------------------------------------------------
+TEST: com/sun/awt/SecurityWarning/GetSizeShouldNotReturnZero.java
+  build: 2.005 seconds
+  compile: 1.992 seconds
+  build: 1.049 seconds
+  compile: 1.048 seconds
+  main: 0.699 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/awt/Translucency/WindowOpacity.java
+  build: 1.158 seconds
+  compile: 1.158 seconds
+  main: 0.737 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/AlphaComposite/TestAlphaCompositeForNaN.java
+  build: 0.944 seconds
+  compile: 0.944 seconds
+  main: 0.099 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/appletviewer/IOExceptionIfEncodedURLTest/IOExceptionIfEncodedURLTest.sh
+  compile: 0.966 seconds
+  build: 0.0 seconds
+  main: 0.116 seconds
+  shell: 60.059 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Choice/ChoiceKeyEventReaction/ChoiceKeyEventReaction.html
+  build: 1.333 seconds
+  compile: 1.333 seconds
+  build: 1.015 seconds
+  compile: 1.015 seconds
+  applet: 2.954 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java
+JDK under test: (/home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
+openjdk version "1.8.0-internal"
+OpenJDK Runtime Environment (build 1.8.0-internal-saiubuntu_2013_03_08_00_00-b00)
+OpenJDK Server VM (build 25.0-b20, mixed mode)
+
+
+ACTION: build -- Failed. Compilation failed: Compilation failed
+REASON: Named class compiled on demand
+TIME:   0.972 seconds
+messages:
+command: build ChoiceMouseWheelTest
+reason: Named class compiled on demand
+elapsed time (seconds): 0.972
+
+ACTION: compile -- Failed. Compilation failed: Compilation failed
+REASON: .class file out of date or does not exist
+TIME:   0.972 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 0.972
+STDOUT:
+STDERR:
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:32: error: package test.java.awt.regtesthelpers does not exist
+import test.java.awt.regtesthelpers.Util;
+                                   ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:90: error: cannot find symbol
+            Util.waitForIdle(robot);
+            ^
+  symbol:   variable Util
+  location: class ChoiceMouseWheelTest
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:104: error: cannot find symbol
+                Util.waitForIdle(robot);
+                ^
+  symbol:   variable Util
+  location: class ChoiceMouseWheelTest
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:113: error: cannot find symbol
+            Util.waitForIdle(robot);
+            ^
+  symbol:   variable Util
+  location: class ChoiceMouseWheelTest
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:115: error: cannot find symbol
+            Util.waitForIdle(robot);
+            ^
+  symbol:   variable Util
+  location: class ChoiceMouseWheelTest
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:120: error: cannot find symbol
+                Util.waitForIdle(robot);
+                ^
+  symbol:   variable Util
+  location: class ChoiceMouseWheelTest
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:129: error: cannot find symbol
+            Util.waitForIdle(robot);
+            ^
+  symbol:   variable Util
+  location: class ChoiceMouseWheelTest
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:132: error: cannot find symbol
+            Util.waitForIdle(robot);
+            ^
+  symbol:   variable Util
+  location: class ChoiceMouseWheelTest
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:137: error: cannot find symbol
+            Util.waitForIdle(robot);
+            ^
+  symbol:   variable Util
+  location: class ChoiceMouseWheelTest
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:139: error: cannot find symbol
+            Util.waitForIdle(robot);
+            ^
+  symbol:   variable Util
+  location: class ChoiceMouseWheelTest
+10 errors
+
+TEST RESULT: Failed. Compilation failed: Compilation failed
+--------------------------------------------------
+TEST: java/awt/Choice/ItemStateChangeTest/ItemStateChangeTest.java
+  build: 1.284 seconds
+  compile: 1.283 seconds
+  build: 1.055 seconds
+  compile: 1.055 seconds
+  main: 0.239 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Choice/UnfocusableToplevel/UnfocusableToplevel.java
+  build: 1.496 seconds
+  compile: 1.496 seconds
+  build: 1.051 seconds
+  compile: 1.051 seconds
+  main: 1.152 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Color/OpacityChange/OpacityChange.java
+  build: 0.894 seconds
+  compile: 0.894 seconds
+  main: 0.105 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Component/7097771/bug7097771.java
+  build: 1.252 seconds
+  compile: 1.252 seconds
+  build: 0.939 seconds
+  compile: 0.938 seconds
+  main: 3.61 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Component/F10TopToplevel/F10TopToplevel.html
+  build: 1.031 seconds
+  compile: 1.031 seconds
+  applet: 2.646 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Component/isLightweightCrash/IsLightweightCrash.java
+  build: 0.958 seconds
+  compile: 0.958 seconds
+  main: 0.413 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Component/isLightweightCrash/StubPeerCrash.java
+JDK under test: (/home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
+openjdk version "1.8.0-internal"
+OpenJDK Runtime Environment (build 1.8.0-internal-saiubuntu_2013_03_08_00_00-b00)
+OpenJDK Server VM (build 25.0-b20, mixed mode)
+
+
+ACTION: build -- Failed. Compilation failed: Compilation failed
+REASON: Named class compiled on demand
+TIME:   1.136 seconds
+messages:
+command: build StubPeerCrash
+reason: Named class compiled on demand
+elapsed time (seconds): 1.136
+
+ACTION: compile -- Failed. Compilation failed: Compilation failed
+REASON: .class file out of date or does not exist
+TIME:   1.136 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.136
+STDOUT:
+STDERR:
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java:44: warning: CausedFocusEvent is internal proprietary API and may be removed in a future release
+import sun.awt.CausedFocusEvent;
+              ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java:45: warning: Region is internal proprietary API and may be removed in a future release
+import sun.java2d.pipe.Region;
+                      ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java:81: warning: ComponentPeer is internal proprietary API and may be removed in a future release
+class StubComponentPeer implements ComponentPeer {
+                                   ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java:67: warning: ComponentPeer is internal proprietary API and may be removed in a future release
+    private ComponentPeer peer = new StubComponentPeer();
+            ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java:76: warning: ComponentPeer is internal proprietary API and may be removed in a future release
+    public ComponentPeer getPeer(){
+           ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java:81: error: StubComponentPeer is not abstract and does not override abstract method updateGraphicsData(GraphicsConfiguration) in ComponentPeer
+class StubComponentPeer implements ComponentPeer {
+^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java:107: warning: CausedFocusEvent is internal proprietary API and may be removed in a future release
+                                     long time, CausedFocusEvent.Cause cause){
+                                                ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java:130: warning: ContainerPeer is internal proprietary API and may be removed in a future release
+    public void reparent(ContainerPeer newContainer){};
+                         ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java:152: warning: Region is internal proprietary API and may be removed in a future release
+    public void applyShape(Region shape){};
+                           ^
+Note: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+1 error
+8 warnings
+
+TEST RESULT: Failed. Compilation failed: Compilation failed
+--------------------------------------------------
+TEST: java/awt/Component/NoUpdateUponShow/NoUpdateUponShow.java
+  build: 1.045 seconds
+  compile: 1.045 seconds
+  main: 0.612 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Component/PaintAll/PaintAll.java
+  build: 1.13 seconds
+  compile: 1.13 seconds
+  main: 1.645 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Component/PrintAllXcheckJNI/PrintAllXcheckJNI.java
+JDK under test: (/home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
+openjdk version "1.8.0-internal"
+OpenJDK Runtime Environment (build 1.8.0-internal-saiubuntu_2013_03_08_00_00-b00)
+OpenJDK Server VM (build 25.0-b20, mixed mode)
+
+
+ACTION: build -- Passed. Build successful
+REASON: Named class compiled on demand
+TIME:   0.886 seconds
+messages:
+command: build PrintAllXcheckJNI
+reason: Named class compiled on demand
+elapsed time (seconds): 0.886
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   0.886 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Component/PrintAllXcheckJNI/PrintAllXcheckJNI.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 0.886
+STDOUT:
+STDERR:
+
+ACTION: main -- Failed. Execution failed: `main' threw exception: java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0
+REASON: User specified action: run main/othervm -Xcheck:jni PrintAllXcheckJNI 
+TIME:   0.242 seconds
+messages:
+command: main -Xcheck:jni PrintAllXcheckJNI
+reason: User specified action: run main/othervm -Xcheck:jni PrintAllXcheckJNI 
+elapsed time (seconds): 0.242
+STDOUT:
+STDERR:
+java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0
+	at java.awt.image.DirectColorModel.createCompatibleWritableRaster(DirectColorModel.java:1016)
+	at java.awt.image.BufferedImage.<init>(BufferedImage.java:329)
+	at PrintAllXcheckJNI.main(PrintAllXcheckJNI.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:487)
+	at com.sun.javatest.regtest.MainWrapper$MainThread.run(MainWrapper.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+
+JavaTest Message: Test threw exception: java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0
+JavaTest Message: shutting down test
+
+STATUS:Failed.`main' threw exception: java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0
+
+TEST RESULT: Failed. Execution failed: `main' threw exception: java.lang.IllegalArgumentException: Width (0) and height (0) cannot be <= 0
+--------------------------------------------------
+TEST: java/awt/Component/Revalidate/Revalidate.java
+  build: 0.991 seconds
+  compile: 0.991 seconds
+  main: 5.335 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Container/CheckZOrderChange/CheckZOrderChange.java
+  build: 0.948 seconds
+  compile: 0.947 seconds
+  main: 0.367 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Container/isRemoveNotifyNeeded/JInternalFrameTest.java
+  build: 1.289 seconds
+  compile: 1.289 seconds
+  build: 1.108 seconds
+  compile: 1.108 seconds
+  main: 0.811 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Container/ValidateRoot/InvalidateMustRespectValidateRoots.java
+  build: 1.014 seconds
+  compile: 1.014 seconds
+  main: 1.515 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Cursor/PredefinedPrivate/PredefinedPrivate.java
+  build: 0.889 seconds
+  compile: 0.887 seconds
+  main: 0.121 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/DataFlavor/MissedHtmlAndRtfBug/MissedHtmlAndRtfBug.java
+JDK under test: (/home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
+openjdk version "1.8.0-internal"
+OpenJDK Runtime Environment (build 1.8.0-internal-saiubuntu_2013_03_08_00_00-b00)
+OpenJDK Server VM (build 25.0-b20, mixed mode)
+
+
+ACTION: build -- Passed. Build successful
+REASON: User specified action: run build Util 
+TIME:   1.308 seconds
+messages:
+command: build Util
+reason: User specified action: run build Util 
+elapsed time (seconds): 1.308
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   1.308 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.308
+STDOUT:
+STDERR:
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+import java.awt.peer.FramePeer;
+                    ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+        FramePeer frame_peer = (FramePeer) embedder.getPeer();
+        ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+        FramePeer frame_peer = (FramePeer) embedder.getPeer();
+                                ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+        ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
+                 ^
+Note: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+4 warnings
+
+ACTION: build -- Passed. Build successful
+REASON: User specified action: run build ProcessResults ProcessCommunicator 
+TIME:   0.946 seconds
+messages:
+command: build ProcessResults ProcessCommunicator
+reason: User specified action: run build ProcessResults ProcessCommunicator 
+elapsed time (seconds): 0.946
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   0.945 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/process/ProcessResults.java /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/process/ProcessCommunicator.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 0.945
+STDOUT:
+STDERR:
+
+ACTION: build -- Failed. Compilation failed: Compilation failed
+REASON: Named class compiled on demand
+TIME:   0.858 seconds
+messages:
+command: build MissedHtmlAndRtfBug
+reason: Named class compiled on demand
+elapsed time (seconds): 0.858
+
+ACTION: compile -- Failed. Compilation failed: Compilation failed
+REASON: .class file out of date or does not exist
+TIME:   0.858 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/DataFlavor/MissedHtmlAndRtfBug/MissedHtmlAndRtfBug.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 0.858
+STDOUT:
+STDERR:
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/DataFlavor/MissedHtmlAndRtfBug/MissedHtmlAndRtfBug.java:44: error: package test.java.awt.regtesthelpers.process does not exist
+import test.java.awt.regtesthelpers.process.ProcessCommunicator;
+                                           ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/DataFlavor/MissedHtmlAndRtfBug/MissedHtmlAndRtfBug.java:45: error: package test.java.awt.regtesthelpers.process does not exist
+import test.java.awt.regtesthelpers.process.ProcessResults;
+                                           ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/DataFlavor/MissedHtmlAndRtfBug/MissedHtmlAndRtfBug.java:47: warning: OSInfo is internal proprietary API and may be removed in a future release
+import sun.awt.OSInfo;
+              ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/DataFlavor/MissedHtmlAndRtfBug/MissedHtmlAndRtfBug.java:115: error: cannot access ProcessResults
+    private static void verifyTestResults(ProcessResults processResults) {
+                                          ^
+  bad source file: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/process/ProcessResults.java
+    file does not contain class ProcessResults
+    Please remove or make sure it appears in the correct subdirectory of the sourcepath.
+
+TEST RESULT: Failed. Compilation failed: Compilation failed
+--------------------------------------------------
+TEST: java/awt/datatransfer/DragUnicodeBetweenJVMTest/DragUnicodeBetweenJVMTest.html
+  build: 1.286 seconds
+  compile: 1.286 seconds
+  build: 0.975 seconds
+  compile: 0.975 seconds
+  build: 1.264 seconds
+  compile: 1.264 seconds
+  applet: 2.341 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Dialog/CrashXCheckJni/CrashXCheckJni.java
+  build: 1.432 seconds
+  compile: 1.432 seconds
+  build: 0.923 seconds
+  compile: 0.922 seconds
+  main: 3.312 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Dialog/DialogOverflowSizeTest/DialogSizeOverflowTest.java
+  build: 1.325 seconds
+  compile: 1.325 seconds
+  build: 0.945 seconds
+  compile: 0.945 seconds
+  main: 0.513 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Dialog/MakeWindowAlwaysOnTop/MakeWindowAlwaysOnTop.java
+  build: 1.377 seconds
+  compile: 1.377 seconds
+  build: 0.94 seconds
+  compile: 0.94 seconds
+  main: 1.16 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Dialog/ModalDialogPermission/ModalDialogPermission.java
+  build: 0.978 seconds
+  compile: 0.977 seconds
+  main: 3.275 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Dialog/NonResizableDialogSysMenuResize/NonResizableDialogSysMenuResize.java
+  build: 1.304 seconds
+  compile: 1.304 seconds
+  build: 1.066 seconds
+  compile: 1.065 seconds
+  main: 0.529 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Dialog/ValidateOnShow/ValidateOnShow.java
+  build: 0.988 seconds
+  compile: 0.987 seconds
+  main: 2.837 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/dnd/Button2DragTest/Button2DragTest.html
+  build: 1.299 seconds
+  compile: 1.299 seconds
+  build: 0.973 seconds
+  compile: 0.972 seconds
+  applet: 7.803 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/dnd/FileListBetweenJVMsTest/FileListBetweenJVMsTest.html
+JDK under test: (/home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
+openjdk version "1.8.0-internal"
+OpenJDK Runtime Environment (build 1.8.0-internal-saiubuntu_2013_03_08_00_00-b00)
+OpenJDK Server VM (build 25.0-b20, mixed mode)
+
+
+ACTION: build -- Passed. Build successful
+REASON: User specified action: run build Util 
+TIME:   1.326 seconds
+messages:
+command: build Util
+reason: User specified action: run build Util 
+elapsed time (seconds): 1.326
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   1.326 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.326
+STDOUT:
+STDERR:
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+import java.awt.peer.FramePeer;
+                    ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+        FramePeer frame_peer = (FramePeer) embedder.getPeer();
+        ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+        FramePeer frame_peer = (FramePeer) embedder.getPeer();
+                                ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+        ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
+                 ^
+Note: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+4 warnings
+
+ACTION: build -- Passed. Build successful
+REASON: User specified action: run build ProcessResults ProcessCommunicator 
+TIME:   0.986 seconds
+messages:
+command: build ProcessResults ProcessCommunicator
+reason: User specified action: run build ProcessResults ProcessCommunicator 
+elapsed time (seconds): 0.986
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   0.985 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/process/ProcessResults.java /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/process/ProcessCommunicator.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 0.985
+STDOUT:
+STDERR:
+
+ACTION: build -- Passed. Build successful
+REASON: Named class compiled on demand
+TIME:   1.213 seconds
+messages:
+command: build FileListBetweenJVMsTest
+reason: Named class compiled on demand
+elapsed time (seconds): 1.213
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   1.212 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/dnd/FileListBetweenJVMsTest/FileListBetweenJVMsTest.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.212
+STDOUT:
+STDERR:
+Note: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/dnd/FileListBetweenJVMsTest/TargetFileListFrame.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+ACTION: applet -- Failed. Execution failed: Applet thread threw exception: java.lang.RuntimeException: WARNING: Child process  error stream is not empty!
+REASON: User specified action: run applet/othervm FileListBetweenJVMsTest.html 
+TIME:   1.089 seconds
+messages:
+command: applet FileListBetweenJVMsTest.html
+reason: User specified action: run applet/othervm FileListBetweenJVMsTest.html 
+elapsed time (seconds): 1.089
+STDOUT:
+STDERR:
+========= Child VM System.err ========
+Exception in thread "main" java.lang.NoClassDefFoundError: test/java/awt/regtesthelpers/process/ProcessResults
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2475)
+	at java.lang.Class.getDeclaredMethod(Class.java:1955)
+	at java.awt.Component.isCoalesceEventsOverriden(Component.java:6198)
+	at java.awt.Component.access$500(Component.java:188)
+	at java.awt.Component$3.run(Component.java:6152)
+	at java.awt.Component$3.run(Component.java:6150)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.awt.Component.checkCoalescing(Component.java:6149)
+	at java.awt.Component.<init>(Component.java:6118)
+	at java.awt.Container.<init>(Container.java:276)
+	at java.awt.Panel.<init>(Panel.java:64)
+	at java.awt.Panel.<init>(Panel.java:56)
+	at java.applet.Applet.<init>(Applet.java:65)
+	at FileListBetweenJVMsTest.<init>(FileListBetweenJVMsTest.java:101)
+	at FileListBetweenJVMsTest.main(FileListBetweenJVMsTest.java:141)
+Caused by: java.lang.ClassNotFoundException: test.java.awt.regtesthelpers.process.ProcessResults
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:365)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:354)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:353)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:423)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:356)
+	... 16 more
+======================================
+java.lang.RuntimeException: WARNING: Child process  error stream is not empty!
+	at test.java.awt.regtesthelpers.process.ProcessResults.verifyStdErr(ProcessResults.java:93)
+	at FileListBetweenJVMsTest.verifyTestResults(FileListBetweenJVMsTest.java:87)
+	at FileListBetweenJVMsTest.start(FileListBetweenJVMsTest.java:75)
+	at com.sun.javatest.regtest.AppletWrapper$AppletRunnable.run(AppletWrapper.java:158)
+	at java.lang.Thread.run(Thread.java:722)
+STATUS:Failed.Applet thread threw exception: java.lang.RuntimeException: WARNING: Child process  error stream is not empty!
+
+TEST RESULT: Failed. Execution failed: Applet thread threw exception: java.lang.RuntimeException: WARNING: Child process  error stream is not empty!
+--------------------------------------------------
+TEST: java/awt/dnd/ImageDecoratedDnDInOut/ImageDecoratedDnDInOut.html
+  build: 1.433 seconds
+  compile: 1.432 seconds
+  applet: 38.949 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/dnd/ImageDecoratedDnDNegative/ImageDecoratedDnDNegative.html
+  build: 1.496 seconds
+  compile: 1.496 seconds
+  applet: 13.309 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/dnd/URIListBetweenJVMsTest/URIListBetweenJVMsTest.html
+  build: 1.36 seconds
+  compile: 1.36 seconds
+  build: 0.958 seconds
+  compile: 0.958 seconds
+  build: 1.246 seconds
+  compile: 1.246 seconds
+  applet: 12.632 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/event/HierarchyEvent/AncestorResized/AncestorResized.java
+  build: 1.346 seconds
+  compile: 1.345 seconds
+  build: 1.064 seconds
+  compile: 1.063 seconds
+  main: 0.882 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/event/InputEvent/ButtonArraysEquality/ButtonArraysEquality.java
+  build: 1.04 seconds
+  compile: 1.038 seconds
+  main: 0.225 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/event/InvocationEvent/InvocationEventTest.java
+  build: 0.843 seconds
+  compile: 0.843 seconds
+  main: 0.215 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/event/KeyEvent/CorrectTime/CorrectTime.java
+JDK under test: (/home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
+openjdk version "1.8.0-internal"
+OpenJDK Runtime Environment (build 1.8.0-internal-saiubuntu_2013_03_08_00_00-b00)
+OpenJDK Server VM (build 25.0-b20, mixed mode)
+
+
+ACTION: build -- Passed. Build successful
+REASON: User specified action: run build Sysout AbstractTest Util 
+TIME:   1.409 seconds
+messages:
+command: build Sysout AbstractTest Util
+reason: User specified action: run build Sysout AbstractTest Util 
+elapsed time (seconds): 1.409
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   1.408 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Sysout.java /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/AbstractTest.java /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.408
+STDOUT:
+STDERR:
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+import java.awt.peer.FramePeer;
+                    ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+        FramePeer frame_peer = (FramePeer) embedder.getPeer();
+        ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+        FramePeer frame_peer = (FramePeer) embedder.getPeer();
+                                ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+        ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
+                 ^
+Note: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+4 warnings
+
+ACTION: build -- Passed. Build successful
+REASON: Named class compiled on demand
+TIME:   0.989 seconds
+messages:
+command: build CorrectTime
+reason: Named class compiled on demand
+elapsed time (seconds): 0.989
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   0.989 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/event/KeyEvent/CorrectTime/CorrectTime.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 0.989
+STDOUT:
+STDERR:
+
+ACTION: main -- Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: keypress diff is -29, event = java.awt.event.KeyEvent[KEY_PRESSED,keyCode=65,keyText=A,keyChar='a',keyLocation=KEY_LOCATION_STANDARD,rawCode=38,primaryLevelUnicode=97,scancode=0,extendedKeyCode=0x41] on textfield0
+REASON: User specified action: run main CorrectTime 
+TIME:   0.778 seconds
+messages:
+command: main CorrectTime
+reason: User specified action: run main CorrectTime 
+elapsed time (seconds): 0.778
+STDOUT:
+keypress diff is -29, event is java.awt.event.KeyEvent[KEY_PRESSED,keyCode=65,keyText=A,keyChar='a',keyLocation=KEY_LOCATION_STANDARD,rawCode=38,primaryLevelUnicode=97,scancode=0,extendedKeyCode=0x41] on textfield0
+The test failed: keypress diff is -29, event = java.awt.event.KeyEvent[KEY_PRESSED,keyCode=65,keyText=A,keyChar='a',keyLocation=KEY_LOCATION_STANDARD,rawCode=38,primaryLevelUnicode=97,scancode=0,extendedKeyCode=0x41] on textfield0
+The test is over, hit  Ctl-C to stop Java VM
+STDERR:
+java.awt.FocusEvent[FOCUS_GAINED,permanent,opposite=java.awt.Button[button0,50,106,95x23,label=press button],cause=MOUSE_EVENT] on java.awt.TextField[textfield0,150,102,90x31,text=press keys,editable,selection=7-7]
+java.lang.RuntimeException: keypress diff is -29, event = java.awt.event.KeyEvent[KEY_PRESSED,keyCode=65,keyText=A,keyChar='a',keyLocation=KEY_LOCATION_STANDARD,rawCode=38,primaryLevelUnicode=97,scancode=0,extendedKeyCode=0x41] on textfield0
+	at test.java.awt.regtesthelpers.AbstractTest.fail(AbstractTest.java:60)
+	at CorrectTime.traceKey(CorrectTime.java:128)
+	at CorrectTime.keyPressed(CorrectTime.java:136)
+	at java.awt.Component.processKeyEvent(Component.java:6471)
+	at java.awt.Component.processEvent(Component.java:6290)
+	at java.awt.TextComponent.processEvent(TextComponent.java:682)
+	at java.awt.TextField.processEvent(TextField.java:588)
+	at java.awt.Component.dispatchEventImpl(Component.java:4869)
+	at java.awt.Component.dispatchEvent(Component.java:4691)
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1953)
+	at java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(DefaultKeyboardFocusManager.java:796)
+	at java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(DefaultKeyboardFocusManager.java:1056)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:931)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:761)
+	at java.awt.Component.dispatchEventImpl(Component.java:4740)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Window.dispatchEventImpl(Window.java:2721)
+	at java.awt.Component.dispatchEvent(Component.java:4691)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:722)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:681)
+	at java.awt.EventQueue$3.run(EventQueue.java:679)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:695)
+	at java.awt.EventQueue$4.run(EventQueue.java:693)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:692)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:216)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:135)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:123)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:119)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:111)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:97)
+STATUS:Failed.`main' threw exception: java.lang.RuntimeException: keypress diff is -29, event = java.awt.event.KeyEvent[KEY_PRESSED,keyCode=65,keyText=A,keyChar='a',keyLocation=KEY_LOCATION_STANDARD,rawCode=38,primaryLevelUnicode=97,scancode=0,extendedKeyCode=0x41] on textfield0
+
+TEST RESULT: Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: keypress diff is -29, event = java.awt.event.KeyEvent[KEY_PRESSED,keyCode=65,keyText=A,keyChar='a',keyLocation=KEY_LOCATION_STANDARD,rawCode=38,primaryLevelUnicode=97,scancode=0,extendedKeyCode=0x41] on textfield0
+--------------------------------------------------
+TEST: java/awt/event/KeyEvent/DeadKey/deadKeyMacOSX.java
+  build: 0.983 seconds
+  compile: 0.982 seconds
+  main: 0.09 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/event/KeyEvent/DeadKey/DeadKeyMacOSXInputText.java
+  build: 1.026 seconds
+  compile: 1.026 seconds
+  main: 0.097 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/event/KeyEvent/KeyTyped/CtrlASCII.html
+  build: 1.149 seconds
+  compile: 1.149 seconds
+  applet: 47.01 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/event/KeyEvent/SwallowKeyEvents/SwallowKeyEvents.java
+  build: 1.297 seconds
+  compile: 1.297 seconds
+  build: 0.941 seconds
+  compile: 0.941 seconds
+  main: 2.644 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/event/MouseEvent/AcceptExtraButton/AcceptExtraButton.java
+  build: 1.01 seconds
+  compile: 1.01 seconds
+  main: 0.272 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/event/MouseEvent/CheckGetMaskForButton/CheckGetMaskForButton.java
+  build: 0.963 seconds
+  compile: 0.962 seconds
+  main: 0.223 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/event/MouseEvent/EventTimeInFuture/EventTimeInFuture.java
+JDK under test: (/home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
+openjdk version "1.8.0-internal"
+OpenJDK Runtime Environment (build 1.8.0-internal-saiubuntu_2013_03_08_00_00-b00)
+OpenJDK Server VM (build 25.0-b20, mixed mode)
+
+
+ACTION: build -- Passed. Build successful
+REASON: User specified action: run build Sysout AbstractTest Util 
+TIME:   1.351 seconds
+messages:
+command: build Sysout AbstractTest Util
+reason: User specified action: run build Sysout AbstractTest Util 
+elapsed time (seconds): 1.351
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   1.351 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Sysout.java /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/AbstractTest.java /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.351
+STDOUT:
+STDERR:
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+import java.awt.peer.FramePeer;
+                    ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+        FramePeer frame_peer = (FramePeer) embedder.getPeer();
+        ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+        FramePeer frame_peer = (FramePeer) embedder.getPeer();
+                                ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+        ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
+                 ^
+Note: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+4 warnings
+
+ACTION: build -- Passed. Build successful
+REASON: Named class compiled on demand
+TIME:   1.03 seconds
+messages:
+command: build EventTimeInFuture
+reason: Named class compiled on demand
+elapsed time (seconds): 1.03
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   1.029 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/event/MouseEvent/EventTimeInFuture/EventTimeInFuture.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.029
+STDOUT:
+STDERR:
+
+ACTION: main -- Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: dragged diff is -1, event = java.awt.event.MouseEvent[MOUSE_DRAGGED,(65,71),absolute(730,417),modifiers=Button1,extModifiers=Button1,clickCount=0] on frame0
+REASON: User specified action: run main EventTimeInFuture 
+TIME:   8.597 seconds
+messages:
+command: main EventTimeInFuture
+reason: User specified action: run main EventTimeInFuture 
+elapsed time (seconds): 8.597
+STDOUT:
+start = java.awt.Point[x=647,y=326]
+end = java.awt.Point[x=775,y=466]
+entered diff is 4, event is java.awt.event.MouseEvent[MOUSE_ENTERED,(27,29),absolute(692,375),button=0,clickCount=0] on frame0
+moved diff is 5, event is java.awt.event.MouseEvent[MOUSE_MOVED,(27,29),absolute(692,375),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(28,30),absolute(693,376),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(29,31),absolute(694,377),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(30,32),absolute(695,378),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(30,33),absolute(695,379),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(31,34),absolute(696,380),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(32,35),absolute(697,381),clickCount=0] on frame0
+moved diff is 38, event is java.awt.event.MouseEvent[MOUSE_MOVED,(33,36),absolute(698,382),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(34,37),absolute(699,383),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(35,38),absolute(700,384),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(36,39),absolute(701,385),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(37,40),absolute(702,386),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(38,41),absolute(703,387),clickCount=0] on frame0
+moved diff is 1, event is java.awt.event.MouseEvent[MOUSE_MOVED,(39,42),absolute(704,388),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(40,43),absolute(705,389),clickCount=0] on frame0
+moved diff is 1, event is java.awt.event.MouseEvent[MOUSE_MOVED,(41,44),absolute(706,390),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(41,45),absolute(706,391),clickCount=0] on frame0
+moved diff is 30, event is java.awt.event.MouseEvent[MOUSE_MOVED,(42,46),absolute(707,392),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(43,47),absolute(708,393),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(44,48),absolute(709,394),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(45,49),absolute(710,395),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(46,50),absolute(711,396),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(47,51),absolute(712,397),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(48,52),absolute(713,398),clickCount=0] on frame0
+moved diff is 1, event is java.awt.event.MouseEvent[MOUSE_MOVED,(49,53),absolute(714,399),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(50,54),absolute(715,400),clickCount=0] on frame0
+moved diff is 1, event is java.awt.event.MouseEvent[MOUSE_MOVED,(51,55),absolute(716,401),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(51,56),absolute(716,402),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(52,57),absolute(717,403),clickCount=0] on frame0
+moved diff is 29, event is java.awt.event.MouseEvent[MOUSE_MOVED,(53,58),absolute(718,404),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(54,59),absolute(719,405),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(55,60),absolute(720,406),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(56,61),absolute(721,407),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(57,62),absolute(722,408),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(58,63),absolute(723,409),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(59,64),absolute(724,410),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(60,65),absolute(725,411),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(61,66),absolute(726,412),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(62,67),absolute(727,413),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(62,68),absolute(727,414),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(63,69),absolute(728,415),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(64,70),absolute(729,416),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(65,71),absolute(730,417),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(66,72),absolute(731,418),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(67,73),absolute(732,419),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(68,74),absolute(733,420),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(69,75),absolute(734,421),clickCount=0] on frame0
+moved diff is 24, event is java.awt.event.MouseEvent[MOUSE_MOVED,(70,76),absolute(735,422),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(71,77),absolute(736,423),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(72,78),absolute(737,424),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(73,79),absolute(738,425),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(73,80),absolute(738,426),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(74,81),absolute(739,427),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(75,82),absolute(740,428),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(76,83),absolute(741,429),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(77,84),absolute(742,430),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(78,85),absolute(743,431),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(79,86),absolute(744,432),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(80,87),absolute(745,433),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(81,88),absolute(746,434),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(82,89),absolute(747,435),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(83,90),absolute(748,436),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(83,91),absolute(748,437),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(84,92),absolute(749,438),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(85,93),absolute(750,439),clickCount=0] on frame0
+moved diff is 1, event is java.awt.event.MouseEvent[MOUSE_MOVED,(86,94),absolute(751,440),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(87,95),absolute(752,441),clickCount=0] on frame0
+moved diff is 14, event is java.awt.event.MouseEvent[MOUSE_MOVED,(88,96),absolute(753,442),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(89,97),absolute(754,443),clickCount=0] on frame0
+moved diff is 0, event is java.awt.event.MouseEvent[MOUSE_MOVED,(90,98),absolute(755,444),clickCount=0] on frame0
+exited diff is 0, event is java.awt.event.MouseEvent[MOUSE_EXITED,(91,99),absolute(756,445),button=0,clickCount=0] on frame0
+entered diff is 2, event is java.awt.event.MouseEvent[MOUSE_ENTERED,(46,50),absolute(711,396),button=0,clickCount=0] on frame0
+moved diff is 3, event is java.awt.event.MouseEvent[MOUSE_MOVED,(46,50),absolute(711,396),clickCount=0] on frame0
+pressed diff is 4, event is java.awt.event.MouseEvent[MOUSE_PRESSED,(46,50),absolute(711,396),button=1,modifiers=Button1,extModifiers=Button1,clickCount=1] on frame0
+dragged diff is 0, event is java.awt.event.MouseEvent[MOUSE_DRAGGED,(50,54),absolute(715,400),modifiers=Button1,extModifiers=Button1,clickCount=0] on frame0
+dragged diff is 0, event is java.awt.event.MouseEvent[MOUSE_DRAGGED,(51,55),absolute(716,401),modifiers=Button1,extModifiers=Button1,clickCount=0] on frame0
+dragged diff is 0, event is java.awt.event.MouseEvent[MOUSE_DRAGGED,(51,56),absolute(716,402),modifiers=Button1,extModifiers=Button1,clickCount=0] on frame0
+dragged diff is 0, event is java.awt.event.MouseEvent[MOUSE_DRAGGED,(52,57),absolute(717,403),modifiers=Button1,extModifiers=Button1,clickCount=0] on frame0
+dragged diff is 0, event is java.awt.event.MouseEvent[MOUSE_DRAGGED,(53,58),absolute(718,404),modifiers=Button1,extModifiers=Button1,clickCount=0] on frame0
+dragged diff is 1, event is java.awt.event.MouseEvent[MOUSE_DRAGGED,(54,59),absolute(719,405),modifiers=Button1,extModifiers=Button1,clickCount=0] on frame0
+dragged diff is 0, event is java.awt.event.MouseEvent[MOUSE_DRAGGED,(55,60),absolute(720,406),modifiers=Button1,extModifiers=Button1,clickCount=0] on frame0
+dragged diff is 0, event is java.awt.event.MouseEvent[MOUSE_DRAGGED,(56,61),absolute(721,407),modifiers=Button1,extModifiers=Button1,clickCount=0] on frame0
+dragged diff is 9, event is java.awt.event.MouseEvent[MOUSE_DRAGGED,(57,62),absolute(722,408),modifiers=Button1,extModifiers=Button1,clickCount=0] on frame0
+dragged diff is 0, event is java.awt.event.MouseEvent[MOUSE_DRAGGED,(58,63),absolute(723,409),modifiers=Button1,extModifiers=Button1,clickCount=0] on frame0
+dragged diff is 19, event is java.awt.event.MouseEvent[MOUSE_DRAGGED,(59,64),absolute(724,410),modifiers=Button1,extModifiers=Button1,clickCount=0] on frame0
+dragged diff is 0, event is java.awt.event.MouseEvent[MOUSE_DRAGGED,(60,65),absolute(725,411),modifiers=Button1,extModifiers=Button1,clickCount=0] on frame0
+dragged diff is 31, event is java.awt.event.MouseEvent[MOUSE_DRAGGED,(61,66),absolute(726,412),modifiers=Button1,extModifiers=Button1,clickCount=0] on frame0
+dragged diff is 0, event is java.awt.event.MouseEvent[MOUSE_DRAGGED,(62,67),absolute(727,413),modifiers=Button1,extModifiers=Button1,clickCount=0] on frame0
+dragged diff is 0, event is java.awt.event.MouseEvent[MOUSE_DRAGGED,(62,68),absolute(727,414),modifiers=Button1,extModifiers=Button1,clickCount=0] on frame0
+dragged diff is 0, event is java.awt.event.MouseEvent[MOUSE_DRAGGED,(63,69),absolute(728,415),modifiers=Button1,extModifiers=Button1,clickCount=0] on frame0
+dragged diff is 16, event is java.awt.event.MouseEvent[MOUSE_DRAGGED,(64,70),absolute(729,416),modifiers=Button1,extModifiers=Button1,clickCount=0] on frame0
+dragged diff is -1, event is java.awt.event.MouseEvent[MOUSE_DRAGGED,(65,71),absolute(730,417),modifiers=Button1,extModifiers=Button1,clickCount=0] on frame0
+The test failed: dragged diff is -1, event = java.awt.event.MouseEvent[MOUSE_DRAGGED,(65,71),absolute(730,417),modifiers=Button1,extModifiers=Button1,clickCount=0] on frame0
+The test is over, hit  Ctl-C to stop Java VM
+STDERR:
+java.lang.RuntimeException: dragged diff is -1, event = java.awt.event.MouseEvent[MOUSE_DRAGGED,(65,71),absolute(730,417),modifiers=Button1,extModifiers=Button1,clickCount=0] on frame0
+	at test.java.awt.regtesthelpers.AbstractTest.fail(AbstractTest.java:60)
+	at SensibleFrame.traceMouse(EventTimeInFuture.java:92)
+	at SensibleFrame.mouseDragged(EventTimeInFuture.java:116)
+	at java.awt.Component.processMouseMotionEvent(Component.java:6561)
+	at java.awt.Component.processEvent(Component.java:6282)
+	at java.awt.Container.processEvent(Container.java:2229)
+	at java.awt.Window.processEvent(Window.java:2022)
+	at java.awt.Component.dispatchEventImpl(Component.java:4869)
+	at java.awt.Container.dispatchEventImpl(Container.java:2287)
+	at java.awt.Window.dispatchEventImpl(Window.java:2721)
+	at java.awt.Component.dispatchEvent(Component.java:4691)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:722)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:681)
+	at java.awt.EventQueue$3.run(EventQueue.java:679)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:695)
+	at java.awt.EventQueue$4.run(EventQueue.java:693)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:692)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:216)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:135)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:123)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:119)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:111)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:97)
+STATUS:Failed.`main' threw exception: java.lang.RuntimeException: dragged diff is -1, event = java.awt.event.MouseEvent[MOUSE_DRAGGED,(65,71),absolute(730,417),modifiers=Button1,extModifiers=Button1,clickCount=0] on frame0
+
+TEST RESULT: Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: dragged diff is -1, event = java.awt.event.MouseEvent[MOUSE_DRAGGED,(65,71),absolute(730,417),modifiers=Button1,extModifiers=Button1,clickCount=0] on frame0
+--------------------------------------------------
+TEST: java/awt/event/MouseEvent/FrameMouseEventAbsoluteCoordsTest/FrameMouseEventAbsoluteCoordsTest.html
+  build: 1.261 seconds
+  compile: 1.261 seconds
+  build: 1.051 seconds
+  compile: 1.05 seconds
+  applet: 2.497 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/event/MouseEvent/MenuDragMouseEventAbsoluteCoordsTest/MenuDragMouseEventAbsoluteCoordsTest.html
+  build: 1.311 seconds
+  compile: 1.311 seconds
+  build: 1.06 seconds
+  compile: 1.06 seconds
+  applet: 2.56 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/event/MouseEvent/MouseClickTest/MouseClickTest.html
+  build: 1.342 seconds
+  compile: 1.342 seconds
+  build: 1.016 seconds
+  compile: 1.015 seconds
+  applet: 2.83 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/event/MouseEvent/MouseWheelEventAbsoluteCoordsTest/MouseWheelEventAbsoluteCoordsTest.html
+  build: 1.302 seconds
+  compile: 1.302 seconds
+  build: 0.952 seconds
+  compile: 0.952 seconds
+  applet: 2.527 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/event/MouseEvent/RobotLWTest/RobotLWTest.html
+  compile: 1.291 seconds
+  build: 1.073 seconds
+  compile: 1.072 seconds
+  applet: 3.447 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/event/MouseEvent/SpuriousExitEnter/SpuriousExitEnter_3.java
+JDK under test: (/home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
+openjdk version "1.8.0-internal"
+OpenJDK Runtime Environment (build 1.8.0-internal-saiubuntu_2013_03_08_00_00-b00)
+OpenJDK Server VM (build 25.0-b20, mixed mode)
+
+
+ACTION: build -- Passed. Build successful
+REASON: User specified action: run build Util 
+TIME:   1.3 seconds
+messages:
+command: build Util
+reason: User specified action: run build Util 
+elapsed time (seconds): 1.3
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   1.3 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.3
+STDOUT:
+STDERR:
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+import java.awt.peer.FramePeer;
+                    ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+        FramePeer frame_peer = (FramePeer) embedder.getPeer();
+        ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+        FramePeer frame_peer = (FramePeer) embedder.getPeer();
+                                ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+        ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
+                 ^
+Note: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+4 warnings
+
+ACTION: build -- Passed. Build successful
+REASON: Named class compiled on demand
+TIME:   1.086 seconds
+messages:
+command: build SpuriousExitEnter_3
+reason: Named class compiled on demand
+elapsed time (seconds): 1.086
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   1.086 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/event/MouseEvent/SpuriousExitEnter/SpuriousExitEnter_3.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.086
+STDOUT:
+STDERR:
+
+ACTION: main -- Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: java.awt.Frame: incorrect event number: Entered got: 0 expected : 1. Exited got : 0 expected : 1
+REASON: User specified action: run main SpuriousExitEnter_3 
+TIME:   62.896 seconds
+messages:
+command: main SpuriousExitEnter_3
+reason: User specified action: run main SpuriousExitEnter_3 
+elapsed time (seconds): 62.896
+STDOUT:
+Entered on javax.swing.JButton
+Zeroeing on javax.swing.JFrame
+Zeroeing on javax.swing.JButton
+Exited on javax.swing.JButton
+Entered on javax.swing.JFrame
+Exited on javax.swing.JFrame
+Entered on javax.swing.JButton
+Zeroeing on javax.swing.JFrame
+Zeroeing on javax.swing.JButton
+Exited on javax.swing.JButton
+Entered on javax.swing.JButton
+Exited on javax.swing.JButton
+Entered on javax.swing.JFrame
+Zeroeing on javax.swing.JFrame
+Zeroeing on javax.swing.JButton
+Exited on javax.swing.JFrame
+Entered on javax.swing.JFrame
+Exited on javax.swing.JFrame
+Entered on java.awt.Button
+Zeroeing on java.awt.Frame
+Zeroeing on java.awt.Button
+Exited on java.awt.Button
+Entered on java.awt.Frame
+Exited on java.awt.Frame
+Entered on java.awt.Button
+Zeroeing on java.awt.Frame
+Zeroeing on java.awt.Button
+Exited on java.awt.Button
+Entered on java.awt.Button
+Exited on java.awt.Button
+Entered on java.awt.Frame
+Zeroeing on java.awt.Frame
+Zeroeing on java.awt.Button
+STDERR:
+java.lang.RuntimeException: java.awt.Frame: incorrect event number: Entered got: 0 expected : 1. Exited got : 0 expected : 1
+	at SpuriousExitEnter_3.checkEvents(SpuriousExitEnter_3.java:143)
+	at SpuriousExitEnter_3.testCase(SpuriousExitEnter_3.java:114)
+	at SpuriousExitEnter_3.main(SpuriousExitEnter_3.java:125)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:487)
+	at com.sun.javatest.regtest.MainWrapper$MainThread.run(MainWrapper.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+
+JavaTest Message: Test threw exception: java.lang.RuntimeException: java.awt.Frame: incorrect event number: Entered got: 0 expected : 1. Exited got : 0 expected : 1
+JavaTest Message: shutting down test
+
+STATUS:Failed.`main' threw exception: java.lang.RuntimeException: java.awt.Frame: incorrect event number: Entered got: 0 expected : 1. Exited got : 0 expected : 1
+
+TEST RESULT: Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: java.awt.Frame: incorrect event number: Entered got: 0 expected : 1. Exited got : 0 expected : 1
+--------------------------------------------------
+TEST: java/awt/event/MouseWheelEvent/DisabledComponent/DisabledComponent.java
+  build: 1.314 seconds
+  compile: 1.313 seconds
+  build: 0.945 seconds
+  compile: 0.944 seconds
+  main: 0.85 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/event/MouseWheelEvent/InfiniteRecursion/InfiniteRecursion_1.java
+  build: 1.464 seconds
+  compile: 1.463 seconds
+  build: 1.056 seconds
+  compile: 1.056 seconds
+  main: 0.752 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/event/MouseWheelEvent/InfiniteRecursion/InfiniteRecursion_2.html
+  build: 1.43 seconds
+  compile: 1.429 seconds
+  build: 1.062 seconds
+  compile: 1.062 seconds
+  applet: 2.699 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/event/MouseWheelEvent/InfiniteRecursion/InfiniteRecursion_3.html
+  build: 1.453 seconds
+  compile: 1.453 seconds
+  build: 1.053 seconds
+  compile: 1.052 seconds
+  applet: 2.763 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/event/MouseWheelEvent/InfiniteRecursion/InfiniteRecursion_4.java
+  build: 1.439 seconds
+  compile: 1.439 seconds
+  build: 0.969 seconds
+  compile: 0.969 seconds
+  main: 0.659 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/event/MouseWheelEvent/InfiniteRecursion/InfiniteRecursion.java
+  build: 1.447 seconds
+  compile: 1.446 seconds
+  build: 1.05 seconds
+  compile: 1.05 seconds
+  main: 0.733 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/event/OtherEvents/UngrabID/UngrabID.java
+  build: 0.994 seconds
+  compile: 0.993 seconds
+  main: 0.232 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/event/TextEvent/TextEventSequenceTest/TextEventSequenceTest.java
+  build: 0.96 seconds
+  compile: 0.958 seconds
+  main: 2.197 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/EventDispatchThread/HandleExceptionOnEDT/HandleExceptionOnEDT.java
+JDK under test: (/home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
+openjdk version "1.8.0-internal"
+OpenJDK Runtime Environment (build 1.8.0-internal-saiubuntu_2013_03_08_00_00-b00)
+OpenJDK Server VM (build 25.0-b20, mixed mode)
+
+
+ACTION: build -- Passed. Build successful
+REASON: User specified action: run build Util 
+TIME:   1.294 seconds
+messages:
+command: build Util
+reason: User specified action: run build Util 
+elapsed time (seconds): 1.294
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   1.293 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.293
+STDOUT:
+STDERR:
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+import java.awt.peer.FramePeer;
+                    ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+        FramePeer frame_peer = (FramePeer) embedder.getPeer();
+        ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+        FramePeer frame_peer = (FramePeer) embedder.getPeer();
+                                ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+        ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
+                 ^
+Note: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+4 warnings
+
+ACTION: build -- Passed. Build successful
+REASON: Named class compiled on demand
+TIME:   0.966 seconds
+messages:
+command: build HandleExceptionOnEDT
+reason: Named class compiled on demand
+elapsed time (seconds): 0.966
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   0.965 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/EventDispatchThread/HandleExceptionOnEDT/HandleExceptionOnEDT.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 0.965
+STDOUT:
+STDERR:
+
+ACTION: main -- Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: Test FAILED: exception is not handled for modal dialog
+REASON: User specified action: run main HandleExceptionOnEDT 
+TIME:   0.765 seconds
+messages:
+command: main HandleExceptionOnEDT
+reason: User specified action: run main HandleExceptionOnEDT 
+elapsed time (seconds): 0.765
+STDOUT:
+STDERR:
+java.lang.RuntimeException: Test FAILED: exception is not handled for modal dialog
+	at HandleExceptionOnEDT.main(HandleExceptionOnEDT.java:127)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:487)
+	at com.sun.javatest.regtest.MainWrapper$MainThread.run(MainWrapper.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+
+JavaTest Message: Test threw exception: java.lang.RuntimeException: Test FAILED: exception is not handled for modal dialog
+JavaTest Message: shutting down test
+
+STATUS:Failed.`main' threw exception: java.lang.RuntimeException: Test FAILED: exception is not handled for modal dialog
+
+TEST RESULT: Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: Test FAILED: exception is not handled for modal dialog
+--------------------------------------------------
+TEST: java/awt/EventDispatchThread/LoopRobustness/LoopRobustness.html
+JDK under test: (/home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
+openjdk version "1.8.0-internal"
+OpenJDK Runtime Environment (build 1.8.0-internal-saiubuntu_2013_03_08_00_00-b00)
+OpenJDK Server VM (build 25.0-b20, mixed mode)
+
+
+ACTION: build -- Passed. Build successful
+REASON: User specified action: run build Util 
+TIME:   1.33 seconds
+messages:
+command: build Util
+reason: User specified action: run build Util 
+elapsed time (seconds): 1.33
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   1.329 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.329
+STDOUT:
+STDERR:
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+import java.awt.peer.FramePeer;
+                    ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+        FramePeer frame_peer = (FramePeer) embedder.getPeer();
+        ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+        FramePeer frame_peer = (FramePeer) embedder.getPeer();
+                                ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+        ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
+                 ^
+Note: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+4 warnings
+
+ACTION: build -- Passed. Build successful
+REASON: Named class compiled on demand
+TIME:   1.022 seconds
+messages:
+command: build LoopRobustness
+reason: Named class compiled on demand
+elapsed time (seconds): 1.022
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   1.022 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/EventDispatchThread/LoopRobustness/LoopRobustness.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.022
+STDOUT:
+STDERR:
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/EventDispatchThread/LoopRobustness/LoopRobustness.java:38: warning: SunToolkit is internal proprietary API and may be removed in a future release
+import sun.awt.SunToolkit;
+              ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/EventDispatchThread/LoopRobustness/LoopRobustness.java:94: warning: SunToolkit is internal proprietary API and may be removed in a future release
+        SunToolkit.createNewAppContext();
+        ^
+2 warnings
+
+ACTION: main -- Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: Test FAILED: robot should press button twice
+REASON: User specified action: run main LoopRobustness 
+TIME:   5.752 seconds
+messages:
+command: main LoopRobustness
+reason: User specified action: run main LoopRobustness 
+elapsed time (seconds): 5.752
+STDOUT:
+Exception caught: java.lang.ExceptionInInitializerError
+java.lang.ExceptionInInitializerError
+	at Impl$1.actionPerformed(LoopRobustness.java:103)
+	at java.awt.Button.processActionEvent(Button.java:409)
+	at java.awt.Button.processEvent(Button.java:377)
+	at java.awt.Component.dispatchEventImpl(Component.java:4869)
+	at java.awt.Component.dispatchEvent(Component.java:4691)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:722)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:681)
+	at java.awt.EventQueue$3.run(EventQueue.java:679)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:695)
+	at java.awt.EventQueue$4.run(EventQueue.java:693)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:692)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:216)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:135)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:123)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:119)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:111)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:97)
+Caused by: java.lang.RuntimeException: Die, AWT-Event Queue thread!
+	at HostileCrasher.<clinit>(LoopRobustness.java:157)
+	... 23 more
+STDERR:
+java.lang.RuntimeException: Test FAILED: robot should press button twice
+	at LoopRobustness.main(LoopRobustness.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:487)
+	at com.sun.javatest.regtest.MainWrapper$MainThread.run(MainWrapper.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+
+JavaTest Message: Test threw exception: java.lang.RuntimeException: Test FAILED: robot should press button twice
+JavaTest Message: shutting down test
+
+STATUS:Failed.`main' threw exception: java.lang.RuntimeException: Test FAILED: robot should press button twice
+
+TEST RESULT: Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: Test FAILED: robot should press button twice
+--------------------------------------------------
+TEST: java/awt/EventDispatchThread/PreserveDispathThread/PreserveDispatchThread.java
+  build: 1.035 seconds
+  compile: 1.035 seconds
+  main: 0.672 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/EventQueue/6638195/bug6638195.java
+  build: 0.979 seconds
+  compile: 0.979 seconds
+  main: 0.226 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/EventQueue/MainAppContext/MainAppContext.java
+  build: 0.923 seconds
+  compile: 0.923 seconds
+  main: 2.408 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/EventQueue/PostEventOrderingTest/PostEventOrderingTest.java
+  build: 0.882 seconds
+  compile: 0.882 seconds
+  main: 1.246 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/EventQueue/PushPopDeadlock2/PushPopTest.java
+  build: 0.979 seconds
+  compile: 0.978 seconds
+  main: 0.225 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/EventQueue/SecondaryLoopTest/SecondaryLoopTest.java
+  build: 0.953 seconds
+  compile: 0.952 seconds
+  main: 10.426 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/FileDialog/FilenameFilterTest/FilenameFilterTest.html
+  build: 1.284 seconds
+  compile: 1.284 seconds
+  build: 0.966 seconds
+  compile: 0.965 seconds
+  applet: 7.605 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/6981400/Test1.java
+  build: 1.273 seconds
+  compile: 1.273 seconds
+  build: 1.171 seconds
+  compile: 1.17 seconds
+  main: 2.971 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/6981400/Test2.java
+  build: 1.333 seconds
+  compile: 1.333 seconds
+  build: 1.066 seconds
+  compile: 1.065 seconds
+  main: 3.691 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/6981400/Test3.java
+  build: 1.289 seconds
+  compile: 1.289 seconds
+  build: 1.024 seconds
+  compile: 1.023 seconds
+  main: 2.57 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/ActualFocusedWindowTest/ActualFocusedWindowBlockingTest.java
+  build: 1.338 seconds
+  compile: 1.338 seconds
+  build: 1.111 seconds
+  compile: 1.11 seconds
+  main: 1.871 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/ActualFocusedWindowTest/ActualFocusedWindowRetaining.java
+JDK under test: (/home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
+openjdk version "1.8.0-internal"
+OpenJDK Runtime Environment (build 1.8.0-internal-saiubuntu_2013_03_08_00_00-b00)
+OpenJDK Server VM (build 25.0-b20, mixed mode)
+
+
+ACTION: build -- Passed. Build successful
+REASON: User specified action: run build Util 
+TIME:   1.312 seconds
+messages:
+command: build Util
+reason: User specified action: run build Util 
+elapsed time (seconds): 1.312
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   1.312 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.312
+STDOUT:
+STDERR:
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+import java.awt.peer.FramePeer;
+                    ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+        FramePeer frame_peer = (FramePeer) embedder.getPeer();
+        ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+        FramePeer frame_peer = (FramePeer) embedder.getPeer();
+                                ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+        ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
+                 ^
+Note: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+4 warnings
+
+ACTION: build -- Passed. Build successful
+REASON: Named class compiled on demand
+TIME:   1.102 seconds
+messages:
+command: build ActualFocusedWindowRetaining
+reason: Named class compiled on demand
+elapsed time (seconds): 1.102
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   1.1 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Focus/ActualFocusedWindowTest/ActualFocusedWindowRetaining.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.1
+STDOUT:
+STDERR:
+
+ACTION: main -- Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: Step 1: Test failed: actual focused window didn't get a focus
+REASON: User specified action: run main ActualFocusedWindowRetaining 
+TIME:   2.539 seconds
+messages:
+command: main ActualFocusedWindowRetaining
+reason: User specified action: run main ActualFocusedWindowRetaining 
+elapsed time (seconds): 2.539
+STDOUT:
+WINDOW_OPENED,opposite=null,oldState=0,newState=0 on <Other Frame>
+WINDOW_OPENED,opposite=null,oldState=0,newState=0 on <Test Frame>
+WINDOW_ACTIVATED,opposite=null,oldState=0,newState=0 on <Other Frame>
+WINDOW_GAINED_FOCUS,opposite=null,oldState=0,newState=0 on <Other Frame>
+FOCUS_GAINED,permanent,opposite=null on <Other Frame>
+FOCUS_LOST,temporary,opposite=java.awt.Button[button0,89,5,99x23,label=Test Button 1] on <Other Frame>
+WINDOW_LOST_FOCUS,opposite=java.awt.Frame[frame1,801,129,400x100,invalid,layout=java.awt.FlowLayout,title=Test Frame,resizable,normal],oldState=0,newState=0 on <Other Frame>
+WINDOW_DEACTIVATED,opposite=java.awt.Frame[frame1,801,129,400x100,invalid,layout=java.awt.FlowLayout,title=Test Frame,resizable,normal],oldState=0,newState=0 on <Other Frame>
+WINDOW_ACTIVATED,opposite=java.awt.Frame[frame0,801,429,400x100,layout=java.awt.BorderLayout,title=Other Frame,resizable,normal],oldState=0,newState=0 on <Test Frame>
+WINDOW_GAINED_FOCUS,opposite=java.awt.Frame[frame0,801,429,400x100,layout=java.awt.BorderLayout,title=Other Frame,resizable,normal],oldState=0,newState=0 on <Test Frame>
+WINDOW_OPENED,opposite=null,oldState=0,newState=0 on <Window 1>
+WINDOW_OPENED,opposite=null,oldState=0,newState=0 on <Window 2>
+FOCUS_GAINED,permanent,opposite=java.awt.Frame[frame0,801,429,400x100,layout=java.awt.BorderLayout,title=Other Frame,resizable,normal] on <Test Button 1>
+FOCUS_LOST,temporary,opposite=java.awt.Button[button1,5,5,99x23,label=Test Button 2] on <Test Button 1>
+WINDOW_LOST_FOCUS,opposite=TestWindow[win0,800,200,221x33,layout=java.awt.FlowLayout],oldState=0,newState=0 on <Test Frame>
+WINDOW_GAINED_FOCUS,opposite=java.awt.Frame[frame1,801,129,400x100,layout=java.awt.FlowLayout,title=Test Frame,resizable,normal],oldState=0,newState=0 on <Window 1>
+FOCUS_GAINED,permanent,opposite=java.awt.Button[button0,94,5,99x23,label=Test Button 1] on <Test Button 2>
+FOCUS_LOST,temporary,opposite=java.awt.Button[button2,5,5,99x23,label=Test Button 3] on <Test Button 2>
+WINDOW_LOST_FOCUS,opposite=TestWindow[win1,800,300,221x33,layout=java.awt.FlowLayout],oldState=0,newState=0 on <Window 1>
+WINDOW_GAINED_FOCUS,opposite=TestWindow[win0,800,200,221x33,layout=java.awt.FlowLayout],oldState=0,newState=0 on <Window 2>
+FOCUS_GAINED,permanent,opposite=java.awt.Button[button1,5,5,99x23,label=Test Button 2] on <Test Button 3>
+FOCUS_LOST,temporary,opposite=java.awt.Button[button0,94,5,99x23,label=Test Button 1] on <Test Button 3>
+WINDOW_LOST_FOCUS,opposite=java.awt.Frame[frame1,801,129,400x100,layout=java.awt.FlowLayout,title=Test Frame,resizable,normal],oldState=0,newState=0 on <Window 2>
+WINDOW_GAINED_FOCUS,opposite=TestWindow[win1,800,300,221x33,layout=java.awt.FlowLayout],oldState=0,newState=0 on <Test Frame>
+WINDOW_LOST_FOCUS,opposite=TestWindow[win1,800,300,221x33,layout=java.awt.FlowLayout],oldState=0,newState=0 on <Test Frame>
+WINDOW_GAINED_FOCUS,opposite=java.awt.Frame[frame1,801,129,400x100,layout=java.awt.FlowLayout,title=Test Frame,resizable,normal],oldState=0,newState=0 on <Window 2>
+FOCUS_GAINED,permanent,opposite=java.awt.Button[button2,5,5,99x23,label=Test Button 3] on <Test Button 3>
+FOCUS_LOST,temporary,opposite=java.awt.Frame[frame0,801,429,400x100,layout=java.awt.BorderLayout,title=Other Frame,resizable,normal] on <Test Button 3>
+WINDOW_LOST_FOCUS,opposite=java.awt.Frame[frame0,801,429,400x100,layout=java.awt.BorderLayout,title=Other Frame,resizable,normal],oldState=0,newState=0 on <Window 2>
+WINDOW_DEACTIVATED,opposite=java.awt.Frame[frame0,801,429,400x100,layout=java.awt.BorderLayout,title=Other Frame,resizable,normal],oldState=0,newState=0 on <Test Frame>
+WINDOW_ACTIVATED,opposite=java.awt.Frame[frame1,801,129,400x100,layout=java.awt.FlowLayout,title=Test Frame,resizable,normal],oldState=0,newState=0 on <Other Frame>
+WINDOW_GAINED_FOCUS,opposite=TestWindow[win1,800,300,221x33,layout=java.awt.FlowLayout],oldState=0,newState=0 on <Other Frame>
+FOCUS_GAINED,permanent,opposite=java.awt.Button[button2,5,5,99x23,label=Test Button 3] on <Other Frame>
+FOCUS_LOST,temporary,opposite=java.awt.Button[button0,94,5,99x23,label=Test Button 1] on <Other Frame>
+WINDOW_LOST_FOCUS,opposite=java.awt.Frame[frame1,801,129,400x100,layout=java.awt.FlowLayout,title=Test Frame,resizable,normal],oldState=0,newState=0 on <Other Frame>
+WINDOW_DEACTIVATED,opposite=java.awt.Frame[frame1,801,129,400x100,layout=java.awt.FlowLayout,title=Test Frame,resizable,normal],oldState=0,newState=0 on <Other Frame>
+WINDOW_ACTIVATED,opposite=java.awt.Frame[frame0,801,429,400x100,layout=java.awt.BorderLayout,title=Other Frame,resizable,normal],oldState=0,newState=0 on <Test Frame>
+WINDOW_GAINED_FOCUS,opposite=java.awt.Frame[frame0,801,429,400x100,layout=java.awt.BorderLayout,title=Other Frame,resizable,normal],oldState=0,newState=0 on <Test Frame>
+FOCUS_GAINED,permanent,opposite=java.awt.Frame[frame0,801,429,400x100,layout=java.awt.BorderLayout,title=Other Frame,resizable,normal] on <Test Button 1>
+STDERR:
+java.lang.RuntimeException: Step 1: Test failed: actual focused window didn't get a focus
+	at ActualFocusedWindowRetaining.stopTest(ActualFocusedWindowRetaining.java:196)
+	at ActualFocusedWindowRetaining.clickOwnerCheckFocus(ActualFocusedWindowRetaining.java:160)
+	at ActualFocusedWindowRetaining.test(ActualFocusedWindowRetaining.java:118)
+	at ActualFocusedWindowRetaining.start(ActualFocusedWindowRetaining.java:105)
+	at ActualFocusedWindowRetaining.main(ActualFocusedWindowRetaining.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:487)
+	at com.sun.javatest.regtest.MainWrapper$MainThread.run(MainWrapper.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+
+JavaTest Message: Test threw exception: java.lang.RuntimeException: Step 1: Test failed: actual focused window didn't get a focus
+JavaTest Message: shutting down test
+
+STATUS:Failed.`main' threw exception: java.lang.RuntimeException: Step 1: Test failed: actual focused window didn't get a focus
+
+TEST RESULT: Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: Step 1: Test failed: actual focused window didn't get a focus
+--------------------------------------------------
+TEST: java/awt/Focus/AppletInitialFocusTest/AppletInitialFocusTest.html
+  build: 1.431 seconds
+  compile: 1.431 seconds
+  build: 0.905 seconds
+  compile: 0.905 seconds
+  applet: 2.379 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/AppletInitialFocusTest/AppletInitialFocusTest1.html
+  build: 1.289 seconds
+  compile: 1.289 seconds
+  build: 0.956 seconds
+  compile: 0.956 seconds
+  applet: 2.485 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/AutoRequestFocusTest/AutoRequestFocusSetVisibleTest.java
+JDK under test: (/home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
+openjdk version "1.8.0-internal"
+OpenJDK Runtime Environment (build 1.8.0-internal-saiubuntu_2013_03_08_00_00-b00)
+OpenJDK Server VM (build 25.0-b20, mixed mode)
+
+
+ACTION: build -- Passed. Build successful
+REASON: User specified action: run build Util 
+TIME:   1.301 seconds
+messages:
+command: build Util
+reason: User specified action: run build Util 
+elapsed time (seconds): 1.301
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   1.301 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.301
+STDOUT:
+STDERR:
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+import java.awt.peer.FramePeer;
+                    ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+        FramePeer frame_peer = (FramePeer) embedder.getPeer();
+        ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+        FramePeer frame_peer = (FramePeer) embedder.getPeer();
+                                ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+        ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
+                 ^
+Note: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+4 warnings
+
+ACTION: build -- Passed. Build successful
+REASON: Named class compiled on demand
+TIME:   1.245 seconds
+messages:
+command: build AutoRequestFocusSetVisibleTest
+reason: Named class compiled on demand
+elapsed time (seconds): 1.245
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   1.244 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Focus/AutoRequestFocusTest/AutoRequestFocusSetVisibleTest.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.244
+STDOUT:
+STDERR:
+Note: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Focus/AutoRequestFocusTest/AutoRequestFocusSetVisibleTest.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+ACTION: main -- Failed. Execution failed: `main' threw exception: TestFailedException: Test failed: the restored frame must gain focus but it didn't!
+REASON: User specified action: run main AutoRequestFocusSetVisibleTest 
+TIME:   2.262 seconds
+messages:
+command: main AutoRequestFocusSetVisibleTest
+reason: User specified action: run main AutoRequestFocusSetVisibleTest 
+elapsed time (seconds): 2.262
+STDOUT:
+Any messages for the tester will display here.
+Stage 1 in progress...
+Stage 2 in progress...
+STDERR:
+TestFailedException: Test failed: the restored frame must gain focus but it didn't!
+	at AutoRequestFocusSetVisibleTest.start(AutoRequestFocusSetVisibleTest.java:197)
+	at AutoRequestFocusSetVisibleTest.main(AutoRequestFocusSetVisibleTest.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:487)
+	at com.sun.javatest.regtest.MainWrapper$MainThread.run(MainWrapper.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+
+JavaTest Message: Test threw exception: TestFailedException: Test failed: the restored frame must gain focus but it didn't!
+JavaTest Message: shutting down test
+
+STATUS:Failed.`main' threw exception: TestFailedException: Test failed: the restored frame must gain focus but it didn't!
+
+TEST RESULT: Failed. Execution failed: `main' threw exception: TestFailedException: Test failed: the restored frame must gain focus but it didn't!
+--------------------------------------------------
+TEST: java/awt/Focus/AutoRequestFocusTest/AutoRequestFocusToFrontTest.java
+JDK under test: (/home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
+openjdk version "1.8.0-internal"
+OpenJDK Runtime Environment (build 1.8.0-internal-saiubuntu_2013_03_08_00_00-b00)
+OpenJDK Server VM (build 25.0-b20, mixed mode)
+
+
+ACTION: build -- Passed. Build successful
+REASON: User specified action: run build Util 
+TIME:   1.324 seconds
+messages:
+command: build Util
+reason: User specified action: run build Util 
+elapsed time (seconds): 1.324
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   1.324 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.324
+STDOUT:
+STDERR:
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+import java.awt.peer.FramePeer;
+                    ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+        FramePeer frame_peer = (FramePeer) embedder.getPeer();
+        ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+        FramePeer frame_peer = (FramePeer) embedder.getPeer();
+                                ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+        ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
+                 ^
+Note: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+4 warnings
+
+ACTION: build -- Passed. Build successful
+REASON: Named class compiled on demand
+TIME:   1.18 seconds
+messages:
+command: build AutoRequestFocusToFrontTest
+reason: Named class compiled on demand
+elapsed time (seconds): 1.18
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   1.179 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Focus/AutoRequestFocusTest/AutoRequestFocusToFrontTest.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.179
+STDOUT:
+STDERR:
+
+ACTION: main -- Failed. Execution failed: `main' threw exception: TestFailedException: Test failed: the window moved to front is not on the top!
+REASON: User specified action: run main AutoRequestFocusToFrontTest 
+TIME:   6.314 seconds
+messages:
+command: main AutoRequestFocusToFrontTest
+reason: User specified action: run main AutoRequestFocusToFrontTest 
+elapsed time (seconds): 6.314
+STDOUT:
+Any messages for the tester will display here.
+Test stage 1 in progress
+Test stage 2 in progress
+(ACTION_EVENT was not generated. One more attemp.)
+STDERR:
+TestFailedException: Test failed: the window moved to front is not on the top!
+	at AutoRequestFocusToFrontTest$Test.test(AutoRequestFocusToFrontTest.java:327)
+	at AutoRequestFocusToFrontTest$Test.test(AutoRequestFocusToFrontTest.java:369)
+	at AutoRequestFocusToFrontTest.start(AutoRequestFocusToFrontTest.java:167)
+	at AutoRequestFocusToFrontTest.main(AutoRequestFocusToFrontTest.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:487)
+	at com.sun.javatest.regtest.MainWrapper$MainThread.run(MainWrapper.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+
+JavaTest Message: Test threw exception: TestFailedException: Test failed: the window moved to front is not on the top!
+JavaTest Message: shutting down test
+
+STATUS:Failed.`main' threw exception: TestFailedException: Test failed: the window moved to front is not on the top!
+
+TEST RESULT: Failed. Execution failed: `main' threw exception: TestFailedException: Test failed: the window moved to front is not on the top!
+--------------------------------------------------
+TEST: java/awt/Focus/ChoiceFocus/ChoiceFocus.java
+  build: 1.308 seconds
+  compile: 1.308 seconds
+  build: 0.967 seconds
+  compile: 0.967 seconds
+  main: 1.232 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/ClearGlobalFocusOwnerTest/ClearGlobalFocusOwnerTest.java
+  build: 1.271 seconds
+  compile: 1.27 seconds
+  build: 0.974 seconds
+  compile: 0.974 seconds
+  main: 0.548 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/ClearLwQueueBreakTest/ClearLwQueueBreakTest.java
+  build: 1.303 seconds
+  compile: 1.303 seconds
+  build: 1.165 seconds
+  compile: 1.165 seconds
+  main: 1.359 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/CloseDialogActivateOwnerTest/CloseDialogActivateOwnerTest.java
+  build: 1.293 seconds
+  compile: 1.293 seconds
+  build: 0.971 seconds
+  compile: 0.971 seconds
+  main: 2.478 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/ConsumeNextKeyTypedOnModalShowTest/ConsumeNextKeyTypedOnModalShowTest.java
+  build: 1.307 seconds
+  compile: 1.307 seconds
+  build: 0.966 seconds
+  compile: 0.966 seconds
+  main: 0.833 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/ContainerFocusAutoTransferTest/ContainerFocusAutoTransferTest.java
+  build: 1.32 seconds
+  compile: 1.319 seconds
+  build: 1.174 seconds
+  compile: 1.174 seconds
+  main: 1.322 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/DeiconifiedFrameLoosesFocus/DeiconifiedFrameLoosesFocus.html
+JDK under test: (/home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
+openjdk version "1.8.0-internal"
+OpenJDK Runtime Environment (build 1.8.0-internal-saiubuntu_2013_03_08_00_00-b00)
+OpenJDK Server VM (build 25.0-b20, mixed mode)
+
+
+ACTION: build -- Passed. Build successful
+REASON: User specified action: run build Util 
+TIME:   1.326 seconds
+messages:
+command: build Util
+reason: User specified action: run build Util 
+elapsed time (seconds): 1.326
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   1.326 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.326
+STDOUT:
+STDERR:
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+import java.awt.peer.FramePeer;
+                    ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+        FramePeer frame_peer = (FramePeer) embedder.getPeer();
+        ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+        FramePeer frame_peer = (FramePeer) embedder.getPeer();
+                                ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+        ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
+                 ^
+Note: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+4 warnings
+
+ACTION: build -- Passed. Build successful
+REASON: Named class compiled on demand
+TIME:   0.965 seconds
+messages:
+command: build DeiconifiedFrameLoosesFocus
+reason: Named class compiled on demand
+elapsed time (seconds): 0.965
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   0.964 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Focus/DeiconifiedFrameLoosesFocus/DeiconifiedFrameLoosesFocus.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 0.964
+STDOUT:
+STDERR:
+
+ACTION: applet -- Failed. Execution failed: Applet thread threw exception: TestFailedException: Test failed: the Frame didn't regain focus after restoring!
+REASON: User specified action: run applet DeiconifiedFrameLoosesFocus.html 
+TIME:   0.583 seconds
+messages:
+command: applet DeiconifiedFrameLoosesFocus.html
+reason: User specified action: run applet DeiconifiedFrameLoosesFocus.html 
+elapsed time (seconds): 0.583
+STDOUT:
+STDERR:
+TestFailedException: Test failed: the Frame didn't regain focus after restoring!
+	at DeiconifiedFrameLoosesFocus.test(DeiconifiedFrameLoosesFocus.java:92)
+	at DeiconifiedFrameLoosesFocus.start(DeiconifiedFrameLoosesFocus.java:78)
+	at com.sun.javatest.regtest.AppletWrapper$AppletRunnable.run(AppletWrapper.java:158)
+	at java.lang.Thread.run(Thread.java:722)
+STATUS:Failed.Applet thread threw exception: TestFailedException: Test failed: the Frame didn't regain focus after restoring!
+
+TEST RESULT: Failed. Execution failed: Applet thread threw exception: TestFailedException: Test failed: the Frame didn't regain focus after restoring!
+--------------------------------------------------
+TEST: java/awt/Focus/FocusEmbeddedFrameTest/FocusEmbeddedFrameTest.java
+  build: 1.358 seconds
+  compile: 1.358 seconds
+  build: 0.969 seconds
+  compile: 0.968 seconds
+  main: 0.226 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/FocusOwnerFrameOnClick/FocusOwnerFrameOnClick.java
+  build: 1.296 seconds
+  compile: 1.296 seconds
+  build: 0.999 seconds
+  compile: 0.999 seconds
+  main: 0.703 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/FocusTraversalPolicy/DefaultFTPTest.java
+  build: 1.028 seconds
+  compile: 1.027 seconds
+  build: 1.536 seconds
+  compile: 1.536 seconds
+  main: 0.76 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/FocusTraversalPolicy/InitialFTP.java
+  build: 0.974 seconds
+  compile: 0.973 seconds
+  main: 0.475 seconds
+  build: 1.041 seconds
+  compile: 1.04 seconds
+  main: 0.448 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/FocusTraversalPolicy/LayoutFTPTest.java
+  build: 1.0 seconds
+  compile: 1.0 seconds
+  build: 1.611 seconds
+  compile: 1.611 seconds
+  main: 0.551 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/FrameJumpingToMouse/FrameJumpingToMouse.java
+  build: 1.326 seconds
+  compile: 1.326 seconds
+  build: 0.979 seconds
+  compile: 0.979 seconds
+  main: 0.64 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/FrameMinimizeTest/FrameMinimizeTest.java
+JDK under test: (/home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
+openjdk version "1.8.0-internal"
+OpenJDK Runtime Environment (build 1.8.0-internal-saiubuntu_2013_03_08_00_00-b00)
+OpenJDK Server VM (build 25.0-b20, mixed mode)
+
+
+ACTION: build -- Passed. Build successful
+REASON: User specified action: run build Util 
+TIME:   1.285 seconds
+messages:
+command: build Util
+reason: User specified action: run build Util 
+elapsed time (seconds): 1.285
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   1.285 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.285
+STDOUT:
+STDERR:
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+import java.awt.peer.FramePeer;
+                    ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+        FramePeer frame_peer = (FramePeer) embedder.getPeer();
+        ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+        FramePeer frame_peer = (FramePeer) embedder.getPeer();
+                                ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+        ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
+                 ^
+Note: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+4 warnings
+
+ACTION: build -- Passed. Build successful
+REASON: Named class compiled on demand
+TIME:   0.896 seconds
+messages:
+command: build FrameMinimizeTest
+reason: Named class compiled on demand
+elapsed time (seconds): 0.896
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   0.895 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Focus/FrameMinimizeTest/FrameMinimizeTest.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 0.895
+STDOUT:
+STDERR:
+
+ACTION: main -- Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: button is not a focus owner after restoring :(
+REASON: User specified action: run main FrameMinimizeTest 
+TIME:   0.535 seconds
+messages:
+command: main FrameMinimizeTest
+reason: User specified action: run main FrameMinimizeTest 
+elapsed time (seconds): 0.535
+STDOUT:
+STDERR:
+java.lang.RuntimeException: button is not a focus owner after restoring :(
+	at FrameMinimizeTest.main(FrameMinimizeTest.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:487)
+	at com.sun.javatest.regtest.MainWrapper$MainThread.run(MainWrapper.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+
+JavaTest Message: Test threw exception: java.lang.RuntimeException: button is not a focus owner after restoring :(
+JavaTest Message: shutting down test
+
+STATUS:Failed.`main' threw exception: java.lang.RuntimeException: button is not a focus owner after restoring :(
+
+TEST RESULT: Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: button is not a focus owner after restoring :(
+--------------------------------------------------
+TEST: java/awt/Focus/IconifiedFrameFocusChangeTest/IconifiedFrameFocusChangeTest.java
+  build: 1.342 seconds
+  compile: 1.342 seconds
+  build: 0.967 seconds
+  compile: 0.967 seconds
+  main: 1.845 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/InputVerifierTest3/InputVerifierTest3.java
+  build: 1.375 seconds
+  compile: 1.374 seconds
+  build: 1.098 seconds
+  compile: 1.097 seconds
+  main: 0.884 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/ModalBlockedStealsFocusTest/ModalBlockedStealsFocusTest.html
+  build: 1.38 seconds
+  compile: 1.38 seconds
+  build: 1.087 seconds
+  compile: 1.086 seconds
+  applet: 6.768 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/NoAutotransferToDisabledCompTest/NoAutotransferToDisabledCompTest.java
+  build: 1.323 seconds
+  compile: 1.322 seconds
+  build: 0.991 seconds
+  compile: 0.991 seconds
+  main: 0.621 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/NonFocusableResizableTooSmall/NonFocusableResizableTooSmall.java
+  build: 1.336 seconds
+  compile: 1.336 seconds
+  build: 1.092 seconds
+  compile: 1.092 seconds
+  main: 0.591 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/NonFocusableWindowTest/NoEventsTest.java
+  build: 1.441 seconds
+  compile: 1.441 seconds
+  main: 5.998 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/NonFocusableWindowTest/NonfocusableOwnerTest.java
+  build: 1.265 seconds
+  compile: 1.265 seconds
+  build: 0.998 seconds
+  compile: 0.997 seconds
+  main: 1.63 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/OverrideRedirectWindowActivationTest/OverrideRedirectWindowActivationTest.java
+  build: 1.341 seconds
+  compile: 1.34 seconds
+  build: 1.078 seconds
+  compile: 1.078 seconds
+  main: 1.224 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/OwnedWindowFocusIMECrashTest/OwnedWindowFocusIMECrashTest.java
+  build: 1.303 seconds
+  compile: 1.302 seconds
+  build: 0.951 seconds
+  compile: 0.951 seconds
+  main: 0.765 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/RemoveAfterRequest/RemoveAfterRequest.java
+  build: 1.35 seconds
+  compile: 1.349 seconds
+  build: 0.976 seconds
+  compile: 0.976 seconds
+  main: 0.483 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/RequestFocusAndHideTest/RequestFocusAndHideTest.java
+  build: 1.337 seconds
+  compile: 1.335 seconds
+  build: 0.957 seconds
+  compile: 0.957 seconds
+  main: 0.749 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/RequestFocusToDisabledCompTest/RequestFocusToDisabledCompTest.java
+  build: 1.334 seconds
+  compile: 1.334 seconds
+  build: 1.013 seconds
+  compile: 1.013 seconds
+  main: 0.442 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/RequestOnCompWithNullParent/RequestOnCompWithNullParent1.java
+  build: 1.314 seconds
+  compile: 1.314 seconds
+  build: 1.111 seconds
+  compile: 1.109 seconds
+  main: 0.649 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/RestoreFocusOnDisabledComponentTest/RestoreFocusOnDisabledComponentTest.java
+  build: 1.315 seconds
+  compile: 1.315 seconds
+  build: 0.974 seconds
+  compile: 0.974 seconds
+  main: 0.582 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/ShowFrameCheckForegroundTest/ShowFrameCheckForegroundTest.java
+  build: 1.355 seconds
+  compile: 1.355 seconds
+  build: 1.061 seconds
+  compile: 1.06 seconds
+  main: 4.715 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/ToFrontFocusTest/ToFrontFocus.html
+  build: 1.271 seconds
+  compile: 1.271 seconds
+  build: 1.041 seconds
+  compile: 1.041 seconds
+  applet: 3.012 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/TranserFocusToWindow/TranserFocusToWindow.java
+  build: 1.297 seconds
+  compile: 1.297 seconds
+  build: 0.914 seconds
+  compile: 0.913 seconds
+  main: 1.616 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/TypeAhead/TestFocusFreeze.java
+  build: 1.268 seconds
+  compile: 1.268 seconds
+  build: 1.026 seconds
+  compile: 1.025 seconds
+  main: 4.626 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/WindowInitialFocusTest/WindowInitialFocusTest.html
+  build: 1.329 seconds
+  compile: 1.329 seconds
+  build: 1.093 seconds
+  compile: 1.093 seconds
+  applet: 4.973 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Focus/WrongKeyTypedConsumedTest/WrongKeyTypedConsumedTest.java
+  build: 1.305 seconds
+  compile: 1.305 seconds
+  build: 1.01 seconds
+  compile: 1.009 seconds
+  main: 0.866 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/font/FontNames/LocaleFamilyNames.java
+  build: 0.942 seconds
+  compile: 0.942 seconds
+  main: 3.645 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/font/GlyphVector/VisualBounds.java
+  build: 0.895 seconds
+  compile: 0.894 seconds
+  main: 0.224 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/font/LineBreakMeasurer/FRCTest.java
+  build: 0.947 seconds
+  compile: 0.947 seconds
+  main: 40.416 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/font/NumericShaper/EasternArabicTest.java
+  build: 0.962 seconds
+  compile: 0.962 seconds
+  main: 0.099 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/font/NumericShaper/EqualsTest.java
+  build: 0.939 seconds
+  compile: 0.939 seconds
+  main: 0.095 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/font/NumericShaper/MTTest.java
+  build: 0.979 seconds
+  compile: 0.979 seconds
+  main: 180.155 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/font/NumericShaper/ShapingTest.java
+  build: 1.031 seconds
+  compile: 1.031 seconds
+  main: 0.101 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/font/Rotate/Shear.java
+  build: 0.985 seconds
+  compile: 0.984 seconds
+  main: 0.307 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/font/Rotate/TestTransform.java
+  build: 0.946 seconds
+  compile: 0.946 seconds
+  main: 0.257 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/font/Rotate/TranslatedOutlineTest.java
+  build: 0.942 seconds
+  compile: 0.942 seconds
+  main: 0.23 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/font/StyledMetrics/BoldSpace.java
+  build: 0.942 seconds
+  compile: 0.942 seconds
+  main: 0.443 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/font/TextLayout/AttributeValuesCastTest.java
+  build: 0.895 seconds
+  compile: 0.883 seconds
+  main: 0.125 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/font/TextLayout/CombiningPerf.java
+JDK under test: (/home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
+openjdk version "1.8.0-internal"
+OpenJDK Runtime Environment (build 1.8.0-internal-saiubuntu_2013_03_08_00_00-b00)
+OpenJDK Server VM (build 25.0-b20, mixed mode)
+
+
+ACTION: build -- Passed. Build successful
+REASON: Named class compiled on demand
+TIME:   0.958 seconds
+messages:
+command: build CombiningPerf
+reason: Named class compiled on demand
+elapsed time (seconds): 0.958
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   0.958 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/font/TextLayout/CombiningPerf.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 0.958
+STDOUT:
+STDERR:
+
+ACTION: main -- Failed. Execution failed: `main' threw exception: java.lang.Exception: took too long
+REASON: Assumed action based on file name: run main CombiningPerf 
+TIME:   1.954 seconds
+messages:
+command: main CombiningPerf
+reason: Assumed action based on file name: run main CombiningPerf 
+elapsed time (seconds): 1.954
+STDOUT:
+STDERR:
+start
+atime: 483.572602 length: 36
+ftime: 439.0595 length: 32
+xtime: 476.682232 length: 37
+java.lang.Exception: took too long
+	at CombiningPerf.main(CombiningPerf.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:487)
+	at com.sun.javatest.regtest.MainWrapper$MainThread.run(MainWrapper.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+
+JavaTest Message: Test threw exception: java.lang.Exception: took too long
+JavaTest Message: shutting down test
+
+STATUS:Failed.`main' threw exception: java.lang.Exception: took too long
+
+TEST RESULT: Failed. Execution failed: `main' threw exception: java.lang.Exception: took too long
+--------------------------------------------------
+TEST: java/awt/font/TextLayout/DecorationBoundsTest.java
+  build: 0.97 seconds
+  compile: 0.97 seconds
+  main: 0.318 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/font/TextLayout/TestHebrewMark.java
+  build: 0.972 seconds
+  compile: 0.972 seconds
+  main: 0.527 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/font/TextLayout/TestSinhalaChar.java
+  build: 1.022 seconds
+  compile: 1.022 seconds
+  main: 0.215 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/font/TextLayout/TextLayoutBounds.java
+  build: 0.946 seconds
+  compile: 0.946 seconds
+  main: 0.25 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/font/TextLayout/UnderlinePositionTest.java
+  build: 0.967 seconds
+  compile: 0.967 seconds
+  main: 0.308 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/font/TextLayout/VisibleAdvance.java
+  build: 0.944 seconds
+  compile: 0.944 seconds
+  main: 0.273 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/font/Threads/FontThread.java
+  build: 0.904 seconds
+  compile: 0.903 seconds
+  main: 0.919 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/FontClass/CreateFont/fileaccess/FontFile.java
+JDK under test: (/home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
+openjdk version "1.8.0-internal"
+OpenJDK Runtime Environment (build 1.8.0-internal-saiubuntu_2013_03_08_00_00-b00)
+OpenJDK Server VM (build 25.0-b20, mixed mode)
+
+
+ACTION: build -- Passed. Build successful
+REASON: Named class compiled on demand
+TIME:   0.955 seconds
+messages:
+command: build FontFile
+reason: Named class compiled on demand
+elapsed time (seconds): 0.955
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   0.954 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/FontClass/CreateFont/fileaccess/FontFile.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 0.954
+STDOUT:
+STDERR:
+
+ACTION: main -- Failed. Execution failed: `main' threw exception: java.security.AccessControlException: access denied ("java.io.FilePermission" "somefile" "read")
+REASON: Assumed action based on file name: run main FontFile 
+TIME:   0.143 seconds
+messages:
+command: main FontFile
+reason: Assumed action based on file name: run main FontFile 
+elapsed time (seconds): 0.143
+STDOUT:
+Will try to access /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/FontClass/CreateFont/fileaccess/../A.ttf
+File is available. Verify no access under SM
+STDERR:
+java.security.AccessControlException: access denied ("java.io.FilePermission" "somefile" "read")
+	at java.security.AccessControlContext.checkPermission(AccessControlContext.java:364)
+	at java.security.AccessController.checkPermission(AccessController.java:560)
+	at java.lang.SecurityManager.checkPermission(SecurityManager.java:549)
+	at java.awt.Font.createFont(Font.java:1019)
+	at FontFile.main(FontFile.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:487)
+	at com.sun.javatest.regtest.MainWrapper$MainThread.run(MainWrapper.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+
+JavaTest Message: Test threw exception: java.security.AccessControlException: access denied ("java.io.FilePermission" "somefile" "read")
+JavaTest Message: shutting down test
+
+STATUS:Failed.`main' threw exception: java.security.AccessControlException: access denied ("java.io.FilePermission" "somefile" "read")
+
+TEST RESULT: Failed. Execution failed: `main' threw exception: java.security.AccessControlException: access denied ("java.io.FilePermission" "somefile" "read")
+--------------------------------------------------
+TEST: java/awt/FontClass/CreateFont/bigfont.html
+JDK under test: (/home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
+openjdk version "1.8.0-internal"
+OpenJDK Runtime Environment (build 1.8.0-internal-saiubuntu_2013_03_08_00_00-b00)
+OpenJDK Server VM (build 25.0-b20, mixed mode)
+
+
+ACTION: build -- Passed. Build successful
+REASON: Named class compiled on demand
+TIME:   1.016 seconds
+messages:
+command: build BigFont
+reason: Named class compiled on demand
+elapsed time (seconds): 1.016
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   1.016 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/FontClass/CreateFont/BigFont.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.016
+STDOUT:
+STDERR:
+
+ACTION: applet -- Failed. Execution failed: Applet thread threw exception: java.lang.RuntimeException: Allowed file to be too large.
+REASON: User specified action: run applet bigfont.html 
+TIME:   1.523 seconds
+messages:
+command: applet bigfont.html
+reason: User specified action: run applet bigfont.html 
+elapsed time (seconds): 1.523
+STDOUT:
+Applet 1 com.sun.javatest.regtest.AppletWrapper$AppletThreadGroup[name=AppletThreadGroup,maxpri=10]
+64000000
+java.awt.FontFormatException: Unsupported sfnt /tmp/+~JF7703163550267258542.tmp
+STDERR:
+java.lang.RuntimeException: Allowed file to be too large.
+	at BigFont.init(BigFont.java:74)
+	at com.sun.javatest.regtest.AppletWrapper$AppletRunnable.run(AppletWrapper.java:155)
+	at java.lang.Thread.run(Thread.java:722)
+STATUS:Failed.Applet thread threw exception: java.lang.RuntimeException: Allowed file to be too large.
+
+TEST RESULT: Failed. Execution failed: Applet thread threw exception: java.lang.RuntimeException: Allowed file to be too large.
+--------------------------------------------------
+TEST: java/awt/FontClass/CreateFont/DeleteFont.sh
+  shell: 1.194 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/FontClass/SurrogateTest/SupplementaryCanDisplayUpToTest.java
+  build: 0.983 seconds
+  compile: 0.983 seconds
+  main: 0.451 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/FontClass/BigMetrics.java
+  build: 1.119 seconds
+  compile: 1.119 seconds
+  main: 2.709 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/FontClass/FontAccess.java
+  build: 0.903 seconds
+  compile: 0.903 seconds
+  main: 0.509 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/FontClass/FontPrivilege.java
+  build: 0.863 seconds
+  compile: 0.862 seconds
+  main: 0.506 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/FontClass/X11FontPathCrashTest.java
+  build: 0.891 seconds
+  compile: 0.89 seconds
+  main: 0.441 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/FontMetrics/StyledSpaceAdvance.java
+  build: 0.958 seconds
+  compile: 0.958 seconds
+  main: 0.457 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Frame/7024749/bug7024749.java
+  build: 1.359 seconds
+  compile: 1.358 seconds
+  build: 0.892 seconds
+  compile: 0.891 seconds
+  main: 4.858 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Frame/DynamicLayout/DynamicLayout.java
+  build: 1.35 seconds
+  compile: 1.35 seconds
+  build: 1.148 seconds
+  compile: 1.148 seconds
+  main: 0.599 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Frame/FrameLocation/FrameLocation.java
+  build: 0.975 seconds
+  compile: 0.974 seconds
+  main: 20.369 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Frame/FrameSetSizeStressTest/FrameSetSizeStressTest.java
+  build: 0.84 seconds
+  compile: 0.839 seconds
+  main: 1.314 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Frame/FrameSize/TestFrameSize.java
+  build: 1.155 seconds
+  compile: 1.155 seconds
+  main: 2.17 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Frame/HideMaximized/HideMaximized.java
+  build: 0.895 seconds
+  compile: 0.895 seconds
+  main: 4.283 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Frame/HugeFrame/HugeFrame.java
+  build: 0.891 seconds
+  compile: 0.891 seconds
+  main: 1.397 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Frame/InvisibleOwner/InvisibleOwner.java
+  build: 1.333 seconds
+  compile: 1.333 seconds
+  build: 1.009 seconds
+  compile: 1.009 seconds
+  main: 2.473 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Frame/LayoutOnMaximizeTest/LayoutOnMaximizeTest.java
+  build: 1.304 seconds
+  compile: 1.303 seconds
+  build: 1.156 seconds
+  compile: 1.156 seconds
+  main: 0.43 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Frame/MaximizedToIconified/MaximizedToIconified.java
+JDK under test: (/home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
+openjdk version "1.8.0-internal"
+OpenJDK Runtime Environment (build 1.8.0-internal-saiubuntu_2013_03_08_00_00-b00)
+OpenJDK Server VM (build 25.0-b20, mixed mode)
+
+
+ACTION: build -- Passed. Build successful
+REASON: User specified action: run build Util 
+TIME:   1.33 seconds
+messages:
+command: build Util
+reason: User specified action: run build Util 
+elapsed time (seconds): 1.33
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   1.329 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.329
+STDOUT:
+STDERR:
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+import java.awt.peer.FramePeer;
+                    ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+        FramePeer frame_peer = (FramePeer) embedder.getPeer();
+        ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+        FramePeer frame_peer = (FramePeer) embedder.getPeer();
+                                ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+        ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
+                 ^
+Note: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+4 warnings
+
+ACTION: build -- Passed. Build successful
+REASON: Named class compiled on demand
+TIME:   1.148 seconds
+messages:
+command: build MaximizedToIconified
+reason: Named class compiled on demand
+elapsed time (seconds): 1.148
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   1.148 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Frame/MaximizedToIconified/MaximizedToIconified.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.148
+STDOUT:
+STDERR:
+
+ACTION: main -- Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: getExtendedState() != last getNewState() in WINDOW_STATE_CHANGED event.
+REASON: User specified action: run main MaximizedToIconified 
+TIME:   1.089 seconds
+messages:
+command: main MaximizedToIconified
+reason: User specified action: run main MaximizedToIconified 
+elapsed time (seconds): 1.089
+STDOUT:
+Any messages for the tester will display here.
+Any messages for the tester will display here.
+last = 0; getOldState() = 0; getNewState() = 6
+state = 6; getExtendedState() = 6
+last = 6; getOldState() = 6; getNewState() = 7
+last = 7; getOldState() = 7; getNewState() = 1
+state = 1; getExtendedState() = 1
+state = 0; getExtendedState() = 0
+The test failed: getExtendedState() != last getNewState() in WINDOW_STATE_CHANGED event.
+The test failed: getExtendedState() != last getNewState() in WINDOW_STATE_CHANGED event.
+The test is over, hit  Ctl-C to stop Java VM
+The test is over, hit  Ctl-C to stop Java VM
+STDERR:
+java.lang.RuntimeException: getExtendedState() != last getNewState() in WINDOW_STATE_CHANGED event.
+	at MaximizedToIconified.fail(MaximizedToIconified.java:237)
+	at MaximizedToIconified.checkState(MaximizedToIconified.java:64)
+	at MaximizedToIconified.examineStates(MaximizedToIconified.java:97)
+	at MaximizedToIconified.init(MaximizedToIconified.java:124)
+	at MaximizedToIconified.main(MaximizedToIconified.java:163)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:487)
+	at com.sun.javatest.regtest.MainWrapper$MainThread.run(MainWrapper.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+
+JavaTest Message: Test threw exception: java.lang.RuntimeException: getExtendedState() != last getNewState() in WINDOW_STATE_CHANGED event.
+JavaTest Message: shutting down test
+
+STATUS:Failed.`main' threw exception: java.lang.RuntimeException: getExtendedState() != last getNewState() in WINDOW_STATE_CHANGED event.
+
+TEST RESULT: Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: getExtendedState() != last getNewState() in WINDOW_STATE_CHANGED event.
+--------------------------------------------------
+TEST: java/awt/Frame/ResizeAfterSetFont/ResizeAfterSetFont.java
+  build: 1.283 seconds
+  compile: 1.283 seconds
+  build: 0.947 seconds
+  compile: 0.947 seconds
+  main: 0.475 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Frame/ShapeNotSetSometimes/ShapeNotSetSometimes.java
+JDK under test: (/home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
+openjdk version "1.8.0-internal"
+OpenJDK Runtime Environment (build 1.8.0-internal-saiubuntu_2013_03_08_00_00-b00)
+OpenJDK Server VM (build 25.0-b20, mixed mode)
+
+
+ACTION: build -- Passed. Build successful
+REASON: Named class compiled on demand
+TIME:   1.107 seconds
+messages:
+command: build ShapeNotSetSometimes
+reason: Named class compiled on demand
+elapsed time (seconds): 1.107
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   1.107 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/Frame/ShapeNotSetSometimes/ShapeNotSetSometimes.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.107
+STDOUT:
+STDERR:
+
+ACTION: main -- Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: Test failed. The shape has not been applied.
+REASON: User specified action: run main ShapeNotSetSometimes 
+TIME:   6.805 seconds
+messages:
+command: main ShapeNotSetSometimes
+reason: User specified action: run main ShapeNotSetSometimes 
+elapsed time (seconds): 6.805
+STDOUT:
+Attempt 0
+Checking java.awt.Frame with Rounded-corners shape (java.awt.geom.Path2D$Float@904359)...
+checking 165, 196, color = java.awt.Color[r=0,g=0,b=255]
+checking 191, 163, color = java.awt.Color[r=0,g=0,b=255]
+checking 146, 185, color = java.awt.Color[r=0,g=0,b=255]
+checking 61, 170, color = java.awt.Color[r=0,g=0,b=255]
+checking 148, 171, color = java.awt.Color[r=0,g=0,b=255]
+checking 82, 172, color = java.awt.Color[r=0,g=0,b=255]
+checking 186, 11, color = java.awt.Color[r=0,g=0,b=255]
+checking 199, 141, color = java.awt.Color[r=0,g=0,b=255]
+checking 13, 173, color = java.awt.Color[r=0,g=0,b=255]
+checking 187, 3, color = java.awt.Color[r=0,g=0,b=255]
+Attempt 1
+Checking java.awt.Frame with Rounded-corners shape (java.awt.geom.Path2D$Float@a227a1)...
+checking 165, 196, color = java.awt.Color[r=0,g=0,b=255]
+checking 191, 163, color = java.awt.Color[r=0,g=0,b=255]
+checking 146, 185, color = java.awt.Color[r=0,g=0,b=255]
+checking 61, 170, color = java.awt.Color[r=0,g=0,b=255]
+checking 148, 171, color = java.awt.Color[r=0,g=0,b=255]
+checking 82, 172, color = java.awt.Color[r=0,g=0,b=255]
+checking 186, 11, color = java.awt.Color[r=0,g=0,b=255]
+checking 199, 141, color = java.awt.Color[r=0,g=0,b=255]
+checking 13, 173, color = java.awt.Color[r=0,g=0,b=255]
+checking 187, 3, color = java.awt.Color[r=0,g=0,b=255]
+Attempt 2
+Checking java.awt.Frame with Rounded-corners shape (java.awt.geom.Path2D$Float@12e95e4)...
+checking 165, 196, color = java.awt.Color[r=0,g=0,b=255]
+checking 191, 163, color = java.awt.Color[r=0,g=0,b=255]
+checking 146, 185, color = java.awt.Color[r=0,g=0,b=255]
+checking 61, 170, color = java.awt.Color[r=0,g=0,b=255]
+checking 148, 171, color = java.awt.Color[r=0,g=0,b=255]
+checking 82, 172, color = java.awt.Color[r=0,g=0,b=255]
+checking 186, 11, color = java.awt.Color[r=0,g=0,b=255]
+checking 199, 141, color = java.awt.Color[r=0,g=0,b=255]
+checking 13, 173, color = java.awt.Color[r=0,g=0,b=255]
+checking 187, 3, color = java.awt.Color[r=0,g=0,b=255]
+Attempt 3
+Checking java.awt.Frame with Rounded-corners shape (java.awt.geom.Path2D$Float@15a4b1d)...
+checking 165, 196, color = java.awt.Color[r=0,g=0,b=255]
+checking 191, 163, color = java.awt.Color[r=0,g=0,b=255]
+checking 146, 185, color = java.awt.Color[r=0,g=0,b=255]
+checking 61, 170, color = java.awt.Color[r=0,g=0,b=255]
+checking 148, 171, color = java.awt.Color[r=0,g=0,b=255]
+checking 82, 172, color = java.awt.Color[r=0,g=0,b=255]
+checking 186, 11, color = java.awt.Color[r=0,g=0,b=255]
+checking 199, 141, color = java.awt.Color[r=0,g=0,b=255]
+checking 13, 173, color = java.awt.Color[r=0,g=0,b=255]
+checking 187, 3, color = java.awt.Color[r=0,g=0,b=255]
+Attempt 4
+Checking java.awt.Frame with Rounded-corners shape (java.awt.geom.Path2D$Float@20c10f)...
+checking 165, 196, color = java.awt.Color[r=0,g=0,b=255]
+checking 191, 163, color = java.awt.Color[r=0,g=0,b=255]
+checking 146, 185, color = java.awt.Color[r=0,g=0,b=255]
+checking 61, 170, color = java.awt.Color[r=0,g=0,b=255]
+checking 148, 171, color = java.awt.Color[r=0,g=0,b=255]
+checking 82, 172, color = java.awt.Color[r=0,g=0,b=255]
+checking 186, 11, color = java.awt.Color[r=0,g=0,b=255]
+checking 199, 141, color = java.awt.Color[r=0,g=0,b=255]
+checking 13, 173, color = java.awt.Color[r=0,g=0,b=255]
+checking 187, 3, color = java.awt.Color[r=0,g=0,b=255]
+Attempt 5
+Checking java.awt.Frame with Rounded-corners shape (java.awt.geom.Path2D$Float@36d88)...
+checking 165, 196, color = java.awt.Color[r=0,g=0,b=255]
+checking 191, 163, color = java.awt.Color[r=0,g=0,b=255]
+checking 146, 185, color = java.awt.Color[r=0,g=0,b=255]
+checking 61, 170, color = java.awt.Color[r=0,g=0,b=255]
+checking 148, 171, color = java.awt.Color[r=0,g=0,b=255]
+checking 82, 172, color = java.awt.Color[r=0,g=0,b=255]
+checking 186, 11, color = java.awt.Color[r=239,g=238,b=237]
+window.getX() = 70, window.getY() = 450
+STDERR:
+Checking for transparency failed: point: 256, 461, color = java.awt.Color[r=239,g=238,b=237] is not of expected background color java.awt.Color[r=0,g=0,b=255]
+java.lang.RuntimeException: Test failed. The shape has not been applied.
+	at ShapeNotSetSometimes.doTest(ShapeNotSetSometimes.java:166)
+	at ShapeNotSetSometimes.main(ShapeNotSetSometimes.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:487)
+	at com.sun.javatest.regtest.MainWrapper$MainThread.run(MainWrapper.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+
+JavaTest Message: Test threw exception: java.lang.RuntimeException: Test failed. The shape has not been applied.
+JavaTest Message: shutting down test
+
+STATUS:Failed.`main' threw exception: java.lang.RuntimeException: Test failed. The shape has not been applied.
+
+TEST RESULT: Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: Test failed. The shape has not been applied.
+--------------------------------------------------
+TEST: java/awt/Frame/ShownOffScreenOnWin98/ShownOffScreenOnWin98Test.java
+  build: 1.292 seconds
+  compile: 1.292 seconds
+  build: 1.103 seconds
+  compile: 1.103 seconds
+  main: 1.092 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Frame/UnfocusableMaximizedFrameResizablity/UnfocusableMaximizedFrameResizablity.java
+  build: 1.35 seconds
+  compile: 1.35 seconds
+  build: 1.077 seconds
+  compile: 1.077 seconds
+  main: 0.861 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/Frame/WindowDragTest/WindowDragTest.java
+  build: 1.307 seconds
+  compile: 1.307 seconds
+  build: 0.962 seconds
+  compile: 0.962 seconds
+  main: 8.504 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/FullScreen/BufferStrategyExceptionTest/BufferStrategyExceptionTest.java
+  build: 0.926 seconds
+  compile: 0.925 seconds
+  main: 4.498 seconds
+  build: 0.0 seconds
+  main: 3.366 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/awt/FullScreen/FullScreenInsets/FullScreenInsets.java
+JDK under test: (/home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
+openjdk version "1.8.0-internal"
+OpenJDK Runtime Environment (build 1.8.0-internal-saiubuntu_2013_03_08_00_00-b00)
+OpenJDK Server VM (build 25.0-b20, mixed mode)
+
+
+ACTION: build -- Passed. Build successful
+REASON: Named class compiled on demand
+TIME:   1.013 seconds
+messages:
+command: build FullScreenInsets
+reason: Named class compiled on demand
+elapsed time (seconds): 1.013
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   1.012 seconds
+messages:
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/FullScreen/FullScreenInsets/FullScreenInsets.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.012
+STDOUT:
+STDERR:
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/FullScreen/FullScreenInsets/FullScreenInsets.java:37: warning: SunToolkit is internal proprietary API and may be removed in a future release
+import sun.awt.SunToolkit;
+              ^
+/home/saiubuntu/sources/jdk8_tl/jdk/test/java/awt/FullScreen/FullScreenInsets/FullScreenInsets.java:150: warning: SunToolkit is internal proprietary API and may be removed in a future release
+        ((SunToolkit) Toolkit.getDefaultToolkit()).realSync();
+          ^
+2 warnings
+
+ACTION: main -- Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: Test failed
+REASON: Assumed action based on file name: run main FullScreenInsets 
+TIME:   11.52 seconds
+messages:
+command: main FullScreenInsets
+reason: Assumed action based on file name: run main FullScreenInsets 
+elapsed time (seconds): 11.52
+STDOUT:
+STDERR:
+ Wrong window bounds: Expected: width = 1366, height = 768 Actual: java.awt.Dimension[width=1301,height=744]
+ Wrong window bounds: Expected: width = 1366, height = 768 Actual: java.awt.Dimension[width=1301,height=744]
+ Wrong window size: Expected: java.awt.Dimension[width=300,height=300] Actual: java.awt.Dimension[width=1301,height=744]
+ Wrong window size: Expected: java.awt.Dimension[width=300,height=300] Actual: java.awt.Dimension[width=1301,height=744]
+java.lang.RuntimeException: Test failed
+	at FullScreenInsets.main(FullScreenInsets.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:487)
+	at com.sun.javatest.regtest.MainWrapper$MainThread.run(MainWrapper.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+
+JavaTest Message: Test threw exception: java.lang.RuntimeException: Test failed
+JavaTest Message: shutting down test
+
+STATUS:Failed.`main' threw exception: java.lang.RuntimeException: Test failed
+
+TEST RESULT: Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: Test failed
+--------------------------------------------------
+Missing file: /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_awt/JTreport/text/summary.txt
+EXIT CODE: 143
+EXIT CODE: 143
+make[2]: *** [jtreg_tests] Error 143
+make[2]: Leaving directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
+make[1]: *** [jdk_awt] Error 2
+make[1]: Leaving directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
+make: *** [jdk_awt] Error 2

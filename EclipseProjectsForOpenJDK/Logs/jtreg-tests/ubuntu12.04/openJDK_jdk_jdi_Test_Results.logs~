@@ -1,0 +1,991 @@
+make -k -C  ../jdk/test  jdk_jdi
+make[1]: Entering directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
+echo "Running tests in agentvm mode: com/sun/jdi"
+Running tests in agentvm mode: com/sun/jdi
+make TEST_DEPENDENCIES="com/sun/jdi" TESTDIRS="com/sun/jdi" USE_JTREG_AGENTVM=true  UNIQUE_DIR=jdk_jdi jtreg_tests
+make[2]: Entering directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
+Excluding list contains 5 items
+Excluding: com/sun/jdi/SuspendThreadTest.java
+Excluding: com/sun/jdi/RedefineCrossEvent.java
+Excluding: com/sun/jdi/DoubleAgentTest.java
+Excluding: com/sun/jdi/FieldWatchpoints.java
+Excluding: com/sun/jdi/ProcessAttachTest.sh
+(                                                                    \
+	  ( JT_HOME=/home/saiubuntu/jtreg/;                   \
+            export JT_HOME;                                                  \
+            /home/saiubuntu/jtreg//win32/bin/jtreg                              \
+              -agentvm   -a -ea -esa -v:fail,error,time -retain:fail,error -ignore:quiet -timeoutFactor:4 -J-Xmx512m                                         \
+              -r:/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/JTreport  \
+              -w:/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/JTwork    \
+              -jdk:/home/saiubuntu/sources//jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image/                \
+              -exclude:/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/excludelist.txt             \
+                                                        \
+              com/sun/jdi                                                    \
+	  ) ; ( jtregExitCode=$? && _summary="/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/JTreport/text/summary.txt"; rm -f -f /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/Stats.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/runlist.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/passlist.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/faillist.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/exitcode.txt; echo "${jtregExitCode}" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/exitcode.txt; if [ -r "${_summary}" ] ; then echo "Summary: jdk_jdi" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/Stats.txt; expand ${_summary} | egrep -v ' Not run\.' > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/runlist.txt; egrep ' Passed\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/runlist.txt | egrep -v ' Error\.' | egrep -v ' Failed\.' > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/passlist.txt; ( egrep ' Failed\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/runlist.txt; egrep ' Error\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/runlist.txt; egrep -v ' Passed\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/runlist.txt ) | sort | uniq > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/faillist.txt; if [ ${jtregExitCode} != 0 -o -s /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/faillist.txt ] ; then expand /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/faillist.txt | cut -d' ' -f1 | sed -e 's@^@FAILED: @' >> /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/Stats.txt; if [ ${jtregExitCode} = 0 ] ; then jtregExitCode=1; fi; fi; runc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/runlist.txt      | wc -l | awk '{print $1;}'`"; passc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/passlist.txt    | wc -l | awk '{print $1;}'`"; failc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/faillist.txt    | wc -l | awk '{print $1;}'`"; exclc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/excludelist.txt | wc -l | awk '{print $1;}'`"; echo "TEST STATS: name=jdk_jdi  run=${runc}  pass=${passc}  fail=${failc}  excluded=${exclc}" >> /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/Stats.txt; else echo "Missing file: ${_summary}" >> /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/Stats.txt; fi; if [ -f /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/Stats.txt ] ; then cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/Stats.txt; fi; ( mkdir -p `dirname /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/ARCHIVE_BUNDLE.zip` && cd /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi && chmod -R a+r . && zip -q -r /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/ARCHIVE_BUNDLE.zip . ) ; if [ ! -s /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/exitcode.txt; fi ; testExitCode=`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode} )                                          \
+	) 2>&1 | tee /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/output.txt ; if [ ! -s /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/exitcode.txt; fi ; testExitCode=`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode}
+Directory "/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/JTreport" not found: creating
+Directory "/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/JTwork" not found: creating
+Directory "/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jdi/JTwork/scratch" not found: creating
+--------------------------------------------------
+TEST: com/sun/jdi/connect/spi/DebugUsingCustomConnector.java
+  build: 1.123 seconds
+  compile: 1.113 seconds
+  build: 0.001 seconds
+  main: 0.612 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/connect/spi/GeneratedConnectors.java
+  build: 0.091 seconds
+  compile: 0.091 seconds
+  build: 0.0 seconds
+  main: 0.157 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/connect/spi/JdiLoadedByCustomLoader.sh
+  shell: 1.836 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/redefine/RedefineTest.java
+  build: 0.63 seconds
+  compile: 0.629 seconds
+  compile: 0.21 seconds
+  shell: 2.319 seconds
+  build: 0.0 seconds
+  main: 0.742 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/redefineMethod/RedefineTest.java
+  build: 0.001 seconds
+  compile: 0.14 seconds
+  shell: 1.526 seconds
+  build: 0.0 seconds
+  main: 0.618 seconds
+  build: 0.0 seconds
+  main: 0.55 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/sde/FilterMangleTest.java
+  build: 0.093 seconds
+  compile: 0.091 seconds
+  compile: 0.083 seconds
+  compile: 0.02 seconds
+  build: 0.0 seconds
+  main: 0.507 seconds
+  build: 0.0 seconds
+  main: 0.475 seconds
+  build: 0.0 seconds
+  main: 0.483 seconds
+  build: 0.0 seconds
+  main: 0.483 seconds
+  build: 0.0 seconds
+  main: 0.471 seconds
+  build: 0.0 seconds
+  main: 0.475 seconds
+  build: 0.001 seconds
+  main: 0.167 seconds
+  build: 0.0 seconds
+  main: 0.475 seconds
+  build: 0.0 seconds
+  main: 0.479 seconds
+  build: 0.0 seconds
+  main: 0.484 seconds
+  build: 0.0 seconds
+  main: 0.484 seconds
+  build: 0.0 seconds
+  main: 0.479 seconds
+  build: 0.0 seconds
+  main: 0.479 seconds
+  build: 0.0 seconds
+  main: 0.476 seconds
+  build: 0.0 seconds
+  main: 0.467 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/sde/MangleStepTest.java
+  build: 0.0 seconds
+  compile: 0.063 seconds
+  compile: 0.022 seconds
+  build: 0.0 seconds
+  main: 0.705 seconds
+  build: 0.001 seconds
+  main: 0.685 seconds
+  build: 0.0 seconds
+  main: 0.695 seconds
+  build: 0.001 seconds
+  main: 0.705 seconds
+  build: 0.0 seconds
+  main: 0.718 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/sde/MangleTest.java
+  build: 0.0 seconds
+  compile: 0.227 seconds
+  compile: 0.019 seconds
+  build: 0.0 seconds
+  main: 0.51 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/sde/SourceDebugExtensionTest.java
+  build: 0.001 seconds
+  compile: 0.068 seconds
+  compile: 0.019 seconds
+  build: 0.001 seconds
+  main: 0.493 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/sde/TemperatureTableTest.java
+  build: 0.0 seconds
+  compile: 0.235 seconds
+  compile: 0.04 seconds
+  build: 0.0 seconds
+  main: 0.608 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/AcceptTimeout.java
+  build: 0.042 seconds
+  compile: 0.042 seconds
+  main: 1.044 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/AccessSpecifierTest.java
+  build: 0.0 seconds
+  compile: 0.106 seconds
+  build: 0.0 seconds
+  main: 0.573 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/AfterThreadDeathTest.java
+  build: 0.001 seconds
+  compile: 0.04 seconds
+  build: 0.0 seconds
+  main: 0.466 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/AllLineLocations.java
+  build: 0.159 seconds
+  compile: 0.158 seconds
+  compile: 0.036 seconds
+  build: 0.148 seconds
+  compile: 0.148 seconds
+  build: 0.0 seconds
+  main: 0.487 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/ArrayLengthDumpTest.sh
+  shell: 8.133 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/ArrayRangeTest.java
+  build: 0.0 seconds
+  compile: 0.166 seconds
+  build: 0.001 seconds
+  main: 0.475 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/BacktraceFieldTest.java
+  build: 0.001 seconds
+  compile: 0.049 seconds
+  build: 0.0 seconds
+  main: 0.489 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/BadHandshakeTest.java
+  build: 0.09 seconds
+  compile: 0.09 seconds
+  build: 0.0 seconds
+  main: 1.383 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/BreakpointTest.java
+  build: 0.001 seconds
+  compile: 0.058 seconds
+  build: 0.0 seconds
+  main: 10.2 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/BreakpointWithFullGC.sh
+  shell: 20.293 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/CatchAllTest.sh
+  shell: 6.014 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/CatchCaughtTest.sh
+  shell: 4.944 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/CatchPatternTest.sh
+  shell: 8.098 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/ClassesByName.java
+  build: 0.0 seconds
+  compile: 0.031 seconds
+  build: 0.075 seconds
+  compile: 0.075 seconds
+  build: 0.001 seconds
+  main: 0.521 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/ClassesByName2Test.java
+  build: 0.0 seconds
+  compile: 0.057 seconds
+  build: 0.0 seconds
+  main: 0.317 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/ClassLoaderClassesTest.java
+  build: 0.001 seconds
+  compile: 0.049 seconds
+  build: 0.0 seconds
+  main: 0.5 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/CommandCommentDelimiter.sh
+  shell: 6.973 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/CompatibleConnectors.java
+  build: 0.059 seconds
+  compile: 0.059 seconds
+  main: 0.043 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/ConnectedVMs.java
+  build: 0.0 seconds
+  compile: 0.061 seconds
+  build: 0.078 seconds
+  compile: 0.078 seconds
+  main: 0.451 seconds
+  build: 0.0 seconds
+  main: 0.464 seconds
+  build: 0.0 seconds
+  main: 0.139 seconds
+  build: 0.0 seconds
+  main: 0.139 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/ConstantPoolInfo.java
+  build: 0.0 seconds
+  compile: 0.056 seconds
+  build: 0.0 seconds
+  main: 0.458 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/CountEvent.java
+  build: 0.0 seconds
+  compile: 0.033 seconds
+  build: 0.0 seconds
+  main: 0.509 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/CountFilterTest.java
+  build: 0.0 seconds
+  compile: 0.083 seconds
+  build: 0.0 seconds
+  main: 0.479 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/DebuggerThreadTest.java
+  build: 0.0 seconds
+  compile: 0.043 seconds
+  build: 0.0 seconds
+  main: 0.448 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/DeleteAllBkptsTest.java
+  build: 0.001 seconds
+  compile: 0.042 seconds
+  build: 0.0 seconds
+  main: 0.457 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/DeleteEventRequestsTest.java
+  build: 0.0 seconds
+  compile: 0.041 seconds
+  build: 0.0 seconds
+  main: 0.453 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/DeoptimizeWalk.sh
+  shell: 10.977 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/EarlyReturnNegativeTest.java
+  build: 0.001 seconds
+  compile: 0.077 seconds
+  build: 0.0 seconds
+  main: 0.482 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/EarlyReturnTest.java
+  build: 0.001 seconds
+  compile: 0.199 seconds
+  build: 0.0 seconds
+  main: 0.876 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/EnumTest.java
+  build: 0.001 seconds
+  compile: 0.058 seconds
+  build: 0.0 seconds
+  main: 0.469 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/EvalArgs.sh
+  shell: 33.659 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/EventQueueDisconnectTest.java
+  build: 0.0 seconds
+  compile: 0.038 seconds
+  build: 0.0 seconds
+  main: 40.471 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/ExceptionEvents.java
+  build: 0.001 seconds
+  compile: 0.102 seconds
+  build: 0.0 seconds
+  main: 1.891 seconds
+  build: 0.0 seconds
+  main: 1.878 seconds
+  build: 0.0 seconds
+  main: 1.913 seconds
+  build: 0.001 seconds
+  main: 1.921 seconds
+  build: 0.0 seconds
+  main: 1.89 seconds
+  build: 0.001 seconds
+  main: 1.894 seconds
+  build: 0.0 seconds
+  main: 1.893 seconds
+  build: 0.0 seconds
+  main: 1.911 seconds
+  build: 0.001 seconds
+  main: 1.925 seconds
+  build: 0.0 seconds
+  main: 1.906 seconds
+  build: 0.0 seconds
+  main: 1.906 seconds
+  build: 0.0 seconds
+  main: 1.915 seconds
+  build: 0.0 seconds
+  main: 1.885 seconds
+  build: 0.0 seconds
+  main: 1.907 seconds
+  build: 0.0 seconds
+  main: 1.909 seconds
+  build: 0.0 seconds
+  main: 1.908 seconds
+  build: 0.0 seconds
+  main: 1.896 seconds
+  build: 0.0 seconds
+  main: 1.916 seconds
+  build: 0.0 seconds
+  main: 1.888 seconds
+  build: 0.0 seconds
+  main: 1.918 seconds
+  build: 0.0 seconds
+  main: 1.905 seconds
+  build: 0.0 seconds
+  main: 1.898 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+Agent[0].stdout: Hello, world!
+TEST: com/sun/jdi/ExclusiveBind.java
+  build: 0.038 seconds
+  compile: 0.038 seconds
+  build: 0.0 seconds
+  main: 5.247 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/ExpiredRequestDeletionTest.java
+  build: 0.0 seconds
+  compile: 0.044 seconds
+  build: 0.0 seconds
+  main: 0.47 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/FilterMatch.java
+  build: 0.0 seconds
+  compile: 0.019 seconds
+  build: 0.076 seconds
+  compile: 0.076 seconds
+  main: 0.673 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/FilterNoMatch.java
+  build: 0.001 seconds
+  compile: 0.06 seconds
+  build: 0.072 seconds
+  compile: 0.072 seconds
+  main: 0.655 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/FinalizerTest.java
+  build: 0.0 seconds
+  compile: 0.101 seconds
+  build: 0.0 seconds
+  main: 0.49 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/FinalLocalsTest.java
+  build: 0.001 seconds
+  compile: 0.1 seconds
+  build: 0.0 seconds
+  main: 0.444 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/FramesTest.java
+  build: 0.0 seconds
+  compile: 0.039 seconds
+  build: 0.0 seconds
+  main: 0.446 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/GenericsTest.java
+  build: 0.001 seconds
+  compile: 0.079 seconds
+  build: 0.0 seconds
+  main: 0.449 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/GetLocalVariables2Test.java
+  build: 0.001 seconds
+  compile: 0.041 seconds
+  build: 0.0 seconds
+  main: 0.497 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/GetLocalVariables3Test.sh
+  shell: 6.046 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/GetLocalVariables4Test.sh
+  shell: 5.999 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/HomeTest.java
+  build: 0.001 seconds
+  compile: 0.04 seconds
+  build: 0.0 seconds
+  main: 0.464 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/ImmutableResourceTest.sh
+  shell: 0.919 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/InstanceFilter.java
+  build: 0.001 seconds
+  compile: 0.04 seconds
+  build: 0.0 seconds
+  main: 0.714 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/InstancesTest.java
+  build: 0.001 seconds
+  compile: 0.079 seconds
+  build: 0.001 seconds
+  main: 1.14 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/InterruptHangTest.java
+  build: 0.0 seconds
+  compile: 0.038 seconds
+  build: 0.0 seconds
+  main: 2.491 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/InvokeHangTest.java
+  build: 0.001 seconds
+  compile: 0.11 seconds
+  build: 0.0 seconds
+  main: 0.98 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/InvokeTest.java
+  build: 0.0 seconds
+  compile: 0.106 seconds
+  build: 0.0 seconds
+  main: 0.555 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/Java_gTest.java
+  build: 0.001 seconds
+  compile: 0.055 seconds
+  build: 0.0 seconds
+  main: 0.446 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/JdbArgTest.sh
+  shell: 0.152 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/JdbLockTest.sh
+  shell: 10.938 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/JdbMethodExitTest.sh
+  shell: 11.617 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/JdbMissStep.sh
+  shell: 9.964 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/JdbReadTwiceTest.sh
+  shell: 2.661 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/JdbVarargsTest.sh
+  shell: 13.132 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/JITDebug.sh
+  build: 0.001 seconds
+  compile: 0.046 seconds
+  shell: 0.354 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/LaunchCommandLine.java
+  build: 0.001 seconds
+  compile: 0.026 seconds
+  build: 0.074 seconds
+  compile: 0.073 seconds
+  build: 0.0 seconds
+  main: 0.52 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/LineNumberInfo.java
+  build: 0.0 seconds
+  compile: 0.05 seconds
+  build: 0.0 seconds
+  main: 0.461 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/ListenAddress.java
+  build: 0.08 seconds
+  compile: 0.08 seconds
+  main: 0.132 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/LocalVariableEqual.java
+  build: 0.0 seconds
+  compile: 0.04 seconds
+  build: 0.001 seconds
+  main: 0.483 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/LocationTest.java
+  build: 0.001 seconds
+  compile: 0.039 seconds
+  build: 0.001 seconds
+  main: 0.516 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/MethodEntryExitEvents.java
+  build: 0.001 seconds
+  compile: 0.127 seconds
+  build: 0.0 seconds
+  main: 0.661 seconds
+  build: 0.0 seconds
+  main: 0.591 seconds
+  build: 0.0 seconds
+  main: 0.656 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/MethodExitReturnValuesTest.java
+  build: 0.001 seconds
+  compile: 0.087 seconds
+  build: 0.0 seconds
+  main: 0.608 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/MixedSuspendTest.sh
+  build: 0.001 seconds
+  shell: 6.147 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/ModificationWatchpoints.java
+  build: 0.0 seconds
+  compile: 0.061 seconds
+  build: 0.0 seconds
+  main: 0.73 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/MonitorEventTest.java
+  build: 0.0 seconds
+  compile: 0.044 seconds
+  build: 0.0 seconds
+  main: 1.466 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/MonitorFrameInfo.java
+  build: 0.001 seconds
+  compile: 0.049 seconds
+  build: 0.0 seconds
+  main: 0.461 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/MultiBreakpointsTest.java
+  build: 0.0 seconds
+  compile: 0.055 seconds
+  build: 0.001 seconds
+  main: 0.683 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/NativeInstanceFilter.java
+  build: 0.0 seconds
+  compile: 0.052 seconds
+  build: 0.04 seconds
+  compile: 0.04 seconds
+  main: 0.777 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/NewInstanceTest.java
+  build: 0.0 seconds
+  compile: 0.075 seconds
+  build: 0.001 seconds
+  main: 0.495 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/NoLaunchOptionTest.java
+  compile: 0.044 seconds
+  build: 0.0 seconds
+  build: 0.0 seconds
+  main: 0.145 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/NoLocInfoTest.java
+  build: 0.001 seconds
+  compile: 0.053 seconds
+  build: 0.0 seconds
+  main: 0.47 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/NotAField.sh
+  shell: 8.046 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/NullLocalVariable.sh
+  shell: 7.044 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/OnThrowTest.java
+  compile: 0.041 seconds
+  compile: 0.027 seconds
+  compile: 0.135 seconds
+  build: 0.001 seconds
+  main: 0.49 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/OptionTest.java
+  compile: 0.048 seconds
+  compile: 0.017 seconds
+  compile: 0.139 seconds
+  build: 0.0 seconds
+  main: 0.89 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/PopAndStepTest.java
+  build: 0.0 seconds
+  compile: 0.135 seconds
+  build: 0.0 seconds
+  main: 0.152 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/PopAsynchronousTest.java
+  build: 0.001 seconds
+  compile: 0.046 seconds
+  build: 0.0 seconds
+  main: 0.501 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/PopSynchronousTest.java
+  build: 0.001 seconds
+  compile: 0.049 seconds
+  build: 0.0 seconds
+  main: 0.722 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/PrivateTransportTest.sh
+  compile: 0.017 seconds
+  shell: 0.404 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/RedefineAbstractClass.sh
+  shell: 10.832 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/RedefineAnnotation.sh
+  shell: 10.818 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/RedefineChangeClassOrder.sh
+  shell: 7.068 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/RedefineClasses.sh
+  shell: 10.072 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/RedefineClearBreakpoint.sh
+  shell: 12.86 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/RedefineCrossStart.java
+  build: 0.001 seconds
+  compile: 0.071 seconds
+  compile: 0.117 seconds
+  compile: 0.081 seconds
+  compile: 0.111 seconds
+  build: 0.0 seconds
+  main: 0.463 seconds
+  build: 0.0 seconds
+  main: 0.467 seconds
+  build: 0.0 seconds
+  main: 0.471 seconds
+  build: 0.0 seconds
+  main: 0.511 seconds
+  build: 0.0 seconds
+  main: 1.933 seconds
+  build: 0.0 seconds
+  main: 1.919 seconds
+  build: 0.0 seconds
+  main: 1.896 seconds
+  build: 0.0 seconds
+  main: 0.59 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/RedefineException.sh
+  shell: 8.877 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/RedefineFinal.sh
+  shell: 7.816 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/Redefine-g.sh
+  shell: 9.04 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/RedefineImplementor.sh
+  shell: 7.841 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/RedefineIntConstantToLong.sh
+  shell: 7.958 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/RedefineMulti.sh
+  shell: 8.808 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/RedefinePop.sh
+  shell: 7.776 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/RedefineStep.sh
+  shell: 11.709 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/RedefineTTYLineNumber.sh
+  shell: 10.767 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/ReferrersTest.java
+  build: 0.0 seconds
+  compile: 0.087 seconds
+  build: 0.001 seconds
+  main: 0.367 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/RepStep.java
+  compile: 0.022 seconds
+  build: 0.113 seconds
+  compile: 0.113 seconds
+  build: 0.0 seconds
+  main: 0.678 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/RequestReflectionTest.java
+  build: 0.001 seconds
+  compile: 0.082 seconds
+  build: 0.0 seconds
+  main: 0.452 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/ResumeOneThreadTest.java
+  build: 0.001 seconds
+  compile: 0.035 seconds
+  build: 0.0 seconds
+  main: 0.495 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/RunToExit.java
+  build: 0.092 seconds
+  compile: 0.092 seconds
+  build: 0.001 seconds
+  main: 1.572 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/SDENullTest.java
+  build: 0.001 seconds
+  compile: 0.022 seconds
+  build: 0.0 seconds
+  main: 0.173 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/SimulResumerTest.java
+  build: 0.001 seconds
+  compile: 0.052 seconds
+  build: 0.0 seconds
+  main: 7.985 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/Solaris32AndSolaris64Test.sh
+  build: 0.0 seconds
+  compile: 0.085 seconds
+  compile: 0.025 seconds
+  shell: 0.004 seconds
+  shell: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/SourceNameFilterTest.java
+  build: 0.001 seconds
+  compile: 0.073 seconds
+  build: 0.0 seconds
+  main: 0.509 seconds
+  compile: 0.037 seconds
+  build: 0.0 seconds
+  main: 0.505 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/StepTest.java
+  build: 0.0 seconds
+  compile: 0.036 seconds
+  compile: 0.066 seconds
+  compile: 0.064 seconds
+  build: 0.071 seconds
+  compile: 0.07 seconds
+  build: 0.0 seconds
+  main: 0.533 seconds
+  build: 0.0 seconds
+  main: 0.523 seconds
+  build: 0.0 seconds
+  main: 0.543 seconds
+  build: 0.0 seconds
+  main: 0.523 seconds
+  build: 0.0 seconds
+  main: 0.559 seconds
+  build: 0.0 seconds
+  main: 0.659 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/StringConvertTest.sh
+  shell: 19.27 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/SuspendNoFlagTest.sh
+  compile: 0.028 seconds
+  shell: 0.394 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/TemplateTest.java
+  build: 0.001 seconds
+  compile: 0.072 seconds
+  build: 0.0 seconds
+  main: 0.517 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/ThreadGroupTest.java
+  build: 0.001 seconds
+  compile: 0.03 seconds
+  build: 0.0 seconds
+  main: 0.504 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/TwoThreadsTest.java
+  build: 0.001 seconds
+  compile: 0.052 seconds
+  build: 0.0 seconds
+  main: 0.663 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/UnpreparedByName.java
+  build: 0.0 seconds
+  compile: 0.028 seconds
+  build: 0.073 seconds
+  compile: 0.073 seconds
+  build: 0.0 seconds
+  main: 0.508 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/UnpreparedClasses.java
+  build: 0.001 seconds
+  compile: 0.026 seconds
+  build: 0.076 seconds
+  compile: 0.075 seconds
+  build: 0.0 seconds
+  main: 0.597 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/UTF8Test.java
+  build: 0.0 seconds
+  compile: 0.045 seconds
+  build: 0.0 seconds
+  main: 9.932 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/VarargsTest.java
+  build: 0.0 seconds
+  compile: 0.113 seconds
+  build: 0.0 seconds
+  main: 0.519 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/Vars.java
+  build: 0.001 seconds
+  compile: 0.079 seconds
+  build: 0.0 seconds
+  main: 0.657 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/VMDeathLastTest.java
+  build: 0.001 seconds
+  compile: 0.025 seconds
+  build: 0.066 seconds
+  compile: 0.066 seconds
+  build: 0.0 seconds
+  main: 0.662 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/VMDeathRequestTest.java
+  build: 0.0 seconds
+  compile: 0.028 seconds
+  build: 0.07 seconds
+  compile: 0.069 seconds
+  build: 0.0 seconds
+  main: 0.517 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/WatchFramePop.sh
+  shell: 11.913 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/jdi/ZZZcleanup.sh
+  shell: 0.058 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+Test results: passed: 131
+Report written to /home/saiubuntu/sources/jdk8_tl/jdk/build/linux-i586/testoutput/jdk_jdi/JTreport/html/report.html
+Results written to /home/saiubuntu/sources/jdk8_tl/jdk/build/linux-i586/testoutput/jdk_jdi/JTwork
+Summary: jdk_jdi
+TEST STATS: name=jdk_jdi  run=131  pass=131  fail=0  excluded=5
+EXIT CODE: 0
+EXIT CODE: 0
+make[2]: Leaving directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
+make[1]: Leaving directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'

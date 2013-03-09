@@ -1,0 +1,2708 @@
+make -k -C  ../jdk/test  jdk_lang
+make[1]: Entering directory `/home/openjdk/sources/jdk8_tl/jdk/test'
+echo "Running tests in agentvm mode: java/lang sun/invoke sun/misc vm"
+Running tests in agentvm mode: java/lang sun/invoke sun/misc vm
+make TEST_DEPENDENCIES="java/lang sun/invoke sun/misc vm" TESTDIRS="java/lang sun/invoke sun/misc vm" USE_JTREG_AGENTVM=true  UNIQUE_DIR=jdk_lang jtreg_tests
+make[2]: Entering directory `/home/openjdk/sources/jdk8_tl/jdk/test'
+Excluding list contains 5 items
+Excluding: java/lang/management/ThreadMXBean/ThreadStateTest.java
+Excluding: java/lang/management/MemoryMXBean/CollectionUsageThreshold.java
+Excluding: java/lang/management/MemoryMXBean/ResetPeakMemoryUsage.java
+Excluding: java/lang/management/MemoryMXBean/LowMemoryTest2.sh
+Excluding: java/lang/Class/asSubclass/BasicUnit.java
+(                                                                    \
+	  ( JT_HOME=/home/openjdk/jtreg/;                   \
+            export JT_HOME;                                                  \
+            /home/openjdk/jtreg//win32/bin/jtreg                              \
+              -agentvm   -a -ea -esa -v:fail,error,time -retain:fail,error -ignore:quiet -timeoutFactor:4 -J-Xmx512m                                         \
+              -r:/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/JTreport  \
+              -w:/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/JTwork    \
+              -jdk:/home/openjdk/sources//jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image/                \
+              -exclude:/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/excludelist.txt             \
+                                                        \
+              java/lang sun/invoke sun/misc vm                                                    \
+	  ) ; ( jtregExitCode=$? && _summary="/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/JTreport/text/summary.txt"; rm -f -f /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/Stats.txt /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/runlist.txt /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/passlist.txt /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/faillist.txt /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/exitcode.txt; echo "${jtregExitCode}" > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/exitcode.txt; if [ -r "${_summary}" ] ; then echo "Summary: jdk_lang" > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/Stats.txt; expand ${_summary} | egrep -v ' Not run\.' > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/runlist.txt; egrep ' Passed\.' /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/runlist.txt | egrep -v ' Error\.' | egrep -v ' Failed\.' > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/passlist.txt; ( egrep ' Failed\.' /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/runlist.txt; egrep ' Error\.' /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/runlist.txt; egrep -v ' Passed\.' /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/runlist.txt ) | sort | uniq > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/faillist.txt; if [ ${jtregExitCode} != 0 -o -s /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/faillist.txt ] ; then expand /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/faillist.txt | cut -d' ' -f1 | sed -e 's@^@FAILED: @' >> /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/Stats.txt; if [ ${jtregExitCode} = 0 ] ; then jtregExitCode=1; fi; fi; runc="`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/runlist.txt      | wc -l | awk '{print $1;}'`"; passc="`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/passlist.txt    | wc -l | awk '{print $1;}'`"; failc="`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/faillist.txt    | wc -l | awk '{print $1;}'`"; exclc="`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/excludelist.txt | wc -l | awk '{print $1;}'`"; echo "TEST STATS: name=jdk_lang  run=${runc}  pass=${passc}  fail=${failc}  excluded=${exclc}" >> /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/Stats.txt; else echo "Missing file: ${_summary}" >> /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/Stats.txt; fi; if [ -f /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/Stats.txt ] ; then cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/Stats.txt; fi; ( mkdir -p `dirname /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/ARCHIVE_BUNDLE.zip` && cd /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang && chmod -R a+r . && zip -q -r /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/ARCHIVE_BUNDLE.zip . ) ; if [ ! -s /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/exitcode.txt; fi ; testExitCode=`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode} )                                          \
+	) 2>&1 | tee /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/output.txt ; if [ ! -s /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/exitcode.txt; fi ; testExitCode=`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode}
+Directory "/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/JTreport" not found: creating
+Directory "/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/JTwork" not found: creating
+Directory "/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_lang/JTwork/scratch" not found: creating
+--------------------------------------------------
+TEST: java/lang/annotation/AnnotationTypeMismatchException/FoundType.java
+  build: 1.073 seconds
+  compile: 1.058 seconds
+  main: 0.055 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/annotation/loaderLeak/Main.java
+  shell: 9.939 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/annotation/Missing/MissingTest.java
+  compile: 0.231 seconds
+  clean: 0.0 seconds
+  build: 0.0 seconds
+  main: 0.065 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/annotation/repeatingAnnotations/RepeatedUnitTest.java
+  compile: 0.358 seconds
+  build: 0.0 seconds
+  main: 0.092 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/annotation/package-info.java
+  compile: 0.074 seconds
+  build: 0.0 seconds
+  main: 0.048 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/annotation/ParameterAnnotations.java
+  build: 0.172 seconds
+  compile: 0.171 seconds
+  main: 0.167 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/annotation/RecursiveAnnotation.java
+  build: 0.03 seconds
+  compile: 0.029 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/annotation/TestIncompleteAnnotationExceptionNPE.java
+  build: 0.106 seconds
+  compile: 0.106 seconds
+  main: 0.04 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/annotation/TypeAnnotationReflection.java
+  build: 0.355 seconds
+  compile: 0.354 seconds
+  main: 0.064 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/annotation/TypeParamAnnotation.java
+  build: 0.118 seconds
+  compile: 0.118 seconds
+  main: 0.054 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/annotation/UnitTest.java
+  build: 2.508 seconds
+  compile: 2.507 seconds
+  main: 0.394 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Appendable/Basic.java
+  build: 0.113 seconds
+  compile: 0.113 seconds
+  main: 0.06 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/AssertionError/Cause.java
+  build: 0.065 seconds
+  compile: 0.064 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Boolean/Factory.java
+  build: 0.058 seconds
+  compile: 0.058 seconds
+  main: 0.076 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Boolean/GetBoolean.java
+  build: 0.059 seconds
+  compile: 0.059 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Boolean/MakeBooleanComparable.java
+  build: 0.092 seconds
+  compile: 0.092 seconds
+  main: 0.043 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Boolean/ParseBoolean.java
+  build: 0.064 seconds
+  compile: 0.064 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Byte/Decode.java
+  build: 0.092 seconds
+  compile: 0.092 seconds
+  main: 0.039 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Character/CheckProp.java
+  build: 0.097 seconds
+  compile: 0.097 seconds
+  main: 0.908 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Character/CheckScript.java
+  build: 0.084 seconds
+  compile: 0.084 seconds
+  main: 0.358 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Class/forName/InitArg.java
+  build: 0.035 seconds
+  compile: 0.033 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Class/forName/InvalidNameWithSlash.java
+  build: 0.061 seconds
+  compile: 0.061 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Class/forName/NonJavaNames.sh
+  compile: 0.124 seconds
+  shell: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Class/getClasses/Sanity.java
+  build: 0.027 seconds
+  compile: 0.026 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Class/getDeclaredClasses/Sanity.java
+  build: 0.064 seconds
+  compile: 0.063 seconds
+  main: 0.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Class/getDeclaredClasses/TypeTag.java
+  build: 0.064 seconds
+  compile: 0.064 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Class/getDeclaredField/Exceptions.java
+  build: 0.104 seconds
+  compile: 0.104 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Class/getDeclaredMethod/Exceptions.java
+  build: 0.103 seconds
+  compile: 0.103 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Class/getDeclaringClass/Sanity.java
+  build: 0.064 seconds
+  compile: 0.064 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Class/getEnclosingClass/EnclosingClassTest.java
+  shell: 0.011 seconds
+  shell: 1.371 seconds
+  build: 0.0 seconds
+  main: 0.226 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Class/getEnclosingClass/T4992170.java
+  build: 0.072 seconds
+  compile: 0.072 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Class/getEnclosingConstructor/EnclosingConstructorTests.java
+  build: 0.087 seconds
+  compile: 0.087 seconds
+  main: 0.044 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Class/getEnclosingMethod/EnclosingMethodTests.java
+  build: 0.074 seconds
+  compile: 0.074 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Class/getField/Exceptions.java
+  build: 0.111 seconds
+  compile: 0.111 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Class/getMethod/Exceptions.java
+  build: 0.101 seconds
+  compile: 0.101 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Class/getMethod/NullInParamList.java
+  build: 0.061 seconds
+  compile: 0.06 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Class/getMethods/NonPublicStaticInitializer.java
+  build: 0.062 seconds
+  compile: 0.061 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Class/getMethods/StarInheritance.java
+  build: 0.135 seconds
+  compile: 0.135 seconds
+  main: 0.051 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Class/getModifiers/ForInnerClass.java
+  build: 0.061 seconds
+  compile: 0.06 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Class/getModifiers/ForStaticInnerClass.java
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Class/getModifiers/ResolveFrom.java
+  build: 0.063 seconds
+  compile: 0.062 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Class/getModifiers/StripACC_SUPER.java
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Class/Cast.java
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  main: 0.088 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Class/IsAnnotationType.java
+  build: 0.087 seconds
+  compile: 0.086 seconds
+  main: 0.041 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Class/IsEnum.java
+  build: 0.072 seconds
+  compile: 0.072 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Class/IsSynthetic.java
+  build: 0.077 seconds
+  compile: 0.077 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ClassLoader/deadlock/GetResource.java
+  build: 0.074 seconds
+  compile: 0.073 seconds
+  build: 0.0 seconds
+  main: 0.139 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ClassLoader/deadlock/TestCrossDelegate.sh
+  shell: 2.361 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ClassLoader/deadlock/TestOneWayDelegate.sh
+  shell: 2.431 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ClassLoader/defineClass/DefineClassByteBuffer.java
+  build: 0.048 seconds
+  compile: 0.048 seconds
+  build: 0.0 seconds
+  main: 0.051 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ClassLoader/findSystemClass/Loader.java
+  build: 0.117 seconds
+  compile: 0.117 seconds
+  main: 0.128 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ClassLoader/Assert.java
+  shell: 8.182 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ClassLoader/ExceptionHidingLoader.java
+  build: 0.015 seconds
+  compile: 0.015 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ClassLoader/GetDotResource.java
+  build: 0.059 seconds
+  compile: 0.059 seconds
+  shell: 0.101 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ClassLoader/GetPackage.java
+  build: 0.063 seconds
+  compile: 0.063 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ClassLoader/LoadNullClass.java
+  build: 0.07 seconds
+  compile: 0.07 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ClassLoader/UninitializedParent.java
+  build: 0.062 seconds
+  compile: 0.061 seconds
+  main: 0.117 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Double/BitwiseConversion.java
+  build: 0.092 seconds
+  compile: 0.091 seconds
+  main: 0.044 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Double/Constants.java
+  compile: 0.062 seconds
+TEST RESULT: Passed. Compilation successful
+--------------------------------------------------
+TEST: java/lang/Double/Extrema.java
+  build: 0.069 seconds
+  compile: 0.069 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Double/NaNInfinityParsing.java
+  build: 0.072 seconds
+  compile: 0.072 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Double/ParseDouble.java
+  build: 0.093 seconds
+  compile: 0.093 seconds
+  main: 0.85 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Double/ParseHexFloatingPoint.java
+  build: 0.097 seconds
+  compile: 0.096 seconds
+  main: 1.875 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Double/ToHexString.java
+  build: 0.084 seconds
+  compile: 0.084 seconds
+  main: 0.061 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Double/ToString.java
+  build: 0.058 seconds
+  compile: 0.058 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Enum/ValueOf.java
+  compile: 0.356 seconds
+  build: 0.0 seconds
+  main: 0.075 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Float/BitwiseConversion.java
+  build: 0.102 seconds
+  compile: 0.102 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Float/Constants.java
+  compile: 0.054 seconds
+TEST RESULT: Passed. Compilation successful
+--------------------------------------------------
+TEST: java/lang/Float/Extrema.java
+  build: 0.054 seconds
+  compile: 0.054 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Float/NaNInfinityParsing.java
+  build: 0.061 seconds
+  compile: 0.06 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Float/ParseFloat.java
+  build: 0.062 seconds
+  compile: 0.062 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/InheritableThreadLocal/Basic.java
+  build: 0.061 seconds
+  compile: 0.061 seconds
+  main: 0.117 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/InheritableThreadLocal/ITLRemoveTest.java
+  build: 0.028 seconds
+  compile: 0.028 seconds
+  main: 0.116 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/appendToClassLoaderSearch/CircularityErrorTest.sh
+  shell: 2.645 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/appendToClassLoaderSearch/ClassUnloadTest.sh
+  build: 0.076 seconds
+  compile: 0.076 seconds
+  shell: 1.063 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/appendToClassLoaderSearch/run_tests.sh
+  build: 0.086 seconds
+  compile: 0.085 seconds
+  shell: 3.293 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/BootClassPath/BootClassPathTest.sh
+  shell: 3.551 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/PremainClass/InheritAgent0001.java
+  shell: 0.945 seconds
+  build: 0.018 seconds
+  compile: 0.017 seconds
+  main: 0.092 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/PremainClass/InheritAgent0010.java
+  shell: 0.865 seconds
+  build: 0.0 seconds
+  main: 0.102 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/PremainClass/InheritAgent0011.java
+  shell: 0.927 seconds
+  build: 0.0 seconds
+  main: 0.095 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/PremainClass/InheritAgent0100.java
+  shell: 0.86 seconds
+  build: 0.0 seconds
+  main: 0.1 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/PremainClass/InheritAgent0101.java
+  shell: 0.972 seconds
+  build: 0.0 seconds
+  main: 0.114 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/PremainClass/InheritAgent0110.java
+  shell: 0.961 seconds
+  build: 0.0 seconds
+  main: 0.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/PremainClass/InheritAgent0111.java
+  shell: 0.894 seconds
+  build: 0.0 seconds
+  main: 0.093 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/PremainClass/InheritAgent1000.java
+  shell: 0.909 seconds
+  build: 0.0 seconds
+  main: 0.109 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/PremainClass/InheritAgent1001.java
+  shell: 0.887 seconds
+  build: 0.0 seconds
+  main: 0.1 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/PremainClass/InheritAgent1010.java
+  shell: 0.929 seconds
+  build: 0.0 seconds
+  main: 0.118 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/PremainClass/InheritAgent1011.java
+  shell: 0.914 seconds
+  build: 0.0 seconds
+  main: 0.104 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/PremainClass/InheritAgent1100.java
+  shell: 0.89 seconds
+  build: 0.0 seconds
+  main: 0.104 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/PremainClass/InheritAgent1101.java
+  shell: 0.881 seconds
+  build: 0.0 seconds
+  main: 0.105 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/PremainClass/InheritAgent1110.java
+  shell: 0.912 seconds
+  build: 0.0 seconds
+  main: 0.1 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/PremainClass/InheritAgent1111.java
+  shell: 0.93 seconds
+  build: 0.0 seconds
+  main: 0.103 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/PremainClass/NoPremainAgent.sh
+  build: 0.0 seconds
+  shell: 0.851 seconds
+  shell: 0.178 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/PremainClass/PremainClassTest.sh
+  shell: 0.856 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/PremainClass/ZeroArgPremainAgent.sh
+  build: 0.0 seconds
+  shell: 0.922 seconds
+  shell: 0.166 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/AddTransformerTest.java
+  build: 0.112 seconds
+  compile: 0.112 seconds
+  shell: 0.908 seconds
+  build: 0.0 seconds
+  main: 0.115 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/AppendToBootstrapClassPathTest.java
+  build: 0.028 seconds
+  compile: 0.028 seconds
+  shell: 0.005 seconds
+  shell: 0.89 seconds
+  build: 0.001 seconds
+  main: 0.095 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/AppendToClassPathTest.java
+  build: 0.063 seconds
+  compile: 0.063 seconds
+  shell: 0.767 seconds
+  shell: 0.885 seconds
+  build: 0.0 seconds
+  main: 0.121 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/FromShutdownHook.java
+  build: 0.07 seconds
+  compile: 0.07 seconds
+  shell: 0.952 seconds
+  build: 0.0 seconds
+  main: 0.101 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/GetAllLoadedClassesTest.java
+  build: 0.062 seconds
+  compile: 0.061 seconds
+  shell: 0.883 seconds
+  build: 0.001 seconds
+  main: 0.106 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/GetInitiatedClassesTest.java
+  build: 0.062 seconds
+  compile: 0.062 seconds
+  shell: 0.978 seconds
+  build: 0.0 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/GetObjectSizeTest.java
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  shell: 0.936 seconds
+  build: 0.0 seconds
+  main: 0.091 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/IsModifiableClassAgent.java
+  build: 0.07 seconds
+  compile: 0.07 seconds
+  shell: 0.947 seconds
+  build: 0.0 seconds
+  main: 0.416 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/ManifestTest.sh
+  build: 0.058 seconds
+  compile: 0.058 seconds
+  shell: 10.636 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/NativeMethodPrefixAgent.java
+  shell: 3.711 seconds
+  build: 0.065 seconds
+  compile: 0.064 seconds
+  main: 0.25 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/NoTransformerAddedTest.java
+  build: 0.059 seconds
+  compile: 0.058 seconds
+  shell: 0.97 seconds
+  build: 0.0 seconds
+  main: 0.112 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/NullGetObjectSizeTest.java
+  build: 0.067 seconds
+  compile: 0.066 seconds
+  shell: 0.91 seconds
+  build: 0.0 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/NullRedefineClassesTests.java
+  build: 0.061 seconds
+  compile: 0.061 seconds
+  shell: 0.913 seconds
+  build: 0.0 seconds
+  main: 0.093 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/NullTransformerAddTest.java
+  build: 0.063 seconds
+  compile: 0.062 seconds
+  shell: 0.915 seconds
+  build: 0.0 seconds
+  main: 0.108 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/NullTransformerRemoveTest.java
+  build: 0.058 seconds
+  compile: 0.058 seconds
+  shell: 0.884 seconds
+  build: 0.0 seconds
+  main: 0.109 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/RedefineBigClass.sh
+  shell: 1.039 seconds
+  build: 0.696 seconds
+  compile: 0.696 seconds
+  shell: 140.256 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/RedefineClassesDisabledTest.java
+  build: 0.037 seconds
+  compile: 0.036 seconds
+  shell: 1.538 seconds
+  shell: 0.863 seconds
+  build: 0.001 seconds
+  main: 0.103 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/RedefineClassesTests.java
+  build: 0.075 seconds
+  compile: 0.074 seconds
+  shell: 1.577 seconds
+  shell: 0.865 seconds
+  build: 0.0 seconds
+  main: 0.104 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/RedefineClassWithNativeMethod.sh
+  shell: 1.022 seconds
+  build: 0.073 seconds
+  compile: 0.073 seconds
+  shell: 2.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/RedefineMethodAddInvoke.sh
+  shell: 0.924 seconds
+  build: 0.072 seconds
+  compile: 0.072 seconds
+  shell: 1.77 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/RedefineMethodInBacktrace.sh
+  shell: 0.964 seconds
+  build: 0.072 seconds
+  compile: 0.071 seconds
+  shell: 0.839 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/RedefineMethodWithAnnotations.sh
+  shell: 0.933 seconds
+  build: 0.076 seconds
+  compile: 0.076 seconds
+  shell: 0.843 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/RedefineSubclassWithTwoInterfaces.sh
+  shell: 0.879 seconds
+  build: 0.081 seconds
+  compile: 0.079 seconds
+  shell: 0.864 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/RemoveAbsentTransformerTest.java
+  build: 0.061 seconds
+  compile: 0.061 seconds
+  shell: 0.877 seconds
+  build: 0.0 seconds
+  main: 0.096 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/RemoveTransformerTest.java
+  build: 0.065 seconds
+  compile: 0.065 seconds
+  shell: 0.866 seconds
+  build: 0.0 seconds
+  main: 0.112 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/RetransformAgent.java
+  shell: 3.518 seconds
+  build: 0.3 seconds
+  compile: 0.3 seconds
+  main: 0.129 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/SingleTransformerTest.java
+  build: 0.02 seconds
+  compile: 0.02 seconds
+  shell: 0.922 seconds
+  build: 0.0 seconds
+  main: 0.113 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/StressGetObjectSizeTest.sh
+  build: 0.071 seconds
+  compile: 0.071 seconds
+  shell: 0.957 seconds
+  shell: 0.636 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/TransformerManagementThreadAddTests.java
+  build: 0.102 seconds
+  compile: 0.102 seconds
+  shell: 0.866 seconds
+  build: 0.0 seconds
+  main: 0.776 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/TransformerManagementThreadRemoveTests.java
+  build: 0.033 seconds
+  compile: 0.033 seconds
+  shell: 0.878 seconds
+  build: 0.0 seconds
+  main: 0.627 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/TransformMethodTest.java
+  build: 0.059 seconds
+  compile: 0.059 seconds
+  shell: 0.901 seconds
+  build: 0.0 seconds
+  main: 0.112 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/instrument/VerifyLocalVariableTableOnRetransformTest.sh
+  build: 0.07 seconds
+  compile: 0.07 seconds
+  compile: 0.056 seconds
+  shell: 0.92 seconds
+  shell: 0.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Integer/BitTwiddle.java
+  build: 0.072 seconds
+  compile: 0.072 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Integer/Decode.java
+  build: 0.059 seconds
+  compile: 0.058 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Integer/GetInteger.java
+  build: 0.054 seconds
+  compile: 0.052 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Integer/ParsingTest.java
+  build: 0.063 seconds
+  compile: 0.062 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Integer/Unsigned.java
+  build: 0.075 seconds
+  compile: 0.074 seconds
+  main: 0.09 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Integer/ValueOf.java
+  build: 0.053 seconds
+  compile: 0.051 seconds
+  main: 0.088 seconds
+  build: 0.0 seconds
+  main: 0.152 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/invoke/6987555/Test6987555.java
+  build: 0.077 seconds
+  compile: 0.077 seconds
+  main: 0.185 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/invoke/6991596/Test6991596.java
+  build: 0.109 seconds
+  compile: 0.109 seconds
+  main: 0.188 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/invoke/6998541/Test6998541.java
+  build: 0.106 seconds
+  compile: 0.106 seconds
+  main: 1.5 seconds
+  build: 0.0 seconds
+  main: 0.981 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/invoke/7087570/Test7087570.java
+  build: 0.106 seconds
+  compile: 0.105 seconds
+  main: 0.21 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/invoke/7157574/Test7157574.java
+  build: 0.049 seconds
+  compile: 0.049 seconds
+  main: 0.052 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/invoke/7196190/ClassForNameTest.java
+  build: 0.072 seconds
+  compile: 0.072 seconds
+  main: 0.202 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/invoke/7196190/GetUnsafeTest.java
+  build: 0.077 seconds
+  compile: 0.077 seconds
+  main: 0.213 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/invoke/7196190/MHProxyTest.java
+  build: 0.219 seconds
+  compile: 0.219 seconds
+  main: 0.223 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/invoke/lambda/LambdaAccessControlDoPrivilegedTest.java
+  compile: 0.082 seconds
+  build: 0.0 seconds
+  main: 1.211 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/invoke/lambda/LambdaAccessControlTest.java
+  compile: 0.043 seconds
+  build: 0.0 seconds
+  main: 0.227 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/invoke/lambda/LambdaClassLoaderSerialization.java
+  build: 0.056 seconds
+  compile: 0.056 seconds
+  main: 0.074 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/invoke/lambda/LambdaSerialization.java
+  build: 0.069 seconds
+  compile: 0.069 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/invoke/AccessControlTest.java
+???
+TEST: java/lang/invoke/BigArityTest.java
+???
+TEST: java/lang/invoke/CallSiteTest.java
+  build: 0.548 seconds
+  compile: 0.548 seconds
+  compile: 0.043 seconds
+  build: 0.0 seconds
+  main: 0.526 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/invoke/ClassValueTest.java
+???
+TEST: java/lang/invoke/InvokeDynamicPrintArgs.java
+  build: 0.0 seconds
+  compile: 0.114 seconds
+  build: 0.0 seconds
+  main: 0.369 seconds
+  build: 0.001 seconds
+  main: 0.404 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/invoke/InvokeGenericTest.java
+???
+TEST: java/lang/invoke/JavaDocExamplesTest.java
+???
+TEST: java/lang/invoke/MethodHandlesTest.java
+???
+TEST: java/lang/invoke/MethodTypeTest.java
+???
+TEST: java/lang/invoke/PermuteArgsTest.java
+???
+TEST: java/lang/invoke/PrivateInvokeTest.java
+???
+TEST: java/lang/invoke/RicochetTest.java
+???
+TEST: java/lang/invoke/ThrowExceptionsTest.java
+???
+TEST: java/lang/Long/BitTwiddle.java
+  build: 0.04 seconds
+  compile: 0.04 seconds
+  main: 0.05 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Long/Decode.java
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Long/GetLong.java
+  build: 0.05 seconds
+  compile: 0.05 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Long/ParsingTest.java
+  build: 0.053 seconds
+  compile: 0.053 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Long/Unsigned.java
+  build: 0.081 seconds
+  compile: 0.081 seconds
+  main: 0.069 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/BufferPoolMXBean/Basic.java
+  build: 0.091 seconds
+  compile: 0.091 seconds
+  main: 0.557 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ClassLoadingMXBean/LoadCounts.java
+  build: 0.031 seconds
+  compile: 0.031 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/CompilationMXBean/Basic.java
+  build: 0.063 seconds
+  compile: 0.063 seconds
+  main: 3.057 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/CompositeData/MemoryNotifInfoCompositeData.java
+  compile: 0.086 seconds
+  build: 0.102 seconds
+  compile: 0.102 seconds
+  build: 0.0 seconds
+  main: 0.059 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/CompositeData/MemoryUsageCompositeData.java
+  build: 0.067 seconds
+  compile: 0.067 seconds
+  build: 0.0 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/CompositeData/ThreadInfoCompositeData.java
+  compile: 0.105 seconds
+  build: 0.119 seconds
+  compile: 0.119 seconds
+  build: 0.0 seconds
+  main: 0.051 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/GarbageCollectorMXBean/GcInfoCompositeType.java
+  build: 0.084 seconds
+  compile: 0.083 seconds
+  main: 0.197 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ManagementFactory/GetObjectName.java
+  build: 0.035 seconds
+  compile: 0.035 seconds
+  main: 0.229 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ManagementFactory/GetPlatformManagementInterfaces.java
+  build: 0.068 seconds
+  compile: 0.068 seconds
+  main: 0.092 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ManagementFactory/GetPlatformMXBeans.java
+  build: 0.092 seconds
+  compile: 0.091 seconds
+  main: 0.097 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ManagementFactory/MBeanServerMXBeanUnsupportedTest.java
+  clean: 0.0 seconds
+  build: 0.034 seconds
+  compile: 0.034 seconds
+  build: 0.0 seconds
+  main: 0.182 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ManagementFactory/MXBeanException.java
+  build: 0.066 seconds
+  compile: 0.066 seconds
+  build: 0.0 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ManagementFactory/MXBeanProxyTest.java
+  build: 0.069 seconds
+  compile: 0.069 seconds
+  main: 0.161 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ManagementFactory/PlatformMBeanServerTest.java
+  build: 0.083 seconds
+  compile: 0.083 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ManagementFactory/ProxyExceptions.java
+  build: 0.066 seconds
+  compile: 0.066 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ManagementFactory/ProxyTypeMapping.java
+  compile: 0.098 seconds
+  build: 0.0 seconds
+  main: 0.223 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ManagementFactory/ThreadMXBeanProxy.java
+  build: 0.065 seconds
+  compile: 0.065 seconds
+  main: 0.24 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ManagementFactory/ValidateOpenTypes.java
+  compile: 0.069 seconds
+  build: 0.0 seconds
+  main: 0.218 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/MemoryMXBean/CollectionUsageThresholdParallelGC.sh
+  build: 0.065 seconds
+  compile: 0.064 seconds
+  shell: 0.137 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/MemoryMXBean/CollectionUsageThresholdSerialGC.sh
+  build: 0.0 seconds
+  shell: 0.11 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/MemoryMXBean/GetMBeanInfo.java
+  build: 0.025 seconds
+  compile: 0.024 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/MemoryMXBean/LowMemoryTest.java
+  build: 0.113 seconds
+  compile: 0.112 seconds
+  build: 0.0 seconds
+  main: 1.819 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/MemoryMXBean/LowMemoryTestConcMarkSweepGC.sh
+  build: 0.001 seconds
+  shell: 3.13 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/MemoryMXBean/LowMemoryTestParallelGC.sh
+  build: 0.0 seconds
+  shell: 1.814 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/MemoryMXBean/LowMemoryTestSerialGC.sh
+  build: 0.0 seconds
+  shell: 2.168 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/MemoryMXBean/MemoryManagement.java
+  build: 0.106 seconds
+  compile: 0.105 seconds
+  build: 0.0 seconds
+  main: 0.366 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/MemoryMXBean/MemoryManagementConcMarkSweepGC.sh
+  build: 0.0 seconds
+  shell: 0.391 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/MemoryMXBean/MemoryManagementParallelGC.sh
+  build: 0.0 seconds
+  shell: 0.342 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/MemoryMXBean/MemoryManagementSerialGC.sh
+  build: 0.0 seconds
+  shell: 0.38 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/MemoryMXBean/MemoryTest.java
+  build: 0.035 seconds
+  compile: 0.035 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/MemoryMXBean/MemoryTestAllGC.sh
+  compile: 0.068 seconds
+  shell: 0.157 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/MemoryMXBean/Pending.java
+  build: 0.081 seconds
+  compile: 0.08 seconds
+  main: 2.667 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/MemoryMXBean/PendingAllGC.sh
+  compile: 0.073 seconds
+  shell: 7.153 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/MemoryPoolMXBean/ThresholdTest.java
+  build: 0.073 seconds
+  compile: 0.073 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/MXBean/MXBeanBehavior.java
+  build: 0.105 seconds
+  compile: 0.105 seconds
+  main: 0.175 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/OperatingSystemMXBean/PlatformMXBeanTest.java
+  build: 0.058 seconds
+  compile: 0.058 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/OperatingSystemMXBean/TestSystemLoadAvg.sh
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  shell: 0.097 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/PlatformLoggingMXBean/LoggingMXBeanTest.java
+  build: 0.075 seconds
+  compile: 0.075 seconds
+  build: 0.001 seconds
+  main: 0.092 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/PlatformLoggingMXBean/PlatformLoggingMXBeanTest.java
+  build: 0.068 seconds
+  compile: 0.067 seconds
+  build: 0.0 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/RuntimeMXBean/GetSystemProperties.java
+  build: 0.067 seconds
+  compile: 0.066 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/RuntimeMXBean/PropertiesTest.java
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  build: 0.0 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/RuntimeMXBean/TestInputArgument.sh
+  compile: 0.059 seconds
+  shell: 0.283 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/RuntimeMXBean/UpTime.java
+  build: 0.061 seconds
+  compile: 0.061 seconds
+  main: 5.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ThreadMXBean/AllThreadIds.java
+  build: 0.017 seconds
+  compile: 0.017 seconds
+  build: 0.076 seconds
+  compile: 0.076 seconds
+  main: 0.35 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ThreadMXBean/DisableTest.java
+  build: 0.059 seconds
+  compile: 0.059 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ThreadMXBean/EnableTest.java
+  build: 0.064 seconds
+  compile: 0.064 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ThreadMXBean/FindDeadlocks.java
+  build: 0.068 seconds
+  compile: 0.068 seconds
+  build: 0.075 seconds
+  compile: 0.075 seconds
+  build: 0.001 seconds
+  build: 0.064 seconds
+  compile: 0.063 seconds
+  main: 0.506 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ThreadMXBean/FindMonitorDeadlock.java
+  build: 0.0 seconds
+  build: 0.0 seconds
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  main: 0.305 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ThreadMXBean/InvalidThreadID.java
+  build: 0.059 seconds
+  compile: 0.059 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ThreadMXBean/LockedMonitors.java
+  build: 0.0 seconds
+  build: 0.095 seconds
+  compile: 0.095 seconds
+  build: 0.0 seconds
+  build: 0.02 seconds
+  compile: 0.02 seconds
+  main: 0.234 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ThreadMXBean/LockedSynchronizers.java
+  build: 0.0 seconds
+  build: 0.047 seconds
+  compile: 0.047 seconds
+  build: 0.0 seconds
+  build: 0.014 seconds
+  compile: 0.014 seconds
+  main: 0.233 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ThreadMXBean/Locks.java
+  build: 0.021 seconds
+  compile: 0.021 seconds
+  build: 0.079 seconds
+  compile: 0.078 seconds
+  main: 1.092 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ThreadMXBean/MyOwnSynchronizer.java
+  build: 0.0 seconds
+  build: 0.0 seconds
+  build: 0.081 seconds
+  compile: 0.08 seconds
+  main: 0.203 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ThreadMXBean/ResetPeakThreadCount.java
+  build: 0.027 seconds
+  compile: 0.027 seconds
+  build: 0.0 seconds
+  build: 0.0 seconds
+  main: 0.295 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ThreadMXBean/SharedSynchronizer.java
+  build: 0.068 seconds
+  compile: 0.068 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ThreadMXBean/ThreadBlockedCount.java
+  build: 0.0 seconds
+  build: 0.066 seconds
+  compile: 0.065 seconds
+  main: 0.779 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ThreadMXBean/ThreadCounts.java
+  build: 0.028 seconds
+  compile: 0.027 seconds
+  main: 0.29 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ThreadMXBean/ThreadCpuTime.java
+  build: 0.027 seconds
+  compile: 0.027 seconds
+  main: 0.41 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ThreadMXBean/ThreadInfoArray.java
+  build: 0.024 seconds
+  compile: 0.023 seconds
+  build: 0.0 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ThreadMXBean/ThreadLists.java
+  build: 0.064 seconds
+  compile: 0.064 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ThreadMXBean/ThreadStackTrace.java
+  build: 0.059 seconds
+  compile: 0.058 seconds
+  build: 0.069 seconds
+  compile: 0.069 seconds
+  main: 0.384 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/management/ThreadMXBean/ThreadUserTime.java
+  build: 0.031 seconds
+  compile: 0.031 seconds
+  main: 0.423 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Math/AbsPositiveZero.java
+  build: 0.019 seconds
+  compile: 0.019 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Math/Atan2Tests.java
+  build: 0.161 seconds
+  compile: 0.161 seconds
+  main: 0.043 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Math/CeilAndFloorTests.java
+  build: 0.101 seconds
+  compile: 0.1 seconds
+  main: 0.167 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Math/CubeRootTests.java
+  build: 0.077 seconds
+  compile: 0.077 seconds
+  main: 0.16 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Math/DivModTests.java
+  build: 0.032 seconds
+  compile: 0.032 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Math/ExactArithTests.java
+  build: 0.072 seconds
+  compile: 0.071 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Math/Expm1Tests.java
+  build: 0.097 seconds
+  compile: 0.097 seconds
+  main: 0.095 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Math/HyperbolicTests.java
+  build: 0.153 seconds
+  compile: 0.153 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Math/HypotTests.java
+  build: 0.074 seconds
+  compile: 0.074 seconds
+  main: 0.411 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Math/IeeeRecommendedTests.java
+  build: 0.153 seconds
+  compile: 0.153 seconds
+  main: 0.115 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Math/Log10Tests.java
+  build: 0.063 seconds
+  compile: 0.062 seconds
+  main: 0.095 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Math/Log1pTests.java
+  build: 0.106 seconds
+  compile: 0.105 seconds
+  main: 0.143 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Math/MinMax.java
+  build: 0.035 seconds
+  compile: 0.034 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Math/PowTests.java
+  build: 0.069 seconds
+  compile: 0.069 seconds
+  main: 0.091 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Math/Rint.java
+  build: 0.094 seconds
+  compile: 0.093 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Math/RoundTests.java
+  build: 0.055 seconds
+  compile: 0.055 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Math/TanTests.java
+  build: 0.065 seconds
+  compile: 0.065 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Math/WorstCaseTests.java
+  build: 0.0 seconds
+  build: 0.089 seconds
+  compile: 0.088 seconds
+  build: 0.0 seconds
+  main: 0.047 seconds
+  build: 0.001 seconds
+  main: 2.813 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ProcessBuilder/Basic.java
+  build: 0.524 seconds
+  compile: 0.524 seconds
+  main: 7.689 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ProcessBuilder/DestroyTest.java
+  build: 0.027 seconds
+  compile: 0.027 seconds
+  main: 2.096 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ProcessBuilder/SecurityManagerClinit.java
+  build: 0.016 seconds
+  compile: 0.016 seconds
+  main: 0.147 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ProcessBuilder/Zombies.java
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  main: 0.092 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ref/SoftReference/Bash.java
+  build: 0.094 seconds
+  compile: 0.093 seconds
+  main: 0.383 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ref/SoftReference/Pin.java
+  build: 0.054 seconds
+  compile: 0.054 seconds
+  main: 7.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ref/Basic.java
+  build: 0.076 seconds
+  compile: 0.076 seconds
+  main: 0.401 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ref/EnqueueNullRef.java
+  build: 0.053 seconds
+  compile: 0.052 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ref/NullQueue.java
+  build: 0.097 seconds
+  compile: 0.096 seconds
+  main: 0.192 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ref/ReferenceEnqueue.java
+  build: 0.014 seconds
+  compile: 0.014 seconds
+  main: 1.856 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ref/ReferenceEnqueuePending.java
+  build: 0.021 seconds
+  compile: 0.021 seconds
+  main: 1.301 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Array/ExceedMaxDim.java
+  build: 0.014 seconds
+  compile: 0.014 seconds
+  main: 0.151 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Assignment/ArrayAssignment.java
+  build: 0.015 seconds
+  compile: 0.015 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Constructor/Equals.java
+  compile: 0.056 seconds
+  build: 0.0 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Constructor/GenericStringTest.java
+  build: 0.067 seconds
+  compile: 0.066 seconds
+  main: 0.09 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Constructor/TestParameterAnnotations.java
+  build: 0.066 seconds
+  compile: 0.066 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Field/4490864/StaticFieldTest.java
+  build: 0.059 seconds
+  compile: 0.058 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Field/4498653/StaticInitializerTest.java
+  build: 0.055 seconds
+  compile: 0.055 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Field/GenericStringTest.java
+  build: 0.063 seconds
+  compile: 0.062 seconds
+  main: 0.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Field/Set.java
+  build: 0.064 seconds
+  compile: 0.064 seconds
+  main: 0.101 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Generics/exceptionCauseTest.java
+  build: 0.05 seconds
+  compile: 0.05 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Generics/getAnnotationTest.java
+  build: 0.09 seconds
+  compile: 0.09 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Generics/HashCodeTest.java
+  build: 0.061 seconds
+  compile: 0.061 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Generics/Probe.java
+  build: 0.074 seconds
+  compile: 0.074 seconds
+  main: 0.115 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Generics/SignatureTest.java
+  build: 0.053 seconds
+  compile: 0.053 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Generics/StringsAndBounds.java
+  build: 0.066 seconds
+  compile: 0.066 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Generics/TestBadSignatures.java
+  build: 0.106 seconds
+  compile: 0.106 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Generics/TestC1.java
+  compile: 0.08 seconds
+  build: 0.0 seconds
+  main: 0.107 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Generics/TestC2.java
+  compile: 0.067 seconds
+  build: 0.0 seconds
+  main: 0.11 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Generics/TestN1.java
+  compile: 0.055 seconds
+  build: 0.0 seconds
+  main: 0.099 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Generics/TestParameterizedType.java
+  build: 0.027 seconds
+  compile: 0.027 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Generics/TestPlainArrayNotGeneric.java
+  build: 0.071 seconds
+  compile: 0.071 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Method/invoke/ErrorInInvoke.java
+  build: 0.089 seconds
+  compile: 0.089 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Method/invoke/IllegalAccessInInvoke.java
+  build: 0.048 seconds
+  compile: 0.048 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Method/Equals.java
+  clean: 0.0 seconds
+  compile: 0.058 seconds
+  build: 0.001 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Method/GenericStringTest.java
+  build: 0.063 seconds
+  compile: 0.063 seconds
+  main: 0.09 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Method/InheritedInterfaceMethods.java
+  build: 0.053 seconds
+  compile: 0.052 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Method/InheritedMethods.java
+  build: 0.093 seconds
+  compile: 0.093 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Method/IsDefaultTest.java
+  build: 0.064 seconds
+  compile: 0.064 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Modifier/toStringTest.java
+  build: 0.052 seconds
+  compile: 0.052 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Parameter/WithoutParameters.java
+  build: 0.068 seconds
+  compile: 0.068 seconds
+  main: 0.094 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Parameter/WithParameters.java
+  compile: 0.064 seconds
+  build: 0.0 seconds
+  main: 0.088 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Proxy/nonJavaNames/Test.java
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  build: 0.0 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Proxy/returnTypes/Test.java
+  build: 0.051 seconds
+  compile: 0.051 seconds
+  build: 0.061 seconds
+  compile: 0.06 seconds
+  main: 0.097 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Proxy/Basic1.java
+  build: 0.105 seconds
+  compile: 0.105 seconds
+  build: 0.001 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Proxy/Boxing.java
+  build: 0.081 seconds
+  compile: 0.08 seconds
+  main: 0.144 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Proxy/CharType.java
+  build: 0.017 seconds
+  compile: 0.017 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Proxy/ClassRestrictions.java
+  build: 0.061 seconds
+  compile: 0.061 seconds
+  build: 0.0 seconds
+  main: 0.088 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/Proxy/NullClassLoader.java
+  build: 0.052 seconds
+  compile: 0.052 seconds
+  build: 0.0 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/ReflectPermission/Exceptions.java
+  build: 0.059 seconds
+  compile: 0.058 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/TypeVariable/TestAnnotatedElement.java
+  build: 0.058 seconds
+  compile: 0.058 seconds
+  main: 0.076 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/DefaultAccessibility.java
+  build: 0.058 seconds
+  compile: 0.058 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/reflect/OldenCompilingWithDefaults.java
+  compile: 0.09 seconds
+  compile: 0.096 seconds
+  compile: 0.096 seconds
+  compile: 0.056 seconds
+TEST RESULT: Passed. Compilation successful
+--------------------------------------------------
+TEST: java/lang/Runtime/exec/ArgWithSpaceAndFinalBackslash.java
+  build: 0.063 seconds
+  compile: 0.062 seconds
+  main: 0.153 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Runtime/exec/BadEnvp.java
+  build: 0.021 seconds
+  compile: 0.02 seconds
+  main: 0.076 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Runtime/exec/ConcurrentRead.java
+  build: 0.079 seconds
+  compile: 0.079 seconds
+  main: 0.042 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Runtime/exec/Duped.java
+  build: 0.054 seconds
+  compile: 0.054 seconds
+  main: 0.178 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Runtime/exec/ExecEmptyString.java
+  build: 0.055 seconds
+  compile: 0.055 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Runtime/exec/ExecWithDir.java
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  main: 0.56 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Runtime/exec/ExecWithInput.java
+  build: 0.064 seconds
+  compile: 0.064 seconds
+  main: 0.37 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Runtime/exec/ExecWithLotsOfArgs.java
+  build: 0.025 seconds
+  compile: 0.025 seconds
+  main: 0.192 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Runtime/exec/ExitValue.java
+  build: 0.058 seconds
+  compile: 0.058 seconds
+  main: 0.158 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Runtime/exec/LotsOfDestroys.java
+  build: 0.019 seconds
+  compile: 0.019 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Runtime/exec/LotsOfOutput.java
+  build: 0.049 seconds
+  compile: 0.049 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Runtime/exec/SetCwd.java
+  build: 0.058 seconds
+  compile: 0.058 seconds
+  shell: 0.206 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Runtime/exec/SleepyCat.java
+  build: 0.067 seconds
+  compile: 0.067 seconds
+  main: 0.126 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Runtime/exec/Space.java
+  build: 0.022 seconds
+  compile: 0.022 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Runtime/exec/Status.java
+  build: 0.053 seconds
+  compile: 0.052 seconds
+  main: 0.252 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Runtime/exec/StreamsSurviveDestroy.java
+  build: 0.031 seconds
+  compile: 0.03 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Runtime/exec/WinCommand.java
+  build: 0.073 seconds
+  compile: 0.073 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Runtime/shutdown/ShutdownHooks.sh
+  build: 0.059 seconds
+  compile: 0.059 seconds
+  shell: 0.068 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/RuntimePermission/ExitVM.java
+  build: 0.058 seconds
+  compile: 0.058 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/SecurityManager/CheckPackageAccess.java
+  build: 0.055 seconds
+  compile: 0.055 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/SecurityManager/NoAWT.java
+  build: 0.06 seconds
+  compile: 0.059 seconds
+  main: 0.097 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Short/ByteSwap.java
+  build: 0.054 seconds
+  compile: 0.053 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Short/Decode.java
+  build: 0.076 seconds
+  compile: 0.076 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StackTraceElement/PublicConstructor.java
+  build: 0.053 seconds
+  compile: 0.053 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StrictMath/CubeRootTests.java
+  build: 0.083 seconds
+  compile: 0.082 seconds
+  main: 0.042 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StrictMath/ExactArithTests.java
+  build: 0.07 seconds
+  compile: 0.069 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StrictMath/Expm1Tests.java
+  build: 0.086 seconds
+  compile: 0.086 seconds
+  main: 0.042 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StrictMath/HyperbolicTests.java
+  build: 0.068 seconds
+  compile: 0.068 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StrictMath/HypotTests.java
+  build: 0.078 seconds
+  compile: 0.077 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StrictMath/Log10Tests.java
+  build: 0.09 seconds
+  compile: 0.09 seconds
+  main: 0.043 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StrictMath/Log1pTests.java
+  build: 0.062 seconds
+  compile: 0.061 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/String/CaseConvertSameInstance.java
+  build: 0.052 seconds
+  compile: 0.051 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/String/CaseInsensitiveComparator.java
+  build: 0.061 seconds
+  compile: 0.061 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/String/CompareIC.java
+  build: 0.054 seconds
+  compile: 0.054 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/String/ContentEquals.java
+  build: 0.059 seconds
+  compile: 0.059 seconds
+  main: 0.097 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/String/Encodings.java
+  build: 0.063 seconds
+  compile: 0.063 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/String/Exceptions.java
+  build: 0.197 seconds
+  compile: 0.197 seconds
+  main: 0.091 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/String/ICCBasher.java
+  build: 0.081 seconds
+  compile: 0.081 seconds
+  main: 0.052 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/String/IndexOfEmptyInEmpty.java
+  build: 0.056 seconds
+  compile: 0.055 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/String/IsEmpty.java
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/String/NonCharacterMapping.java
+  build: 0.062 seconds
+  compile: 0.062 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/String/Regex.java
+  build: 0.06 seconds
+  compile: 0.059 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/String/RegionMatches.java
+  build: 0.058 seconds
+  compile: 0.058 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/String/SBConstructor.java
+  build: 0.058 seconds
+  compile: 0.057 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/String/Split.java
+  build: 0.071 seconds
+  compile: 0.071 seconds
+  main: 3.82 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/String/Supplementary.java
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  main: 0.126 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/String/ToLowerCase.java
+  build: 0.024 seconds
+  compile: 0.024 seconds
+  main: 0.152 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/String/ToUpperCase.java
+  build: 0.021 seconds
+  compile: 0.021 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StringBuffer/AppendCharSequence.java
+  build: 0.069 seconds
+  compile: 0.069 seconds
+  main: 0.183 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StringBuffer/AppendSB.java
+  build: 0.015 seconds
+  compile: 0.015 seconds
+  main: 0.098 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StringBuffer/AppendStringBuilder.java
+  build: 0.059 seconds
+  compile: 0.059 seconds
+  main: 0.102 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StringBuffer/BufferForwarding.java
+  build: 0.074 seconds
+  compile: 0.074 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StringBuffer/Capacity.java
+  build: 0.064 seconds
+  compile: 0.063 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StringBuffer/Exceptions.java
+  build: 0.066 seconds
+  compile: 0.066 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StringBuffer/GetCharsOverLength.java
+  build: 0.052 seconds
+  compile: 0.052 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StringBuffer/GetCharsSrcEndLarger.java
+  build: 0.051 seconds
+  compile: 0.051 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StringBuffer/IndexOf.java
+  build: 0.068 seconds
+  compile: 0.067 seconds
+  main: 0.26 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StringBuffer/InsertMaxValue.java
+  build: 0.011 seconds
+  compile: 0.011 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StringBuffer/InsertNullString.java
+  build: 0.055 seconds
+  compile: 0.055 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StringBuffer/Replace.java
+  build: 0.054 seconds
+  compile: 0.053 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StringBuffer/SBBasher.java
+  build: 0.059 seconds
+  compile: 0.059 seconds
+  main: 0.13 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StringBuffer/SetLength.java
+  build: 0.018 seconds
+  compile: 0.017 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StringBuffer/Substring.java
+  build: 0.055 seconds
+  compile: 0.055 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StringBuffer/Supplementary.java
+  build: 0.079 seconds
+  compile: 0.079 seconds
+  main: 0.046 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StringBuffer/TestSynchronization.java
+  build: 0.071 seconds
+  compile: 0.071 seconds
+  main: 0.119 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StringBuffer/Trim.java
+  build: 0.025 seconds
+  compile: 0.025 seconds
+  main: 0.099 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StringBuilder/AppendStringBuffer.java
+  build: 0.055 seconds
+  compile: 0.055 seconds
+  main: 0.102 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StringBuilder/BuilderForwarding.java
+  build: 0.075 seconds
+  compile: 0.075 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StringBuilder/EnsureCapacity.java
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StringBuilder/Exceptions.java
+  build: 0.067 seconds
+  compile: 0.067 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StringBuilder/Insert.java
+  build: 0.051 seconds
+  compile: 0.051 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StringBuilder/Supplementary.java
+  build: 0.075 seconds
+  compile: 0.075 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StringCoding/CheckEncodings.sh
+  shell: 3.537 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/StringCoding/Enormous.java
+  build: 0.069 seconds
+  compile: 0.069 seconds
+  main: 1.223 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/System/finalization/FinExit.java
+  build: 0.048 seconds
+  compile: 0.048 seconds
+  shell: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/System/finalization/FinThreads.java
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  main: 0.659 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/System/MacJNUEncoding/MacJNUEncoding.sh
+  shell: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/System/Available.java
+  build: 0.019 seconds
+  compile: 0.019 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/System/ExitFinalizersAndJIT.java
+  build: 0.092 seconds
+  compile: 0.092 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/System/IgnoreNullSecurityManager.java
+  build: 0.049 seconds
+  compile: 0.049 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/System/IHashCode.java
+  build: 0.051 seconds
+  compile: 0.051 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/System/SecurityRace.java
+  build: 0.062 seconds
+  compile: 0.061 seconds
+  build: 0.0 seconds
+  main: 0.225 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/System/Versions.java
+  build: 0.064 seconds
+  compile: 0.064 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Thread/GenerifyStackTraces.java
+  build: 0.063 seconds
+  compile: 0.062 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Thread/HoldsLock.java
+  build: 0.052 seconds
+  compile: 0.052 seconds
+  main: 0.185 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Thread/MainThreadTest.java
+  build: 0.012 seconds
+  compile: 0.012 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Thread/NullStackTrace.java
+  build: 0.051 seconds
+  compile: 0.051 seconds
+  main: 0.494 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Thread/StackTraces.java
+  build: 0.027 seconds
+  compile: 0.026 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Thread/ThreadStateTest.java
+  build: 0.069 seconds
+  compile: 0.069 seconds
+  build: 0.0 seconds
+  main: 0.134 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+Agent[0].stderr: Waking Thread[Finalizer,8,system]
+TEST: java/lang/Thread/UncaughtExceptions.sh
+  shell: 7.186 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ThreadGroup/Daemon.java
+  build: 0.021 seconds
+  compile: 0.02 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ThreadGroup/NullThreadName.java
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  main: 2.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ThreadGroup/SetMaxPriority.java
+  build: 0.018 seconds
+  compile: 0.018 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ThreadGroup/Stop.java
+  build: 0.09 seconds
+  compile: 0.089 seconds
+  main: 2.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ThreadGroup/Suspend.java
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  main: 3.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ThreadLocal/Basic.java
+  build: 0.019 seconds
+  compile: 0.018 seconds
+  main: 0.127 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ThreadLocal/ImmutableLocal.java
+  build: 0.019 seconds
+  compile: 0.019 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ThreadLocal/InitialValue.java
+  build: 0.049 seconds
+  compile: 0.048 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ThreadLocal/MemoryLeak.java
+  build: 0.089 seconds
+  compile: 0.088 seconds
+  main: 0.823 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ThreadLocal/TestThreadId.java
+  build: 0.037 seconds
+  compile: 0.037 seconds
+  main: 0.692 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ThreadLocal/ThreadLocalSupplierTest.java
+  build: 0.078 seconds
+  compile: 0.077 seconds
+  testng: 0.528 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ThreadLocal/TLRemoveTest.java
+  build: 0.02 seconds
+  compile: 0.02 seconds
+  main: 0.131 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Throwable/ChainedExceptions.java
+  build: 0.033 seconds
+  compile: 0.033 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Throwable/LegacyChainedExceptionSerialization.java
+  build: 0.054 seconds
+  compile: 0.054 seconds
+  main: 0.099 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Throwable/LocalizedMessage.java
+  build: 0.057 seconds
+  compile: 0.056 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Throwable/NewChainedExceptions.java
+  build: 0.061 seconds
+  compile: 0.061 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Throwable/StackTraceSerialization.java
+  build: 0.079 seconds
+  compile: 0.078 seconds
+  main: 0.09 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Throwable/SuppressedExceptions.java
+  build: 0.071 seconds
+  compile: 0.071 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/Compare.java
+  build: 0.07 seconds
+  compile: 0.07 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/HashCode.java
+  build: 0.061 seconds
+  compile: 0.061 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/PrimitiveSumMinMaxTest.java
+  build: 0.101 seconds
+  compile: 0.101 seconds
+  testng: 0.138 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/lang/ToString.java
+  build: 0.025 seconds
+  compile: 0.024 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/misc/ClassLoaderUtil/Test.java
+  build: 0.105 seconds
+  compile: 0.104 seconds
+  main: 0.091 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/misc/Cleaner/exitOnThrow.sh
+  build: 0.094 seconds
+  compile: 0.094 seconds
+  shell: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/misc/Encode/DecodeBuffer.java
+  build: 0.063 seconds
+  compile: 0.062 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/misc/Encode/Encode.java
+  build: 0.089 seconds
+  compile: 0.089 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/misc/Encode/GetBytes.java
+  build: 0.089 seconds
+  compile: 0.089 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/misc/JarIndex/metaInfFilenames/Basic.java
+  build: 0.157 seconds
+  compile: 0.156 seconds
+  main: 11.464 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/misc/JarIndex/JarIndexMergeForClassLoaderTest.java
+  build: 0.032 seconds
+  compile: 0.031 seconds
+  main: 0.377 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/misc/JarIndex/JarIndexMergeTest.java
+  compile: 0.021 seconds
+  build: 0.0 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/misc/URLClassPath/ClassnameCharTest.java
+  compile: 0.07 seconds
+  build: 0.0 seconds
+  main: 0.163 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/misc/URLClassPath/FileLoaderTest.java
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/misc/URLClassPath/JarLoaderTest.java
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/misc/Version/Version.java
+  compile: 0.072 seconds
+  build: 0.001 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/misc/CopyMemory.java
+  build: 0.117 seconds
+  compile: 0.117 seconds
+  main: 0.244 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/misc/EscapePath.java
+  build: 0.018 seconds
+  compile: 0.018 seconds
+  main: 0.151 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/misc/Hashing.java
+  compile: 0.034 seconds
+TEST RESULT: Passed. Compilation successful
+--------------------------------------------------
+TEST: sun/misc/Safe.java
+  build: 0.093 seconds
+  compile: 0.093 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: vm/verifier/TestStaticIF.java
+JDK under test: (/home/openjdk/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
+openjdk version "1.8.0-internal"
+OpenJDK Runtime Environment (build 1.8.0-internal-openjdk_2013_03_08_00_00-b00)
+OpenJDK Server VM (build 25.0-b20, mixed mode)
+
+
+ACTION: build -- Passed. Build successful
+REASON: Named class compiled on demand
+TIME:   0.051 seconds
+messages:
+command: build TestStaticIF
+reason: Named class compiled on demand
+elapsed time (seconds): 0.051
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   0.05 seconds
+messages:
+command: compile /home/openjdk/sources/jdk8_tl/jdk/test/vm/verifier/TestStaticIF.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 0.05
+
+ACTION: main -- Failed. Unexpected exit from test [exit code: 134]
+REASON: User specified action: run main/othervm -Xverify:all -XX:-UseSplitVerifier TestStaticIF 
+TIME:   0.131 seconds
+messages:
+command: main -Xverify:all -XX:-UseSplitVerifier TestStaticIF
+reason: User specified action: run main/othervm -Xverify:all -XX:-UseSplitVerifier TestStaticIF 
+elapsed time (seconds): 0.131
+STDOUT:
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00000000, pid=31361, tid=1091476288
+#
+# JRE version:  (8.0) (build )
+# Java VM: OpenJDK Server VM (25.0-b20 mixed mode linux-x86 )
+# Problematic frame:
+# C  0x00000000
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# An error report file with more information is saved as:
+# /home/openjdk/sources/jdk8_tl/jdk/build/linux-i586/testoutput/jdk_lang/JTwork/scratch/hs_err_pid31361.log
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+STDERR:
+
+TEST RESULT: Failed. Unexpected exit from test [exit code: 134]
+--------------------------------------------------
+TEST: vm/verifier/VerifyProtectedConstructor.java
+  build: 0.059 seconds
+  compile: 0.059 seconds
+  main: 0.096 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: vm/verifier/VerifyStackForExceptionHandlers.java
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+Test results: passed: 415; failed: 1; error: 11
+Report written to /home/openjdk/sources/jdk8_tl/jdk/build/linux-i586/testoutput/jdk_lang/JTreport/html/report.html
+Results written to /home/openjdk/sources/jdk8_tl/jdk/build/linux-i586/testoutput/jdk_lang/JTwork
+Error: Some tests failed or other problems occurred.
+Summary: jdk_lang
+FAILED: java/lang/invoke/AccessControlTest.java
+FAILED: java/lang/invoke/BigArityTest.java
+FAILED: java/lang/invoke/ClassValueTest.java
+FAILED: java/lang/invoke/InvokeGenericTest.java
+FAILED: java/lang/invoke/JavaDocExamplesTest.java
+FAILED: java/lang/invoke/MethodHandlesTest.java
+FAILED: java/lang/invoke/MethodTypeTest.java
+FAILED: java/lang/invoke/PermuteArgsTest.java
+FAILED: java/lang/invoke/PrivateInvokeTest.java
+FAILED: java/lang/invoke/RicochetTest.java
+FAILED: java/lang/invoke/ThrowExceptionsTest.java
+FAILED: vm/verifier/TestStaticIF.java
+TEST STATS: name=jdk_lang  run=427  pass=415  fail=12  excluded=5
+EXIT CODE: 2
+EXIT CODE: 2
+make[2]: *** [jtreg_tests] Error 2
+make[2]: Leaving directory `/home/openjdk/sources/jdk8_tl/jdk/test'
+make[1]: *** [jdk_lang] Error 2
+make[1]: Leaving directory `/home/openjdk/sources/jdk8_tl/jdk/test'
+make: *** [jdk_lang] Error 2

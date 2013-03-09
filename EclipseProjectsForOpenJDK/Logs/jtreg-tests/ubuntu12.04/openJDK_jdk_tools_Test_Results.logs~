@@ -1,0 +1,699 @@
+make -k -C  ../jdk/test  jdk_tools
+make[1]: Entering directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
+make SHARED_LIBRARY_DIR=tools/launcher UNIQUE_DIR=jdk_tools shared_library_permissions
+make[2]: Entering directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
+if [ ! -d /home/saiubuntu/sources/jdk8_tl/jdk/test/../.hg ] ; then                          \
+	  find tools/launcher \( -name \*.dll -o -name \*.DLL -o -name \*.so \)  \
+	        -exec chmod a+rx {} \; ;                             \
+        fi
+make[2]: Leaving directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
+echo "Running tests in agentvm mode: com/sun/tools sun/jvmstat sun/tools tools"
+Running tests in agentvm mode: com/sun/tools sun/jvmstat sun/tools tools
+make TEST_DEPENDENCIES="com/sun/tools sun/jvmstat sun/tools tools" TESTDIRS="com/sun/tools sun/jvmstat sun/tools tools" USE_JTREG_AGENTVM=true  UNIQUE_DIR=jdk_tools jtreg_tests
+make[2]: Entering directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
+Excluding list contains 5 items
+Excluding: com/sun/tools/attach/BasicTests.sh
+Excluding: sun/jvmstat/monitor/MonitoredVm/CR6672135.java
+Excluding: sun/tools/jconsole/ResourceCheckTest.sh
+Excluding: sun/tools/jconsole/ImmutableResourceTest.sh
+Excluding: tools/launcher/FXLauncherTest.java
+(                                                                    \
+	  ( JT_HOME=/home/saiubuntu/jtreg/;                   \
+            export JT_HOME;                                                  \
+            /home/saiubuntu/jtreg//win32/bin/jtreg                              \
+              -agentvm   -a -ea -esa -v:fail,error,time -retain:fail,error -ignore:quiet -timeoutFactor:4 -J-Xmx512m                                         \
+              -r:/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/JTreport  \
+              -w:/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/JTwork    \
+              -jdk:/home/saiubuntu/sources//jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image/                \
+              -exclude:/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/excludelist.txt             \
+                                                        \
+              com/sun/tools sun/jvmstat sun/tools tools                                                    \
+	  ) ; ( jtregExitCode=$? && _summary="/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/JTreport/text/summary.txt"; rm -f -f /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/Stats.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/runlist.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/passlist.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/faillist.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/exitcode.txt; echo "${jtregExitCode}" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/exitcode.txt; if [ -r "${_summary}" ] ; then echo "Summary: jdk_tools" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/Stats.txt; expand ${_summary} | egrep -v ' Not run\.' > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/runlist.txt; egrep ' Passed\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/runlist.txt | egrep -v ' Error\.' | egrep -v ' Failed\.' > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/passlist.txt; ( egrep ' Failed\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/runlist.txt; egrep ' Error\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/runlist.txt; egrep -v ' Passed\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/runlist.txt ) | sort | uniq > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/faillist.txt; if [ ${jtregExitCode} != 0 -o -s /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/faillist.txt ] ; then expand /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/faillist.txt | cut -d' ' -f1 | sed -e 's@^@FAILED: @' >> /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/Stats.txt; if [ ${jtregExitCode} = 0 ] ; then jtregExitCode=1; fi; fi; runc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/runlist.txt      | wc -l | awk '{print $1;}'`"; passc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/passlist.txt    | wc -l | awk '{print $1;}'`"; failc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/faillist.txt    | wc -l | awk '{print $1;}'`"; exclc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/excludelist.txt | wc -l | awk '{print $1;}'`"; echo "TEST STATS: name=jdk_tools  run=${runc}  pass=${passc}  fail=${failc}  excluded=${exclc}" >> /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/Stats.txt; else echo "Missing file: ${_summary}" >> /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/Stats.txt; fi; if [ -f /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/Stats.txt ] ; then cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/Stats.txt; fi; ( mkdir -p `dirname /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/ARCHIVE_BUNDLE.zip` && cd /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools && chmod -R a+r . && zip -q -r /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/ARCHIVE_BUNDLE.zip . ) ; if [ ! -s /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/exitcode.txt; fi ; testExitCode=`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode} )                                          \
+	) 2>&1 | tee /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/output.txt ; if [ ! -s /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/exitcode.txt; fi ; testExitCode=`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode}
+Directory "/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/JTreport" not found: creating
+Directory "/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/JTwork" not found: creating
+Directory "/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_tools/JTwork/scratch" not found: creating
+--------------------------------------------------
+TEST: com/sun/tools/attach/PermissionTests.sh
+  build: 1.081 seconds
+  compile: 1.071 seconds
+  shell: 3.452 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/tools/attach/ProviderTests.sh
+  build: 0.088 seconds
+  compile: 0.088 seconds
+  shell: 0.24 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/tools/extcheck/TestExtcheckArgs.java
+  shell: 0.964 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/jvmstat/monitor/HostIdentifier/HostIdentifierCreate.java
+  build: 0.304 seconds
+  compile: 0.304 seconds
+  main: 0.105 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/jvmstat/monitor/VmIdentifier/VmIdentifierCreateResolve.java
+  build: 0.242 seconds
+  compile: 0.242 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/jvmstat/perfdata/PrologSanity/PrologSizeSanityCheck.java
+  build: 0.065 seconds
+  compile: 0.065 seconds
+  main: 0.196 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/common/CommonTests.sh
+  build: 0.113 seconds
+  compile: 0.113 seconds
+  shell: 32.132 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jcmd/jcmd-big-script.sh
+  build: 0.001 seconds
+  shell: 1.491 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jcmd/jcmd-Defaults.sh
+  shell: 0.502 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jcmd/jcmd-f.sh
+  build: 0.0 seconds
+  shell: 1.489 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jcmd/jcmd-help.sh
+  shell: 0.165 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jcmd/jcmd-help-help.sh
+  build: 0.0 seconds
+  shell: 1.461 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jcmd/jcmd-pid.sh
+  build: 0.0 seconds
+  shell: 1.583 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jhat/HatHeapDump1Test.java
+  compile: 0.1 seconds
+  build: 0.021 seconds
+  compile: 0.021 seconds
+  build: 0.0 seconds
+  main: 1.567 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jhat/ParseTest.sh
+  shell: 1.211 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jinfo/Basic.sh
+  build: 0.001 seconds
+  shell: 1.781 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jmap/Basic.sh
+  build: 0.0 seconds
+  shell: 2.82 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jps/jps-Defaults.sh
+  shell: 0.242 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jps/jps-help.sh
+  shell: 0.172 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jps/jps-l_1.sh
+  shell: 0.259 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jps/jps-l_2.sh
+  shell: 0.26 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jps/jps-lm.sh
+  shell: 0.222 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jps/jps-m_2.sh
+  build: 0.037 seconds
+  compile: 0.037 seconds
+  shell: 2.279 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jps/jps-m.sh
+  shell: 0.257 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jps/jps-q.sh
+  shell: 0.105 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jps/jps-v_1.sh
+  shell: 0.23 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jps/jps-V_2.sh
+  shell: 0.266 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jps/jps-vm_1.sh
+  shell: 0.24 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jps/jps-Vm_2.sh
+  shell: 0.253 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jps/jps-Vvm.sh
+  shell: 0.249 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jps/jps-Vvml_2.sh
+  build: 0.0 seconds
+  shell: 2.304 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jps/jps-Vvml.sh
+  shell: 0.234 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jrunscript/jrunscript-argsTest.sh
+  build: 0.075 seconds
+  compile: 0.074 seconds
+  shell: 2.17 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jrunscript/jrunscript-cpTest.sh
+  build: 0.0 seconds
+  shell: 4.213 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jrunscript/jrunscript-DTest.sh
+  build: 0.0 seconds
+  shell: 2.116 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jrunscript/jrunscript-eTest.sh
+  build: 0.0 seconds
+  shell: 2.132 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jrunscript/jrunscript-fTest.sh
+  build: 0.0 seconds
+  shell: 2.154 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jrunscript/jrunscript-helpTest.sh
+  shell: 0.213 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jrunscript/jrunscriptTest.sh
+  build: 0.0 seconds
+  shell: 2.178 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jstack/Basic.sh
+  build: 0.0 seconds
+  shell: 1.643 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jstat/jstatClassloadOutput1.sh
+  shell: 0.259 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jstat/jstatClassOutput1.sh
+  shell: 0.195 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jstat/jstatCompilerOutput1.sh
+  shell: 0.196 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jstat/jstatFileURITest1.sh
+  shell: 0.249 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jstat/jstatGcCapacityOutput1.sh
+  shell: 0.206 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jstat/jstatGcCauseOutput1.sh
+  shell: 0.236 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jstat/jstatGcNewCapacityOutput1.sh
+  shell: 0.201 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jstat/jstatGcNewOutput1.sh
+  shell: 0.229 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jstat/jstatGcOldCapacityOutput1.sh
+  shell: 0.212 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jstat/jstatGcOldOutput1.sh
+  shell: 0.252 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jstat/jstatGcOutput1.sh
+  shell: 0.219 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jstat/jstatGcPermCapacityOutput1.sh
+  shell: 0.23 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jstat/jstatHelp.sh
+  shell: 0.171 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jstat/jstatLineCounts1.sh
+  shell: 1.232 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jstat/jstatLineCounts2.sh
+  shell: 0.239 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jstat/jstatLineCounts3.sh
+  shell: 2.512 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jstat/jstatLineCounts4.sh
+  shell: 2.742 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jstat/jstatOptions1.sh
+  shell: 0.309 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jstat/jstatPrintCompilationOutput1.sh
+  shell: 6.168 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jstat/jstatSnap1.sh
+  shell: 0.133 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jstat/jstatSnap2.sh
+  shell: 0.128 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jstat/jstatTimeStamp1.sh
+  shell: 0.223 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jstatd/jstatdDefaults.sh
+  shell: 6.842 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jstatd/jstatdExternalRegistry.sh
+  shell: 12.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jstatd/jstatdPort.sh
+  shell: 6.913 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jstatd/jstatdServerName.sh
+  shell: 13.842 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/jstatd/jstatdUsage1.sh
+  shell: 0.159 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/native2ascii/resources/ImmutableResourceTest.sh
+  shell: 0.968 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/native2ascii/Native2AsciiTests.sh
+  shell: 0.861 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/native2ascii/NativeErrors.java
+  build: 0.098 seconds
+  compile: 0.097 seconds
+  main: 0.319 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/tools/native2ascii/Permission.java
+  build: 0.085 seconds
+  compile: 0.085 seconds
+  main: 0.059 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/jar/index/MetaInf.java
+  build: 0.144 seconds
+  compile: 0.144 seconds
+  main: 0.131 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/jar/AddAndUpdateProfile.java
+  compile: 0.124 seconds
+  build: 0.0 seconds
+  main: 0.055 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/jar/ChangeDir.java
+  build: 0.177 seconds
+  compile: 0.177 seconds
+  main: 0.052 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/jar/JarBackSlash.java
+  build: 0.198 seconds
+  compile: 0.197 seconds
+  main: 0.052 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/jar/JarEntryTime.java
+  build: 0.241 seconds
+  compile: 0.241 seconds
+  main: 0.292 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/jar/UpdateJar.java
+  build: 0.11 seconds
+  compile: 0.11 seconds
+  main: 0.044 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/jar/UpdateManifest.java
+  build: 0.163 seconds
+  compile: 0.163 seconds
+  main: 0.063 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/launcher/6842838/Test6842838.sh
+  compile: 0.111 seconds
+  shell: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/launcher/profiles/Basic.java
+  compile: 0.157 seconds
+  build: 0.0 seconds
+  main: 0.833 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/launcher/profiles/VersionCheck.java
+  compile: 0.069 seconds
+  build: 0.001 seconds
+  main: 0.125 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/launcher/Arrrghs.java
+  compile: 0.425 seconds
+  build: 0.0 seconds
+  main: 7.778 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/launcher/BigJar.java
+  compile: 0.094 seconds
+  build: 0.0 seconds
+  main: 16.661 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/launcher/ChangeDataModel.java
+  compile: 0.041 seconds
+  build: 0.0 seconds
+  main: 0.147 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/launcher/ClassPathWildCard.sh
+  shell: 3.657 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/launcher/DefaultLocaleTestRun.java
+  compile: 0.042 seconds
+  build: 0.022 seconds
+  compile: 0.022 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/launcher/ExecutionEnvironment.java
+JDK under test: (/home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
+openjdk version "1.8.0-internal"
+OpenJDK Runtime Environment (build 1.8.0-internal-saiubuntu_2013_03_08_00_00-b00)
+OpenJDK Server VM (build 25.0-b20, mixed mode)
+
+
+ACTION: compile -- Passed. Compilation successful
+REASON: User specified action: run compile -XDignore.symbol.file ExecutionEnvironment.java 
+TIME:   0.132 seconds
+messages:
+command: compile -XDignore.symbol.file /home/saiubuntu/sources/jdk8_tl/jdk/test/tools/launcher/ExecutionEnvironment.java
+reason: User specified action: run compile -XDignore.symbol.file ExecutionEnvironment.java 
+elapsed time (seconds): 0.132
+
+ACTION: build -- Passed. All files up to date
+REASON: Named class compiled on demand
+TIME:   0.0 seconds
+messages:
+command: build ExecutionEnvironment
+reason: Named class compiled on demand
+elapsed time (seconds): 0.0
+
+ACTION: main -- Failed. Execution failed: `main' threw exception: java.lang.Exception: ExecutionEnvironment: FAIL: with 1 errors and passes 7
+REASON: User specified action: run main ExecutionEnvironment 
+TIME:   0.428 seconds
+messages:
+command: main ExecutionEnvironment
+reason: User specified action: run main ExecutionEnvironment 
+elapsed time (seconds): 0.428
+STDOUT:
+FAIL: the expected vm -client did not launch
+Executed command: /home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image/bin/java -client -version 
+
+###TestError###: string <.*Client VM.*> not found
+++++Begin Test Info++++
+Test Status: FAIL
+++++Test Environment++++
+  DISPLAY=:0
+  LANG=en_GB.UTF-8
+  XFILESEARCHPATH=/usr/dt/app-defaults/%L/Dt
+  CLASSPATH=/home/saiubuntu/jtreg/lib/javatest.jar:/home/saiubuntu/jtreg/lib/jtreg.jar:/home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image/lib/tools.jar
+  PATH=/bin:/usr/bin
+  NLSPATH=/usr/dt/lib/nls/msg/%L/%N.cat
+  GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+  JTREG_INSTALL=/home/saiubuntu/jtreg/
+  HOME=/home/saiubuntu
+++++Test Output++++
+  openjdk version "1.8.0-internal"
+  OpenJDK Runtime Environment (build 1.8.0-internal-saiubuntu_2013_03_08_00_00-b00)
+  OpenJDK Server VM (build 25.0-b20, mixed mode)
+++++Test Stack Trace++++
+java.lang.Throwable: current stack of the test
+  TestHelper.doExec(TestHelper.java:481)
+  TestHelper.doExec(TestHelper.java:442)
+  ExecutionEnvironment.verifyVmSelection(ExecutionEnvironment.java:297)
+  ExecutionEnvironment.main(ExecutionEnvironment.java:345)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:487)
+  com.sun.javatest.regtest.MainAction$SameVMRunnable.run(MainAction.java:706)
+  java.lang.Thread.run(Thread.java:722)
+++++End of Test Info++++
+
+STDERR:
+java.lang.Exception: ExecutionEnvironment: FAIL: with 1 errors and passes 7
+	at ExecutionEnvironment.main(ExecutionEnvironment.java:350)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:487)
+	at com.sun.javatest.regtest.MainAction$SameVMRunnable.run(MainAction.java:706)
+	at java.lang.Thread.run(Thread.java:722)
+
+JavaTest Message: Test threw exception: java.lang.Exception
+JavaTest Message: shutting down test
+
+
+TEST RESULT: Failed. Execution failed: `main' threw exception: java.lang.Exception: ExecutionEnvironment: FAIL: with 1 errors and passes 7
+--------------------------------------------------
+TEST: tools/launcher/I18NJarTest.java
+  compile: 0.041 seconds
+  build: 0.0 seconds
+  main: 1.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/launcher/I18NTest.java
+  compile: 0.039 seconds
+  build: 0.0 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/launcher/MainClassAttributeTest.java
+  build: 0.071 seconds
+  compile: 0.071 seconds
+  build: 0.0 seconds
+  main: 0.453 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/launcher/MiscTests.java
+  compile: 0.035 seconds
+  build: 0.0 seconds
+  main: 0.22 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/launcher/MultipleJRE.sh
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  build: 0.095 seconds
+  compile: 0.095 seconds
+  build: 0.075 seconds
+  compile: 0.074 seconds
+  shell: 3.219 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/launcher/RunpathTest.java
+  compile: 0.071 seconds
+  build: 0.001 seconds
+  main: 0.106 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/launcher/Settings.java
+  compile: 0.081 seconds
+  build: 0.0 seconds
+  main: 1.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/launcher/Test7029048.java
+  compile: 0.18 seconds
+  build: 0.0 seconds
+  main: 0.755 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/launcher/TestSpecialArgs.java
+  compile: 0.054 seconds
+  build: 0.0 seconds
+  main: 0.058 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/launcher/ToolsOpts.java
+  build: 0.096 seconds
+  compile: 0.096 seconds
+  main: 2.06 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/launcher/UnicodeTest.java
+  compile: 0.066 seconds
+  build: 0.0 seconds
+  main: 1.458 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/launcher/UnresolvedExceptions.java
+  compile: 0.024 seconds
+  build: 0.0 seconds
+  main: 0.157 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/launcher/VersionCheck.java
+  compile: 0.077 seconds
+  build: 0.001 seconds
+  main: 3.79 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/pack200/AttributeTests.java
+  compile: 0.313 seconds
+  build: 0.001 seconds
+  main: 4.907 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/pack200/CommandLineTests.java
+  compile: 0.052 seconds
+  build: 0.0 seconds
+  main: 275.995 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/pack200/InstructionTests.java
+  compile: 0.089 seconds
+  build: 0.0 seconds
+  main: 3.421 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/pack200/NoBeans.java
+  compile: 0.024 seconds
+TEST RESULT: Passed. Compilation successful
+--------------------------------------------------
+TEST: tools/pack200/Pack200Props.java
+  compile: 0.134 seconds
+  build: 0.0 seconds
+  main: 8.476 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/pack200/Pack200Test.java
+  compile: 0.088 seconds
+  build: 0.0 seconds
+  main: 117.276 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/pack200/PackageVersionTest.java
+  compile: 0.103 seconds
+  build: 0.0 seconds
+  main: 1.054 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/pack200/Reflect.java
+  build: 0.033 seconds
+  compile: 0.033 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/pack200/RepackTest.java
+  compile: 0.108 seconds
+  build: 0.0 seconds
+  main: 4.834 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/pack200/T7007157.java
+  compile: 0.08 seconds
+  build: 0.0 seconds
+  main: 11.01 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/pack200/TestExceptions.java
+  compile: 0.098 seconds
+  build: 0.0 seconds
+  main: 0.06 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/pack200/TimeStamp.java
+  compile: 0.123 seconds
+  build: 0.0 seconds
+  main: 4.725 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: tools/pack200/UnpackerMemoryTest.java
+  compile: 0.079 seconds
+  build: 0.0 seconds
+  main: 2.804 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+Test results: passed: 112; failed: 1
+Report written to /home/saiubuntu/sources/jdk8_tl/jdk/build/linux-i586/testoutput/jdk_tools/JTreport/html/report.html
+Results written to /home/saiubuntu/sources/jdk8_tl/jdk/build/linux-i586/testoutput/jdk_tools/JTwork
+Error: Some tests failed or other problems occurred.
+Summary: jdk_tools
+FAILED: tools/launcher/ExecutionEnvironment.java
+TEST STATS: name=jdk_tools  run=113  pass=112  fail=1  excluded=5
+EXIT CODE: 1
+EXIT CODE: 1
+make[2]: *** [jtreg_tests] Error 1
+make[2]: Leaving directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
+make[1]: *** [jdk_tools] Error 2
+make[1]: Leaving directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
+make: *** [jdk_tools] Error 2

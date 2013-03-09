@@ -1,0 +1,809 @@
+make -k -C  ../jdk/test  jdk_security1
+make[1]: Entering directory `/home/openjdk/sources/jdk8_tl/jdk/test'
+echo "Running tests in agentvm mode: java/security"
+Running tests in agentvm mode: java/security
+make TEST_DEPENDENCIES="java/security" TESTDIRS="java/security" USE_JTREG_AGENTVM=true  UNIQUE_DIR=jdk_security1 jtreg_tests
+make[2]: Entering directory `/home/openjdk/sources/jdk8_tl/jdk/test'
+Excluding list contains 0 items
+(                                                                    \
+	  ( JT_HOME=/home/openjdk/jtreg/;                   \
+            export JT_HOME;                                                  \
+            /home/openjdk/jtreg//win32/bin/jtreg                              \
+              -agentvm   -a -ea -esa -v:fail,error,time -retain:fail,error -ignore:quiet -timeoutFactor:4 -J-Xmx512m                                         \
+              -r:/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/JTreport  \
+              -w:/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/JTwork    \
+              -jdk:/home/openjdk/sources//jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image/                \
+              -exclude:/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/excludelist.txt             \
+                                                        \
+              java/security                                                    \
+	  ) ; ( jtregExitCode=$? && _summary="/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/JTreport/text/summary.txt"; rm -f -f /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/Stats.txt /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/runlist.txt /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/passlist.txt /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/faillist.txt /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/exitcode.txt; echo "${jtregExitCode}" > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/exitcode.txt; if [ -r "${_summary}" ] ; then echo "Summary: jdk_security1" > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/Stats.txt; expand ${_summary} | egrep -v ' Not run\.' > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/runlist.txt; egrep ' Passed\.' /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/runlist.txt | egrep -v ' Error\.' | egrep -v ' Failed\.' > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/passlist.txt; ( egrep ' Failed\.' /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/runlist.txt; egrep ' Error\.' /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/runlist.txt; egrep -v ' Passed\.' /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/runlist.txt ) | sort | uniq > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/faillist.txt; if [ ${jtregExitCode} != 0 -o -s /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/faillist.txt ] ; then expand /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/faillist.txt | cut -d' ' -f1 | sed -e 's@^@FAILED: @' >> /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/Stats.txt; if [ ${jtregExitCode} = 0 ] ; then jtregExitCode=1; fi; fi; runc="`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/runlist.txt      | wc -l | awk '{print $1;}'`"; passc="`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/passlist.txt    | wc -l | awk '{print $1;}'`"; failc="`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/faillist.txt    | wc -l | awk '{print $1;}'`"; exclc="`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/excludelist.txt | wc -l | awk '{print $1;}'`"; echo "TEST STATS: name=jdk_security1  run=${runc}  pass=${passc}  fail=${failc}  excluded=${exclc}" >> /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/Stats.txt; else echo "Missing file: ${_summary}" >> /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/Stats.txt; fi; if [ -f /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/Stats.txt ] ; then cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/Stats.txt; fi; ( mkdir -p `dirname /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/ARCHIVE_BUNDLE.zip` && cd /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1 && chmod -R a+r . && zip -q -r /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/ARCHIVE_BUNDLE.zip . ) ; if [ ! -s /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/exitcode.txt; fi ; testExitCode=`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode} )                                          \
+	) 2>&1 | tee /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/output.txt ; if [ ! -s /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/exitcode.txt; fi ; testExitCode=`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode}
+Directory "/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/JTreport" not found: creating
+Directory "/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/JTwork" not found: creating
+Directory "/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security1/JTwork/scratch" not found: creating
+--------------------------------------------------
+TEST: java/security/AccessControlContext/CheckCtor.java
+  build: 1.148 seconds
+  compile: 1.139 seconds
+  main: 0.049 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/AccessControlContext/CheckNullPermission.java
+  build: 0.083 seconds
+  compile: 0.083 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/AccessControlContext/FailureDebugOption.java
+  build: 0.108 seconds
+  compile: 0.108 seconds
+  main: 0.122 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/AccessControlContext/NullCombinerEquals.java
+  build: 0.089 seconds
+  compile: 0.088 seconds
+  main: 0.042 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/AccessController/PreserveCombiner.java
+  build: 0.29 seconds
+  compile: 0.29 seconds
+  main: 0.056 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/BasicPermission/EqualsImplies.java
+  build: 0.09 seconds
+  compile: 0.09 seconds
+  main: 0.042 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/BasicPermission/ExitVMEquals.java
+  build: 0.097 seconds
+  compile: 0.097 seconds
+  main: 0.044 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/BasicPermission/Homogeneity.java
+  build: 0.078 seconds
+  compile: 0.078 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/BasicPermission/MixedBasicPermissions.java
+  build: 0.075 seconds
+  compile: 0.074 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/BasicPermission/NullOrEmptyName.java
+  build: 0.085 seconds
+  compile: 0.085 seconds
+  main: 0.042 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/BasicPermission/PermClass.java
+  build: 0.145 seconds
+  compile: 0.145 seconds
+  main: 0.478 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/BasicPermission/SerialVersion.java
+  build: 0.109 seconds
+  compile: 0.108 seconds
+  main: 0.05 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/BasicPermission/Wildcard.java
+  build: 0.136 seconds
+  compile: 0.136 seconds
+  main: 0.043 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertificateFactory/invalidEncodedCerts/DetectInvalidEncoding.java
+  build: 0.066 seconds
+  compile: 0.066 seconds
+  main: 0.117 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertificateFactory/openssl/BadFooter.java
+  build: 0.036 seconds
+  compile: 0.036 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertificateFactory/openssl/OpenSSLCert.java
+  build: 0.096 seconds
+  compile: 0.096 seconds
+  main: 0.117 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertificateFactory/BadX509CertData.java
+  build: 0.031 seconds
+  compile: 0.031 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertificateFactory/GenerateCertificatesEmptyCollection.java
+  build: 0.075 seconds
+  compile: 0.075 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertificateFactory/ReturnStream.java
+  build: 0.14 seconds
+  compile: 0.138 seconds
+  main: 0.044 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertificateFactory/slowstream.sh
+  shell: 10.948 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertificateRevokedException/Basic.java
+  build: 0.096 seconds
+  compile: 0.096 seconds
+  main: 0.095 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertPath/Serialize.java
+  build: 0.036 seconds
+  compile: 0.036 seconds
+  main: 0.133 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertPathBuilder/selfIssued/DisableRevocation.java
+  build: 0.116 seconds
+  compile: 0.116 seconds
+  main: 0.227 seconds
+  build: 0.0 seconds
+  main: 0.221 seconds
+  build: 0.0 seconds
+  main: 0.227 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertPathBuilder/selfIssued/KeyUsageMatters.java
+  build: 0.062 seconds
+  compile: 0.062 seconds
+  main: 0.224 seconds
+  build: 0.0 seconds
+  main: 0.236 seconds
+  build: 0.0 seconds
+  main: 0.26 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertPathBuilder/selfIssued/StatusLoopDependency.java
+  build: 0.07 seconds
+  compile: 0.069 seconds
+  main: 0.23 seconds
+  build: 0.0 seconds
+  main: 0.249 seconds
+  build: 0.0 seconds
+  main: 0.272 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertPathBuilder/targetConstraints/BuildEEBasicConstraints.java
+  build: 0.107 seconds
+  compile: 0.107 seconds
+  build: 0.046 seconds
+  compile: 0.046 seconds
+  main: 0.221 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertPathBuilder/targetConstraints/BuildOddSel.java
+  build: 0.04 seconds
+  compile: 0.04 seconds
+  main: 0.049 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertPathBuilder/zeroLengthPath/ZeroLengthPath.java
+  build: 0.09 seconds
+  compile: 0.089 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertPathBuilder/GetInstance.java
+  compile: 0.029 seconds
+  build: 0.063 seconds
+  compile: 0.062 seconds
+  main: 0.114 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertPathBuilder/NoExtensions.java
+  build: 0.108 seconds
+  compile: 0.108 seconds
+  main: 0.056 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertPathValidator/indirectCRL/CircularCRLOneLevel.java
+  build: 0.122 seconds
+  compile: 0.121 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertPathValidator/indirectCRL/CircularCRLOneLevelRevoked.java
+  build: 0.088 seconds
+  compile: 0.087 seconds
+  main: 0.071 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertPathValidator/indirectCRL/CircularCRLTwoLevel.java
+  build: 0.132 seconds
+  compile: 0.132 seconds
+  main: 0.071 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertPathValidator/indirectCRL/CircularCRLTwoLevelRevoked.java
+  build: 0.14 seconds
+  compile: 0.139 seconds
+  main: 0.063 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertPathValidator/nameConstraints/NameConstraintsWithoutRID.java
+  build: 0.129 seconds
+  compile: 0.128 seconds
+  main: 0.051 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertPathValidator/nameConstraints/NameConstraintsWithRID.java
+  build: 0.117 seconds
+  compile: 0.116 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertPathValidator/nameConstraints/NameConstraintsWithUnexpectedRID.java
+  build: 0.136 seconds
+  compile: 0.136 seconds
+  main: 0.043 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertPathValidator/nameConstraintsRFC822/ValidateCertPath.java
+  build: 0.085 seconds
+  compile: 0.084 seconds
+  main: 0.183 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertPathValidator/OCSP/AIACheck.java
+  build: 0.039 seconds
+  compile: 0.038 seconds
+  main: 0.1 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertPathValidator/OCSP/FailoverToCRL.java
+  build: 0.079 seconds
+  compile: 0.079 seconds
+  main: 0.05 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertPathValidator/targetConstraints/ValidateTargetConstraints.java
+  build: 0.124 seconds
+  compile: 0.123 seconds
+  main: 0.044 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertPathValidator/trustAnchor/ValidateNC.java
+  build: 0.113 seconds
+  compile: 0.113 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertPathValidatorException/GetMessage.java
+  build: 0.063 seconds
+  compile: 0.062 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertPathValidatorException/ReasonTest.java
+  build: 0.068 seconds
+  compile: 0.068 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertPathValidatorException/Serial.java
+  build: 0.113 seconds
+  compile: 0.112 seconds
+  main: 0.049 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/CertStore/NoLDAP.java
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/pkix/nameConstraintsMinMax/VerifyNameConstraints.java
+  build: 0.115 seconds
+  compile: 0.115 seconds
+  main: 0.109 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/pkix/policyChanges/TestPolicy.java
+  build: 0.143 seconds
+  compile: 0.143 seconds
+  main: 0.21 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/PKIXBuilderParameters/InvalidParameters.java
+  compile: 0.026 seconds
+  build: 0.0 seconds
+  main: 0.076 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/PKIXParameters/InvalidParameters.java
+  compile: 0.104 seconds
+  build: 0.001 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/PKIXRevocationChecker/UnitTest.java
+  build: 0.103 seconds
+  compile: 0.103 seconds
+  main: 0.045 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/PolicyNode/GetPolicyQualifiers.java
+  build: 0.123 seconds
+  compile: 0.123 seconds
+  main: 0.059 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/X509Certificate/EmptySubject.java
+  build: 0.071 seconds
+  compile: 0.07 seconds
+  main: 0.094 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/X509Certificate/ExtKeyUsage.java
+  build: 0.063 seconds
+  compile: 0.063 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/X509CertSelector/SetNameConstraintsEmptySequence.java
+  build: 0.053 seconds
+  compile: 0.053 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/cert/GetInstance.java
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  main: 0.111 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/CodeSigner/Serialize.java
+  build: 0.067 seconds
+  compile: 0.066 seconds
+  main: 0.09 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/CodeSource/Implies.java
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Exceptions/ChainingConstructors.java
+  build: 0.104 seconds
+  compile: 0.103 seconds
+  main: 0.043 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Identity/EqualsHashCodeContract.java
+  build: 0.116 seconds
+  compile: 0.116 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/IdentityScope/NoDefaultSystemScope.java
+  build: 0.094 seconds
+  compile: 0.093 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/KeyFactory/Failover.java
+  build: 0.124 seconds
+  compile: 0.123 seconds
+  main: 0.064 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/KeyFactory/GenerateRSAPrivateCrtKey.java
+  build: 0.093 seconds
+  compile: 0.092 seconds
+  main: 0.043 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/KeyPairGenerator/Failover.java
+  build: 0.11 seconds
+  compile: 0.11 seconds
+  main: 0.465 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/KeyPairGenerator/GenerateKeypair.java
+  build: 0.017 seconds
+  compile: 0.017 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/KeyPairGenerator/GenerateRSAKeyPair.java
+  build: 0.057 seconds
+  compile: 0.056 seconds
+  main: 0.288 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/KeyPairGenerator/SolarisShortDSA.java
+  build: 0.068 seconds
+  compile: 0.068 seconds
+  main: 0.223 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/KeyRep/Serial.java
+  build: 0.065 seconds
+  compile: 0.064 seconds
+  main: 0.453 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/KeyRep/SerialDSAPubKey.java
+  build: 0.026 seconds
+  compile: 0.025 seconds
+  main: 0.176 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/KeyRep/SerialOld.java
+  build: 0.064 seconds
+  compile: 0.062 seconds
+  main: 0.252 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/KeyStore/DefaultEntryType.java
+  build: 0.098 seconds
+  compile: 0.098 seconds
+  main: 0.044 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/KeyStore/EntryMethods.java
+  build: 0.264 seconds
+  compile: 0.264 seconds
+  main: 0.056 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/KeyStore/KeyStoreBuilder.java
+  build: 0.127 seconds
+  compile: 0.127 seconds
+  main: 0.061 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/KeyStore/PBETest.java
+  build: 0.089 seconds
+  compile: 0.088 seconds
+  main: 0.924 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/MessageDigest/ArgumentSanity.java
+  build: 0.027 seconds
+  compile: 0.027 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/MessageDigest/ByteBuffers.java
+  build: 0.068 seconds
+  compile: 0.067 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Permission/NullName.java
+  build: 0.06 seconds
+  compile: 0.058 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Permission/ToString.java
+  build: 0.072 seconds
+  compile: 0.072 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/PermissionCollection/AddToReadOnlyPermissionCollection.java
+  build: 0.068 seconds
+  compile: 0.068 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/PermissionCollection/Concurrent.java
+  build: 0.132 seconds
+  compile: 0.131 seconds
+  main: 27.1 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Policy/Dynamic/TestDynamicPolicy.java
+  build: 0.053 seconds
+  compile: 0.053 seconds
+  main: 0.099 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Policy/GetInstance/GetInstance.java
+  build: 0.036 seconds
+  compile: 0.036 seconds
+  build: 0.137 seconds
+  compile: 0.137 seconds
+  main: 0.255 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Policy/GetInstance/GetInstanceSecurity.java
+  build: 0.024 seconds
+  compile: 0.024 seconds
+  main: 0.122 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Policy/GetPermissions/JarURL.java
+  build: 0.059 seconds
+  compile: 0.058 seconds
+  main: 0.118 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Principal/Implies.java
+  build: 0.069 seconds
+  compile: 0.069 seconds
+  main: 0.088 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/PrivilegedActionException/PrintWrappedException.java
+  build: 0.1 seconds
+  compile: 0.1 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/ProtectionDomain/AllPerm.java
+  build: 0.12 seconds
+  compile: 0.119 seconds
+  main: 0.047 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/ProtectionDomain/CheckWhatYouGet.java
+  build: 0.061 seconds
+  compile: 0.061 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/ProtectionDomain/NullPerms.java
+  build: 0.065 seconds
+  compile: 0.064 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/ProtectionDomain/Recursion.java
+  build: 0.074 seconds
+  compile: 0.074 seconds
+  main: 0.11 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/ProtectionDomain/RecursionDebug.java
+  build: 0.067 seconds
+  compile: 0.065 seconds
+  main: 0.105 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Provider/CaseSensitiveServices.java
+  build: 0.065 seconds
+  compile: 0.065 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Provider/CertStoreConstructorParam.java
+  build: 0.059 seconds
+  compile: 0.059 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Provider/ChangeProviders.java
+  build: 0.073 seconds
+  compile: 0.073 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Provider/DefaultPKCS11.java
+  build: 0.247 seconds
+  compile: 0.247 seconds
+  main: 0.041 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Provider/Equals.java
+  build: 0.067 seconds
+  compile: 0.067 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Provider/GetInstance.java
+  build: 0.161 seconds
+  compile: 0.161 seconds
+  main: 0.055 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Provider/ProviderInfoCheck.java
+  build: 0.069 seconds
+  compile: 0.069 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Provider/RemoveProvider.java
+  build: 0.128 seconds
+  compile: 0.128 seconds
+  main: 0.044 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Provider/SupportsParameter.java
+  build: 0.083 seconds
+  compile: 0.083 seconds
+  main: 0.045 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Provider/Turkish.java
+  build: 0.072 seconds
+  compile: 0.072 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/SecureClassLoader/DefineClassByteBuffer.java
+  build: 0.069 seconds
+  compile: 0.069 seconds
+  build: 0.0 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/SecureRandom/GetAlgorithm.java
+  build: 0.067 seconds
+  compile: 0.067 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/SecureRandom/Serialize.java
+  build: 0.049 seconds
+  compile: 0.049 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Security/ClassLoaderDeadlock/ClassLoaderDeadlock.sh
+  shell: 2.826 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Security/ClassLoaderDeadlock/Deadlock.sh
+  build: 0.069 seconds
+  compile: 0.069 seconds
+  shell: 0.144 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Security/ClassLoaderDeadlock/Deadlock2.sh
+  shell: 2.28 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Security/removing/RemoveProviderByIdentity.java
+  build: 0.07 seconds
+  compile: 0.07 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Security/removing/RemoveProviders.java
+  build: 0.081 seconds
+  compile: 0.081 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Security/removing/RemoveStaticProvider.java
+  build: 0.062 seconds
+  compile: 0.062 seconds
+  main: 0.151 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Security/SecurityPropFile/SecurityPropFile.java
+  build: 0.067 seconds
+  compile: 0.067 seconds
+  main: 0.121 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Security/signedfirst/Dyn.sh
+  shell: 1.055 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Security/signedfirst/Static.sh
+  shell: 1.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Security/CaseInsensitiveAlgNames.java
+  build: 0.055 seconds
+  compile: 0.055 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Security/NoInstalledProviders.java
+  build: 0.068 seconds
+  compile: 0.068 seconds
+  main: 0.126 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Security/Nulls.java
+  build: 0.064 seconds
+  compile: 0.064 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Security/SynchronizedAccess.java
+  build: 0.078 seconds
+  compile: 0.077 seconds
+  main: 16.669 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Signature/ByteBuffers.java
+  build: 0.029 seconds
+  compile: 0.029 seconds
+  main: 0.095 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Signature/NONEwithRSA.java
+  build: 0.074 seconds
+  compile: 0.073 seconds
+  main: 0.106 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Signature/SignWithOutputBuffer.java
+  build: 0.062 seconds
+  compile: 0.061 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Signature/TestInitSignWithMyOwnRandom.java
+  build: 0.07 seconds
+  compile: 0.069 seconds
+  main: 0.088 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/Signature/VerifyRangeCheckOverflow.java
+  build: 0.061 seconds
+  compile: 0.061 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/SignedObject/Correctness.java
+  build: 0.061 seconds
+  compile: 0.06 seconds
+  main: 0.291 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/spec/ECCBasic.java
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  main: 0.047 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/spec/EllipticCurveMatch.java
+  build: 0.068 seconds
+  compile: 0.068 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/UnresolvedPermission/AccessorMethods.java
+  build: 0.061 seconds
+  compile: 0.061 seconds
+  main: 0.094 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/UnresolvedPermission/Debug.java
+  compile: 0.068 seconds
+  build: 0.0 seconds
+  main: 0.13 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/security/UnresolvedPermission/Equals.java
+  build: 0.073 seconds
+  compile: 0.073 seconds
+  main: 0.124 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+Test results: passed: 128
+Report written to /home/openjdk/sources/jdk8_tl/jdk/build/linux-i586/testoutput/jdk_security1/JTreport/html/report.html
+Results written to /home/openjdk/sources/jdk8_tl/jdk/build/linux-i586/testoutput/jdk_security1/JTwork
+Summary: jdk_security1
+TEST STATS: name=jdk_security1  run=128  pass=128  fail=0  excluded=0
+EXIT CODE: 0
+EXIT CODE: 0
+make[2]: Leaving directory `/home/openjdk/sources/jdk8_tl/jdk/test'
+make[1]: Leaving directory `/home/openjdk/sources/jdk8_tl/jdk/test'

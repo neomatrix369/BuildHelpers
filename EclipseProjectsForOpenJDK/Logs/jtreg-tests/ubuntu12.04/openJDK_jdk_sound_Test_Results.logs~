@@ -1,0 +1,1605 @@
+make -k -C  ../jdk/test  jdk_sound
+make[1]: Entering directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
+echo "Running tests in agentvm mode: javax/sound"
+Running tests in agentvm mode: javax/sound
+make TEST_DEPENDENCIES="javax/sound" TESTDIRS="javax/sound" USE_JTREG_AGENTVM=true  UNIQUE_DIR=jdk_sound jtreg_tests
+make[2]: Entering directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
+Excluding list contains 0 items
+(                                                                    \
+	  ( JT_HOME=/home/saiubuntu/jtreg/;                   \
+            export JT_HOME;                                                  \
+            /home/saiubuntu/jtreg//win32/bin/jtreg                              \
+              -agentvm   -a -ea -esa -v:fail,error,time -retain:fail,error -ignore:quiet -timeoutFactor:4 -J-Xmx512m                                         \
+              -r:/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/JTreport  \
+              -w:/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/JTwork    \
+              -jdk:/home/saiubuntu/sources//jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image/                \
+              -exclude:/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/excludelist.txt             \
+                                                        \
+              javax/sound                                                    \
+	  ) ; ( jtregExitCode=$? && _summary="/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/JTreport/text/summary.txt"; rm -f -f /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/Stats.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/runlist.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/passlist.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/faillist.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/exitcode.txt; echo "${jtregExitCode}" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/exitcode.txt; if [ -r "${_summary}" ] ; then echo "Summary: jdk_sound" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/Stats.txt; expand ${_summary} | egrep -v ' Not run\.' > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/runlist.txt; egrep ' Passed\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/runlist.txt | egrep -v ' Error\.' | egrep -v ' Failed\.' > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/passlist.txt; ( egrep ' Failed\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/runlist.txt; egrep ' Error\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/runlist.txt; egrep -v ' Passed\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/runlist.txt ) | sort | uniq > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/faillist.txt; if [ ${jtregExitCode} != 0 -o -s /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/faillist.txt ] ; then expand /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/faillist.txt | cut -d' ' -f1 | sed -e 's@^@FAILED: @' >> /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/Stats.txt; if [ ${jtregExitCode} = 0 ] ; then jtregExitCode=1; fi; fi; runc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/runlist.txt      | wc -l | awk '{print $1;}'`"; passc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/passlist.txt    | wc -l | awk '{print $1;}'`"; failc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/faillist.txt    | wc -l | awk '{print $1;}'`"; exclc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/excludelist.txt | wc -l | awk '{print $1;}'`"; echo "TEST STATS: name=jdk_sound  run=${runc}  pass=${passc}  fail=${failc}  excluded=${exclc}" >> /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/Stats.txt; else echo "Missing file: ${_summary}" >> /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/Stats.txt; fi; if [ -f /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/Stats.txt ] ; then cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/Stats.txt; fi; ( mkdir -p `dirname /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/ARCHIVE_BUNDLE.zip` && cd /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound && chmod -R a+r . && zip -q -r /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/ARCHIVE_BUNDLE.zip . ) ; if [ ! -s /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/exitcode.txt; fi ; testExitCode=`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode} )                                          \
+	) 2>&1 | tee /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/output.txt ; if [ ! -s /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/exitcode.txt; fi ; testExitCode=`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode}
+Directory "/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/JTreport" not found: creating
+Directory "/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/JTwork" not found: creating
+Directory "/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_sound/JTwork/scratch" not found: creating
+--------------------------------------------------
+TEST: javax/sound/midi/File/SMPTESequence.java
+  build: 1.075 seconds
+  compile: 1.068 seconds
+  main: 0.118 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/AudioFloatConverter/GetFormat.java
+  build: 0.874 seconds
+  compile: 0.874 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/AudioFloatConverter/ToFloatArray.java
+  build: 1.082 seconds
+  compile: 1.082 seconds
+  main: 0.246 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/AudioFloatFormatConverter/SkipTest.java
+  build: 0.923 seconds
+  compile: 0.923 seconds
+  main: 0.094 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/AudioFloatInputStream/Available.java
+  build: 0.914 seconds
+  compile: 0.914 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/AudioFloatInputStream/Close.java
+  build: 0.924 seconds
+  compile: 0.924 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/AudioFloatInputStream/GetFormat.java
+  build: 0.929 seconds
+  compile: 0.928 seconds
+  main: 0.095 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/AudioFloatInputStream/GetFrameLength.java
+  build: 0.914 seconds
+  compile: 0.914 seconds
+  main: 0.093 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/AudioFloatInputStream/MarkSupported.java
+  build: 0.923 seconds
+  compile: 0.923 seconds
+  main: 0.093 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/AudioFloatInputStream/Read.java
+  build: 0.903 seconds
+  compile: 0.903 seconds
+  main: 0.099 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/AudioFloatInputStream/ReadFloatArray.java
+  build: 0.931 seconds
+  compile: 0.931 seconds
+  main: 0.088 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/AudioFloatInputStream/ReadFloatArrayIntInt.java
+  build: 0.905 seconds
+  compile: 0.905 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/AudioFloatInputStream/Reset.java
+  build: 0.928 seconds
+  compile: 0.928 seconds
+  main: 0.102 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/AudioFloatInputStream/Skip.java
+  build: 0.905 seconds
+  compile: 0.905 seconds
+  main: 0.09 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/DLSSoundbankReader/TestGetSoundbankFile.java
+  build: 0.878 seconds
+  compile: 0.878 seconds
+  main: 0.109 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/DLSSoundbankReader/TestGetSoundbankInputStream.java
+  build: 0.904 seconds
+  compile: 0.904 seconds
+  main: 0.097 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/DLSSoundbankReader/TestGetSoundbankInputStream2.java
+  build: 0.876 seconds
+  compile: 0.875 seconds
+  main: 0.152 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/DLSSoundbankReader/TestGetSoundbankUrl.java
+  build: 0.914 seconds
+  compile: 0.914 seconds
+  main: 0.095 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/EmergencySoundbank/TestCreateSoundbank.java
+  build: 0.915 seconds
+  compile: 0.915 seconds
+  main: 6.22 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBuffer/RandomFileInputStream/Available.java
+  build: 0.936 seconds
+  compile: 0.935 seconds
+  main: 0.118 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBuffer/RandomFileInputStream/Close.java
+  build: 0.913 seconds
+  compile: 0.912 seconds
+  main: 0.121 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBuffer/RandomFileInputStream/MarkReset.java
+  build: 0.97 seconds
+  compile: 0.97 seconds
+  main: 0.117 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBuffer/RandomFileInputStream/MarkSupported.java
+  build: 0.88 seconds
+  compile: 0.879 seconds
+  main: 0.122 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBuffer/RandomFileInputStream/Read.java
+  build: 0.914 seconds
+  compile: 0.914 seconds
+  main: 0.121 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBuffer/RandomFileInputStream/ReadByte.java
+  build: 0.946 seconds
+  compile: 0.946 seconds
+  main: 0.117 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBuffer/RandomFileInputStream/ReadByteIntInt.java
+  build: 0.966 seconds
+  compile: 0.966 seconds
+  main: 0.126 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBuffer/RandomFileInputStream/Skip.java
+  build: 0.957 seconds
+  compile: 0.956 seconds
+  main: 0.131 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBuffer/GetInputStream.java
+  build: 0.906 seconds
+  compile: 0.906 seconds
+  main: 0.119 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBuffer/GetRoot.java
+  build: 0.905 seconds
+  compile: 0.905 seconds
+  main: 0.122 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBuffer/Load.java
+  build: 0.932 seconds
+  compile: 0.932 seconds
+  main: 0.12 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBuffer/LoadAll.java
+  build: 0.918 seconds
+  compile: 0.917 seconds
+  main: 0.111 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBuffer/NewModelByteBufferByteArray.java
+  build: 0.893 seconds
+  compile: 0.893 seconds
+  main: 0.123 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBuffer/NewModelByteBufferByteArrayIntInt.java
+  build: 0.916 seconds
+  compile: 0.915 seconds
+  main: 0.12 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBuffer/NewModelByteBufferFile.java
+  build: 0.887 seconds
+  compile: 0.887 seconds
+  main: 0.118 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBuffer/NewModelByteBufferFileLongLong.java
+  build: 0.88 seconds
+  compile: 0.88 seconds
+  main: 0.123 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBuffer/SubbufferLong.java
+  build: 0.93 seconds
+  compile: 0.929 seconds
+  main: 0.121 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBuffer/SubbufferLongLong.java
+  build: 0.873 seconds
+  compile: 0.873 seconds
+  main: 0.121 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBuffer/SubbufferLongLongBoolean.java
+  build: 0.897 seconds
+  compile: 0.896 seconds
+  main: 0.121 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBuffer/Unload.java
+  build: 0.857 seconds
+  compile: 0.857 seconds
+  main: 0.122 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBuffer/WriteTo.java
+  build: 0.916 seconds
+  compile: 0.916 seconds
+  main: 0.112 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBufferWavetable/GetAttenuation.java
+  build: 0.913 seconds
+  compile: 0.913 seconds
+  main: 0.123 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBufferWavetable/GetChannels.java
+  build: 0.942 seconds
+  compile: 0.942 seconds
+  main: 0.108 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBufferWavetable/GetLoopLength.java
+  build: 0.889 seconds
+  compile: 0.888 seconds
+  main: 0.114 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBufferWavetable/GetLoopStart.java
+  build: 0.917 seconds
+  compile: 0.916 seconds
+  main: 0.113 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBufferWavetable/GetPitchCorrection.java
+  build: 0.916 seconds
+  compile: 0.916 seconds
+  main: 0.118 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBufferWavetable/NewModelByteBufferWavetableModelByteBuffer.java
+  build: 0.934 seconds
+  compile: 0.934 seconds
+  main: 0.118 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBufferWavetable/NewModelByteBufferWavetableModelByteBufferAudioFormat.java
+  build: 0.93 seconds
+  compile: 0.93 seconds
+  main: 0.119 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBufferWavetable/NewModelByteBufferWavetableModelByteBufferAudioFormatFloat.java
+  build: 0.924 seconds
+  compile: 0.924 seconds
+  main: 0.114 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBufferWavetable/NewModelByteBufferWavetableModelByteBufferFloat.java
+  build: 0.919 seconds
+  compile: 0.919 seconds
+  main: 0.115 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBufferWavetable/Open.java
+  build: 0.927 seconds
+  compile: 0.926 seconds
+  main: 0.12 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBufferWavetable/OpenStream.java
+  build: 0.93 seconds
+  compile: 0.93 seconds
+  main: 0.137 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBufferWavetable/Set8BitExtensionBuffer.java
+  build: 0.953 seconds
+  compile: 0.953 seconds
+  main: 0.127 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelByteBufferWavetable/SetLoopType.java
+  build: 0.944 seconds
+  compile: 0.944 seconds
+  main: 0.114 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelDestination/NewModelDestination.java
+  build: 0.854 seconds
+  compile: 0.854 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelDestination/NewModelDestinationModelIdentifier.java
+  build: 0.875 seconds
+  compile: 0.874 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelDestination/SetIdentifier.java
+  build: 0.857 seconds
+  compile: 0.856 seconds
+  main: 0.088 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelDestination/SetTransform.java
+  build: 0.861 seconds
+  compile: 0.861 seconds
+  main: 0.092 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelIdentifier/EqualsObject.java
+  build: 0.84 seconds
+  compile: 0.84 seconds
+  main: 0.091 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelIdentifier/NewModelIdentifierString.java
+  build: 0.868 seconds
+  compile: 0.868 seconds
+  main: 0.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelIdentifier/NewModelIdentifierStringInt.java
+  build: 0.857 seconds
+  compile: 0.857 seconds
+  main: 0.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelIdentifier/NewModelIdentifierStringString.java
+  build: 0.905 seconds
+  compile: 0.905 seconds
+  main: 0.088 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelIdentifier/NewModelIdentifierStringStringInt.java
+  build: 0.859 seconds
+  compile: 0.859 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelIdentifier/SetInstance.java
+  build: 0.84 seconds
+  compile: 0.839 seconds
+  main: 0.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelIdentifier/SetObject.java
+  build: 0.845 seconds
+  compile: 0.845 seconds
+  main: 0.09 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelIdentifier/SetVariable.java
+  build: 0.815 seconds
+  compile: 0.815 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelPerformer/GetOscillators.java
+  build: 0.876 seconds
+  compile: 0.876 seconds
+  main: 0.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelPerformer/SetConnectionBlocks.java
+  build: 0.869 seconds
+  compile: 0.869 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelPerformer/SetDefaultConnectionsEnabled.java
+  build: 0.836 seconds
+  compile: 0.836 seconds
+  main: 0.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelPerformer/SetExclusiveClass.java
+  build: 0.844 seconds
+  compile: 0.844 seconds
+  main: 0.088 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelPerformer/SetKeyFrom.java
+  build: 0.899 seconds
+  compile: 0.899 seconds
+  main: 0.091 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelPerformer/SetKeyTo.java
+  build: 0.847 seconds
+  compile: 0.847 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelPerformer/SetName.java
+  build: 0.857 seconds
+  compile: 0.856 seconds
+  main: 0.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelPerformer/SetSelfNonExclusive.java
+  build: 0.876 seconds
+  compile: 0.876 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelPerformer/SetVelFrom.java
+  build: 0.832 seconds
+  compile: 0.832 seconds
+  main: 0.09 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelPerformer/SetVelTo.java
+  build: 0.855 seconds
+  compile: 0.855 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelSource/NewModelSource.java
+  build: 0.852 seconds
+  compile: 0.852 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelSource/NewModelSourceModelIdentifier.java
+  build: 0.876 seconds
+  compile: 0.875 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelSource/NewModelSourceModelIdentifierBoolean.java
+  build: 0.873 seconds
+  compile: 0.872 seconds
+  main: 0.09 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelSource/NewModelSourceModelIdentifierBooleanBoolean.java
+  build: 0.871 seconds
+  compile: 0.871 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelSource/NewModelSourceModelIdentifierBooleanBooleanInt.java
+  build: 0.899 seconds
+  compile: 0.898 seconds
+  main: 0.088 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelSource/NewModelSourceModelIdentifierModelTransform.java
+  build: 0.864 seconds
+  compile: 0.864 seconds
+  main: 0.088 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelSource/SetIdentifier.java
+  build: 0.858 seconds
+  compile: 0.857 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelSource/SetTransform.java
+  build: 0.889 seconds
+  compile: 0.889 seconds
+  main: 0.09 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelStandardIndexedDirector/ModelStandardIndexedDirectorTest.java
+  build: 0.975 seconds
+  compile: 0.975 seconds
+  main: 0.795 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelStandardTransform/NewModelStandardTransform.java
+  build: 0.861 seconds
+  compile: 0.861 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelStandardTransform/NewModelStandardTransformBoolean.java
+  build: 0.835 seconds
+  compile: 0.835 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelStandardTransform/NewModelStandardTransformBooleanBoolean.java
+  build: 0.892 seconds
+  compile: 0.892 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelStandardTransform/NewModelStandardTransformBooleanBooleanInt.java
+  build: 0.878 seconds
+  compile: 0.878 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelStandardTransform/SetDirection.java
+  build: 0.867 seconds
+  compile: 0.866 seconds
+  main: 0.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelStandardTransform/SetPolarity.java
+  build: 0.847 seconds
+  compile: 0.847 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelStandardTransform/SetTransform.java
+  build: 0.899 seconds
+  compile: 0.899 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelStandardTransform/TransformAbsolute.java
+  build: 0.891 seconds
+  compile: 0.89 seconds
+  main: 0.091 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelStandardTransform/TransformConcave.java
+  build: 0.888 seconds
+  compile: 0.887 seconds
+  main: 0.098 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelStandardTransform/TransformConvex.java
+  build: 0.938 seconds
+  compile: 0.938 seconds
+  main: 0.093 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelStandardTransform/TransformLinear.java
+  build: 0.923 seconds
+  compile: 0.923 seconds
+  main: 0.09 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/ModelStandardTransform/TransformSwitch.java
+  build: 0.9 seconds
+  compile: 0.9 seconds
+  main: 0.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/RiffReaderWriter/Available.java
+  build: 0.918 seconds
+  compile: 0.918 seconds
+  main: 0.122 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/RiffReaderWriter/Close.java
+  build: 0.892 seconds
+  compile: 0.891 seconds
+  main: 0.122 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/RiffReaderWriter/GetFilePointer.java
+  build: 0.876 seconds
+  compile: 0.876 seconds
+  main: 0.113 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/RiffReaderWriter/GetSize.java
+  build: 0.903 seconds
+  compile: 0.903 seconds
+  main: 0.109 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/RiffReaderWriter/HasNextChunk.java
+  build: 0.898 seconds
+  compile: 0.898 seconds
+  main: 0.12 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/RiffReaderWriter/Read.java
+  build: 0.882 seconds
+  compile: 0.882 seconds
+  main: 0.124 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/RiffReaderWriter/ReadByte.java
+  build: 0.9 seconds
+  compile: 0.9 seconds
+  main: 0.118 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/RiffReaderWriter/ReadByteArrayIntInt.java
+  build: 0.915 seconds
+  compile: 0.915 seconds
+  main: 0.121 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/RiffReaderWriter/ReadInt.java
+  build: 0.905 seconds
+  compile: 0.905 seconds
+  main: 0.124 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/RiffReaderWriter/ReadLong.java
+  build: 0.924 seconds
+  compile: 0.924 seconds
+  main: 0.13 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/RiffReaderWriter/ReadShort.java
+  build: 0.905 seconds
+  compile: 0.904 seconds
+  main: 0.121 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/RiffReaderWriter/ReadString.java
+  build: 0.896 seconds
+  compile: 0.895 seconds
+  main: 0.125 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/RiffReaderWriter/ReadUnsignedByte.java
+  build: 0.881 seconds
+  compile: 0.881 seconds
+  main: 0.118 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/RiffReaderWriter/ReadUnsignedInt.java
+  build: 0.905 seconds
+  compile: 0.905 seconds
+  main: 0.122 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/RiffReaderWriter/ReadUnsignedShort.java
+  build: 0.894 seconds
+  compile: 0.894 seconds
+  main: 0.107 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/RiffReaderWriter/Skip.java
+  build: 0.867 seconds
+  compile: 0.867 seconds
+  main: 0.122 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/RiffReaderWriter/WriteOutputStream.java
+  build: 0.888 seconds
+  compile: 0.887 seconds
+  main: 0.111 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SF2SoundbankReader/TestGetSoundbankFile.java
+  build: 0.862 seconds
+  compile: 0.861 seconds
+  main: 0.106 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SF2SoundbankReader/TestGetSoundbankInputStream.java
+  build: 0.889 seconds
+  compile: 0.888 seconds
+  main: 0.099 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SF2SoundbankReader/TestGetSoundbankInputStream2.java
+  build: 0.925 seconds
+  compile: 0.925 seconds
+  main: 0.151 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SF2SoundbankReader/TestGetSoundbankUrl.java
+  build: 0.86 seconds
+  compile: 0.86 seconds
+  main: 0.103 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SimpleInstrument/AddModelInstrument.java
+  build: 0.96 seconds
+  compile: 0.96 seconds
+  main: 0.097 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SimpleInstrument/AddModelInstrumentIntInt.java
+  build: 0.95 seconds
+  compile: 0.95 seconds
+  main: 0.093 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SimpleInstrument/AddModelInstrumentIntIntIntInt.java
+  build: 0.967 seconds
+  compile: 0.966 seconds
+  main: 0.098 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SimpleInstrument/AddModelInstrumentIntIntIntIntInt.java
+  build: 0.966 seconds
+  compile: 0.964 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SimpleInstrument/AddModelPerformer.java
+  build: 0.93 seconds
+  compile: 0.93 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SimpleInstrument/AddModelPerformerArray.java
+  build: 0.96 seconds
+  compile: 0.96 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SimpleInstrument/AddModelPerformerArrayIntInt.java
+  build: 0.928 seconds
+  compile: 0.928 seconds
+  main: 0.099 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SimpleInstrument/AddModelPerformerArrayIntIntIntInt.java
+  build: 0.977 seconds
+  compile: 0.977 seconds
+  main: 0.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SimpleInstrument/AddModelPerformerArrayIntIntIntIntInt.java
+  build: 0.943 seconds
+  compile: 0.943 seconds
+  main: 0.093 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SimpleInstrument/AddModelPerformerIntInt.java
+  build: 0.987 seconds
+  compile: 0.987 seconds
+  main: 0.094 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SimpleInstrument/AddModelPerformerIntIntIntInt.java
+  build: 0.938 seconds
+  compile: 0.938 seconds
+  main: 0.09 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SimpleInstrument/AddModelPerformerIntIntIntIntInt.java
+  build: 0.961 seconds
+  compile: 0.961 seconds
+  main: 0.098 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SimpleInstrument/Clear.java
+  build: 0.909 seconds
+  compile: 0.909 seconds
+  main: 0.094 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SimpleInstrument/SetName.java
+  build: 0.958 seconds
+  compile: 0.958 seconds
+  main: 0.093 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SimpleInstrument/SetPatch.java
+  build: 0.897 seconds
+  compile: 0.897 seconds
+  main: 0.093 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SimpleSoundbank/AddInstrument.java
+  build: 0.946 seconds
+  compile: 0.946 seconds
+  main: 0.093 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SimpleSoundbank/AddResource.java
+  build: 0.909 seconds
+  compile: 0.909 seconds
+  main: 0.088 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SimpleSoundbank/GetInstrument.java
+  build: 0.831 seconds
+  compile: 0.831 seconds
+  main: 0.092 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SimpleSoundbank/RemoveInstrument.java
+  build: 0.91 seconds
+  compile: 0.91 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SimpleSoundbank/SetDescription.java
+  build: 0.887 seconds
+  compile: 0.887 seconds
+  main: 0.091 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SimpleSoundbank/SetName.java
+  build: 0.861 seconds
+  compile: 0.86 seconds
+  main: 0.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SimpleSoundbank/SetVendor.java
+  build: 0.877 seconds
+  compile: 0.877 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SimpleSoundbank/SetVersion.java
+  build: 0.866 seconds
+  compile: 0.865 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftAudioBuffer/Array.java
+  build: 0.92 seconds
+  compile: 0.92 seconds
+  main: 0.088 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftAudioBuffer/Clear.java
+  build: 0.875 seconds
+  compile: 0.874 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftAudioBuffer/Get.java
+  build: 0.904 seconds
+  compile: 0.904 seconds
+  main: 0.091 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftAudioBuffer/NewSoftAudioBuffer.java
+  build: 0.85 seconds
+  compile: 0.848 seconds
+  main: 0.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftAudioSynthesizer/GetFormat.java
+  build: 0.905 seconds
+  compile: 0.905 seconds
+  main: 0.599 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftAudioSynthesizer/GetPropertyInfo.java
+  build: 0.881 seconds
+  compile: 0.881 seconds
+  main: 0.113 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftAudioSynthesizer/Open.java
+  build: 1.067 seconds
+  compile: 1.067 seconds
+  main: 0.435 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftAudioSynthesizer/OpenStream.java
+  build: 0.921 seconds
+  compile: 0.921 seconds
+  main: 0.432 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftChannel/AllNotesOff.java
+  build: 0.982 seconds
+  compile: 0.982 seconds
+  main: 0.757 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftChannel/AllSoundOff.java
+  build: 0.869 seconds
+  compile: 0.869 seconds
+  main: 0.721 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftChannel/ChannelPressure.java
+  build: 0.905 seconds
+  compile: 0.905 seconds
+  main: 0.471 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftChannel/Controller.java
+  build: 0.914 seconds
+  compile: 0.914 seconds
+  main: 0.5 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftChannel/LocalControl.java
+  build: 0.882 seconds
+  compile: 0.881 seconds
+  main: 0.424 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftChannel/Mono.java
+  build: 0.897 seconds
+  compile: 0.896 seconds
+  main: 0.442 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftChannel/Mute.java
+  build: 0.891 seconds
+  compile: 0.891 seconds
+  main: 0.487 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftChannel/NoteOff.java
+  build: 0.899 seconds
+  compile: 0.899 seconds
+  main: 0.712 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftChannel/NoteOff2.java
+  build: 0.891 seconds
+  compile: 0.891 seconds
+  main: 0.776 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftChannel/NoteOn.java
+  build: 0.883 seconds
+  compile: 0.883 seconds
+  main: 0.732 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftChannel/NoteOverFlowTest.java
+  build: 0.883 seconds
+  compile: 0.883 seconds
+  main: 0.863 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftChannel/NoteOverFlowTest2.java
+  build: 0.914 seconds
+  compile: 0.914 seconds
+  main: 0.55 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftChannel/Omni.java
+  build: 0.949 seconds
+  compile: 0.949 seconds
+  main: 0.452 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftChannel/PitchBend.java
+  build: 0.867 seconds
+  compile: 0.866 seconds
+  main: 0.434 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftChannel/PolyPressure.java
+  build: 0.851 seconds
+  compile: 0.851 seconds
+  main: 0.467 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftChannel/ProgramAndBankChange.java
+  build: 0.993 seconds
+  compile: 0.993 seconds
+  main: 0.496 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftChannel/ProgramChange.java
+  build: 0.903 seconds
+  compile: 0.903 seconds
+  main: 0.48 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftChannel/ResetAllControllers.java
+  build: 0.927 seconds
+  compile: 0.926 seconds
+  main: 0.476 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftChannel/Solo.java
+  build: 0.856 seconds
+  compile: 0.856 seconds
+  main: 0.473 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftCubicResampler/Interpolate.java
+  build: 0.925 seconds
+  compile: 0.925 seconds
+  main: 0.106 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftFilter/TestProcessAudio.java
+  build: 0.934 seconds
+  compile: 0.934 seconds
+  main: 0.38 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftLanczosResampler/Interpolate.java
+  build: 0.945 seconds
+  compile: 0.944 seconds
+  main: 0.122 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftLimiter/ProcessAudio_replace_mix_mono_overdrive.java
+  build: 0.907 seconds
+  compile: 0.907 seconds
+  main: 0.436 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftLimiter/ProcessAudio_replace_mix_mono.java
+  build: 0.947 seconds
+  compile: 0.947 seconds
+  main: 0.449 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftLimiter/ProcessAudio_replace_mix_overdrive.java
+  build: 0.89 seconds
+  compile: 0.89 seconds
+  main: 0.416 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftLimiter/ProcessAudio_replace_mix.java
+  build: 0.89 seconds
+  compile: 0.89 seconds
+  main: 0.389 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftLimiter/ProcessAudio_replace_normal_mono.java
+  build: 0.921 seconds
+  compile: 0.921 seconds
+  main: 0.467 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftLimiter/ProcessAudio_replace_normal.java
+  build: 0.912 seconds
+  compile: 0.912 seconds
+  main: 0.438 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftLimiter/ProcessAudio_replace_overdrive_mono.java
+  build: 0.93 seconds
+  compile: 0.93 seconds
+  main: 0.455 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftLimiter/ProcessAudio_replace_overdrive.java
+  build: 0.915 seconds
+  compile: 0.915 seconds
+  main: 0.403 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftLinearResampler/Interpolate.java
+  build: 0.89 seconds
+  compile: 0.889 seconds
+  main: 0.112 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftLinearResampler2/Interpolate.java
+  build: 0.92 seconds
+  compile: 0.92 seconds
+  main: 0.106 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftLowFrequencyOscillator/TestProcessControlLogic.java
+  build: 1.004 seconds
+  compile: 1.004 seconds
+  main: 0.223 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftPointResampler/Interpolate.java
+  build: 0.914 seconds
+  compile: 0.914 seconds
+  main: 0.112 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftProvider/GetDevice.java
+  build: 0.87 seconds
+  compile: 0.869 seconds
+  main: 0.093 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftReceiver/Close.java
+  build: 0.973 seconds
+  compile: 0.973 seconds
+  main: 0.469 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftReceiver/GetMidiDevice.java
+  build: 0.88 seconds
+  compile: 0.88 seconds
+  main: 0.422 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftReceiver/Send_ActiveSense.java
+  build: 0.903 seconds
+  compile: 0.903 seconds
+  main: 0.852 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftReceiver/Send_AllNotesOff.java
+  build: 0.872 seconds
+  compile: 0.872 seconds
+  main: 0.783 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftReceiver/Send_AllSoundOff.java
+  build: 0.911 seconds
+  compile: 0.911 seconds
+  main: 0.727 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftReceiver/Send_ChannelPressure.java
+  build: 0.878 seconds
+  compile: 0.878 seconds
+  main: 0.499 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftReceiver/Send_Controller.java
+  build: 0.886 seconds
+  compile: 0.886 seconds
+  main: 0.478 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftReceiver/Send_Mono.java
+  build: 0.899 seconds
+  compile: 0.899 seconds
+  main: 0.703 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftReceiver/Send_NoteOff.java
+  build: 0.859 seconds
+  compile: 0.859 seconds
+  main: 0.774 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftReceiver/Send_NoteOn_AllChannels.java
+  build: 0.853 seconds
+  compile: 0.852 seconds
+  main: 1.136 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftReceiver/Send_NoteOn_Delayed.java
+  build: 0.902 seconds
+  compile: 0.902 seconds
+  main: 0.865 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftReceiver/Send_NoteOn_Multiple.java
+  build: 0.885 seconds
+  compile: 0.885 seconds
+  main: 0.786 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftReceiver/Send_NoteOn.java
+  build: 0.859 seconds
+  compile: 0.858 seconds
+  main: 0.728 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftReceiver/Send_Omni.java
+  build: 0.91 seconds
+  compile: 0.91 seconds
+  main: 0.793 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftReceiver/Send_PitchBend.java
+  build: 0.898 seconds
+  compile: 0.898 seconds
+  main: 0.48 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftReceiver/Send_PolyPressure.java
+  build: 0.887 seconds
+  compile: 0.887 seconds
+  main: 0.442 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftReceiver/Send_ProgramChange.java
+  build: 0.903 seconds
+  compile: 0.902 seconds
+  main: 0.478 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftReceiver/Send_ResetAllControllers.java
+  build: 0.921 seconds
+  compile: 0.92 seconds
+  main: 0.453 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSincResampler/Interpolate.java
+  build: 0.925 seconds
+  compile: 0.925 seconds
+  main: 0.608 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/Close.java
+  build: 0.877 seconds
+  compile: 0.877 seconds
+  main: 0.44 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/GetAvailableInstruments.java
+  build: 0.921 seconds
+  compile: 0.921 seconds
+  main: 0.435 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/GetAvailableInstruments2.java
+  build: 0.876 seconds
+  compile: 0.876 seconds
+  main: 0.402 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/GetChannels.java
+  build: 0.875 seconds
+  compile: 0.875 seconds
+  main: 0.448 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/GetDefaultSoundbank.java
+  build: 0.87 seconds
+  compile: 0.869 seconds
+  main: 0.421 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/GetDeviceInfo.java
+  build: 0.857 seconds
+  compile: 0.857 seconds
+  main: 0.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/GetLatency.java
+  build: 1.072 seconds
+  compile: 1.072 seconds
+  main: 0.453 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/GetLoadedInstruments.java
+  build: 0.87 seconds
+  compile: 0.87 seconds
+  main: 0.519 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/GetLoadedInstruments2.java
+  build: 0.883 seconds
+  compile: 0.883 seconds
+  main: 0.43 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/GetMaxPolyphony.java
+  build: 0.907 seconds
+  compile: 0.907 seconds
+  main: 0.441 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/GetMaxReceivers.java
+  build: 0.869 seconds
+  compile: 0.868 seconds
+  main: 0.075 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/GetMaxTransmitters.java
+  build: 0.886 seconds
+  compile: 0.886 seconds
+  main: 0.09 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/GetMicrosecondPosition.java
+  build: 0.918 seconds
+  compile: 0.918 seconds
+  main: 0.496 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/GetPropertyInfo.java
+  build: 0.945 seconds
+  compile: 0.945 seconds
+  main: 0.128 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/GetReceiver.java
+  build: 0.906 seconds
+  compile: 0.905 seconds
+  main: 0.428 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/GetReceiver2.java
+  build: 0.892 seconds
+  compile: 0.892 seconds
+  main: 0.453 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/GetReceivers.java
+  build: 0.89 seconds
+  compile: 0.89 seconds
+  main: 0.578 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/GetTransmitter.java
+  build: 0.886 seconds
+  compile: 0.886 seconds
+  main: 0.437 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/GetTransmitters.java
+  build: 0.879 seconds
+  compile: 0.878 seconds
+  main: 0.411 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/GetVoiceStatus.java
+  build: 0.887 seconds
+  compile: 0.885 seconds
+  main: 0.397 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/ImplicitOpenClose.java
+  build: 0.922 seconds
+  compile: 0.922 seconds
+  main: 0.802 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/IsOpen.java
+  build: 0.894 seconds
+  compile: 0.893 seconds
+  main: 0.408 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/IsSoundbankSupported.java
+  build: 0.905 seconds
+  compile: 0.905 seconds
+  main: 0.448 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/LoadAllInstruments.java
+  build: 0.928 seconds
+  compile: 0.928 seconds
+  main: 0.451 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/LoadInstrument.java
+  build: 0.893 seconds
+  compile: 0.893 seconds
+  main: 0.457 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/LoadInstruments.java
+  build: 0.866 seconds
+  compile: 0.866 seconds
+  main: 0.447 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/Open.java
+  build: 0.869 seconds
+  compile: 0.869 seconds
+  main: 0.438 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/OpenStream.java
+  build: 0.912 seconds
+  compile: 0.911 seconds
+  main: 0.45 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/RemapInstrument.java
+  build: 0.901 seconds
+  compile: 0.901 seconds
+  main: 0.449 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/TestDisableLoadDefaultSoundbank.java
+  build: 0.899 seconds
+  compile: 0.899 seconds
+  main: 0.478 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/TestPreciseTimestampRendering.java
+  build: 1.05 seconds
+  compile: 1.05 seconds
+  main: 1.203 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/TestRender1.java
+  build: 1.052 seconds
+  compile: 1.052 seconds
+  main: 5.42 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/UnloadAllInstruments.java
+  build: 0.886 seconds
+  compile: 0.886 seconds
+  main: 0.531 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/UnloadInstrument.java
+  build: 0.934 seconds
+  compile: 0.934 seconds
+  main: 0.478 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftSynthesizer/UnloadInstruments.java
+  build: 0.925 seconds
+  compile: 0.925 seconds
+  main: 0.451 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftTuning/GetName.java
+  build: 0.874 seconds
+  compile: 0.874 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftTuning/GetTuning.java
+  build: 0.886 seconds
+  compile: 0.886 seconds
+  main: 0.09 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftTuning/GetTuningInt.java
+  build: 0.884 seconds
+  compile: 0.884 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftTuning/Load1.java
+  build: 0.937 seconds
+  compile: 0.937 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftTuning/Load2.java
+  build: 0.893 seconds
+  compile: 0.893 seconds
+  main: 0.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftTuning/Load4.java
+  build: 0.955 seconds
+  compile: 0.955 seconds
+  main: 0.091 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftTuning/Load5.java
+  build: 0.894 seconds
+  compile: 0.893 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftTuning/Load6.java
+  build: 0.92 seconds
+  compile: 0.92 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftTuning/Load7.java
+  build: 0.923 seconds
+  compile: 0.923 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftTuning/Load8.java
+  build: 0.898 seconds
+  compile: 0.898 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftTuning/Load9.java
+  build: 0.894 seconds
+  compile: 0.894 seconds
+  main: 0.103 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftTuning/NewSoftTuning.java
+  build: 0.876 seconds
+  compile: 0.876 seconds
+  main: 0.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftTuning/NewSoftTuningByteArray.java
+  build: 0.9 seconds
+  compile: 0.899 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftTuning/NewSoftTuningPatch.java
+  build: 0.832 seconds
+  compile: 0.832 seconds
+  main: 0.092 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftTuning/NewSoftTuningPatchByteArray.java
+  build: 0.901 seconds
+  compile: 0.901 seconds
+  main: 0.099 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Gervill/SoftTuning/RealTimeTuning.java
+  build: 1.003 seconds
+  compile: 1.003 seconds
+  main: 1.043 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/MidiDeviceConnectors/TestAllDevices.java
+  compile: 0.842 seconds
+  build: 0.0 seconds
+  main: 0.79 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/midi/Sequencer/SequencerImplicitSynthOpen.java
+  build: 0.933 seconds
+  compile: 0.932 seconds
+  main: 0.947 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/sampled/AudioFormat/Matches_NOT_SPECIFIED.java
+  build: 0.812 seconds
+  compile: 0.812 seconds
+  main: 0.095 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/sampled/AudioFormat/PCM_FLOAT_support.java
+  compile: 0.895 seconds
+  build: 0.0 seconds
+  main: 0.113 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/sampled/Clip/ClipSetPos.java
+  build: 0.85 seconds
+  compile: 0.849 seconds
+  main: 0.162 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/sampled/DataLine/DataLine_ArrayIndexOutOfBounds.java
+  build: 0.98 seconds
+  compile: 0.98 seconds
+  main: 0.204 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/sampled/DirectAudio/bug6400879.java
+  build: 0.924 seconds
+  compile: 0.923 seconds
+  main: 0.585 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/sampled/FileWriter/AlawEncoderSync.java
+  build: 0.909 seconds
+  compile: 0.909 seconds
+  main: 0.687 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/sound/sampled/FileWriter/WriterCloseInput.java
+  build: 0.923 seconds
+  compile: 0.923 seconds
+  main: 0.148 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+Test results: passed: 262
+Report written to /home/saiubuntu/sources/jdk8_tl/jdk/build/linux-i586/testoutput/jdk_sound/JTreport/html/report.html
+Results written to /home/saiubuntu/sources/jdk8_tl/jdk/build/linux-i586/testoutput/jdk_sound/JTwork
+Summary: jdk_sound
+TEST STATS: name=jdk_sound  run=262  pass=262  fail=0  excluded=0
+EXIT CODE: 0
+EXIT CODE: 0
+make[2]: Leaving directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
+make[1]: Leaving directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'

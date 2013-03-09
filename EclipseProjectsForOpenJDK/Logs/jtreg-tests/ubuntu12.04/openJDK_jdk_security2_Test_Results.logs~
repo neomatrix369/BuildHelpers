@@ -1,0 +1,663 @@
+make -k -C  ../jdk/test  jdk_security2
+make[1]: Entering directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
+echo "Running tests in agentvm mode: javax/crypto javax/xml/crypto com/sun/crypto"
+Running tests in agentvm mode: javax/crypto javax/xml/crypto com/sun/crypto
+make TEST_DEPENDENCIES="javax/crypto javax/xml/crypto com/sun/crypto" TESTDIRS="javax/crypto javax/xml/crypto com/sun/crypto" USE_JTREG_AGENTVM=true  UNIQUE_DIR=jdk_security2 jtreg_tests
+make[2]: Entering directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
+Excluding list contains 0 items
+(                                                                    \
+	  ( JT_HOME=/home/saiubuntu/jtreg/;                   \
+            export JT_HOME;                                                  \
+            /home/saiubuntu/jtreg//win32/bin/jtreg                              \
+              -agentvm   -a -ea -esa -v:fail,error,time -retain:fail,error -ignore:quiet -timeoutFactor:4 -J-Xmx512m                                         \
+              -r:/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/JTreport  \
+              -w:/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/JTwork    \
+              -jdk:/home/saiubuntu/sources//jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image/                \
+              -exclude:/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/excludelist.txt             \
+                                                        \
+              javax/crypto javax/xml/crypto com/sun/crypto                                                    \
+	  ) ; ( jtregExitCode=$? && _summary="/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/JTreport/text/summary.txt"; rm -f -f /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/Stats.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/runlist.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/passlist.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/faillist.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/exitcode.txt; echo "${jtregExitCode}" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/exitcode.txt; if [ -r "${_summary}" ] ; then echo "Summary: jdk_security2" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/Stats.txt; expand ${_summary} | egrep -v ' Not run\.' > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/runlist.txt; egrep ' Passed\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/runlist.txt | egrep -v ' Error\.' | egrep -v ' Failed\.' > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/passlist.txt; ( egrep ' Failed\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/runlist.txt; egrep ' Error\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/runlist.txt; egrep -v ' Passed\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/runlist.txt ) | sort | uniq > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/faillist.txt; if [ ${jtregExitCode} != 0 -o -s /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/faillist.txt ] ; then expand /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/faillist.txt | cut -d' ' -f1 | sed -e 's@^@FAILED: @' >> /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/Stats.txt; if [ ${jtregExitCode} = 0 ] ; then jtregExitCode=1; fi; fi; runc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/runlist.txt      | wc -l | awk '{print $1;}'`"; passc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/passlist.txt    | wc -l | awk '{print $1;}'`"; failc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/faillist.txt    | wc -l | awk '{print $1;}'`"; exclc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/excludelist.txt | wc -l | awk '{print $1;}'`"; echo "TEST STATS: name=jdk_security2  run=${runc}  pass=${passc}  fail=${failc}  excluded=${exclc}" >> /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/Stats.txt; else echo "Missing file: ${_summary}" >> /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/Stats.txt; fi; if [ -f /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/Stats.txt ] ; then cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/Stats.txt; fi; ( mkdir -p `dirname /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/ARCHIVE_BUNDLE.zip` && cd /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2 && chmod -R a+r . && zip -q -r /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/ARCHIVE_BUNDLE.zip . ) ; if [ ! -s /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/exitcode.txt; fi ; testExitCode=`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode} )                                          \
+	) 2>&1 | tee /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/output.txt ; if [ ! -s /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/exitcode.txt; fi ; testExitCode=`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode}
+Directory "/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/JTreport" not found: creating
+Directory "/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/JTwork" not found: creating
+Directory "/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_security2/JTwork/scratch" not found: creating
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/AES/Test4511676.java
+  build: 1.04 seconds
+  compile: 1.029 seconds
+  main: 0.145 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/AES/Test4512524.java
+  build: 0.098 seconds
+  compile: 0.098 seconds
+  main: 0.046 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/AES/Test4512704.java
+  build: 0.138 seconds
+  compile: 0.138 seconds
+  main: 0.049 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/AES/Test4513830.java
+  build: 0.188 seconds
+  compile: 0.188 seconds
+  main: 0.041 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/AES/Test4517355.java
+  build: 0.166 seconds
+  compile: 0.166 seconds
+  main: 0.052 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/AES/Test4626070.java
+  build: 0.12 seconds
+  compile: 0.12 seconds
+  main: 0.042 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/AES/TestGCMKeyAndIvCheck.java
+  build: 0.086 seconds
+  compile: 0.085 seconds
+  build: 0.129 seconds
+  compile: 0.129 seconds
+  main: 0.048 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/AES/TestISO10126Padding.java
+  build: 0.13 seconds
+  compile: 0.128 seconds
+  main: 0.052 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/AES/TestKATForECB_IV.java
+  build: 0.0 seconds
+  build: 0.178 seconds
+  compile: 0.178 seconds
+  main: 0.045 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/AES/TestKATForECB_VK.java
+  build: 0.0 seconds
+  build: 0.179 seconds
+  compile: 0.178 seconds
+  main: 0.056 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/AES/TestKATForECB_VT.java
+  build: 0.0 seconds
+  build: 0.122 seconds
+  compile: 0.12 seconds
+  main: 0.061 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/AES/TestKATForGCM.java
+  build: 0.0 seconds
+  build: 0.116 seconds
+  compile: 0.116 seconds
+  main: 0.054 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/AES/TestShortBuffer.java
+  build: 0.128 seconds
+  compile: 0.128 seconds
+  main: 0.047 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/Blowfish/BlowfishTestVector.java
+  build: 0.0 seconds
+  build: 0.087 seconds
+  compile: 0.087 seconds
+  main: 0.095 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/CTR/CounterMode.java
+  build: 0.001 seconds
+  build: 0.122 seconds
+  compile: 0.121 seconds
+  main: 0.056 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/CTS/CTSMode.java
+  build: 0.179 seconds
+  compile: 0.179 seconds
+  main: 0.057 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/DES/DesAPITest.java
+  build: 0.127 seconds
+  compile: 0.127 seconds
+  main: 0.056 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/DES/DoFinalReturnLen.java
+  build: 0.156 seconds
+  compile: 0.156 seconds
+  main: 0.065 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/DES/FlushBug.java
+  build: 0.076 seconds
+  compile: 0.075 seconds
+  main: 0.088 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/DES/KeyWrapping.java
+  build: 0.074 seconds
+  compile: 0.073 seconds
+  main: 0.118 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/DES/PaddingTest.java
+  build: 0.114 seconds
+  compile: 0.114 seconds
+  main: 0.189 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/DES/Sealtest.java
+  build: 0.043 seconds
+  compile: 0.043 seconds
+  main: 0.074 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/KeyWrap/NISTWrapKAT.java
+  build: 0.105 seconds
+  compile: 0.105 seconds
+  main: 0.045 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/KeyWrap/XMLEncKAT.java
+  build: 0.141 seconds
+  compile: 0.141 seconds
+  main: 0.055 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/PBE/DecryptWithoutParameters.java
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/PBE/PBEInvalidParamsTest.java
+  build: 0.069 seconds
+  compile: 0.069 seconds
+  main: 0.103 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/PBE/PBEKeysAlgorithmNames.java
+  build: 0.077 seconds
+  compile: 0.075 seconds
+  main: 0.122 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/PBE/PBEKeyTest.java
+  build: 0.038 seconds
+  compile: 0.038 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/PBE/PBEParametersTest.java
+  build: 0.087 seconds
+  compile: 0.086 seconds
+  main: 0.365 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/PBE/PBES2Test.java
+  build: 0.068 seconds
+  compile: 0.068 seconds
+  main: 0.495 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/PBE/PKCS12Cipher.java
+  build: 0.053 seconds
+  compile: 0.053 seconds
+  main: 0.113 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/PBE/PKCS12CipherKAT.java
+  build: 0.091 seconds
+  compile: 0.091 seconds
+  main: 0.057 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/PBE/PKCS12Oid.java
+  build: 0.072 seconds
+  compile: 0.071 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/RC2ArcFour/CipherKAT.java
+  build: 0.115 seconds
+  compile: 0.115 seconds
+  main: 0.049 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/RSA/TestOAEP_KAT.java
+  build: 0.098 seconds
+  compile: 0.098 seconds
+  main: 0.708 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/RSA/TestOAEP.java
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  main: 0.166 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/RSA/TestOAEPParameterSpec.java
+  build: 0.045 seconds
+  compile: 0.045 seconds
+  main: 0.046 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/RSA/TestOAEPWithParams.java
+  build: 0.074 seconds
+  compile: 0.074 seconds
+  main: 0.227 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/RSA/TestRSA.java
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  main: 0.155 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Cipher/UTIL/StrongOrUnlimited.java
+  build: 0.032 seconds
+  compile: 0.031 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/KeyAgreement/DHGenSecretKey.java
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  main: 0.111 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/KeyAgreement/DHGenSharedSecret.java
+  build: 0.067 seconds
+  compile: 0.067 seconds
+  main: 0.091 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/KeyAgreement/DHKeyAgreement2.java
+  build: 0.139 seconds
+  compile: 0.139 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/KeyAgreement/DHKeyAgreement3.java
+  build: 0.053 seconds
+  compile: 0.052 seconds
+  main: 0.099 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/KeyAgreement/DHKeyFactory.java
+  build: 0.024 seconds
+  compile: 0.024 seconds
+  main: 0.095 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/KeyAgreement/DHKeyGenSpeed.java
+  build: 0.077 seconds
+  compile: 0.076 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/KeyAgreement/TestExponentSize.java
+  build: 0.101 seconds
+  compile: 0.1 seconds
+  main: 0.179 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/KeyFactory/PBKDF2HmacSHA1FactoryTest.java
+  build: 0.065 seconds
+  compile: 0.063 seconds
+  main: 0.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/KeyFactory/TestProviderLeak.java
+  build: 0.071 seconds
+  compile: 0.071 seconds
+  main: 0.836 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/KeyGenerator/Test4628062.java
+  build: 0.036 seconds
+  compile: 0.035 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/KeyGenerator/TestExplicitKeyLength.java
+  build: 0.072 seconds
+  compile: 0.071 seconds
+  main: 0.1 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Mac/HmacMD5.java
+  build: 0.075 seconds
+  compile: 0.075 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Mac/HmacPBESHA1.java
+  build: 0.068 seconds
+  compile: 0.068 seconds
+  main: 0.267 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Mac/HmacSaltLengths.java
+  build: 0.038 seconds
+  compile: 0.037 seconds
+  main: 0.222 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Mac/MacClone.java
+  build: 0.042 seconds
+  compile: 0.041 seconds
+  main: 0.044 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/Mac/MacKAT.java
+  build: 0.097 seconds
+  compile: 0.097 seconds
+  main: 0.156 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/TLS/TestKeyMaterial.java
+  build: 0.104 seconds
+  compile: 0.104 seconds
+  main: 0.1 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/TLS/TestMasterSecret.java
+  build: 0.07 seconds
+  compile: 0.069 seconds
+  main: 0.112 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/TLS/TestPremaster.java
+  build: 0.105 seconds
+  compile: 0.105 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/TLS/TestPRF.java
+  build: 0.115 seconds
+  compile: 0.115 seconds
+  main: 0.147 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/crypto/provider/TLS/TestPRF12.java
+  build: 0.075 seconds
+  compile: 0.075 seconds
+  main: 0.091 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/Cipher/ByteBuffers.java
+  build: 0.081 seconds
+  compile: 0.08 seconds
+  main: 0.054 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/Cipher/ByteBuffersNull.java
+  build: 0.094 seconds
+  compile: 0.093 seconds
+  main: 0.042 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/Cipher/GCMAPI.java
+  build: 0.07 seconds
+  compile: 0.07 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/Cipher/GetMaxAllowed.java
+  build: 0.074 seconds
+  compile: 0.073 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/Cipher/InOutBuffers.java
+  build: 0.056 seconds
+  compile: 0.055 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/Cipher/TestCipherMode.java
+  build: 0.061 seconds
+  compile: 0.061 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/Cipher/TestGetInstance.java
+  build: 0.075 seconds
+  compile: 0.074 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/Cipher/Turkish.java
+  build: 0.065 seconds
+  compile: 0.065 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/CipherSpi/DirectBBRemaining.java
+  build: 0.084 seconds
+  compile: 0.084 seconds
+  main: 0.056 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/CryptoPermission/AllPermCheck.java
+  build: 0.067 seconds
+  compile: 0.067 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/CryptoPermission/LowercasePermCheck.java
+  build: 0.065 seconds
+  compile: 0.065 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/CryptoPermission/RC2PermCheck.java
+  build: 0.074 seconds
+  compile: 0.074 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/CryptoPermission/RC4AliasPermCheck.java
+  build: 0.063 seconds
+  compile: 0.063 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/CryptoPermission/RSANoLimit.java
+  build: 0.08 seconds
+  compile: 0.08 seconds
+  main: 0.044 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/EncryptedPrivateKeyInfo/GetAlgName.java
+  build: 0.074 seconds
+  compile: 0.073 seconds
+  main: 0.099 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/EncryptedPrivateKeyInfo/GetKeySpec.java
+  build: 0.078 seconds
+  compile: 0.077 seconds
+  main: 0.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/EncryptedPrivateKeyInfo/GetKeySpecException.java
+  build: 0.127 seconds
+  compile: 0.127 seconds
+  main: 0.047 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/EncryptedPrivateKeyInfo/GetKeySpecException2.java
+  build: 0.066 seconds
+  compile: 0.066 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/EncryptedPrivateKeyInfo/GetKeySpecInvalidEncoding.java
+  build: 0.07 seconds
+  compile: 0.07 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/JceSecurity/SunJCE_BC_LoadOrdering.java
+  build: 0.066 seconds
+  compile: 0.065 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/KeyGenerator/TestGetInstance.java
+  build: 0.067 seconds
+  compile: 0.067 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/Mac/ByteBuffers.java
+  build: 0.065 seconds
+  compile: 0.064 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/Mac/NullMacSpi.java
+  build: 0.051 seconds
+  compile: 0.051 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/Mac/TestGetInstance.java
+  build: 0.065 seconds
+  compile: 0.065 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/NullCipher/TestNPE.java
+  build: 0.062 seconds
+  compile: 0.062 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/NullCipher/TestWithoutInit.java
+  build: 0.062 seconds
+  compile: 0.061 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/sanity/CheckManifestForRelease.java
+  build: 0.063 seconds
+  compile: 0.063 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/SealedObject/NullKeySealedObject.java
+  build: 0.061 seconds
+  compile: 0.061 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/SecretKeyFactory/FailOverTest.sh
+  shell: 0.983 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/spec/DESKeySpec/CheckParity.java
+  build: 0.24 seconds
+  compile: 0.238 seconds
+  main: 0.041 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/spec/DESKeySpec/CheckWeakKeys.java
+  build: 0.063 seconds
+  compile: 0.063 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/spec/DESKeySpec/NullKey.java
+  build: 0.059 seconds
+  compile: 0.058 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/spec/GCMParameterSpec/GCMParameterSpecTest.java
+  build: 0.066 seconds
+  compile: 0.066 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/spec/IvParameterSpec/InvalidArgs.java
+  build: 0.053 seconds
+  compile: 0.053 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/spec/IvParameterSpec/NullIV.java
+  build: 0.055 seconds
+  compile: 0.055 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/spec/RC2ParameterSpec/RC2AlgorithmParameters.java
+  build: 0.086 seconds
+  compile: 0.086 seconds
+  main: 0.042 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/spec/RC2ParameterSpec/RC2ParameterSpecEquals.java
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/spec/RC5ParameterSpec/InvalidIV.java
+  build: 0.059 seconds
+  compile: 0.058 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/crypto/spec/RC5ParameterSpec/RC5ParameterSpecEquals.java
+  build: 0.056 seconds
+  compile: 0.056 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/xml/crypto/dsig/keyinfo/KeyInfo/Marshal.java
+  compile: 0.088 seconds
+  build: 0.0 seconds
+  main: 0.07 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/xml/crypto/dsig/SecurityManager/XMLDSigWithSecMgr.java
+  build: 0.149 seconds
+  compile: 0.149 seconds
+  main: 2.613 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/xml/crypto/dsig/GenerationTests.java
+  compile: 0.672 seconds
+  build: 0.0 seconds
+  main: 0.742 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/xml/crypto/dsig/ValidationTests.java
+  compile: 0.162 seconds
+  build: 0.0 seconds
+  main: 0.303 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+Test results: passed: 104
+Report written to /home/saiubuntu/sources/jdk8_tl/jdk/build/linux-i586/testoutput/jdk_security2/JTreport/html/report.html
+Results written to /home/saiubuntu/sources/jdk8_tl/jdk/build/linux-i586/testoutput/jdk_security2/JTwork
+Summary: jdk_security2
+TEST STATS: name=jdk_security2  run=104  pass=104  fail=0  excluded=0
+EXIT CODE: 0
+EXIT CODE: 0
+make[2]: Leaving directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
+make[1]: Leaving directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'

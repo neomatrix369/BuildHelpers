@@ -1,0 +1,2044 @@
+make -k -C  ../jdk/test  jdk_io
+make[1]: Entering directory `/home/openjdk/sources/jdk8_tl/jdk/test'
+echo "Running tests in agentvm mode: java/io"
+Running tests in agentvm mode: java/io
+make TEST_DEPENDENCIES="java/io" TESTDIRS="java/io" USE_JTREG_AGENTVM=true  UNIQUE_DIR=jdk_io jtreg_tests
+make[2]: Entering directory `/home/openjdk/sources/jdk8_tl/jdk/test'
+Excluding list contains 0 items
+(                                                                    \
+	  ( JT_HOME=/home/openjdk/jtreg/;                   \
+            export JT_HOME;                                                  \
+            /home/openjdk/jtreg//win32/bin/jtreg                              \
+              -agentvm   -a -ea -esa -v:fail,error,time -retain:fail,error -ignore:quiet -timeoutFactor:4 -J-Xmx512m                                         \
+              -r:/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/JTreport  \
+              -w:/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/JTwork    \
+              -jdk:/home/openjdk/sources//jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image/                \
+              -exclude:/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/excludelist.txt             \
+                                                        \
+              java/io                                                    \
+	  ) ; ( jtregExitCode=$? && _summary="/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/JTreport/text/summary.txt"; rm -f -f /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/Stats.txt /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/runlist.txt /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/passlist.txt /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/faillist.txt /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/exitcode.txt; echo "${jtregExitCode}" > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/exitcode.txt; if [ -r "${_summary}" ] ; then echo "Summary: jdk_io" > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/Stats.txt; expand ${_summary} | egrep -v ' Not run\.' > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/runlist.txt; egrep ' Passed\.' /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/runlist.txt | egrep -v ' Error\.' | egrep -v ' Failed\.' > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/passlist.txt; ( egrep ' Failed\.' /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/runlist.txt; egrep ' Error\.' /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/runlist.txt; egrep -v ' Passed\.' /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/runlist.txt ) | sort | uniq > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/faillist.txt; if [ ${jtregExitCode} != 0 -o -s /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/faillist.txt ] ; then expand /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/faillist.txt | cut -d' ' -f1 | sed -e 's@^@FAILED: @' >> /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/Stats.txt; if [ ${jtregExitCode} = 0 ] ; then jtregExitCode=1; fi; fi; runc="`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/runlist.txt      | wc -l | awk '{print $1;}'`"; passc="`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/passlist.txt    | wc -l | awk '{print $1;}'`"; failc="`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/faillist.txt    | wc -l | awk '{print $1;}'`"; exclc="`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/excludelist.txt | wc -l | awk '{print $1;}'`"; echo "TEST STATS: name=jdk_io  run=${runc}  pass=${passc}  fail=${failc}  excluded=${exclc}" >> /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/Stats.txt; else echo "Missing file: ${_summary}" >> /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/Stats.txt; fi; if [ -f /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/Stats.txt ] ; then cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/Stats.txt; fi; ( mkdir -p `dirname /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/ARCHIVE_BUNDLE.zip` && cd /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io && chmod -R a+r . && zip -q -r /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/ARCHIVE_BUNDLE.zip . ) ; if [ ! -s /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/exitcode.txt; fi ; testExitCode=`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode} )                                          \
+	) 2>&1 | tee /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/output.txt ; if [ ! -s /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/exitcode.txt; fi ; testExitCode=`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode}
+Directory "/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/JTreport" not found: creating
+Directory "/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/JTwork" not found: creating
+Directory "/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_io/JTwork/scratch" not found: creating
+--------------------------------------------------
+TEST: java/io/BufferedInputStream/CloseStream.java
+  build: 1.365 seconds
+  compile: 1.355 seconds
+  main: 0.049 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/BufferedInputStream/CountUpdate.java
+  build: 0.112 seconds
+  compile: 0.112 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/BufferedInputStream/Fill.java
+  build: 0.125 seconds
+  compile: 0.124 seconds
+  main: 0.047 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/BufferedInputStream/ReadAfterClose.java
+  build: 0.089 seconds
+  compile: 0.089 seconds
+  main: 0.095 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/BufferedInputStream/ReadZeroBytes.java
+  build: 0.079 seconds
+  compile: 0.078 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/BufferedInputStream/SkipTest.java
+  build: 0.12 seconds
+  compile: 0.119 seconds
+  main: 0.042 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/BufferedReader/BigMark.java
+  build: 0.096 seconds
+  compile: 0.096 seconds
+  build: 0.0 seconds
+  main: 0.092 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/BufferedReader/EOL.java
+  build: 0.046 seconds
+  compile: 0.046 seconds
+  main: 0.04 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/BufferedReader/Fill.java
+  build: 0.112 seconds
+  compile: 0.111 seconds
+  main: 0.042 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/BufferedReader/MarkedFillAtEOF.java
+  build: 0.091 seconds
+  compile: 0.09 seconds
+  main: 0.04 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/BufferedReader/ReadLine.java
+  build: 0.119 seconds
+  compile: 0.119 seconds
+  main: 0.043 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/BufferedReader/ReadLineSync.java
+  build: 0.136 seconds
+  compile: 0.136 seconds
+  main: 0.193 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/BufferedReader/Ready.java
+  build: 0.052 seconds
+  compile: 0.052 seconds
+  main: 0.042 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/BufferedReader/SkipNegative.java
+  build: 0.074 seconds
+  compile: 0.074 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/BufferedWriter/Cleanup.java
+  build: 0.083 seconds
+  compile: 0.083 seconds
+  main: 3.045 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/ByteArrayInputStream/Skip.java
+  build: 0.064 seconds
+  compile: 0.064 seconds
+  main: 0.041 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/ByteArrayOutputStream/ToString.java
+  build: 0.117 seconds
+  compile: 0.116 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/ByteArrayOutputStream/WriteBounds.java
+  build: 0.086 seconds
+  compile: 0.085 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/CharArrayReader/Constructor.java
+  build: 0.076 seconds
+  compile: 0.075 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/charStreams/BCat.java
+  build: 0.109 seconds
+  compile: 0.109 seconds
+  main: 0.054 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/charStreams/BufferedReaderMark.java
+  build: 0.121 seconds
+  compile: 0.121 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/charStreams/BufferSizes.java
+  build: 0.051 seconds
+  compile: 0.051 seconds
+  main: 0.068 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/charStreams/Cat.java
+  build: 0.067 seconds
+  compile: 0.067 seconds
+  main: 0.103 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/charStreams/LineLengths.java
+  build: 0.12 seconds
+  compile: 0.12 seconds
+  main: 0.06 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/charStreams/LineNumbers.java
+  build: 0.158 seconds
+  compile: 0.157 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/charStreams/RandomLines.java
+  build: 0.03 seconds
+  compile: 0.03 seconds
+  main: 0.122 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/charStreams/SmallReads.java
+  build: 0.038 seconds
+  compile: 0.038 seconds
+  main: 0.095 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/charStreams/StringConvert.java
+  build: 0.07 seconds
+  compile: 0.07 seconds
+  main: 0.046 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/charStreams/UTF16.java
+  build: 0.023 seconds
+  compile: 0.023 seconds
+  main: 0.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/charStreams/UTF8.java
+  build: 0.079 seconds
+  compile: 0.078 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/charStreams/WriteLengths.java
+  build: 0.064 seconds
+  compile: 0.064 seconds
+  main: 0.105 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/DataInputStream/OpsAfterClose.java
+  build: 0.201 seconds
+  compile: 0.2 seconds
+  main: 0.051 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/DataInputStream/ReadFully.java
+  build: 0.061 seconds
+  compile: 0.061 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/DataInputStream/ReadLinePushback.java
+  build: 0.103 seconds
+  compile: 0.103 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/DataInputStream/ReadUTF.java
+  build: 0.078 seconds
+  compile: 0.078 seconds
+  main: 1.11 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/DataInputStream/SkipBytes.java
+  build: 0.038 seconds
+  compile: 0.038 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/DataOutputStream/CounterOverflow.java
+  build: 0.054 seconds
+  compile: 0.054 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/DataOutputStream/WriteUTF.java
+  build: 0.066 seconds
+  compile: 0.065 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/etc/FailingFlushAndClose.java
+  build: 0.165 seconds
+  compile: 0.164 seconds
+  main: 0.047 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Externalizable/compatibility/ExternalizableBlockData.java
+  build: 0.094 seconds
+  compile: 0.094 seconds
+  main: 0.102 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Externalizable/definesWriteObject/DefinesWriteObject.java
+  build: 0.066 seconds
+  compile: 0.065 seconds
+  main: 0.104 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/createTempFile/Patterns.java
+  build: 0.078 seconds
+  compile: 0.076 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/AccessDenied.java
+  build: 0.067 seconds
+  compile: 0.067 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/Basic.java
+  build: 0.11 seconds
+  compile: 0.109 seconds
+  shell: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/CheckTempDir.java
+  build: 0.026 seconds
+  compile: 0.026 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/CompareTo.java
+  build: 0.058 seconds
+  compile: 0.058 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/Cons.java
+  build: 0.208 seconds
+  compile: 0.208 seconds
+  main: 0.044 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/Create.java
+  build: 0.085 seconds
+  compile: 0.084 seconds
+  main: 0.039 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/CreateNewFile.java
+  build: 0.065 seconds
+  compile: 0.065 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/DeleteOnExit.java
+  build: 0.088 seconds
+  compile: 0.087 seconds
+  main: 0.157 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/DeleteOnExitLong.java
+  build: 0.022 seconds
+  compile: 0.022 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/DeleteOnExitNPE.java
+  build: 0.075 seconds
+  compile: 0.074 seconds
+  main: 2.169 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/EmptyPath.java
+  build: 0.02 seconds
+  compile: 0.02 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/FileMethods.java
+  build: 0.092 seconds
+  compile: 0.092 seconds
+  main: 0.044 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/GetAbsolutePath.java
+  build: 0.071 seconds
+  compile: 0.071 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/GetCanonicalPath.java
+  build: 0.059 seconds
+  compile: 0.059 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/GetParent.java
+  build: 0.075 seconds
+  compile: 0.075 seconds
+  main: 0.076 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/HashCodeEquals.java
+  build: 0.064 seconds
+  compile: 0.063 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/IsAbsolute.java
+  build: 0.065 seconds
+  compile: 0.065 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/IsHidden.java
+  build: 0.093 seconds
+  compile: 0.092 seconds
+  main: 0.04 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/ListNull.java
+  build: 0.064 seconds
+  compile: 0.064 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/ListRoots.java
+  build: 0.067 seconds
+  compile: 0.067 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/ListSpace.java
+  build: 0.065 seconds
+  compile: 0.065 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/MacPathTest.java
+  build: 0.104 seconds
+  compile: 0.104 seconds
+  shell: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/MaxPath.java
+  build: 0.036 seconds
+  compile: 0.035 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/MaxPathLength.java
+  build: 0.111 seconds
+  compile: 0.111 seconds
+  main: 1.377 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/Mkdir.java
+  build: 0.015 seconds
+  compile: 0.014 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/NullArgs.java
+  build: 0.066 seconds
+  compile: 0.066 seconds
+  main: 0.101 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/SetAccess.java
+  build: 0.134 seconds
+  compile: 0.133 seconds
+  build: 0.0 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/SetLastModified.java
+  build: 0.071 seconds
+  compile: 0.071 seconds
+  main: 0.046 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/SetReadOnly.java
+  build: 0.07 seconds
+  compile: 0.07 seconds
+  build: 0.0 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/SymLinks.java
+  build: 0.28 seconds
+  compile: 0.28 seconds
+  build: 0.0 seconds
+  main: 2.063 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/ToURI.java
+  build: 0.029 seconds
+  compile: 0.028 seconds
+  main: 0.123 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/ToURL.java
+  build: 0.058 seconds
+  compile: 0.058 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/Unicode.java
+  build: 0.08 seconds
+  compile: 0.079 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/WinDeviceName.java
+  build: 0.065 seconds
+  compile: 0.065 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/WinMaxPath.java
+  build: 0.063 seconds
+  compile: 0.063 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/File/WinSpecialFiles.java
+  build: 0.062 seconds
+  compile: 0.062 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/FileDescriptor/Finalize.java
+  build: 0.087 seconds
+  compile: 0.087 seconds
+  main: 6.614 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/FileDescriptor/Sharing.java
+  build: 0.095 seconds
+  compile: 0.094 seconds
+  main: 0.836 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/FileInputStream/Available.java
+  build: 0.026 seconds
+  compile: 0.025 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/FileInputStream/FinalizeShdCallClose.java
+  build: 0.065 seconds
+  compile: 0.065 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/FileInputStream/LargeFileAvailable.java
+  build: 0.073 seconds
+  compile: 0.073 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/FileInputStream/LeadingSlash.java
+  build: 0.055 seconds
+  compile: 0.054 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/FileInputStream/OpenDir.java
+  build: 0.06 seconds
+  compile: 0.058 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/FileInputStream/OpsAfterClose.java
+  build: 0.081 seconds
+  compile: 0.081 seconds
+  main: 0.043 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/FileOutputStream/AtomicAppend.java
+  build: 0.077 seconds
+  compile: 0.077 seconds
+  main: 0.107 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/FileOutputStream/FileOpen.sh
+  shell: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/FileOutputStream/FinalizeShdCallClose.java
+  build: 0.168 seconds
+  compile: 0.168 seconds
+  main: 0.046 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/FileOutputStream/ManyFiles.java
+  build: 0.104 seconds
+  compile: 0.104 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/FileOutputStream/OpsAfterClose.java
+  build: 0.088 seconds
+  compile: 0.087 seconds
+  main: 0.045 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/FilePermission/SpecTests.java
+  build: 0.067 seconds
+  compile: 0.066 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/FilterOutputStream/BoundsCheck.java
+  build: 0.062 seconds
+  compile: 0.062 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/FilterOutputStream/Write.java
+  build: 0.06 seconds
+  compile: 0.059 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/InputStream/OpsAfterClose.java
+  build: 0.108 seconds
+  compile: 0.108 seconds
+  main: 0.045 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/InputStream/ReadParams.java
+  build: 0.144 seconds
+  compile: 0.144 seconds
+  main: 0.051 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/InputStream/Skip.java
+  build: 0.066 seconds
+  compile: 0.066 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/InputStreamReader/GrowAfterEOF.java
+  build: 0.062 seconds
+  compile: 0.062 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/InputStreamReader/NullCreate.java
+  build: 0.056 seconds
+  compile: 0.056 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/InputStreamReader/One.java
+  build: 0.064 seconds
+  compile: 0.064 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/InputStreamReader/ReadOffset.java
+  build: 0.079 seconds
+  compile: 0.078 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/LineNumberInputStream/Available.java
+  build: 0.102 seconds
+  compile: 0.1 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/LineNumberInputStream/MarkReset.java
+  build: 0.096 seconds
+  compile: 0.096 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/LineNumberInputStream/Skip.java
+  build: 0.097 seconds
+  compile: 0.097 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/LineNumberInputStream/SkipEOL.java
+  build: 0.101 seconds
+  compile: 0.1 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/LineNumberReader/MarkReset.java
+  build: 0.061 seconds
+  compile: 0.061 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/LineNumberReader/Read.java
+  build: 0.062 seconds
+  compile: 0.062 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/LineNumberReader/ReadReadLine.java
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/LineNumberReader/Skip.java
+  build: 0.053 seconds
+  compile: 0.053 seconds
+  main: 0.113 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/ObjectInputStream/ResolveProxyClass.java
+  build: 0.068 seconds
+  compile: 0.068 seconds
+  build: 0.0 seconds
+  main: 0.088 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/OutputStream/WriteParams.java
+  build: 0.079 seconds
+  compile: 0.079 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/OutputStreamWriter/BoundsCheck.java
+  build: 0.056 seconds
+  compile: 0.056 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/OutputStreamWriter/Encode.java
+  build: 0.066 seconds
+  compile: 0.066 seconds
+  main: 0.126 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/OutputStreamWriter/NullCreate.java
+  build: 0.023 seconds
+  compile: 0.023 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/OutputStreamWriter/TestWrite.java
+  build: 0.062 seconds
+  compile: 0.062 seconds
+  main: 0.174 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/OutputStreamWriter/WriteAfterClose.java
+  build: 0.027 seconds
+  compile: 0.026 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/pathNames/unix/TrailingSlash.java
+  build: 0.069 seconds
+  compile: 0.069 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/pathNames/win32/BadDriveLetter.java
+  build: 0.058 seconds
+  compile: 0.058 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/pathNames/win32/bug6344646.java
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/pathNames/win32/DriveOnly.java
+  build: 0.061 seconds
+  compile: 0.061 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/pathNames/win32/DriveRelativePath.java
+  build: 0.064 seconds
+  compile: 0.063 seconds
+  main: 0.076 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/pathNames/win32/DriveSlash.java
+  build: 0.066 seconds
+  compile: 0.065 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/pathNames/win32/RenameDelete.java
+  build: 0.064 seconds
+  compile: 0.063 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/pathNames/win32/SJIS.java
+  build: 0.063 seconds
+  compile: 0.062 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/pathNames/GeneralWin32.java
+  build: 0.16 seconds
+  compile: 0.16 seconds
+  build: 0.0 seconds
+  main: 0.043 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PipedInputStream/CloseAndAvailableRC.java
+  build: 0.082 seconds
+  compile: 0.081 seconds
+  main: 0.207 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PipedInputStream/ClosedWriter.java
+  build: 0.02 seconds
+  compile: 0.02 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PipedInputStream/Constructors.java
+  build: 0.072 seconds
+  compile: 0.071 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PipedInputStream/FasterWriter.java
+  build: 0.062 seconds
+  compile: 0.06 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PipedInputStream/WriterLoop.java
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  main: 3.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PipedOutputStream/ClosedWrite.java
+  build: 0.024 seconds
+  compile: 0.022 seconds
+  main: 0.076 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PipedOutputStream/DeadReader.java
+  build: 0.055 seconds
+  compile: 0.055 seconds
+  main: 0.182 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PipedOutputStream/MultipleConnect.java
+  build: 0.017 seconds
+  compile: 0.016 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PipedOutputStream/NotConnected.java
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PipedOutputStream/WriteAfterClose.java
+  build: 0.052 seconds
+  compile: 0.052 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PipedReader/Constructors.java
+  build: 0.066 seconds
+  compile: 0.066 seconds
+  main: 0.098 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PipedReader/ReadToArray.java
+  build: 0.059 seconds
+  compile: 0.058 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PipedReader/Ready.java
+  build: 0.055 seconds
+  compile: 0.055 seconds
+  main: 0.076 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PipedWriter/ConnectAfterReaderClose.java
+  build: 0.058 seconds
+  compile: 0.057 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PipedWriter/FlushAfterClose.java
+  build: 0.055 seconds
+  compile: 0.055 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PipedWriter/WriteAfterReaderClose.java
+  build: 0.052 seconds
+  compile: 0.052 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PrintStream/CheckError.java
+  build: 0.063 seconds
+  compile: 0.062 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PrintStream/ClearErrorStream.java
+  build: 0.054 seconds
+  compile: 0.052 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PrintStream/EncodingConstructor.java
+  build: 0.064 seconds
+  compile: 0.063 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PrintStream/FailingConstructors.java
+  build: 0.068 seconds
+  compile: 0.068 seconds
+  main: 0.117 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PrintStream/NullConstructor.java
+  build: 0.018 seconds
+  compile: 0.017 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PrintStream/OversynchronizedTest.java
+  build: 0.059 seconds
+  compile: 0.059 seconds
+  main: 2.609 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PrintWriter/CheckError.java
+  build: 0.022 seconds
+  compile: 0.022 seconds
+  main: 0.198 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PrintWriter/ClearErrorWriter.java
+  build: 0.02 seconds
+  compile: 0.02 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PrintWriter/FailingConstructors.java
+  build: 0.071 seconds
+  compile: 0.071 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PrintWriter/OpsAfterClose.java
+  build: 0.067 seconds
+  compile: 0.066 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PrintWriter/OversynchronizedTest.java
+  build: 0.062 seconds
+  compile: 0.062 seconds
+  main: 2.698 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PrintWriter/SubClass.java
+  build: 0.021 seconds
+  compile: 0.021 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PushbackInputStream/Available.java
+  build: 0.06 seconds
+  compile: 0.059 seconds
+  main: 0.076 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PushbackInputStream/ClosedStream.java
+  build: 0.053 seconds
+  compile: 0.053 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PushbackInputStream/MarkReset.java
+  build: 0.051 seconds
+  compile: 0.051 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PushbackInputStream/Skip.java
+  build: 0.055 seconds
+  compile: 0.054 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PushbackReader/MarkReset.java
+  build: 0.056 seconds
+  compile: 0.056 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/PushbackReader/Skip.java
+  build: 0.055 seconds
+  compile: 0.055 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/RandomAccessFile/skipBytes/SkipBytes.java
+  build: 0.066 seconds
+  compile: 0.065 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/RandomAccessFile/Close.java
+  build: 0.055 seconds
+  compile: 0.054 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/RandomAccessFile/EOF.java
+  build: 0.055 seconds
+  compile: 0.055 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/RandomAccessFile/OpenSync.java
+  build: 0.055 seconds
+  compile: 0.055 seconds
+  main: 0.27 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/RandomAccessFile/OpsAfterClose.java
+  build: 0.05 seconds
+  compile: 0.05 seconds
+  main: 0.044 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/RandomAccessFile/ParameterCheck.java
+  build: 0.071 seconds
+  compile: 0.071 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/RandomAccessFile/ReadLine.java
+  build: 0.072 seconds
+  compile: 0.072 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/RandomAccessFile/ReadWritePrimitives.java
+  build: 0.063 seconds
+  compile: 0.063 seconds
+  main: 0.426 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/RandomAccessFile/Seek.java
+  build: 0.02 seconds
+  compile: 0.019 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/RandomAccessFile/SetLength.java
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/RandomAccessFile/WriteBytesChars.java
+  build: 0.059 seconds
+  compile: 0.059 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/RandomAccessFile/WriteUTF.java
+  build: 0.064 seconds
+  compile: 0.064 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/readBytes/MemoryLeak.java
+  build: 0.102 seconds
+  compile: 0.101 seconds
+  main: 0.311 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/readBytes/ReadBytesBounds.java
+  build: 0.023 seconds
+  compile: 0.022 seconds
+  main: 0.094 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Reader/NullLock.java
+  build: 0.058 seconds
+  compile: 0.057 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Reader/OpsAfterClose.java
+  build: 0.079 seconds
+  compile: 0.079 seconds
+  main: 0.041 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Reader/ReadParams.java
+  build: 0.066 seconds
+  compile: 0.066 seconds
+  main: 0.092 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Reader/Skip.java
+  build: 0.052 seconds
+  compile: 0.052 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Reader/SkipNegative.java
+  build: 0.049 seconds
+  compile: 0.048 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/SequenceInputStream/ConstructorNull.java
+  build: 0.048 seconds
+  compile: 0.048 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/accessConstants/AccessConstants.java
+  clean: 0.0 seconds
+  build: 0.048 seconds
+  compile: 0.047 seconds
+TEST RESULT: Passed. Build successful
+--------------------------------------------------
+TEST: java/io/Serializable/arraySuidConflict/Write.java
+  clean: 0.0 seconds
+  compile: 0.052 seconds
+  build: 0.0 seconds
+  main: 0.08 seconds
+  clean: 0.0 seconds
+  compile: 0.049 seconds
+  build: 0.0 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/auditStreamSubclass/AuditStreamSubclass.java
+  build: 0.074 seconds
+  compile: 0.074 seconds
+  build: 0.0 seconds
+  main: 0.188 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/available/Available.java
+  build: 0.062 seconds
+  compile: 0.062 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/backRefCNFException/Write.java
+  clean: 0.0 seconds
+  compile: 0.052 seconds
+  build: 0.0 seconds
+  main: 0.082 seconds
+  clean: 0.001 seconds
+  compile: 0.051 seconds
+  build: 0.0 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/badSerialPersistentField/BadSerialPersistentField.java
+  build: 0.054 seconds
+  compile: 0.053 seconds
+  main: 0.096 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/badSerialVersionUID/BadSerialVersionUID.java
+  build: 0.063 seconds
+  compile: 0.062 seconds
+  main: 0.102 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/badSubstByReplace/BadSubstByReplace.java
+  build: 0.056 seconds
+  compile: 0.056 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/checkModifiers/CheckModifiers.java
+  clean: 0.0 seconds
+  build: 0.074 seconds
+  compile: 0.073 seconds
+  build: 0.0 seconds
+  main: 0.091 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/class/run.sh
+  shell: 13.499 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/ClassCastExceptionDetail/Write.java
+  clean: 0.0 seconds
+  compile: 0.055 seconds
+  build: 0.0 seconds
+  main: 0.082 seconds
+  clean: 0.0 seconds
+  compile: 0.062 seconds
+  build: 0.0 seconds
+  main: 0.088 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/classDescFlagConflict/Read.java
+  build: 0.055 seconds
+  compile: 0.055 seconds
+  build: 0.053 seconds
+  compile: 0.051 seconds
+  main: 0.1 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/classDescGetField/GetField.java
+  clean: 0.0 seconds
+  build: 0.058 seconds
+  compile: 0.057 seconds
+  build: 0.0 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/classDescHooks/ClassDescHooks.java
+  build: 0.074 seconds
+  compile: 0.073 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/classDescHooks/CNFException.java
+  build: 0.062 seconds
+  compile: 0.061 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/classDescHooks/ExternLoopback.java
+  build: 0.117 seconds
+  compile: 0.117 seconds
+  main: 0.043 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/classDescHooks/Loopback.java
+  build: 0.097 seconds
+  compile: 0.097 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/clearHandleTable/ClearHandleTable.java
+  build: 0.113 seconds
+  compile: 0.113 seconds
+  main: 2.255 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/cloneArray/CloneArray.java
+  build: 0.029 seconds
+  compile: 0.029 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/concurrentClassDescLookup/ConcurrentClassDescLookup.java
+  build: 0.063 seconds
+  compile: 0.062 seconds
+  main: 4.144 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/corruptedUTFConsumption/CorruptedUTFConsumption.java
+  build: 0.024 seconds
+  compile: 0.024 seconds
+  main: 0.24 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/defaultDataEnd/DefaultDataEnd.java
+  build: 0.032 seconds
+  compile: 0.032 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/defaulted/GetFieldWrite.java
+  clean: 0.0 seconds
+  build: 0.069 seconds
+  compile: 0.069 seconds
+  build: 0.0 seconds
+  main: 0.086 seconds
+  clean: 0.0 seconds
+  build: 0.065 seconds
+  compile: 0.065 seconds
+  build: 0.0 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/defaultReadObjectCNFException/DefaultReadObjectCNFException.java
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  main: 0.088 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/duplicateSerialFields/Test.java
+  clean: 0.0 seconds
+  compile: 0.056 seconds
+  build: 0.0 seconds
+  main: 0.089 seconds
+  clean: 0.0 seconds
+  compile: 0.064 seconds
+  build: 0.0 seconds
+  main: 0.099 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/enum/array/Test.java
+  build: 0.068 seconds
+  compile: 0.068 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/enum/badResolve/Write.java
+  compile: 0.058 seconds
+  build: 0.0 seconds
+  main: 0.083 seconds
+  clean: 0.0 seconds
+  compile: 0.058 seconds
+  build: 0.0 seconds
+  main: 0.083 seconds
+  clean: 0.0 seconds
+TEST RESULT: Passed. Clean successful
+--------------------------------------------------
+TEST: java/io/Serializable/enum/basic/Test.java
+  build: 0.064 seconds
+  compile: 0.064 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/enum/classObject/Test.java
+  build: 0.069 seconds
+  compile: 0.068 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/enum/constantSubclasses/Write.java
+  compile: 0.058 seconds
+  build: 0.0 seconds
+  main: 0.081 seconds
+  clean: 0.0 seconds
+  compile: 0.062 seconds
+  build: 0.0 seconds
+  main: 0.08 seconds
+  clean: 0.0 seconds
+TEST RESULT: Passed. Clean successful
+--------------------------------------------------
+TEST: java/io/Serializable/enum/ignoreSerializationFields/Test.java
+  build: 0.055 seconds
+  compile: 0.055 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/enum/ignoreSerializationMethods/Test.java
+  build: 0.056 seconds
+  compile: 0.055 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/enum/mismatchedTypecode/Test.java
+  build: 0.068 seconds
+  compile: 0.068 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/enum/missingConstant/Write.java
+  compile: 0.056 seconds
+  build: 0.0 seconds
+  main: 0.083 seconds
+  clean: 0.001 seconds
+  compile: 0.069 seconds
+  build: 0.0 seconds
+  main: 0.082 seconds
+  clean: 0.0 seconds
+TEST RESULT: Passed. Clean successful
+--------------------------------------------------
+TEST: java/io/Serializable/enum/unshared/Test.java
+  build: 0.07 seconds
+  compile: 0.069 seconds
+  main: 0.088 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/evolution/AddedExternField/WriteAddedField.java
+  clean: 0.001 seconds
+  compile: 0.061 seconds
+  build: 0.0 seconds
+  main: 0.085 seconds
+  clean: 0.0 seconds
+  compile: 0.065 seconds
+  build: 0.0 seconds
+  main: 0.09 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/evolution/AddedField/WriteAddedField.java
+  clean: 0.0 seconds
+  compile: 0.077 seconds
+  build: 0.0 seconds
+  main: 0.095 seconds
+  clean: 0.0 seconds
+  compile: 0.066 seconds
+  build: 0.0 seconds
+  main: 0.092 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/evolution/AddedSuperClass/WriteAddedSuperClass.java
+  clean: 0.0 seconds
+  compile: 0.057 seconds
+  build: 0.0 seconds
+  main: 0.081 seconds
+  clean: 0.0 seconds
+  compile: 0.057 seconds
+  build: 0.0 seconds
+  main: 0.081 seconds
+  clean: 0.0 seconds
+  compile: 0.06 seconds
+  build: 0.0 seconds
+  main: 0.083 seconds
+  clean: 0.0 seconds
+  compile: 0.054 seconds
+  build: 0.001 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/evolution/RenamePackage/run.sh
+  shell: 3.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/expectedStackTrace/ExpectedStackTrace.java
+  build: 0.064 seconds
+  compile: 0.064 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/explicitCNFException/ExplicitCNFException.java
+  build: 0.055 seconds
+  compile: 0.055 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/fieldTypeString/Write.java
+  clean: 0.0 seconds
+  compile: 0.061 seconds
+  build: 0.001 seconds
+  main: 0.082 seconds
+  clean: 0.0 seconds
+  compile: 0.058 seconds
+  build: 0.0 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/finalFields/FinalFields.java
+  build: 0.056 seconds
+  compile: 0.056 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/GetField/Write.java
+  clean: 0.0 seconds
+  compile: 0.054 seconds
+  build: 0.0 seconds
+  main: 0.083 seconds
+  clean: 0.0 seconds
+  compile: 0.065 seconds
+  build: 0.0 seconds
+  main: 0.078 seconds
+  clean: 0.001 seconds
+  compile: 0.057 seconds
+  build: 0.0 seconds
+  main: 0.082 seconds
+  clean: 0.001 seconds
+TEST RESULT: Passed. Clean successful
+--------------------------------------------------
+TEST: java/io/Serializable/getSuidClinitError/GetSuidClinitError.java
+  build: 0.071 seconds
+  compile: 0.071 seconds
+  main: 0.088 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/illegalHandle/Test.java
+  build: 0.057 seconds
+  compile: 0.056 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/inactiveRegistration/InactiveRegistration.java
+  build: 0.054 seconds
+  compile: 0.054 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/InvalidClassException/noargctor/DefaultPackage.java
+  compile: 0.079 seconds
+  build: 0.0 seconds
+  main: 0.097 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/InvalidClassException/noargctor/Test.java
+  compile: 0.054 seconds
+  compile: 0.072 seconds
+  build: 0.056 seconds
+  compile: 0.056 seconds
+  main: 0.095 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/longString/LongString.java
+  build: 0.062 seconds
+  compile: 0.061 seconds
+  main: 0.127 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/lookupAnyInvocation/LookupAnyInvocation.java
+  build: 0.016 seconds
+  compile: 0.016 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/lookupInterfaceDesc/LookupInterfaceDesc.java
+  build: 0.054 seconds
+  compile: 0.054 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/maskSyntheticModifier/run.sh
+  shell: 0.944 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/misplacedArrayClassDesc/MisplacedArrayClassDesc.java
+  build: 0.063 seconds
+  compile: 0.062 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/modifyStaticFields/ModifyStaticFields.java
+  build: 0.056 seconds
+  compile: 0.056 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/nestedReplace/NestedReplace.java
+  clean: 0.001 seconds
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  build: 0.0 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/NoClassDefFoundErrorTrap/NoClassDefFoundErrorTrap.java
+  build: 0.059 seconds
+  compile: 0.059 seconds
+  build: 0.0 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/nonserializable/ExceptionDetail.java
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/noSuchFieldClarification/NoSuchFieldClarification.java
+  build: 0.063 seconds
+  compile: 0.063 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/notAvailable/NotAvailable.java
+  build: 0.054 seconds
+  compile: 0.053 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/NPEProvoker/NPEProvoker.java
+  build: 0.058 seconds
+  compile: 0.057 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/nullArgExceptionOrder/Test.java
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/oldTests/AnnotateClass.java
+  build: 0.072 seconds
+  compile: 0.071 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/oldTests/ArrayFields.java
+  build: 0.084 seconds
+  compile: 0.084 seconds
+  build: 0.015 seconds
+  compile: 0.015 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/oldTests/ArraysOfArrays.java
+  build: 0.085 seconds
+  compile: 0.085 seconds
+  main: 0.05 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/oldTests/BinaryTree.java
+  build: 0.062 seconds
+  compile: 0.061 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/oldTests/CheckForException.java
+  build: 0.066 seconds
+  compile: 0.066 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/oldTests/CheckingEquality.java
+  build: 0.077 seconds
+  compile: 0.077 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/oldTests/CircularList.java
+  build: 0.056 seconds
+  compile: 0.055 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/oldTests/SerializeWithException.java
+  build: 0.0 seconds
+  build: 0.064 seconds
+  compile: 0.063 seconds
+  main: 0.098 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/oldTests/SimpleArrays.java
+  build: 0.0 seconds
+  build: 0.064 seconds
+  compile: 0.062 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/oldTests/ValidateClass.java
+  build: 0.064 seconds
+  compile: 0.064 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/oldTests/WritePrimitive.java
+  build: 0.0 seconds
+  build: 0.072 seconds
+  compile: 0.072 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/optionalDataEnd/OptionalDataEnd.java
+  build: 0.056 seconds
+  compile: 0.056 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/packageAccess/run.sh
+  shell: 1.161 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/parents/OriginalClass.java
+  clean: 0.0 seconds
+  build: 0.056 seconds
+  compile: 0.056 seconds
+  build: 0.0 seconds
+  main: 0.082 seconds
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  build: 0.0 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/partialClassDesc/PartialClassDesc.java
+  build: 0.061 seconds
+  compile: 0.06 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/primitiveClasses/PrimitiveClasses.java
+  build: 0.058 seconds
+  compile: 0.058 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/proxy/replace/Test.java
+  build: 0.062 seconds
+  compile: 0.062 seconds
+  main: 0.09 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/proxy/skipMissing/Write.java
+  clean: 0.0 seconds
+  compile: 0.061 seconds
+  build: 0.0 seconds
+  main: 0.091 seconds
+  clean: 0.0 seconds
+  compile: 0.061 seconds
+  build: 0.0 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/proxy/Basic.java
+  build: 0.063 seconds
+  compile: 0.063 seconds
+  main: 0.094 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/PutField/Write.java
+  clean: 0.0 seconds
+  compile: 0.062 seconds
+  build: 0.001 seconds
+  main: 0.081 seconds
+  clean: 0.0 seconds
+  compile: 0.058 seconds
+  build: 0.0 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/PutField/Write2.java
+  clean: 0.0 seconds
+  compile: 0.089 seconds
+  build: 0.0 seconds
+  main: 0.083 seconds
+  clean: 0.001 seconds
+  compile: 0.055 seconds
+  build: 0.0 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/readObjectNoData/Write.java
+  clean: 0.0 seconds
+  compile: 0.051 seconds
+  build: 0.0 seconds
+  main: 0.085 seconds
+  clean: 0.001 seconds
+  compile: 0.063 seconds
+  build: 0.0 seconds
+  main: 0.091 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/readPastObject/ReadPastObject.java
+  build: 0.063 seconds
+  compile: 0.062 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/recursiveClassDescLookup/Test.java
+  build: 0.056 seconds
+  compile: 0.055 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/replaceStringArray/ReplaceStringArray.java
+  build: 0.071 seconds
+  compile: 0.07 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/replaceWithNull/ReplaceWithNull.java
+  build: 0.053 seconds
+  compile: 0.053 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/resolveClass/consTest/run.sh
+  shell: 1.808 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/resolveClass/deserializeButton/run.sh
+  shell: 1.955 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/resolveClass/MethodTest.java
+  build: 0.09 seconds
+  compile: 0.09 seconds
+  main: 0.051 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/resolveClassException/ResolveClassException.java
+  build: 0.059 seconds
+  compile: 0.058 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/resolveProxyClass/NonPublicInterface.java
+  build: 0.059 seconds
+  compile: 0.058 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/sanityCheck/SanityCheck.java
+  build: 0.065 seconds
+  compile: 0.065 seconds
+  main: 0.376 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/serialver/classpath/run.sh
+  build: 0.008 seconds
+  compile: 0.007 seconds
+  shell: 0.189 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/serialver/nested/run.sh
+  build: 0.054 seconds
+  compile: 0.053 seconds
+  shell: 0.112 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/skippedObjCNFException/Write.java
+  clean: 0.0 seconds
+  compile: 0.06 seconds
+  build: 0.0 seconds
+  main: 0.082 seconds
+  clean: 0.0 seconds
+  compile: 0.056 seconds
+  build: 0.0 seconds
+  main: 0.09 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/skipToEndOfBlockData/SkipToEndOfBlockData.java
+  build: 0.06 seconds
+  compile: 0.059 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/skipWriteObject/Write.java
+  clean: 0.0 seconds
+  compile: 0.05 seconds
+  build: 0.001 seconds
+  main: 0.077 seconds
+  clean: 0.001 seconds
+  compile: 0.057 seconds
+  build: 0.001 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/stopCustomDeserialization/Write.java
+  clean: 0.0 seconds
+  compile: 0.054 seconds
+  build: 0.001 seconds
+  main: 0.081 seconds
+  clean: 0.0 seconds
+  compile: 0.058 seconds
+  build: 0.0 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/subclass/Test.java
+  compile: 0.188 seconds
+  build: 0.0 seconds
+  main: 0.051 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/subclassGC/SubclassGC.java
+  build: 0.065 seconds
+  compile: 0.065 seconds
+  main: 0.134 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/superclassDataLoss/run.sh
+  shell: 1.886 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/survivePrematureClose/SurvivePrematureClose.java
+  build: 0.062 seconds
+  compile: 0.061 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/typeSafeEnum/TypeSafeEnum.java
+  build: 0.074 seconds
+  compile: 0.074 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/typeStringBackRef/TypeStringBackRef.java
+  build: 0.055 seconds
+  compile: 0.055 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/underlyingOutputStreamException/UnderlyingOutputStreamException.java
+  build: 0.058 seconds
+  compile: 0.058 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/unnamedPackageSwitch/run.sh
+  shell: 0.968 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/unresolvedClassDesc/Write.java
+  clean: 0.0 seconds
+  build: 0.055 seconds
+  compile: 0.055 seconds
+  build: 0.0 seconds
+  main: 0.081 seconds
+  clean: 0.001 seconds
+  build: 0.051 seconds
+  compile: 0.051 seconds
+  build: 0.0 seconds
+  main: 0.084 seconds
+  clean: 0.0 seconds
+TEST RESULT: Passed. Clean successful
+--------------------------------------------------
+TEST: java/io/Serializable/unshared/Write.java
+  clean: 0.0 seconds
+  compile: 0.063 seconds
+  build: 0.0 seconds
+  main: 0.084 seconds
+  clean: 0.001 seconds
+  compile: 0.059 seconds
+  build: 0.0 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/userRWObjError/UserRWObjError.java
+  build: 0.053 seconds
+  compile: 0.053 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/validate/Validate.java
+  build: 0.063 seconds
+  compile: 0.062 seconds
+  main: 0.115 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/verifyDynamicObjHandleTable/VerifyDynamicObjHandleTable.java
+  build: 0.093 seconds
+  compile: 0.092 seconds
+  main: 0.092 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/writeObjectMemory/WriteObjectMemory.java
+  clean: 0.0 seconds
+  build: 0.097 seconds
+  compile: 0.097 seconds
+  main: 0.1 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/writeReplace/WriteReplace.java
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  main: 0.088 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Serializable/wrongReturnTypes/Write.java
+  clean: 0.001 seconds
+  compile: 0.054 seconds
+  build: 0.0 seconds
+  main: 0.082 seconds
+  clean: 0.001 seconds
+  compile: 0.058 seconds
+  build: 0.0 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/StreamTokenizer/Comment.java
+  build: 0.053 seconds
+  compile: 0.053 seconds
+  main: 0.092 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/StreamTokenizer/NullConstruct.java
+  build: 0.052 seconds
+  compile: 0.052 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/StreamTokenizer/QuoteTest.java
+  build: 0.056 seconds
+  compile: 0.056 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/StreamTokenizer/ReadAhead.java
+  build: 0.101 seconds
+  compile: 0.101 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/StreamTokenizer/Reset.java
+  build: 0.093 seconds
+  compile: 0.093 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/StringReader/ClosedReady.java
+  build: 0.05 seconds
+  compile: 0.05 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/StringReader/NegativeMarkLimit.java
+  build: 0.049 seconds
+  compile: 0.049 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/StringReader/Skip.java
+  build: 0.055 seconds
+  compile: 0.055 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/StringWriter/NegativeBufferSize.java
+  build: 0.055 seconds
+  compile: 0.055 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Writer/Append.java
+  build: 0.1 seconds
+  compile: 0.099 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Writer/WriteFromString.java
+  build: 0.06 seconds
+  compile: 0.059 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Writer/WriteParams.java
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  main: 0.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/NegativeInitSize.java
+  build: 0.064 seconds
+  compile: 0.064 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/io/Unicode.java
+  build: 0.062 seconds
+  compile: 0.062 seconds
+  main: 0.099 seconds
+  build: 0.0 seconds
+  main: 0.079 seconds
+  build: 0.0 seconds
+  main: 0.079 seconds
+  build: 0.0 seconds
+  main: 0.079 seconds
+  build: 0.001 seconds
+  main: 0.079 seconds
+  build: 0.0 seconds
+  main: 0.079 seconds
+  build: 0.001 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+Test results: passed: 309
+Report written to /home/openjdk/sources/jdk8_tl/jdk/build/linux-i586/testoutput/jdk_io/JTreport/html/report.html
+Results written to /home/openjdk/sources/jdk8_tl/jdk/build/linux-i586/testoutput/jdk_io/JTwork
+Summary: jdk_io
+TEST STATS: name=jdk_io  run=309  pass=309  fail=0  excluded=0
+EXIT CODE: 0
+EXIT CODE: 0
+make[2]: Leaving directory `/home/openjdk/sources/jdk8_tl/jdk/test'
+make[1]: Leaving directory `/home/openjdk/sources/jdk8_tl/jdk/test'

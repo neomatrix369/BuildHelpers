@@ -1,0 +1,310 @@
+make -k -C  ../jdk/test  jdk_management
+make[1]: Entering directory `/home/openjdk/sources/jdk8_tl/jdk/test'
+echo "Running tests in othervm mode: com/sun/management sun/management"
+Running tests in othervm mode: com/sun/management sun/management
+make TEST_DEPENDENCIES="com/sun/management sun/management" TESTDIRS="com/sun/management sun/management" USE_JTREG_AGENTVM=false UNIQUE_DIR=jdk_management jtreg_tests
+make[2]: Entering directory `/home/openjdk/sources/jdk8_tl/jdk/test'
+Excluding list contains 0 items
+(                                                                    \
+	  ( JT_HOME=/home/openjdk/jtreg/;                   \
+            export JT_HOME;                                                  \
+            /home/openjdk/jtreg//win32/bin/jtreg                              \
+               -a -ea -esa -v:fail,error,time -retain:fail,error -ignore:quiet -timeoutFactor:4 -J-Xmx512m                                         \
+              -r:/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/JTreport  \
+              -w:/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/JTwork    \
+              -jdk:/home/openjdk/sources//jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image/                \
+              -exclude:/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/excludelist.txt             \
+                                                         \
+              com/sun/management sun/management                                                    \
+	  ) ; ( jtregExitCode=$? && _summary="/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/JTreport/text/summary.txt"; rm -f -f /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/Stats.txt /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/runlist.txt /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/passlist.txt /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/faillist.txt /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/exitcode.txt; echo "${jtregExitCode}" > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/exitcode.txt; if [ -r "${_summary}" ] ; then echo "Summary: jdk_management" > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/Stats.txt; expand ${_summary} | egrep -v ' Not run\.' > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/runlist.txt; egrep ' Passed\.' /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/runlist.txt | egrep -v ' Error\.' | egrep -v ' Failed\.' > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/passlist.txt; ( egrep ' Failed\.' /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/runlist.txt; egrep ' Error\.' /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/runlist.txt; egrep -v ' Passed\.' /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/runlist.txt ) | sort | uniq > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/faillist.txt; if [ ${jtregExitCode} != 0 -o -s /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/faillist.txt ] ; then expand /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/faillist.txt | cut -d' ' -f1 | sed -e 's@^@FAILED: @' >> /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/Stats.txt; if [ ${jtregExitCode} = 0 ] ; then jtregExitCode=1; fi; fi; runc="`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/runlist.txt      | wc -l | awk '{print $1;}'`"; passc="`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/passlist.txt    | wc -l | awk '{print $1;}'`"; failc="`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/faillist.txt    | wc -l | awk '{print $1;}'`"; exclc="`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/excludelist.txt | wc -l | awk '{print $1;}'`"; echo "TEST STATS: name=jdk_management  run=${runc}  pass=${passc}  fail=${failc}  excluded=${exclc}" >> /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/Stats.txt; else echo "Missing file: ${_summary}" >> /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/Stats.txt; fi; if [ -f /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/Stats.txt ] ; then cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/Stats.txt; fi; ( mkdir -p `dirname /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/ARCHIVE_BUNDLE.zip` && cd /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management && chmod -R a+r . && zip -q -r /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/ARCHIVE_BUNDLE.zip . ) ; if [ ! -s /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/exitcode.txt; fi ; testExitCode=`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode} )                                          \
+	) 2>&1 | tee /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/output.txt ; if [ ! -s /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/exitcode.txt; fi ; testExitCode=`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode}
+Directory "/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/JTreport" not found: creating
+Directory "/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/JTwork" not found: creating
+Directory "/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_management/JTwork/scratch" not found: creating
+--------------------------------------------------
+TEST: com/sun/management/GarbageCollectorMXBean/GarbageCollectionNotificationContentTest.java
+  build: 1.182 seconds
+  compile: 1.173 seconds
+  main: 1.768 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/management/GarbageCollectorMXBean/GarbageCollectionNotificationTest.java
+  build: 1.007 seconds
+  compile: 1.007 seconds
+  main: 1.748 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/management/GarbageCollectorMXBean/LastGCInfo.java
+  build: 0.981 seconds
+  compile: 0.981 seconds
+  main: 0.129 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/management/HotSpotDiagnosticMXBean/DumpHeap.sh
+  build: 0.9 seconds
+  compile: 0.9 seconds
+  shell: 0.491 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/management/HotSpotDiagnosticMXBean/GetDiagnosticOptions.java
+  build: 0.946 seconds
+  compile: 0.946 seconds
+  main: 0.169 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/management/HotSpotDiagnosticMXBean/GetVMOption.java
+  build: 0.897 seconds
+  compile: 0.897 seconds
+  main: 0.161 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/management/HotSpotDiagnosticMXBean/SetAllVMOptions.java
+  build: 0.945 seconds
+  compile: 0.945 seconds
+  main: 0.171 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/management/HotSpotDiagnosticMXBean/SetVMOption.java
+  build: 1.014 seconds
+  compile: 1.014 seconds
+  main: 0.1 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/management/OperatingSystemMXBean/GetCommittedVirtualMemorySize.java
+  build: 0.862 seconds
+  compile: 0.862 seconds
+  main: 0.091 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/management/OperatingSystemMXBean/GetFreePhysicalMemorySize.java
+  build: 0.85 seconds
+  compile: 0.85 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/management/OperatingSystemMXBean/GetFreeSwapSpaceSize.java
+  build: 0.887 seconds
+  compile: 0.887 seconds
+  main: 0.09 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/management/OperatingSystemMXBean/GetProcessCpuLoad.java
+  build: 0.846 seconds
+  compile: 0.846 seconds
+  main: 2.094 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/management/OperatingSystemMXBean/GetProcessCpuTime.java
+  build: 0.931 seconds
+  compile: 0.931 seconds
+  main: 0.106 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/management/OperatingSystemMXBean/GetSystemCpuLoad.java
+  build: 0.853 seconds
+  compile: 0.853 seconds
+  main: 2.097 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/management/OperatingSystemMXBean/GetTotalPhysicalMemorySize.java
+  build: 0.899 seconds
+  compile: 0.898 seconds
+  main: 0.093 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/management/OperatingSystemMXBean/MemoryStatusOverflow.java
+  build: 0.895 seconds
+  compile: 0.894 seconds
+  main: 0.094 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/management/OperatingSystemMXBean/TestTotalSwap.sh
+  build: 0.909 seconds
+  compile: 0.909 seconds
+  shell: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/management/ThreadMXBean/ThreadAllocatedMemory.java
+  build: 1.007 seconds
+  compile: 1.006 seconds
+  main: 0.657 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/management/ThreadMXBean/ThreadAllocatedMemoryArray.java
+  build: 0.946 seconds
+  compile: 0.946 seconds
+  main: 0.638 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/management/ThreadMXBean/ThreadCpuTimeArray.java
+  build: 1.05 seconds
+  compile: 1.05 seconds
+  main: 0.433 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/management/UnixOperatingSystemMXBean/GetMaxFileDescriptorCount.sh
+  shell: 0.9 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/management/UnixOperatingSystemMXBean/GetOpenFileDescriptorCount.sh
+  shell: 0.916 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/management/HotspotClassLoadingMBean/GetClassInitializationTime.java
+  build: 0.895 seconds
+  compile: 0.894 seconds
+  main: 1.094 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/management/HotspotClassLoadingMBean/GetClassLoadingTime.java
+  build: 0.789 seconds
+  compile: 0.788 seconds
+  build: 0.999 seconds
+  compile: 0.998 seconds
+  main: 0.263 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/management/HotspotClassLoadingMBean/GetInitializedClassCount.java
+  build: 0.877 seconds
+  compile: 0.877 seconds
+  main: 0.088 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/management/HotspotClassLoadingMBean/GetLoadedClassSize.java
+  build: 0.923 seconds
+  compile: 0.923 seconds
+  main: 0.092 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/management/HotspotClassLoadingMBean/GetMethodDataSize.java
+  build: 0.924 seconds
+  compile: 0.924 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/management/HotspotClassLoadingMBean/GetUnloadedClassSize.java
+  build: 0.898 seconds
+  compile: 0.898 seconds
+  main: 0.095 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/management/HotspotRuntimeMBean/GetSafepointCount.java
+  build: 0.895 seconds
+  compile: 0.894 seconds
+  main: 0.094 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/management/HotspotRuntimeMBean/GetSafepointSyncTime.java
+  build: 0.91 seconds
+  compile: 0.91 seconds
+  main: 0.218 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/management/HotspotRuntimeMBean/GetTotalSafepointTime.java
+  build: 0.93 seconds
+  compile: 0.93 seconds
+  main: 0.125 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/management/HotspotThreadMBean/GetInternalThreads.java
+  build: 0.922 seconds
+  compile: 0.922 seconds
+  main: 0.091 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/management/jdp/JdpTest.sh
+  compile: 1.145 seconds
+  shell: 18.928 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/management/jmxremote/bootstrap/CustomLauncherTest.sh
+  build: 0.991 seconds
+  compile: 0.99 seconds
+  shell: 0.006 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/management/jmxremote/bootstrap/JvmstatCountersTest.java
+  clean: 0.0 seconds
+  build: 1.013 seconds
+  compile: 1.013 seconds
+  build: 0.0 seconds
+  main: 0.133 seconds
+  build: 0.0 seconds
+  main: 0.604 seconds
+  build: 0.0 seconds
+  main: 0.644 seconds
+  build: 0.001 seconds
+  main: 1.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/management/jmxremote/bootstrap/LocalManagementTest.sh
+  build: 0.0 seconds
+  shell: 11.594 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/management/jmxremote/bootstrap/PasswordFilePermissionTest.sh
+  shell: 1.413 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/management/jmxremote/bootstrap/RmiBootstrapTest.sh
+  build: 1.462 seconds
+  compile: 1.462 seconds
+  shell: 1.187 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/management/jmxremote/bootstrap/RmiRegistrySslTest.sh
+  clean: 0.0 seconds
+  build: 0.813 seconds
+  compile: 0.813 seconds
+  shell: 2.096 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/management/jmxremote/bootstrap/RmiSslBootstrapTest.sh
+  build: 0.986 seconds
+  compile: 0.985 seconds
+  shell: 1.482 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/management/jmxremote/bootstrap/RmiSslNoKeyStoreTest.sh
+  build: 1.243 seconds
+  compile: 1.243 seconds
+  shell: 1.16 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/management/jmxremote/bootstrap/SSLConfigFilePermissionTest.sh
+  shell: 1.496 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/management/jmxremote/startstop/JMXStartStopTest.sh
+  build: 1.01 seconds
+  compile: 1.009 seconds
+  shell: 50.732 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/management/jmxremote/LocalRMIServerSocketFactoryTest.java
+  compile: 1.046 seconds
+  build: 0.0 seconds
+  main: 0.426 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/management/AgentCheckTest.java
+  build: 0.867 seconds
+  compile: 0.867 seconds
+  main: 0.112 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/management/AgentCMETest.java
+  build: 0.941 seconds
+  compile: 0.941 seconds
+  main: 2.097 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+Test results: passed: 46
+Report written to /home/openjdk/sources/jdk8_tl/jdk/build/linux-i586/testoutput/jdk_management/JTreport/html/report.html
+Results written to /home/openjdk/sources/jdk8_tl/jdk/build/linux-i586/testoutput/jdk_management/JTwork
+Summary: jdk_management
+TEST STATS: name=jdk_management  run=46  pass=46  fail=0  excluded=0
+EXIT CODE: 0
+EXIT CODE: 0
+make[2]: Leaving directory `/home/openjdk/sources/jdk8_tl/jdk/test'
+make[1]: Leaving directory `/home/openjdk/sources/jdk8_tl/jdk/test'

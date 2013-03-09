@@ -1,0 +1,1227 @@
+make -k -C  ../jdk/test  jdk_beans3
+make[1]: Entering directory `/home/openjdk/sources/jdk8_tl/jdk/test'
+echo "Running tests in othervm mode: java/beans/XMLEncoder"
+Running tests in othervm mode: java/beans/XMLEncoder
+make TEST_DEPENDENCIES="java/beans/XMLEncoder" TESTDIRS="java/beans/XMLEncoder" USE_JTREG_AGENTVM=false UNIQUE_DIR=jdk_beans3 jtreg_tests
+make[2]: Entering directory `/home/openjdk/sources/jdk8_tl/jdk/test'
+Excluding list contains 0 items
+(                                                                    \
+	  ( JT_HOME=/home/openjdk/jtreg/;                   \
+            export JT_HOME;                                                  \
+            /home/openjdk/jtreg//win32/bin/jtreg                              \
+               -a -ea -esa -v:fail,error,time -retain:fail,error -ignore:quiet -timeoutFactor:4 -J-Xmx512m                                         \
+              -r:/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/JTreport  \
+              -w:/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/JTwork    \
+              -jdk:/home/openjdk/sources//jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image/                \
+              -exclude:/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/excludelist.txt             \
+                                                         \
+              java/beans/XMLEncoder                                                    \
+	  ) ; ( jtregExitCode=$? && _summary="/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/JTreport/text/summary.txt"; rm -f -f /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/Stats.txt /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/runlist.txt /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/passlist.txt /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/faillist.txt /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/exitcode.txt; echo "${jtregExitCode}" > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/exitcode.txt; if [ -r "${_summary}" ] ; then echo "Summary: jdk_beans3" > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/Stats.txt; expand ${_summary} | egrep -v ' Not run\.' > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/runlist.txt; egrep ' Passed\.' /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/runlist.txt | egrep -v ' Error\.' | egrep -v ' Failed\.' > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/passlist.txt; ( egrep ' Failed\.' /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/runlist.txt; egrep ' Error\.' /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/runlist.txt; egrep -v ' Passed\.' /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/runlist.txt ) | sort | uniq > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/faillist.txt; if [ ${jtregExitCode} != 0 -o -s /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/faillist.txt ] ; then expand /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/faillist.txt | cut -d' ' -f1 | sed -e 's@^@FAILED: @' >> /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/Stats.txt; if [ ${jtregExitCode} = 0 ] ; then jtregExitCode=1; fi; fi; runc="`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/runlist.txt      | wc -l | awk '{print $1;}'`"; passc="`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/passlist.txt    | wc -l | awk '{print $1;}'`"; failc="`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/faillist.txt    | wc -l | awk '{print $1;}'`"; exclc="`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/excludelist.txt | wc -l | awk '{print $1;}'`"; echo "TEST STATS: name=jdk_beans3  run=${runc}  pass=${passc}  fail=${failc}  excluded=${exclc}" >> /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/Stats.txt; else echo "Missing file: ${_summary}" >> /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/Stats.txt; fi; if [ -f /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/Stats.txt ] ; then cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/Stats.txt; fi; ( mkdir -p `dirname /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/ARCHIVE_BUNDLE.zip` && cd /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3 && chmod -R a+r . && zip -q -r /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/ARCHIVE_BUNDLE.zip . ) ; if [ ! -s /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/exitcode.txt; fi ; testExitCode=`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode} )                                          \
+	) 2>&1 | tee /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/output.txt ; if [ ! -s /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/exitcode.txt; fi ; testExitCode=`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode}
+Directory "/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/JTreport" not found: creating
+Directory "/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/JTwork" not found: creating
+Directory "/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans3/JTwork/scratch" not found: creating
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/4741757/TestFieldAccess.java
+  build: 0.99 seconds
+  compile: 0.98 seconds
+  main: 0.159 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/4741757/TestSecurityManager.java
+  build: 0.814 seconds
+  compile: 0.814 seconds
+  main: 0.2 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/4741757/TestStackOverflow.java
+  build: 0.843 seconds
+  compile: 0.843 seconds
+  main: 0.155 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/6329581/Test6329581.java
+  build: 0.949 seconds
+  compile: 0.948 seconds
+  main: 0.163 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/6380849/TestPersistenceDelegate.java
+  build: 0.858 seconds
+  compile: 0.858 seconds
+  main: 0.116 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/6777487/TestBox.java
+  build: 0.991 seconds
+  compile: 0.991 seconds
+  main: 0.226 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/6777487/TestCheckedCollection.java
+  build: 0.95 seconds
+  compile: 0.95 seconds
+  main: 0.137 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/6777487/TestCheckedList.java
+  build: 0.908 seconds
+  compile: 0.908 seconds
+  main: 0.141 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/6777487/TestCheckedMap.java
+  build: 0.902 seconds
+  compile: 0.901 seconds
+  main: 0.145 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/6777487/TestCheckedRandomAccessList.java
+  build: 0.903 seconds
+  compile: 0.903 seconds
+  main: 0.136 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/6777487/TestCheckedSet.java
+  build: 0.939 seconds
+  compile: 0.939 seconds
+  main: 0.142 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/6777487/TestCheckedSortedMap.java
+  build: 0.94 seconds
+  compile: 0.94 seconds
+  main: 0.148 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/6777487/TestCheckedSortedSet.java
+  build: 0.98 seconds
+  compile: 0.979 seconds
+  main: 0.133 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/6777487/TestEnumMap.java
+  build: 0.949 seconds
+  compile: 0.949 seconds
+  main: 0.141 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/6777487/TestEnumSet.java
+  build: 0.957 seconds
+  compile: 0.957 seconds
+  main: 0.147 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_awt_AWTKeyStroke.java
+  build: 1.154 seconds
+  compile: 1.154 seconds
+  main: 0.27 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_awt_BasicStroke.java
+  build: 0.856 seconds
+  compile: 0.856 seconds
+  main: 0.263 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_awt_BorderLayout.java
+  build: 0.929 seconds
+  compile: 0.929 seconds
+  main: 2.881 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_awt_Color.java
+  build: 0.849 seconds
+  compile: 0.849 seconds
+  main: 0.243 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_awt_Component.java
+  build: 0.921 seconds
+  compile: 0.92 seconds
+  main: 0.397 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_awt_Cursor.java
+  build: 0.891 seconds
+  compile: 0.891 seconds
+  main: 0.233 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_awt_Dimension.java
+  build: 0.877 seconds
+  compile: 0.877 seconds
+  main: 0.298 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_awt_Font.java
+  build: 0.891 seconds
+  compile: 0.891 seconds
+  main: 0.43 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_awt_geom_AffineTransform.java
+  build: 0.878 seconds
+  compile: 0.878 seconds
+  main: 0.249 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_awt_GradientPaint.java
+  build: 0.873 seconds
+  compile: 0.873 seconds
+  main: 0.329 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_awt_GridBagConstraints.java
+  build: 0.865 seconds
+  compile: 0.865 seconds
+  main: 0.356 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_awt_Insets.java
+  build: 0.849 seconds
+  compile: 0.849 seconds
+  main: 0.246 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_awt_LinearGradientPaint.java
+  build: 0.886 seconds
+  compile: 0.885 seconds
+  main: 0.384 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_awt_MenuShortcut.java
+  build: 0.861 seconds
+  compile: 0.861 seconds
+  main: 0.239 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_awt_Point.java
+  build: 0.838 seconds
+  compile: 0.838 seconds
+  main: 0.268 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_awt_RadialGradientPaint.java
+  build: 0.892 seconds
+  compile: 0.892 seconds
+  main: 0.402 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_awt_Rectangle.java
+  build: 0.834 seconds
+  compile: 0.834 seconds
+  main: 0.354 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_awt_ScrollPane.java
+  build: 0.865 seconds
+  compile: 0.865 seconds
+  main: 0.757 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_beans_EventHandler.java
+  build: 0.846 seconds
+  compile: 0.846 seconds
+  main: 0.222 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_beans_Expression.java
+  build: 0.859 seconds
+  compile: 0.859 seconds
+  main: 0.247 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_beans_Statement.java
+  build: 0.872 seconds
+  compile: 0.872 seconds
+  main: 0.237 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_lang_Character.java
+  build: 0.848 seconds
+  compile: 0.847 seconds
+  main: 0.22 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_lang_Class.java
+  build: 0.871 seconds
+  compile: 0.87 seconds
+  main: 0.21 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_lang_Enum.java
+  build: 0.909 seconds
+  compile: 0.909 seconds
+  main: 0.221 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_lang_reflect_Field.java
+  build: 0.916 seconds
+  compile: 0.916 seconds
+  main: 0.222 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_lang_reflect_Method.java
+  build: 0.892 seconds
+  compile: 0.891 seconds
+  main: 0.254 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_lang_String.java
+  build: 0.891 seconds
+  compile: 0.891 seconds
+  main: 0.816 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_net_URI.java
+  build: 0.874 seconds
+  compile: 0.874 seconds
+  main: 0.211 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_sql_Date.java
+  build: 0.884 seconds
+  compile: 0.884 seconds
+  main: 0.322 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_sql_Time.java
+  build: 0.881 seconds
+  compile: 0.881 seconds
+  main: 0.341 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_sql_Timestamp.java
+  build: 0.878 seconds
+  compile: 0.877 seconds
+  main: 0.255 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_ArrayList.java
+  build: 0.832 seconds
+  compile: 0.832 seconds
+  main: 0.288 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_Collections_CheckedCollection.java
+  build: 0.942 seconds
+  compile: 0.942 seconds
+  main: 0.267 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_Collections_CheckedList.java
+  build: 0.923 seconds
+  compile: 0.923 seconds
+  main: 0.285 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_Collections_CheckedMap.java
+  build: 0.931 seconds
+  compile: 0.931 seconds
+  main: 0.282 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_Collections_CheckedRandomAccessList.java
+  build: 0.909 seconds
+  compile: 0.909 seconds
+  main: 0.288 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_Collections_CheckedSet.java
+  build: 0.872 seconds
+  compile: 0.871 seconds
+  main: 0.267 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_Collections_CheckedSortedMap.java
+  build: 0.983 seconds
+  compile: 0.982 seconds
+  main: 0.285 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_Collections_CheckedSortedSet.java
+  build: 0.958 seconds
+  compile: 0.958 seconds
+  main: 0.297 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_Collections_EmptyList.java
+  build: 0.917 seconds
+  compile: 0.917 seconds
+  main: 0.263 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_Collections_EmptyMap.java
+  build: 0.902 seconds
+  compile: 0.902 seconds
+  main: 0.254 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_Collections_EmptySet.java
+  build: 0.88 seconds
+  compile: 0.88 seconds
+  main: 0.267 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_Collections_SingletonList.java
+  build: 0.879 seconds
+  compile: 0.878 seconds
+  main: 0.263 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_Collections_SingletonMap.java
+  build: 0.868 seconds
+  compile: 0.868 seconds
+  main: 0.265 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_Collections_SingletonSet.java
+  build: 0.914 seconds
+  compile: 0.914 seconds
+  main: 0.27 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_Collections_SynchronizedCollection.java
+  build: 0.874 seconds
+  compile: 0.873 seconds
+  main: 0.269 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_Collections_SynchronizedList.java
+  build: 0.926 seconds
+  compile: 0.926 seconds
+  main: 0.302 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_Collections_SynchronizedMap.java
+  build: 0.9 seconds
+  compile: 0.899 seconds
+  main: 0.264 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_Collections_SynchronizedRandomAccessList.java
+  build: 0.906 seconds
+  compile: 0.906 seconds
+  main: 0.28 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_Collections_SynchronizedSet.java
+  build: 0.906 seconds
+  compile: 0.906 seconds
+  main: 0.261 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_Collections_SynchronizedSortedMap.java
+  build: 0.907 seconds
+  compile: 0.907 seconds
+  main: 0.281 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_Collections_SynchronizedSortedSet.java
+  build: 0.907 seconds
+  compile: 0.907 seconds
+  main: 0.271 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_Collections_UnmodifiableCollection.java
+  build: 0.915 seconds
+  compile: 0.915 seconds
+  main: 0.253 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_Collections_UnmodifiableList.java
+  build: 0.93 seconds
+  compile: 0.93 seconds
+  main: 0.271 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_Collections_UnmodifiableMap.java
+  build: 0.928 seconds
+  compile: 0.927 seconds
+  main: 0.251 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_Collections_UnmodifiableRandomAccessList.java
+  build: 0.902 seconds
+  compile: 0.902 seconds
+  main: 0.315 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_Collections_UnmodifiableSet.java
+  build: 0.877 seconds
+  compile: 0.876 seconds
+  main: 0.257 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_Collections_UnmodifiableSortedMap.java
+  build: 0.887 seconds
+  compile: 0.886 seconds
+  main: 0.27 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_Collections_UnmodifiableSortedSet.java
+  build: 0.921 seconds
+  compile: 0.921 seconds
+  main: 0.297 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_Date.java
+  build: 0.852 seconds
+  compile: 0.852 seconds
+  main: 0.247 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_EnumMap.java
+  build: 0.949 seconds
+  compile: 0.949 seconds
+  main: 0.236 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_HashMap.java
+  build: 0.953 seconds
+  compile: 0.953 seconds
+  main: 0.285 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_JumboEnumSet.java
+  build: 1.056 seconds
+  compile: 1.056 seconds
+  main: 0.269 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/java_util_RegularEnumSet.java
+  build: 0.908 seconds
+  compile: 0.908 seconds
+  main: 0.258 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_border_BevelBorder.java
+  build: 0.884 seconds
+  compile: 0.884 seconds
+  main: 0.271 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_border_CompoundBorder.java
+  build: 0.872 seconds
+  compile: 0.872 seconds
+  main: 0.244 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_border_EmptyBorder.java
+  build: 0.881 seconds
+  compile: 0.881 seconds
+  main: 0.255 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_border_EtchedBorder.java
+  build: 0.905 seconds
+  compile: 0.905 seconds
+  main: 0.248 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_border_LineBorder.java
+  build: 0.865 seconds
+  compile: 0.865 seconds
+  main: 0.252 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_border_MatteBorder.java
+  build: 0.896 seconds
+  compile: 0.896 seconds
+  main: 0.275 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_border_SoftBevelBorder.java
+  build: 0.93 seconds
+  compile: 0.929 seconds
+  main: 0.274 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_border_StrokeBorder.java
+  build: 0.912 seconds
+  compile: 0.912 seconds
+  main: 0.261 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_border_TitledBorder.java
+  build: 0.921 seconds
+  compile: 0.921 seconds
+  main: 0.534 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_Box_Filler.java
+  build: 0.909 seconds
+  compile: 0.909 seconds
+  main: 0.747 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_Box.java
+  build: 0.943 seconds
+  compile: 0.943 seconds
+  main: 1.059 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_BoxLayout.java
+  build: 0.904 seconds
+  compile: 0.904 seconds
+  main: 0.915 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_DefaultCellEditor.java
+  build: 1.0 seconds
+  compile: 1.0 seconds
+  main: 0.865 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_JButton.java
+  build: 0.882 seconds
+  compile: 0.882 seconds
+  main: 1.573 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_JLayeredPane.java
+  build: 0.932 seconds
+  compile: 0.932 seconds
+  main: 1.541 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_JSplitPane.java
+  build: 0.927 seconds
+  compile: 0.927 seconds
+  main: 0.648 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_JTree.java
+  build: 0.99 seconds
+  compile: 0.989 seconds
+  main: 1.032 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_KeyStroke.java
+  build: 0.913 seconds
+  compile: 0.913 seconds
+  main: 0.236 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_OverlayLayout.java
+  build: 0.902 seconds
+  compile: 0.902 seconds
+  main: 0.824 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_plaf_BorderUIResource_BevelBorderUIResource.java
+  build: 0.881 seconds
+  compile: 0.881 seconds
+  main: 0.249 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_plaf_BorderUIResource_CompoundBorderUIResource.java
+  build: 0.862 seconds
+  compile: 0.862 seconds
+  main: 0.256 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_plaf_BorderUIResource_EmptyBorderUIResource.java
+  build: 0.918 seconds
+  compile: 0.918 seconds
+  main: 0.259 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_plaf_BorderUIResource_EtchedBorderUIResource.java
+  build: 0.889 seconds
+  compile: 0.889 seconds
+  main: 0.244 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_plaf_BorderUIResource_LineBorderUIResource.java
+  build: 0.889 seconds
+  compile: 0.889 seconds
+  main: 0.266 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_plaf_BorderUIResource_MatteBorderUIResource.java
+  build: 0.896 seconds
+  compile: 0.896 seconds
+  main: 0.295 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_plaf_BorderUIResource_TitledBorderUIResource.java
+  build: 0.902 seconds
+  compile: 0.902 seconds
+  main: 0.558 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_plaf_ColorUIResource.java
+  build: 0.882 seconds
+  compile: 0.882 seconds
+  main: 0.254 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_plaf_FontUIResource.java
+  build: 0.976 seconds
+  compile: 0.976 seconds
+  main: 0.689 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_tree_DefaultTreeModel.java
+  build: 0.911 seconds
+  compile: 0.911 seconds
+  main: 0.238 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/javax_swing_tree_TreePath.java
+  build: 0.889 seconds
+  compile: 0.889 seconds
+  main: 0.265 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/sun_swing_PrintColorUIResource.java
+  build: 0.896 seconds
+  compile: 0.896 seconds
+  main: 0.402 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test4625418.java
+  build: 0.976 seconds
+  compile: 0.976 seconds
+  main: 1.072 seconds
+  build: 0.0 seconds
+  main: 1.108 seconds
+  build: 0.0 seconds
+  main: 1.112 seconds
+  build: 0.0 seconds
+  main: 1.048 seconds
+  build: 0.0 seconds
+  main: 1.061 seconds
+  build: 0.001 seconds
+  main: 1.045 seconds
+  build: 0.0 seconds
+  main: 1.05 seconds
+  build: 0.0 seconds
+  main: 1.034 seconds
+  build: 0.0 seconds
+  main: 1.058 seconds
+  build: 0.0 seconds
+  main: 1.061 seconds
+  build: 0.0 seconds
+  main: 1.074 seconds
+  build: 0.001 seconds
+  main: 1.11 seconds
+  build: 0.0 seconds
+  main: 1.076 seconds
+  build: 0.0 seconds
+  main: 1.053 seconds
+  build: 0.001 seconds
+  main: 1.059 seconds
+  build: 0.0 seconds
+  main: 1.077 seconds
+  build: 0.001 seconds
+  main: 1.097 seconds
+  build: 0.0 seconds
+  main: 1.092 seconds
+  build: 0.001 seconds
+  main: 1.046 seconds
+  build: 0.0 seconds
+  main: 1.063 seconds
+  build: 0.0 seconds
+  main: 1.004 seconds
+  build: 0.0 seconds
+  main: 1.143 seconds
+  build: 0.0 seconds
+  main: 1.114 seconds
+  build: 0.0 seconds
+  main: 1.095 seconds
+  build: 0.0 seconds
+  main: 1.125 seconds
+  build: 0.0 seconds
+  main: 1.054 seconds
+  build: 0.0 seconds
+  main: 1.079 seconds
+  build: 0.0 seconds
+  main: 1.084 seconds
+  build: 0.0 seconds
+  main: 1.075 seconds
+  build: 0.0 seconds
+  main: 1.055 seconds
+  build: 0.0 seconds
+  main: 1.076 seconds
+  build: 0.001 seconds
+  main: 1.071 seconds
+  build: 0.0 seconds
+  main: 1.052 seconds
+  build: 0.0 seconds
+  main: 1.079 seconds
+  build: 0.0 seconds
+  main: 1.085 seconds
+  build: 0.001 seconds
+  main: 1.099 seconds
+  build: 0.0 seconds
+  main: 1.029 seconds
+  build: 0.0 seconds
+  main: 1.113 seconds
+  build: 0.0 seconds
+  main: 1.029 seconds
+  build: 0.0 seconds
+  main: 1.079 seconds
+  build: 0.0 seconds
+  main: 1.129 seconds
+  build: 0.0 seconds
+  main: 1.135 seconds
+  build: 0.0 seconds
+  main: 1.036 seconds
+  build: 0.001 seconds
+  main: 1.049 seconds
+  build: 0.0 seconds
+  main: 1.168 seconds
+  build: 0.0 seconds
+  main: 1.191 seconds
+  build: 0.0 seconds
+  main: 1.098 seconds
+  build: 0.0 seconds
+  main: 1.2 seconds
+  build: 0.0 seconds
+  main: 0.525 seconds
+  build: 0.0 seconds
+  main: 1.183 seconds
+  build: 0.0 seconds
+  main: 0.937 seconds
+  build: 0.0 seconds
+  main: 1.115 seconds
+  build: 0.0 seconds
+  main: 1.055 seconds
+  build: 0.001 seconds
+  main: 1.063 seconds
+  build: 0.0 seconds
+  main: 1.031 seconds
+  build: 0.0 seconds
+  main: 1.039 seconds
+  build: 0.0 seconds
+  main: 1.09 seconds
+  build: 0.0 seconds
+  main: 1.074 seconds
+  build: 0.0 seconds
+  main: 1.02 seconds
+  build: 0.0 seconds
+  main: 1.032 seconds
+  build: 0.0 seconds
+  main: 1.046 seconds
+  build: 0.0 seconds
+  main: 1.041 seconds
+  build: 0.0 seconds
+  main: 1.072 seconds
+  build: 0.0 seconds
+  main: 1.015 seconds
+  build: 0.001 seconds
+  main: 1.051 seconds
+  build: 0.0 seconds
+  main: 1.112 seconds
+  build: 0.0 seconds
+  main: 1.11 seconds
+  build: 0.001 seconds
+  main: 1.114 seconds
+  build: 0.001 seconds
+  main: 1.293 seconds
+  build: 0.0 seconds
+  main: 1.354 seconds
+  build: 0.0 seconds
+  main: 1.121 seconds
+  build: 0.0 seconds
+  main: 1.055 seconds
+  build: 0.0 seconds
+  main: 0.999 seconds
+  build: 0.0 seconds
+  main: 1.027 seconds
+  build: 0.0 seconds
+  main: 1.041 seconds
+  build: 0.0 seconds
+  main: 1.024 seconds
+  build: 0.0 seconds
+  main: 1.048 seconds
+  build: 0.0 seconds
+  main: 1.081 seconds
+  build: 0.0 seconds
+  main: 1.079 seconds
+  build: 0.0 seconds
+  main: 1.022 seconds
+  build: 0.0 seconds
+  main: 1.039 seconds
+  build: 0.0 seconds
+  main: 1.245 seconds
+  build: 0.0 seconds
+  main: 1.295 seconds
+  build: 0.0 seconds
+  main: 1.06 seconds
+  build: 0.0 seconds
+  main: 1.073 seconds
+  build: 0.0 seconds
+  main: 1.017 seconds
+  build: 0.0 seconds
+  main: 1.037 seconds
+  build: 0.0 seconds
+  main: 1.121 seconds
+  build: 0.0 seconds
+  main: 1.027 seconds
+  build: 0.0 seconds
+  main: 1.014 seconds
+  build: 0.0 seconds
+  main: 1.024 seconds
+  build: 0.0 seconds
+  main: 1.108 seconds
+  build: 0.0 seconds
+  main: 1.113 seconds
+  build: 0.0 seconds
+  main: 1.059 seconds
+  build: 0.0 seconds
+  main: 1.076 seconds
+  build: 0.0 seconds
+  main: 1.019 seconds
+  build: 0.0 seconds
+  main: 1.047 seconds
+  build: 0.0 seconds
+  main: 1.087 seconds
+  build: 0.0 seconds
+  main: 1.098 seconds
+  build: 0.0 seconds
+  main: 1.045 seconds
+  build: 0.0 seconds
+  main: 1.11 seconds
+  build: 0.0 seconds
+  main: 1.045 seconds
+  build: 0.0 seconds
+  main: 1.056 seconds
+  build: 0.0 seconds
+  main: 1.036 seconds
+  build: 0.0 seconds
+  main: 1.111 seconds
+  build: 0.0 seconds
+  main: 1.025 seconds
+  build: 0.0 seconds
+  main: 1.042 seconds
+  build: 0.001 seconds
+  main: 1.114 seconds
+  build: 0.0 seconds
+  main: 1.072 seconds
+  build: 0.0 seconds
+  main: 1.07 seconds
+  build: 0.0 seconds
+  main: 1.059 seconds
+  build: 0.001 seconds
+  main: 1.098 seconds
+  build: 0.0 seconds
+  main: 1.118 seconds
+  build: 0.0 seconds
+  main: 1.036 seconds
+  build: 0.0 seconds
+  main: 1.052 seconds
+  build: 0.0 seconds
+  main: 1.064 seconds
+  build: 0.001 seconds
+  main: 0.448 seconds
+  build: 0.001 seconds
+  main: 0.43 seconds
+  build: 0.0 seconds
+  main: 0.425 seconds
+  build: 0.0 seconds
+  main: 0.444 seconds
+  build: 0.0 seconds
+  main: 0.441 seconds
+  build: 0.0 seconds
+  main: 0.41 seconds
+  build: 0.001 seconds
+  main: 0.397 seconds
+  build: 0.0 seconds
+  main: 0.417 seconds
+  build: 0.0 seconds
+  main: 0.445 seconds
+  build: 0.0 seconds
+  main: 0.416 seconds
+  build: 0.0 seconds
+  main: 0.452 seconds
+  build: 0.0 seconds
+  main: 0.45 seconds
+  build: 0.0 seconds
+  main: 0.422 seconds
+  build: 0.0 seconds
+  main: 0.428 seconds
+  build: 0.0 seconds
+  main: 0.439 seconds
+  build: 0.0 seconds
+  main: 1.054 seconds
+  build: 0.001 seconds
+  main: 1.13 seconds
+  build: 0.001 seconds
+  main: 1.097 seconds
+  build: 0.0 seconds
+  main: 1.065 seconds
+  build: 0.0 seconds
+  main: 1.062 seconds
+  build: 0.0 seconds
+  main: 1.061 seconds
+  build: 0.0 seconds
+  main: 1.082 seconds
+  build: 0.0 seconds
+  main: 1.049 seconds
+  build: 0.0 seconds
+  main: 1.067 seconds
+  build: 0.001 seconds
+  main: 1.033 seconds
+  build: 0.0 seconds
+  main: 1.088 seconds
+  build: 0.0 seconds
+  main: 1.007 seconds
+  build: 0.0 seconds
+  main: 1.016 seconds
+  build: 0.0 seconds
+  main: 1.074 seconds
+  build: 0.0 seconds
+  main: 1.002 seconds
+  build: 0.0 seconds
+  main: 1.184 seconds
+  build: 0.0 seconds
+  main: 1.051 seconds
+  build: 0.0 seconds
+  main: 1.054 seconds
+  build: 0.0 seconds
+  main: 1.028 seconds
+  build: 0.0 seconds
+  main: 1.086 seconds
+  build: 0.0 seconds
+  main: 1.206 seconds
+  build: 0.0 seconds
+  main: 1.112 seconds
+  build: 0.001 seconds
+  main: 1.132 seconds
+  build: 0.0 seconds
+  main: 0.985 seconds
+  build: 0.0 seconds
+  main: 1.254 seconds
+  build: 0.0 seconds
+  main: 1.167 seconds
+  build: 0.0 seconds
+  main: 1.032 seconds
+  build: 0.0 seconds
+  main: 1.108 seconds
+  build: 0.0 seconds
+  main: 1.079 seconds
+  build: 0.001 seconds
+  main: 1.046 seconds
+  build: 0.0 seconds
+  main: 1.092 seconds
+  build: 0.0 seconds
+  main: 1.063 seconds
+  build: 0.0 seconds
+  main: 1.097 seconds
+  build: 0.0 seconds
+  main: 1.027 seconds
+  build: 0.0 seconds
+  main: 1.095 seconds
+  build: 0.0 seconds
+  main: 1.024 seconds
+  build: 0.001 seconds
+  main: 1.098 seconds
+  build: 0.0 seconds
+  main: 1.098 seconds
+  build: 0.0 seconds
+  main: 0.449 seconds
+  build: 0.0 seconds
+  main: 1.057 seconds
+  build: 0.001 seconds
+  main: 1.0 seconds
+  build: 0.0 seconds
+  main: 1.046 seconds
+  build: 0.0 seconds
+  main: 1.172 seconds
+  build: 0.0 seconds
+  main: 0.991 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test4631471.java
+  build: 1.024 seconds
+  compile: 1.024 seconds
+  main: 1.047 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test4646747.java
+  build: 0.866 seconds
+  compile: 0.866 seconds
+  main: 0.134 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test4652928.java
+  build: 0.993 seconds
+  compile: 0.992 seconds
+  main: 2.78 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test4679556.java
+  build: 0.921 seconds
+  compile: 0.92 seconds
+  main: 0.32 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test4822050.java
+  build: 0.933 seconds
+  compile: 0.933 seconds
+  main: 0.745 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test4880633.java
+  build: 1.255 seconds
+  compile: 1.255 seconds
+  main: 0.108 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test4903007.java
+  build: 0.995 seconds
+  compile: 0.995 seconds
+  main: 3.718 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test4935607.java
+  build: 0.894 seconds
+  compile: 0.894 seconds
+  main: 0.246 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test4936682.java
+  build: 0.916 seconds
+  compile: 0.916 seconds
+  main: 0.208 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test4950122.java
+  build: 0.878 seconds
+  compile: 0.878 seconds
+  main: 0.123 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test4968523.java
+  build: 0.92 seconds
+  compile: 0.92 seconds
+  main: 0.128 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test4993777.java
+  build: 0.874 seconds
+  compile: 0.874 seconds
+  main: 0.359 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test4994637.java
+  build: 0.917 seconds
+  compile: 0.917 seconds
+  main: 0.273 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test5023550.java
+  build: 0.918 seconds
+  compile: 0.918 seconds
+  main: 0.223 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test5023552.java
+  build: 0.893 seconds
+  compile: 0.892 seconds
+  main: 0.207 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test5023557.java
+  build: 0.881 seconds
+  compile: 0.88 seconds
+  main: 0.214 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test5023559.java
+  build: 0.954 seconds
+  compile: 0.953 seconds
+  main: 0.217 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test6176120.java
+  build: 0.893 seconds
+  compile: 0.893 seconds
+  main: 0.235 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test6187118.java
+  build: 1.009 seconds
+  compile: 1.009 seconds
+  main: 0.209 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test6256805.java
+  build: 0.9 seconds
+  compile: 0.9 seconds
+  main: 0.261 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test6437265.java
+  build: 1.051 seconds
+  compile: 1.051 seconds
+  main: 3.561 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test6501431.java
+  build: 0.931 seconds
+  compile: 0.931 seconds
+  main: 1.831 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test6505888.java
+  build: 0.939 seconds
+  compile: 0.938 seconds
+  main: 0.287 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test6531597.java
+  build: 0.873 seconds
+  compile: 0.873 seconds
+  main: 0.322 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test6570354.java
+  build: 0.96 seconds
+  compile: 0.959 seconds
+  main: 1.191 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test6852574.java
+  build: 0.961 seconds
+  compile: 0.96 seconds
+  main: 0.237 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test6921644.java
+  build: 0.926 seconds
+  compile: 0.926 seconds
+  main: 0.55 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test6963811.java
+  build: 0.892 seconds
+  compile: 0.892 seconds
+  main: 1.116 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test7092744.java
+  build: 0.896 seconds
+  compile: 0.896 seconds
+  main: 0.247 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLEncoder/Test7169395.java
+  build: 0.922 seconds
+  compile: 0.922 seconds
+  main: 0.281 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+Test results: passed: 141
+Report written to /home/openjdk/sources/jdk8_tl/jdk/build/linux-i586/testoutput/jdk_beans3/JTreport/html/report.html
+Results written to /home/openjdk/sources/jdk8_tl/jdk/build/linux-i586/testoutput/jdk_beans3/JTwork
+Summary: jdk_beans3
+TEST STATS: name=jdk_beans3  run=141  pass=141  fail=0  excluded=0
+EXIT CODE: 0
+EXIT CODE: 0
+make[2]: Leaving directory `/home/openjdk/sources/jdk8_tl/jdk/test'
+make[1]: Leaving directory `/home/openjdk/sources/jdk8_tl/jdk/test'

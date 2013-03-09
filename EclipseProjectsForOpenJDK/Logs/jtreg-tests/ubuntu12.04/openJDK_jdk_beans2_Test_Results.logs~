@@ -1,0 +1,723 @@
+make -k -C  ../jdk/test  jdk_beans2
+make[1]: Entering directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
+echo "Running tests in othervm mode: java/beans/Beans java/beans/EventHandler java/beans/XMLDecoder java/beans/PropertyEditor"
+Running tests in othervm mode: java/beans/Beans java/beans/EventHandler java/beans/XMLDecoder java/beans/PropertyEditor
+make TEST_DEPENDENCIES="java/beans/Beans java/beans/EventHandler java/beans/XMLDecoder java/beans/PropertyEditor" TESTDIRS="java/beans/Beans java/beans/EventHandler java/beans/XMLDecoder java/beans/PropertyEditor" USE_JTREG_AGENTVM=false UNIQUE_DIR=jdk_beans2 jtreg_tests
+make[2]: Entering directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
+Excluding list contains 0 items
+(                                                                    \
+	  ( JT_HOME=/home/saiubuntu/jtreg/;                   \
+            export JT_HOME;                                                  \
+            /home/saiubuntu/jtreg//win32/bin/jtreg                              \
+               -a -ea -esa -v:fail,error,time -retain:fail,error -ignore:quiet -timeoutFactor:4 -J-Xmx512m                                         \
+              -r:/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/JTreport  \
+              -w:/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/JTwork    \
+              -jdk:/home/saiubuntu/sources//jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image/                \
+              -exclude:/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/excludelist.txt             \
+                                                         \
+              java/beans/Beans java/beans/EventHandler java/beans/XMLDecoder java/beans/PropertyEditor                                                    \
+	  ) ; ( jtregExitCode=$? && _summary="/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/JTreport/text/summary.txt"; rm -f -f /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/Stats.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/runlist.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/passlist.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/faillist.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/exitcode.txt; echo "${jtregExitCode}" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/exitcode.txt; if [ -r "${_summary}" ] ; then echo "Summary: jdk_beans2" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/Stats.txt; expand ${_summary} | egrep -v ' Not run\.' > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/runlist.txt; egrep ' Passed\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/runlist.txt | egrep -v ' Error\.' | egrep -v ' Failed\.' > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/passlist.txt; ( egrep ' Failed\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/runlist.txt; egrep ' Error\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/runlist.txt; egrep -v ' Passed\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/runlist.txt ) | sort | uniq > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/faillist.txt; if [ ${jtregExitCode} != 0 -o -s /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/faillist.txt ] ; then expand /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/faillist.txt | cut -d' ' -f1 | sed -e 's@^@FAILED: @' >> /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/Stats.txt; if [ ${jtregExitCode} = 0 ] ; then jtregExitCode=1; fi; fi; runc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/runlist.txt      | wc -l | awk '{print $1;}'`"; passc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/passlist.txt    | wc -l | awk '{print $1;}'`"; failc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/faillist.txt    | wc -l | awk '{print $1;}'`"; exclc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/excludelist.txt | wc -l | awk '{print $1;}'`"; echo "TEST STATS: name=jdk_beans2  run=${runc}  pass=${passc}  fail=${failc}  excluded=${exclc}" >> /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/Stats.txt; else echo "Missing file: ${_summary}" >> /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/Stats.txt; fi; if [ -f /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/Stats.txt ] ; then cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/Stats.txt; fi; ( mkdir -p `dirname /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/ARCHIVE_BUNDLE.zip` && cd /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2 && chmod -R a+r . && zip -q -r /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/ARCHIVE_BUNDLE.zip . ) ; if [ ! -s /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/exitcode.txt; fi ; testExitCode=`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode} )                                          \
+	) 2>&1 | tee /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/output.txt ; if [ ! -s /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/exitcode.txt; fi ; testExitCode=`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode}
+Directory "/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/JTreport" not found: creating
+Directory "/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/JTwork" not found: creating
+Directory "/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_beans2/JTwork/scratch" not found: creating
+--------------------------------------------------
+TEST: java/beans/Beans/6669869/TestDesignTime.java
+  build: 1.076 seconds
+  compile: 1.067 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Beans/6669869/TestGuiAvailable.java
+  build: 0.826 seconds
+  compile: 0.826 seconds
+  main: 0.091 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Beans/Test4067824.java
+  build: 0.909 seconds
+  compile: 0.909 seconds
+  main: 0.115 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Beans/Test4080522.java
+  build: 0.876 seconds
+  compile: 0.876 seconds
+  main: 0.118 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Beans/Test4343723.java
+  build: 0.962 seconds
+  compile: 0.962 seconds
+  main: 0.103 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/EventHandler/Test6179222.java
+  build: 0.936 seconds
+  compile: 0.935 seconds
+  main: 0.518 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/EventHandler/Test6277246.java
+  build: 0.876 seconds
+  compile: 0.876 seconds
+  main: 0.13 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/EventHandler/Test6277266.java
+  build: 0.994 seconds
+  compile: 0.994 seconds
+  main: 0.234 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/EventHandler/Test6788531.java
+  build: 1.066 seconds
+  compile: 1.066 seconds
+  main: 0.537 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/6380849/TestPropertyEditor.java
+  compile: 1.064 seconds
+  build: 0.0 seconds
+  main: 0.239 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/Test4968709.java
+  build: 0.885 seconds
+  compile: 0.885 seconds
+  main: 0.093 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/Test6397609.java
+  build: 0.991 seconds
+  compile: 0.991 seconds
+  main: 1.112 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/Test6963811.java
+  compile: 0.932 seconds
+  build: 0.0 seconds
+  main: 1.104 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/Test7087876.java
+  build: 0.844 seconds
+  compile: 0.844 seconds
+  main: 0.098 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestBooleanClass.java
+  build: 0.932 seconds
+  compile: 0.932 seconds
+  main: 0.115 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestBooleanClassJava.java
+  build: 0.892 seconds
+  compile: 0.891 seconds
+  main: 0.977 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestBooleanClassNull.java
+  build: 0.822 seconds
+  compile: 0.821 seconds
+  main: 0.933 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestBooleanClassValue.java
+  build: 0.824 seconds
+  compile: 0.824 seconds
+  main: 0.101 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestBooleanType.java
+  build: 0.859 seconds
+  compile: 0.859 seconds
+  main: 0.103 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestBooleanTypeJava.java
+  build: 0.86 seconds
+  compile: 0.86 seconds
+  main: 0.969 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestBooleanTypeNull.java
+  build: 0.82 seconds
+  compile: 0.82 seconds
+  main: 0.921 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestBooleanTypeValue.java
+  build: 0.813 seconds
+  compile: 0.813 seconds
+  main: 0.096 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestByteClass.java
+  build: 0.866 seconds
+  compile: 0.866 seconds
+  main: 0.129 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestByteClassJava.java
+  build: 0.862 seconds
+  compile: 0.862 seconds
+  main: 0.945 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestByteClassNull.java
+  build: 0.803 seconds
+  compile: 0.803 seconds
+  main: 0.903 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestByteClassValue.java
+  build: 0.858 seconds
+  compile: 0.857 seconds
+  main: 0.106 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestByteType.java
+  build: 0.844 seconds
+  compile: 0.844 seconds
+  main: 0.11 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestByteTypeJava.java
+  build: 0.874 seconds
+  compile: 0.874 seconds
+  main: 0.92 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestByteTypeNull.java
+  build: 0.83 seconds
+  compile: 0.829 seconds
+  main: 0.887 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestByteTypeValue.java
+  build: 0.895 seconds
+  compile: 0.895 seconds
+  main: 0.093 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestColorClass.java
+  build: 0.869 seconds
+  compile: 0.869 seconds
+  main: 0.142 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestColorClassJava.java
+  build: 0.865 seconds
+  compile: 0.865 seconds
+  main: 0.967 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestColorClassNull.java
+  build: 0.893 seconds
+  compile: 0.893 seconds
+  main: 0.918 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestColorClassValue.java
+  build: 0.849 seconds
+  compile: 0.849 seconds
+  main: 0.132 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestDoubleClass.java
+  build: 0.807 seconds
+  compile: 0.806 seconds
+  main: 0.119 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestDoubleClassJava.java
+  build: 0.872 seconds
+  compile: 0.872 seconds
+  main: 0.92 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestDoubleClassNull.java
+  build: 0.852 seconds
+  compile: 0.851 seconds
+  main: 0.889 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestDoubleClassValue.java
+  build: 0.885 seconds
+  compile: 0.885 seconds
+  main: 0.097 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestDoubleType.java
+  build: 0.824 seconds
+  compile: 0.824 seconds
+  main: 0.126 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestDoubleTypeJava.java
+  build: 0.834 seconds
+  compile: 0.834 seconds
+  main: 0.954 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestDoubleTypeNull.java
+  build: 0.839 seconds
+  compile: 0.837 seconds
+  main: 0.939 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestDoubleTypeValue.java
+  build: 0.863 seconds
+  compile: 0.863 seconds
+  main: 0.09 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestEnumClass.java
+  build: 0.883 seconds
+  compile: 0.883 seconds
+  main: 0.121 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestEnumClassJava.java
+  build: 0.865 seconds
+  compile: 0.865 seconds
+  main: 0.907 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestEnumClassNull.java
+  build: 0.886 seconds
+  compile: 0.886 seconds
+  main: 0.915 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestEnumClassValue.java
+  build: 0.858 seconds
+  compile: 0.858 seconds
+  main: 0.107 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestEnumSubclass.java
+  build: 0.915 seconds
+  compile: 0.914 seconds
+  main: 0.118 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestEnumSubclassJava.java
+  build: 0.864 seconds
+  compile: 0.864 seconds
+  main: 0.897 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestEnumSubclassNull.java
+  build: 0.896 seconds
+  compile: 0.896 seconds
+  main: 0.933 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestEnumSubclassValue.java
+  build: 0.887 seconds
+  compile: 0.887 seconds
+  main: 0.107 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestFloatClass.java
+  build: 0.859 seconds
+  compile: 0.858 seconds
+  main: 0.12 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestFloatClassJava.java
+  build: 0.869 seconds
+  compile: 0.868 seconds
+  main: 0.919 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestFloatClassNull.java
+  build: 0.825 seconds
+  compile: 0.825 seconds
+  main: 0.927 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestFloatClassValue.java
+  build: 0.793 seconds
+  compile: 0.793 seconds
+  main: 0.104 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestFloatType.java
+  build: 0.842 seconds
+  compile: 0.842 seconds
+  main: 0.141 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestFloatTypeJava.java
+  build: 0.836 seconds
+  compile: 0.835 seconds
+  main: 0.964 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestFloatTypeNull.java
+  build: 0.811 seconds
+  compile: 0.811 seconds
+  main: 0.875 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestFloatTypeValue.java
+  build: 0.839 seconds
+  compile: 0.838 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestFontClass.java
+  build: 0.855 seconds
+  compile: 0.854 seconds
+  main: 0.241 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestFontClassJava.java
+  build: 0.871 seconds
+  compile: 0.871 seconds
+  main: 1.736 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestFontClassNull.java
+  build: 0.889 seconds
+  compile: 0.889 seconds
+  main: 1.321 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestFontClassValue.java
+  build: 0.846 seconds
+  compile: 0.846 seconds
+  main: 0.573 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestIntegerClass.java
+  build: 0.835 seconds
+  compile: 0.834 seconds
+  main: 0.12 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestIntegerClassJava.java
+  build: 0.866 seconds
+  compile: 0.866 seconds
+  main: 0.94 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestIntegerClassNull.java
+  build: 0.839 seconds
+  compile: 0.839 seconds
+  main: 0.901 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestIntegerClassValue.java
+  build: 0.87 seconds
+  compile: 0.869 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestIntegerType.java
+  build: 0.888 seconds
+  compile: 0.887 seconds
+  main: 0.125 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestIntegerTypeJava.java
+  build: 0.831 seconds
+  compile: 0.831 seconds
+  main: 0.986 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestIntegerTypeNull.java
+  build: 0.831 seconds
+  compile: 0.83 seconds
+  main: 0.926 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestIntegerTypeValue.java
+  build: 0.843 seconds
+  compile: 0.842 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestLongClass.java
+  build: 0.805 seconds
+  compile: 0.805 seconds
+  main: 0.116 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestLongClassJava.java
+  build: 0.874 seconds
+  compile: 0.874 seconds
+  main: 0.949 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestLongClassNull.java
+  build: 0.843 seconds
+  compile: 0.843 seconds
+  main: 0.91 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestLongClassValue.java
+  build: 0.862 seconds
+  compile: 0.861 seconds
+  main: 0.094 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestLongType.java
+  build: 0.87 seconds
+  compile: 0.87 seconds
+  main: 0.116 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestLongTypeJava.java
+  build: 0.869 seconds
+  compile: 0.869 seconds
+  main: 0.959 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestLongTypeNull.java
+  build: 0.84 seconds
+  compile: 0.84 seconds
+  main: 0.928 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestLongTypeValue.java
+  build: 0.863 seconds
+  compile: 0.863 seconds
+  main: 0.092 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestShortClass.java
+  build: 0.827 seconds
+  compile: 0.827 seconds
+  main: 0.121 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestShortClassJava.java
+  build: 0.837 seconds
+  compile: 0.836 seconds
+  main: 0.939 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestShortClassNull.java
+  build: 0.82 seconds
+  compile: 0.82 seconds
+  main: 0.912 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestShortClassValue.java
+  build: 0.838 seconds
+  compile: 0.838 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestShortType.java
+  build: 0.827 seconds
+  compile: 0.827 seconds
+  main: 0.11 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestShortTypeJava.java
+  build: 0.849 seconds
+  compile: 0.849 seconds
+  main: 0.931 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestShortTypeNull.java
+  build: 0.88 seconds
+  compile: 0.88 seconds
+  main: 0.917 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestShortTypeValue.java
+  build: 0.84 seconds
+  compile: 0.839 seconds
+  main: 0.099 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestStringClass.java
+  build: 0.827 seconds
+  compile: 0.826 seconds
+  main: 0.111 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestStringClassJava.java
+  build: 0.905 seconds
+  compile: 0.904 seconds
+  main: 0.921 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestStringClassNull.java
+  build: 0.818 seconds
+  compile: 0.818 seconds
+  main: 0.863 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyEditor/TestStringClassValue.java
+  build: 0.822 seconds
+  compile: 0.822 seconds
+  main: 0.097 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLDecoder/4676532/Test4676532.java
+  build: 0.928 seconds
+  compile: 0.927 seconds
+  main: 0.161 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLDecoder/spec/TestArray.java
+  build: 0.961 seconds
+  compile: 0.96 seconds
+  main: 0.151 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLDecoder/spec/TestBoolean.java
+  build: 0.882 seconds
+  compile: 0.881 seconds
+  main: 0.159 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLDecoder/spec/TestByte.java
+  build: 0.878 seconds
+  compile: 0.878 seconds
+  main: 0.149 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLDecoder/spec/TestChar.java
+  build: 0.859 seconds
+  compile: 0.859 seconds
+  main: 0.148 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLDecoder/spec/TestClass.java
+  build: 0.917 seconds
+  compile: 0.917 seconds
+  main: 0.151 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLDecoder/spec/TestDouble.java
+  build: 0.897 seconds
+  compile: 0.897 seconds
+  main: 0.154 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLDecoder/spec/TestFalse.java
+  build: 0.878 seconds
+  compile: 0.878 seconds
+  main: 0.146 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLDecoder/spec/TestField.java
+  build: 0.878 seconds
+  compile: 0.878 seconds
+  main: 0.165 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLDecoder/spec/TestFloat.java
+  build: 0.881 seconds
+  compile: 0.881 seconds
+  main: 0.159 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLDecoder/spec/TestInt.java
+  build: 0.861 seconds
+  compile: 0.861 seconds
+  main: 0.158 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLDecoder/spec/TestJava.java
+  build: 0.819 seconds
+  compile: 0.818 seconds
+  main: 0.159 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLDecoder/spec/TestLong.java
+  build: 0.908 seconds
+  compile: 0.907 seconds
+  main: 0.158 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLDecoder/spec/TestMethod.java
+  build: 0.893 seconds
+  compile: 0.893 seconds
+  main: 0.147 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLDecoder/spec/TestNew.java
+  build: 0.902 seconds
+  compile: 0.902 seconds
+  main: 0.157 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLDecoder/spec/TestNull.java
+  build: 0.865 seconds
+  compile: 0.865 seconds
+  main: 0.148 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLDecoder/spec/TestObject.java
+  build: 0.95 seconds
+  compile: 0.95 seconds
+  main: 0.363 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLDecoder/spec/TestProperty.java
+  build: 0.882 seconds
+  compile: 0.882 seconds
+  main: 0.169 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLDecoder/spec/TestShort.java
+  build: 0.92 seconds
+  compile: 0.92 seconds
+  main: 0.141 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLDecoder/spec/TestString.java
+  build: 0.89 seconds
+  compile: 0.89 seconds
+  main: 0.17 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLDecoder/spec/TestTrue.java
+  build: 0.911 seconds
+  compile: 0.911 seconds
+  main: 0.147 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLDecoder/spec/TestVar.java
+  build: 0.853 seconds
+  compile: 0.853 seconds
+  main: 0.149 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLDecoder/Test4864117.java
+  build: 0.96 seconds
+  compile: 0.959 seconds
+  main: 0.131 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLDecoder/Test6338070.java
+  build: 0.874 seconds
+  compile: 0.874 seconds
+  main: 0.13 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/XMLDecoder/Test6341798.java
+  build: 0.947 seconds
+  compile: 0.947 seconds
+  main: 0.146 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+Test results: passed: 115
+Report written to /home/saiubuntu/sources/jdk8_tl/jdk/build/linux-i586/testoutput/jdk_beans2/JTreport/html/report.html
+Results written to /home/saiubuntu/sources/jdk8_tl/jdk/build/linux-i586/testoutput/jdk_beans2/JTwork
+Summary: jdk_beans2
+TEST STATS: name=jdk_beans2  run=115  pass=115  fail=0  excluded=0
+EXIT CODE: 0
+EXIT CODE: 0
+make[2]: Leaving directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
+make[1]: Leaving directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'

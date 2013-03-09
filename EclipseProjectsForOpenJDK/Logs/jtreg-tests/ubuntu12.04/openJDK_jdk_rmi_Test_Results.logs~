@@ -1,0 +1,1029 @@
+make -k -C  ../jdk/test  jdk_rmi
+make[1]: Entering directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
+echo "Running tests in othervm mode: java/rmi sun/rmi javax/rmi/ssl"
+Running tests in othervm mode: java/rmi sun/rmi javax/rmi/ssl
+make TEST_DEPENDENCIES="java/rmi sun/rmi javax/rmi/ssl" TESTDIRS="java/rmi sun/rmi javax/rmi/ssl" USE_JTREG_AGENTVM=false UNIQUE_DIR=jdk_rmi jtreg_tests
+make[2]: Entering directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
+Excluding list contains 4 items
+Excluding: java/rmi/transport/rapidExportUnexport/RapidExportUnexport.java
+Excluding: java/rmi/reliability/benchmark/runRmiBench.sh
+Excluding: java/rmi/transport/checkLeaseInfoLeak/CheckLeaseLeak.java
+Excluding: sun/rmi/transport/proxy/EagerHttpFallback.java
+(                                                                    \
+	  ( JT_HOME=/home/saiubuntu/jtreg/;                   \
+            export JT_HOME;                                                  \
+            /home/saiubuntu/jtreg//win32/bin/jtreg                              \
+               -a -ea -esa -v:fail,error,time -retain:fail,error -ignore:quiet -timeoutFactor:4 -J-Xmx512m                                         \
+              -r:/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/JTreport  \
+              -w:/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/JTwork    \
+              -jdk:/home/saiubuntu/sources//jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image/                \
+              -exclude:/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/excludelist.txt             \
+                                                         \
+              java/rmi sun/rmi javax/rmi/ssl                                                    \
+	  ) ; ( jtregExitCode=$? && _summary="/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/JTreport/text/summary.txt"; rm -f -f /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/Stats.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/runlist.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/passlist.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/faillist.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/exitcode.txt; echo "${jtregExitCode}" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/exitcode.txt; if [ -r "${_summary}" ] ; then echo "Summary: jdk_rmi" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/Stats.txt; expand ${_summary} | egrep -v ' Not run\.' > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/runlist.txt; egrep ' Passed\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/runlist.txt | egrep -v ' Error\.' | egrep -v ' Failed\.' > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/passlist.txt; ( egrep ' Failed\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/runlist.txt; egrep ' Error\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/runlist.txt; egrep -v ' Passed\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/runlist.txt ) | sort | uniq > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/faillist.txt; if [ ${jtregExitCode} != 0 -o -s /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/faillist.txt ] ; then expand /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/faillist.txt | cut -d' ' -f1 | sed -e 's@^@FAILED: @' >> /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/Stats.txt; if [ ${jtregExitCode} = 0 ] ; then jtregExitCode=1; fi; fi; runc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/runlist.txt      | wc -l | awk '{print $1;}'`"; passc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/passlist.txt    | wc -l | awk '{print $1;}'`"; failc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/faillist.txt    | wc -l | awk '{print $1;}'`"; exclc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/excludelist.txt | wc -l | awk '{print $1;}'`"; echo "TEST STATS: name=jdk_rmi  run=${runc}  pass=${passc}  fail=${failc}  excluded=${exclc}" >> /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/Stats.txt; else echo "Missing file: ${_summary}" >> /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/Stats.txt; fi; if [ -f /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/Stats.txt ] ; then cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/Stats.txt; fi; ( mkdir -p `dirname /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/ARCHIVE_BUNDLE.zip` && cd /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi && chmod -R a+r . && zip -q -r /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/ARCHIVE_BUNDLE.zip . ) ; if [ ! -s /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/exitcode.txt; fi ; testExitCode=`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode} )                                          \
+	) 2>&1 | tee /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/output.txt ; if [ ! -s /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/exitcode.txt; fi ; testExitCode=`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode}
+Directory "/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/JTreport" not found: creating
+Directory "/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/JTwork" not found: creating
+Directory "/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_rmi/JTwork/scratch" not found: creating
+--------------------------------------------------
+TEST: java/rmi/activation/Activatable/checkActivateRef/CheckActivateRef.java
+  build: 2.443 seconds
+  compile: 1.568 seconds
+  compile: 0.868 seconds
+  build: 1.044 seconds
+  compile: 1.044 seconds
+  main: 24.915 seconds
+  build: 0.0 seconds
+  main: 25.075 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/Activatable/checkAnnotations/CheckAnnotations.java
+  build: 0.923 seconds
+  compile: 0.922 seconds
+  build: 0.981 seconds
+  compile: 0.981 seconds
+  main: 49.278 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/Activatable/checkImplClassLoader/CheckImplClassLoader.java
+  build: 0.953 seconds
+  compile: 0.951 seconds
+  build: 0.877 seconds
+  compile: 0.877 seconds
+  main: 10.484 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/Activatable/checkRegisterInLog/CheckRegisterInLog.java
+  build: 0.886 seconds
+  compile: 0.885 seconds
+  build: 0.948 seconds
+  compile: 0.948 seconds
+  main: 7.661 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/Activatable/createPrivateActivable/CreatePrivateActivatable.java
+  build: 0.788 seconds
+  compile: 0.787 seconds
+  build: 0.943 seconds
+  compile: 0.942 seconds
+  main: 1.894 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/Activatable/downloadParameterClass/DownloadParameterClass.java
+  build: 0.99 seconds
+  compile: 0.99 seconds
+  build: 0.0 seconds
+  main: 1.941 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/Activatable/elucidateNoSuchMethod/ElucidateNoSuchMethod.java
+  build: 0.842 seconds
+  compile: 0.841 seconds
+  build: 0.935 seconds
+  compile: 0.935 seconds
+  main: 1.608 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/Activatable/extLoadedImpl/ext.sh
+  build: 0.0 seconds
+  build: 0.969 seconds
+  compile: 0.968 seconds
+  shell: 2.047 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/Activatable/forceLogSnapshot/ForceLogSnapshot.java
+  build: 0.932 seconds
+  compile: 0.931 seconds
+  build: 0.962 seconds
+  compile: 0.962 seconds
+  main: 80.702 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/Activatable/inactiveGroup/InactiveGroup.java
+  build: 0.906 seconds
+  compile: 0.905 seconds
+  build: 0.927 seconds
+  compile: 0.927 seconds
+  main: 7.58 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/Activatable/lookupActivationSystem/LookupActivationSystem.java
+  build: 0.001 seconds
+  build: 0.918 seconds
+  compile: 0.917 seconds
+  main: 0.898 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/Activatable/nestedActivate/NestedActivate.java
+  build: 0.88 seconds
+  compile: 0.878 seconds
+  build: 0.969 seconds
+  compile: 0.969 seconds
+  main: 1.745 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/Activatable/nonExistentActivatable/NonExistentActivatable.java
+  build: 0.837 seconds
+  compile: 0.836 seconds
+  build: 0.924 seconds
+  compile: 0.923 seconds
+  main: 1.79 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/Activatable/notSerializable/NotSerializable.java
+  build: 0.918 seconds
+  compile: 0.918 seconds
+  main: 0.488 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/Activatable/restartCrashedService/RestartCrashedService.java
+  build: 0.858 seconds
+  compile: 0.858 seconds
+  build: 0.989 seconds
+  compile: 0.988 seconds
+  main: 13.611 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/Activatable/restartLatecomer/RestartLatecomer.java
+  build: 0.99 seconds
+  compile: 0.989 seconds
+  build: 0.001 seconds
+  main: 7.323 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/Activatable/restartService/RestartService.java
+  build: 0.894 seconds
+  compile: 0.893 seconds
+  build: 0.957 seconds
+  compile: 0.957 seconds
+  main: 8.14 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/Activatable/shutdownGracefully/ShutdownGracefully.java
+  build: 0.903 seconds
+  compile: 0.902 seconds
+  build: 1.001 seconds
+  compile: 1.001 seconds
+  main: 5.306 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/Activatable/unregisterInactive/UnregisterInactive.java
+  build: 0.905 seconds
+  compile: 0.904 seconds
+  build: 0.882 seconds
+  compile: 0.882 seconds
+  main: 1.793 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/ActivateFailedException/activateFails/ActivateFails.java
+  build: 0.924 seconds
+  compile: 0.922 seconds
+  build: 0.94 seconds
+  compile: 0.94 seconds
+  main: 4.678 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/ActivationGroup/downloadActivationGroup/DownloadActivationGroup.java
+  build: 0.983 seconds
+  compile: 0.981 seconds
+  build: 0.0 seconds
+  main: 1.901 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/ActivationGroupDesc/checkDefaultGroupName/CheckDefaultGroupName.java
+  build: 0.0 seconds
+  build: 0.862 seconds
+  compile: 0.861 seconds
+  main: 0.095 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/ActivationSystem/activeGroup/IdempotentActiveGroup.java
+  build: 0.0 seconds
+  build: 0.913 seconds
+  compile: 0.912 seconds
+  main: 1.585 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/ActivationSystem/modifyDescriptor/ModifyDescriptor.java
+  build: 0.905 seconds
+  compile: 0.904 seconds
+  build: 0.968 seconds
+  compile: 0.968 seconds
+  main: 3.627 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/ActivationSystem/stubClassesPermitted/StubClassesPermitted.java
+  build: 0.884 seconds
+  compile: 0.884 seconds
+  build: 0.96 seconds
+  compile: 0.96 seconds
+  main: 5.891 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/ActivationSystem/unregisterGroup/UnregisterGroup.java
+  build: 0.776 seconds
+  compile: 0.776 seconds
+  build: 0.957 seconds
+  compile: 0.956 seconds
+  main: 2.181 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/checkusage/CheckUsage.java
+  build: 0.0 seconds
+  build: 0.879 seconds
+  compile: 0.878 seconds
+  main: 0.236 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/CommandEnvironment/NullOptions.java
+  build: 0.877 seconds
+  compile: 0.877 seconds
+  main: 0.09 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/CommandEnvironment/SetChildEnv.java
+  build: 0.904 seconds
+  compile: 0.903 seconds
+  build: 1.007 seconds
+  compile: 1.006 seconds
+  main: 28.846 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/log/LogTest.java
+  build: 1.002 seconds
+  compile: 1.002 seconds
+  main: 2.63 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/rmidViaInheritedChannel/InheritedChannelNotServerSocket.java
+  build: 0.001 seconds
+  build: 0.922 seconds
+  compile: 0.922 seconds
+  main: 1.208 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/activation/rmidViaInheritedChannel/RmidViaInheritedChannel.java
+  build: 0.001 seconds
+  build: 0.953 seconds
+  compile: 0.953 seconds
+  main: 1.268 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/dgc/dgcAckFailure/DGCAckFailure.java
+  build: 0.932 seconds
+  compile: 0.932 seconds
+  build: 0.0 seconds
+  main: 12.528 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/dgc/dgcImplInsulation/DGCImplInsulation.java
+  build: 0.813 seconds
+  compile: 0.812 seconds
+  build: 0.893 seconds
+  compile: 0.893 seconds
+  main: 7.556 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/dgc/retryDirtyCalls/RetryDirtyCalls.java
+  build: 0.941 seconds
+  compile: 0.94 seconds
+  build: 0.0 seconds
+  main: 20.508 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/dgc/VMID/CheckVMID.java
+  build: 0.0 seconds
+  build: 0.883 seconds
+  compile: 0.883 seconds
+  main: 0.13 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/invalidName/InvalidName.java
+  build: 0.001 seconds
+  build: 0.872 seconds
+  compile: 0.872 seconds
+  main: 0.131 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/MarshalledObject/compare/Compare.java
+  build: 0.927 seconds
+  compile: 0.927 seconds
+  main: 0.138 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/MarshalledObject/compare/HashCode.java
+  build: 0.805 seconds
+  compile: 0.804 seconds
+  main: 0.13 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/MarshalledObject/compare/NullReference.java
+  build: 0.789 seconds
+  compile: 0.789 seconds
+  main: 0.096 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/Naming/legalRegistryNames/LegalRegistryNames.java
+  build: 0.846 seconds
+  compile: 0.845 seconds
+  build: 1.033 seconds
+  compile: 1.033 seconds
+  main: 0.577 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/Naming/DefaultRegistryPort.java
+  build: 0.0 seconds
+  build: 0.852 seconds
+  compile: 0.852 seconds
+  main: 0.493 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/Naming/LookupIPv6.java
+  build: 0.896 seconds
+  compile: 0.896 seconds
+  main: 0.496 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/Naming/LookupNameWithColon.java
+  build: 0.001 seconds
+  build: 0.836 seconds
+  compile: 0.836 seconds
+  main: 0.526 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/Naming/RmiIsNoScheme.java
+  build: 0.0 seconds
+  build: 0.917 seconds
+  compile: 0.917 seconds
+  main: 0.482 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/Naming/UnderscoreHost.java
+  build: 0.837 seconds
+  compile: 0.836 seconds
+  build: 0.859 seconds
+  compile: 0.859 seconds
+  main: 0.465 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/registry/altSecurityManager/AltSecurityManager.java
+  build: 0.805 seconds
+  compile: 0.804 seconds
+  build: 0.913 seconds
+  compile: 0.913 seconds
+  main: 0.42 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/registry/checkusage/CheckUsage.java
+  build: 0.0 seconds
+  build: 0.883 seconds
+  compile: 0.882 seconds
+  main: 0.26 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/registry/classPathCodebase/ClassPathCodebase.java
+  build: 0.761 seconds
+  compile: 0.761 seconds
+  build: 0.974 seconds
+  compile: 0.974 seconds
+  main: 15.663 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/registry/emptyName/EmptyName.java
+  build: 0.0 seconds
+  build: 0.798 seconds
+  compile: 0.797 seconds
+  main: 0.531 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/registry/interfaceHash/InterfaceHash.java
+  build: 0.909 seconds
+  compile: 0.908 seconds
+  build: 1.049 seconds
+  compile: 1.048 seconds
+  main: 0.511 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/registry/multipleRegistries/MultipleRegistries.java
+  build: 0.0 seconds
+  build: 0.898 seconds
+  compile: 0.898 seconds
+  main: 0.505 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/registry/readTest/readTest.sh
+  build: 0.0 seconds
+  shell: 12.574 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/registry/reexport/Reexport.java
+  build: 0.95 seconds
+  compile: 0.949 seconds
+  build: 0.891 seconds
+  compile: 0.891 seconds
+  main: 5.83 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/reliability/benchmark/runSerialBench.sh
+  build: 0.941 seconds
+  compile: 0.939 seconds
+  build: 1.018 seconds
+  compile: 1.017 seconds
+  build: 1.248 seconds
+  compile: 1.248 seconds
+  build: 0.958 seconds
+  compile: 0.958 seconds
+  build: 0.906 seconds
+  compile: 0.905 seconds
+  build: 1.078 seconds
+  compile: 1.078 seconds
+  build: 0.913 seconds
+  compile: 0.913 seconds
+  build: 0.88 seconds
+  compile: 0.88 seconds
+  build: 0.9 seconds
+  compile: 0.9 seconds
+  build: 0.927 seconds
+  compile: 0.927 seconds
+  build: 0.904 seconds
+  compile: 0.903 seconds
+  build: 1.047 seconds
+  compile: 1.046 seconds
+  build: 0.96 seconds
+  compile: 0.96 seconds
+  build: 0.935 seconds
+  compile: 0.935 seconds
+  build: 0.892 seconds
+  compile: 0.891 seconds
+  build: 0.931 seconds
+  compile: 0.931 seconds
+  build: 0.897 seconds
+  compile: 0.896 seconds
+  shell: 23.557 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/reliability/juicer/AppleUserImpl.java
+  build: 1.144 seconds
+  compile: 1.143 seconds
+  build: 1.147 seconds
+  compile: 1.145 seconds
+  main: 32.022 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/RemoteException/chaining/Chaining.java
+  build: 0.845 seconds
+  compile: 0.845 seconds
+  main: 0.187 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/RMISecurityManager/checkPackageAccess/CheckPackageAccess.java
+  build: 0.827 seconds
+  compile: 0.827 seconds
+  main: 0.113 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/clientStackTrace/ClientStackTrace.java
+  build: 0.901 seconds
+  compile: 0.9 seconds
+  build: 0.001 seconds
+  main: 0.54 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/getRemoteClass/GetRemoteClass.java
+  build: 0.0 seconds
+  build: 0.862 seconds
+  compile: 0.862 seconds
+  main: 0.102 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/ObjID/randomIDs/RandomIDs.java
+  build: 0.946 seconds
+  compile: 0.945 seconds
+  main: 0.394 seconds
+  build: 0.0 seconds
+  main: 0.392 seconds
+  build: 0.0 seconds
+  main: 0.269 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/RemoteObject/notExtending/NotExtending.java
+  build: 0.943 seconds
+  compile: 0.943 seconds
+  build: 0.001 seconds
+  main: 1.94 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/RemoteObject/toStub/ToStub.java
+  build: 0.898 seconds
+  compile: 0.897 seconds
+  build: 0.0 seconds
+  main: 0.553 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/RemoteObject/unrecognizedRefType/UnrecognizedRefType.java
+  build: 0.887 seconds
+  compile: 0.887 seconds
+  main: 0.143 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/RemoteObject/verifyRemoteEquals/VerifyRemoteEquals.java
+  build: 0.0 seconds
+  build: 0.939 seconds
+  compile: 0.938 seconds
+  main: 0.529 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/RemoteServer/setLogPermission/SetLogPermission.java
+  build: 0.917 seconds
+  compile: 0.917 seconds
+  main: 0.279 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/RemoteServer/AddrInUse.java
+  build: 0.916 seconds
+  compile: 0.916 seconds
+  main: 0.157 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/RemoteServer/SetLogNull.java
+  build: 0.839 seconds
+  compile: 0.838 seconds
+  main: 0.105 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/RMIClassLoader/delegateBeforePermissionCheck/DelegateBeforePermissionCheck.java
+  build: 0.786 seconds
+  compile: 0.784 seconds
+  build: 0.883 seconds
+  compile: 0.883 seconds
+  main: 1.201 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/RMIClassLoader/delegateToContextLoader/DelegateToContextLoader.java
+  build: 0.825 seconds
+  compile: 0.825 seconds
+  build: 0.902 seconds
+  compile: 0.902 seconds
+  main: 0.154 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/RMIClassLoader/downloadArrayClass/DownloadArrayClass.java
+  build: 0.907 seconds
+  compile: 0.906 seconds
+  build: 0.911 seconds
+  compile: 0.911 seconds
+  main: 0.52 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/RMIClassLoader/getClassAnnotation/NullClass.java
+  build: 0.0 seconds
+  build: 0.835 seconds
+  compile: 0.834 seconds
+  main: 0.109 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/RMIClassLoader/getClassLoader/GetClassLoader.java
+  build: 0.806 seconds
+  compile: 0.805 seconds
+  build: 0.865 seconds
+  compile: 0.865 seconds
+  main: 0.148 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/RMIClassLoader/loadProxyClasses/LoadProxyClasses.java
+  build: 0.793 seconds
+  compile: 0.792 seconds
+  build: 1.124 seconds
+  compile: 1.124 seconds
+  main: 0.249 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/RMIClassLoader/noSecurityManager/NoSecurityManager.java
+  build: 0.795 seconds
+  compile: 0.795 seconds
+  build: 0.888 seconds
+  compile: 0.887 seconds
+  main: 0.109 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/RMIClassLoader/spi/ContextInsulation.java
+  build: 1.171 seconds
+  compile: 1.17 seconds
+  build: 0.935 seconds
+  compile: 0.935 seconds
+  main: 0.142 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/RMIClassLoader/spi/DefaultProperty.java
+  build: 0.767 seconds
+  compile: 0.767 seconds
+  build: 0.901 seconds
+  compile: 0.901 seconds
+  main: 0.141 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/RMIClassLoader/spi/Installed.java
+  build: 0.0 seconds
+  build: 0.896 seconds
+  compile: 0.896 seconds
+  main: 0.134 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/RMIClassLoader/spi/InvalidProperty.java
+  build: 0.001 seconds
+  build: 0.866 seconds
+  compile: 0.866 seconds
+  main: 0.119 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/RMIClassLoader/spi/Property.java
+  build: 0.0 seconds
+  build: 0.885 seconds
+  compile: 0.885 seconds
+  main: 0.131 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/RMIClassLoader/useCodebaseOnly/UseCodebaseOnly.java
+  build: 0.916 seconds
+  compile: 0.915 seconds
+  build: 0.936 seconds
+  compile: 0.936 seconds
+  main: 0.594 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/RMIClassLoader/useGetURLs/UseGetURLs.java
+  build: 0.795 seconds
+  compile: 0.794 seconds
+  build: 0.986 seconds
+  compile: 0.986 seconds
+  main: 0.156 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/RMISocketFactory/useSocketFactory/activatable/UseCustomSocketFactory.java
+  build: 1.167 seconds
+  compile: 1.166 seconds
+  build: 0.974 seconds
+  compile: 0.973 seconds
+  main: 8.767 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/RMISocketFactory/useSocketFactory/registry/UseCustomSocketFactory.java
+  build: 1.146 seconds
+  compile: 1.145 seconds
+  build: 0.0 seconds
+  main: 0.734 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/RMISocketFactory/useSocketFactory/unicast/UseCustomSocketFactory.java
+  build: 1.128 seconds
+  compile: 1.127 seconds
+  build: 0.942 seconds
+  compile: 0.941 seconds
+  main: 6.662 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/serverStackTrace/ServerStackTrace.java
+  build: 0.89 seconds
+  compile: 0.89 seconds
+  build: 0.0 seconds
+  main: 0.497 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/serverStackTrace/SuppressStackTraces.java
+  build: 0.988 seconds
+  compile: 0.987 seconds
+  build: 0.0 seconds
+  main: 0.505 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/UnicastRemoteObject/changeHostName/ChangeHostName.java
+  build: 0.876 seconds
+  compile: 0.875 seconds
+  build: 0.0 seconds
+  main: 0.483 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/UnicastRemoteObject/exportObject/GcDuringExport.java
+  build: 0.894 seconds
+  compile: 0.894 seconds
+  main: 14.452 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/UnicastRemoteObject/keepAliveDuringCall/KeepAliveDuringCall.java
+  build: 0.952 seconds
+  compile: 0.951 seconds
+  build: 0.0 seconds
+  main: 2.706 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/UnicastRemoteObject/marshalAfterUnexport/MarshalAfterUnexport.java
+  build: 0.909 seconds
+  compile: 0.909 seconds
+  build: 0.0 seconds
+  main: 0.523 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/UnicastRemoteObject/marshalAfterUnexport/MarshalAfterUnexport2.java
+  build: 0.896 seconds
+  compile: 0.896 seconds
+  build: 0.0 seconds
+  main: 0.506 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/UnicastRemoteObject/unexportObject/UnexportLeak.java
+  build: 0.839 seconds
+  compile: 0.839 seconds
+  build: 0.876 seconds
+  compile: 0.876 seconds
+  main: 1.9 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/UnicastRemoteObject/useDynamicProxies/UseDynamicProxies.java
+  build: 0.902 seconds
+  compile: 0.9 seconds
+  build: 0.0 seconds
+  main: 0.525 seconds
+  build: 0.0 seconds
+  main: 0.541 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/Unmarshal/checkUnmarshalOnStopThread/CheckUnmarshalOnStopThread.java
+  build: 0.982 seconds
+  compile: 0.981 seconds
+  build: 0.0 seconds
+  main: 1.769 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/Unmarshal/PrimitiveClasses.java
+  build: 0.827 seconds
+  compile: 0.827 seconds
+  main: 0.12 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/Unreferenced/finiteGCLatency/FiniteGCLatency.java
+  build: 0.809 seconds
+  compile: 0.808 seconds
+  build: 0.904 seconds
+  compile: 0.904 seconds
+  main: 6.472 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/Unreferenced/leaseCheckInterval/LeaseCheckInterval.java
+  build: 0.924 seconds
+  compile: 0.923 seconds
+  build: 0.001 seconds
+  main: 10.644 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/Unreferenced/marshalledObjectGet/MarshalledObjectGet.java
+  build: 0.852 seconds
+  compile: 0.852 seconds
+  build: 0.899 seconds
+  compile: 0.899 seconds
+  main: 0.508 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/Unreferenced/unreferencedContext/UnreferencedContext.java
+  build: 0.78 seconds
+  compile: 0.779 seconds
+  build: 0.952 seconds
+  compile: 0.952 seconds
+  main: 0.525 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/server/useCustomRef/UseCustomRef.java
+  build: 1.06 seconds
+  compile: 1.06 seconds
+  build: 0.0 seconds
+  main: 0.551 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/transport/acceptLoop/CloseServerSocketOnTermination.java
+  build: 0.928 seconds
+  compile: 0.927 seconds
+  main: 0.235 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/transport/checkFQDN/CheckFQDN.java
+  build: 0.929 seconds
+  compile: 0.928 seconds
+  build: 0.943 seconds
+  compile: 0.942 seconds
+  main: 1.232 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/transport/closeServerSocket/CloseServerSocket.java
+  build: 0.0 seconds
+  build: 0.86 seconds
+  compile: 0.86 seconds
+  main: 0.138 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/transport/dgcDeadLock/DGCDeadLock.java
+  build: 1.196 seconds
+  compile: 1.195 seconds
+  build: 0.0 seconds
+  main: 55.469 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/transport/handshakeFailure/HandshakeFailure.java
+  build: 0.0 seconds
+  build: 0.884 seconds
+  compile: 0.884 seconds
+  main: 0.15 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/transport/handshakeTimeout/HandshakeTimeout.java
+  build: 0.0 seconds
+  build: 0.859 seconds
+  compile: 0.859 seconds
+  main: 5.158 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/transport/httpSocket/HttpSocketTest.java
+  build: 0.948 seconds
+  compile: 0.948 seconds
+  build: 0.0 seconds
+  main: 0.575 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/transport/pinClientSocketFactory/PinClientSocketFactory.java
+  build: 0.0 seconds
+  build: 1.017 seconds
+  compile: 1.017 seconds
+  main: 6.907 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/transport/pinLastArguments/PinLastArguments.java
+  build: 0.865 seconds
+  compile: 0.865 seconds
+  main: 0.542 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/transport/readTimeout/ReadTimeoutTest.java
+  build: 0.853 seconds
+  compile: 0.853 seconds
+  build: 0.92 seconds
+  compile: 0.92 seconds
+  main: 10.482 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/transport/reuseDefaultPort/ReuseDefaultPort.java
+  build: 0.0 seconds
+  build: 0.893 seconds
+  compile: 0.892 seconds
+  main: 0.46 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/rmi/transport/runtimeThreadInheritanceLeak/RuntimeThreadInheritanceLeak.java
+  build: 0.808 seconds
+  compile: 0.808 seconds
+  build: 0.904 seconds
+  compile: 0.904 seconds
+  main: 2.463 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/rmi/ssl/SocketFactoryTest.java
+  build: 1.074 seconds
+  compile: 1.074 seconds
+  main: 0.303 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/rmi/ssl/SSLSocketParametersTest.sh
+  clean: 0.001 seconds
+  build: 1.03 seconds
+  compile: 1.03 seconds
+  shell: 3.781 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/rmi/log/ReliableLog/LogAlignmentTest.java
+  build: 0.878 seconds
+  compile: 0.878 seconds
+  main: 1.076 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/rmi/log/ReliableLog/SnapshotSize.java
+  build: 0.84 seconds
+  compile: 0.84 seconds
+  main: 0.093 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/rmi/rmic/classFileVersion/run.sh
+  build: 0.822 seconds
+  compile: 0.822 seconds
+  shell: 0.392 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/rmi/rmic/classpath/RMICClassPathTest.java
+  build: 0.865 seconds
+  compile: 0.865 seconds
+  main: 0.119 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/rmi/rmic/covariantReturns/run.sh
+  build: 0.855 seconds
+  compile: 0.855 seconds
+  shell: 0.792 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/rmi/rmic/defaultStubVersion/run.sh
+  build: 0.802 seconds
+  compile: 0.802 seconds
+  shell: 0.776 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/rmi/rmic/extraCompilation/run.sh
+  shell: 0.122 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/rmi/rmic/manifestClassPath/run.sh
+  shell: 6.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/rmi/rmic/minimizeWrapperInstances/run.sh
+  build: 0.978 seconds
+  compile: 0.977 seconds
+  shell: 3.011 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/rmi/rmic/newrmic/equivalence/run.sh
+  build: 1.561 seconds
+  compile: 1.561 seconds
+  shell: 10.245 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/rmi/rmic/RMIGenerator/RmicDefault.java
+  build: 0.001 seconds
+  build: 0.958 seconds
+  compile: 0.958 seconds
+  main: 1.25 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/rmi/runtime/Log/4504153/Test4504153.java
+  build: 0.0 seconds
+  build: 0.897 seconds
+  compile: 0.896 seconds
+  main: 0.519 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/rmi/runtime/Log/6409194/NoConsoleOutput.java
+  build: 0.0 seconds
+  build: 0.922 seconds
+  compile: 0.922 seconds
+  main: 0.705 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/rmi/runtime/Log/checkLogging/CheckLogging.java
+  build: 0.0 seconds
+  build: 0.97 seconds
+  compile: 0.97 seconds
+  main: 0.584 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/rmi/runtime/Log/checkLogging/CheckLogStreams.java
+  build: 0.0 seconds
+  build: 0.822 seconds
+  compile: 0.822 seconds
+  main: 0.538 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/rmi/server/MarshalOutputStream/marshalForeignStub/MarshalForeignStub.java
+  build: 0.897 seconds
+  compile: 0.896 seconds
+  build: 0.872 seconds
+  compile: 0.87 seconds
+  main: 0.496 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/rmi/transport/tcp/blockAccept/BlockAcceptTest.java
+  build: 0.872 seconds
+  compile: 0.872 seconds
+  build: 0.95 seconds
+  compile: 0.95 seconds
+  main: 0.503 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/rmi/transport/tcp/disableMultiplexing/DisableMultiplexing.java
+  build: 0.832 seconds
+  compile: 0.831 seconds
+  build: 0.888 seconds
+  compile: 0.888 seconds
+  main: 0.156 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/rmi/transport/tcp/DeadCachedConnection.java
+  build: 0.0 seconds
+  build: 0.927 seconds
+  compile: 0.926 seconds
+  main: 14.255 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+Test results: passed: 134
+Report written to /home/saiubuntu/sources/jdk8_tl/jdk/build/linux-i586/testoutput/jdk_rmi/JTreport/html/report.html
+Results written to /home/saiubuntu/sources/jdk8_tl/jdk/build/linux-i586/testoutput/jdk_rmi/JTwork
+Summary: jdk_rmi
+TEST STATS: name=jdk_rmi  run=134  pass=134  fail=0  excluded=4
+EXIT CODE: 0
+EXIT CODE: 0
+make[2]: Leaving directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
+make[1]: Leaving directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'

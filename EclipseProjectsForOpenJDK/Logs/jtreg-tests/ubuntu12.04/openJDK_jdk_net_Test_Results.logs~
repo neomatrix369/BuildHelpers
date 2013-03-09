@@ -1,0 +1,2288 @@
+make -k -C  ../jdk/test  jdk_net
+make[1]: Entering directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
+echo "Running tests in agentvm mode: com/sun/net java/net sun/net com/oracle/net"
+Running tests in agentvm mode: com/sun/net java/net sun/net com/oracle/net
+make TEST_DEPENDENCIES="com/sun/net java/net sun/net com/oracle/net" TESTDIRS="com/sun/net java/net sun/net com/oracle/net" USE_JTREG_AGENTVM=true  UNIQUE_DIR=jdk_net jtreg_tests
+make[2]: Entering directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
+Excluding list contains 6 items
+Excluding: com/sun/net/httpserver/bugs/6725892/Test.java
+Excluding: com/sun/net/httpserver/Test9a.java
+Excluding: java/net/ipv6tests/UdpTest.java
+Excluding: java/net/InetAddress/CheckJNI.java
+Excluding: sun/net/InetAddress/nameservice/simple/CacheTest.java
+Excluding: sun/net/InetAddress/nameservice/simple/DefaultCaching.java
+(                                                                    \
+	  ( JT_HOME=/home/saiubuntu/jtreg/;                   \
+            export JT_HOME;                                                  \
+            /home/saiubuntu/jtreg//win32/bin/jtreg                              \
+              -agentvm   -a -ea -esa -v:fail,error,time -retain:fail,error -ignore:quiet -timeoutFactor:4 -J-Xmx512m                                         \
+              -r:/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/JTreport  \
+              -w:/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/JTwork    \
+              -jdk:/home/saiubuntu/sources//jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image/                \
+              -exclude:/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/excludelist.txt             \
+                                                        \
+              com/sun/net java/net sun/net com/oracle/net                                                    \
+	  ) ; ( jtregExitCode=$? && _summary="/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/JTreport/text/summary.txt"; rm -f -f /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/Stats.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/runlist.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/passlist.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/faillist.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/exitcode.txt; echo "${jtregExitCode}" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/exitcode.txt; if [ -r "${_summary}" ] ; then echo "Summary: jdk_net" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/Stats.txt; expand ${_summary} | egrep -v ' Not run\.' > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/runlist.txt; egrep ' Passed\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/runlist.txt | egrep -v ' Error\.' | egrep -v ' Failed\.' > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/passlist.txt; ( egrep ' Failed\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/runlist.txt; egrep ' Error\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/runlist.txt; egrep -v ' Passed\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/runlist.txt ) | sort | uniq > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/faillist.txt; if [ ${jtregExitCode} != 0 -o -s /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/faillist.txt ] ; then expand /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/faillist.txt | cut -d' ' -f1 | sed -e 's@^@FAILED: @' >> /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/Stats.txt; if [ ${jtregExitCode} = 0 ] ; then jtregExitCode=1; fi; fi; runc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/runlist.txt      | wc -l | awk '{print $1;}'`"; passc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/passlist.txt    | wc -l | awk '{print $1;}'`"; failc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/faillist.txt    | wc -l | awk '{print $1;}'`"; exclc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/excludelist.txt | wc -l | awk '{print $1;}'`"; echo "TEST STATS: name=jdk_net  run=${runc}  pass=${passc}  fail=${failc}  excluded=${exclc}" >> /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/Stats.txt; else echo "Missing file: ${_summary}" >> /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/Stats.txt; fi; if [ -f /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/Stats.txt ] ; then cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/Stats.txt; fi; ( mkdir -p `dirname /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/ARCHIVE_BUNDLE.zip` && cd /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net && chmod -R a+r . && zip -q -r /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/ARCHIVE_BUNDLE.zip . ) ; if [ ! -s /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/exitcode.txt; fi ; testExitCode=`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode} )                                          \
+	) 2>&1 | tee /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/output.txt ; if [ ! -s /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/exitcode.txt; fi ; testExitCode=`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode}
+Directory "/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/JTreport" not found: creating
+Directory "/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/JTwork" not found: creating
+Directory "/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_net/JTwork/scratch" not found: creating
+--------------------------------------------------
+TEST: com/oracle/net/sanity.sh
+  build: 1.194 seconds
+  compile: 1.185 seconds
+  shell: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/bugs/B6339483.java
+  build: 0.106 seconds
+  compile: 0.105 seconds
+  main: 2.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/bugs/B6341616.java
+  build: 0.185 seconds
+  compile: 0.185 seconds
+  main: 2.102 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/bugs/B6361557.java
+  build: 0.145 seconds
+  compile: 0.144 seconds
+  main: 1.198 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/bugs/B6373555.java
+  build: 0.137 seconds
+  compile: 0.137 seconds
+  main: 4.858 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/bugs/B6393710.java
+  build: 0.153 seconds
+  compile: 0.152 seconds
+  main: 1.272 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/bugs/B6401598.java
+  build: 0.073 seconds
+  compile: 0.072 seconds
+  main: 31.59 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/bugs/B6421581.java
+  build: 0.093 seconds
+  compile: 0.093 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/bugs/B6424196.java
+  build: 0.063 seconds
+  compile: 0.063 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/bugs/B6431193.java
+  build: 0.104 seconds
+  compile: 0.104 seconds
+  main: 0.291 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/bugs/B6433018.java
+  build: 0.1 seconds
+  compile: 0.099 seconds
+  main: 5.055 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/bugs/B6526158.java
+  build: 0.05 seconds
+  compile: 0.05 seconds
+  main: 2.064 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/bugs/B6526913.java
+  build: 0.054 seconds
+  compile: 0.054 seconds
+  main: 2.214 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/bugs/B6529200.java
+  build: 0.061 seconds
+  compile: 0.061 seconds
+  main: 2.187 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/bugs/B6744329.java
+  build: 0.059 seconds
+  compile: 0.059 seconds
+  main: 2.063 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/bugs/B6886436.java
+  build: 0.047 seconds
+  compile: 0.047 seconds
+  main: 2.056 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/bugs/FixedLengthInputStream.java
+  build: 0.075 seconds
+  compile: 0.074 seconds
+  main: 4.452 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/bugs/HeadTest.java
+  build: 0.058 seconds
+  compile: 0.058 seconds
+  main: 1.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/SelCacheTest.java
+  build: 0.149 seconds
+  compile: 0.149 seconds
+  main: 22.78 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/Test1.java
+  build: 0.084 seconds
+  compile: 0.084 seconds
+  main: 6.894 seconds
+  build: 0.001 seconds
+  main: 6.753 seconds
+  build: 0.0 seconds
+  main: 6.582 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/Test10.java
+  build: 0.047 seconds
+  compile: 0.047 seconds
+  main: 6.14 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/Test11.java
+  build: 0.042 seconds
+  compile: 0.041 seconds
+  main: 2.049 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/Test12.java
+  build: 0.072 seconds
+  compile: 0.071 seconds
+  main: 6.374 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/Test13.java
+  build: 0.08 seconds
+  compile: 0.08 seconds
+  main: 6.545 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/Test14.java
+  build: 0.05 seconds
+  compile: 0.05 seconds
+  main: 2.056 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/Test2.java
+  build: 0.063 seconds
+  compile: 0.063 seconds
+  main: 2.069 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/Test3.java
+  build: 0.058 seconds
+  compile: 0.058 seconds
+  main: 13.13 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/Test4.java
+  build: 0.059 seconds
+  compile: 0.058 seconds
+  main: 13.121 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/Test5.java
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  main: 13.134 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/Test6.java
+  build: 0.047 seconds
+  compile: 0.047 seconds
+  main: 3.137 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/Test6a.java
+  build: 0.054 seconds
+  compile: 0.054 seconds
+  main: 4.666 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/Test7.java
+  build: 0.045 seconds
+  compile: 0.045 seconds
+  main: 3.104 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/Test7a.java
+  build: 0.046 seconds
+  compile: 0.046 seconds
+  main: 3.774 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/Test8.java
+  build: 0.044 seconds
+  compile: 0.043 seconds
+  main: 3.15 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/Test8a.java
+  build: 0.073 seconds
+  compile: 0.073 seconds
+  main: 3.616 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/Test9.java
+  build: 0.075 seconds
+  compile: 0.074 seconds
+  main: 7.432 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: com/sun/net/httpserver/TestLogging.java
+  build: 0.043 seconds
+  compile: 0.043 seconds
+  main: 3.061 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Authenticator/AuthNPETest.java
+  build: 0.046 seconds
+  compile: 0.046 seconds
+  main: 0.045 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Authenticator/B4678055.java
+  build: 0.482 seconds
+  compile: 0.475 seconds
+  build: 0.047 seconds
+  compile: 0.047 seconds
+  main: 0.06 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Authenticator/B4722333.java
+  build: 0.0 seconds
+  build: 0.093 seconds
+  compile: 0.092 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Authenticator/B4759514.java
+  build: 0.001 seconds
+  build: 0.037 seconds
+  compile: 0.037 seconds
+  main: 0.104 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Authenticator/B4769350.java
+  build: 0.129 seconds
+  compile: 0.129 seconds
+  build: 0.11 seconds
+  compile: 0.11 seconds
+  main: 0.481 seconds
+  build: 0.0 seconds
+  main: 0.785 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Authenticator/B4921848.java
+  build: 0.001 seconds
+  build: 0.042 seconds
+  compile: 0.042 seconds
+  main: 0.477 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Authenticator/B4933582.sh
+  shell: 3.834 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Authenticator/B4962064.java
+  build: 0.0 seconds
+  build: 0.048 seconds
+  compile: 0.047 seconds
+  main: 1.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Authenticator/B6870935.java
+  build: 0.142 seconds
+  compile: 0.141 seconds
+  main: 2.136 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Authenticator/BasicTest.java
+  build: 0.073 seconds
+  compile: 0.073 seconds
+  main: 1.049 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Authenticator/BasicTest3.java
+  build: 0.059 seconds
+  compile: 0.059 seconds
+  main: 1.049 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Authenticator/BasicTest4.java
+  build: 0.074 seconds
+  compile: 0.074 seconds
+  main: 5.055 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Authenticator/Deadlock.java
+  build: 0.052 seconds
+  compile: 0.052 seconds
+  main: 2.229 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/BindException/Test.java
+  build: 0.052 seconds
+  compile: 0.052 seconds
+  main: 0.048 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/CookieHandler/B6277794.java
+  build: 0.061 seconds
+  compile: 0.06 seconds
+  main: 0.121 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/CookieHandler/B6644726.java
+  build: 0.094 seconds
+  compile: 0.094 seconds
+  main: 0.053 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/CookieHandler/B6791927.java
+  build: 0.062 seconds
+  compile: 0.062 seconds
+  main: 0.096 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/CookieHandler/CookieHandlerTest.java
+  build: 0.079 seconds
+  compile: 0.079 seconds
+  main: 0.123 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/CookieHandler/CookieManagerTest.java
+  build: 0.0 seconds
+  build: 0.143 seconds
+  compile: 0.143 seconds
+  main: 0.337 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/CookieHandler/NullUriCookieTest.java
+  build: 0.022 seconds
+  compile: 0.022 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/CookieHandler/TestHttpCookie.java
+  build: 0.135 seconds
+  compile: 0.135 seconds
+  main: 0.057 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/DatagramPacket/CheckBoundaries.java
+  build: 0.068 seconds
+  compile: 0.067 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/DatagramPacket/Constructor.java
+  build: 0.065 seconds
+  compile: 0.065 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/DatagramPacket/Offset.java
+  build: 0.058 seconds
+  compile: 0.058 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/DatagramPacket/ReuseBuf.java
+  build: 0.083 seconds
+  compile: 0.083 seconds
+  main: 0.043 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/DatagramPacket/Unresolved.java
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/DatagramSocket/SetDatagramSocketImplFactory/ADatagramSocket.java
+  build: 0.109 seconds
+  compile: 0.107 seconds
+  shell: 0.154 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/DatagramSocket/B6411513.java
+  build: 0.071 seconds
+  compile: 0.07 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/DatagramSocket/BindFailTest.java
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  main: 1.207 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/DatagramSocket/DatagramTimeout.java
+  build: 0.02 seconds
+  compile: 0.019 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/DatagramSocket/ImplicitBind.java
+  build: 0.059 seconds
+  compile: 0.059 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/DatagramSocket/InheritHandle.java
+  build: 0.062 seconds
+  compile: 0.062 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/DatagramSocket/LocalSocketAddress.java
+  build: 0.066 seconds
+  compile: 0.066 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/DatagramSocket/PortUnreachable.java
+  build: 0.067 seconds
+  compile: 0.066 seconds
+  main: 7.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/DatagramSocket/ReportSocketClosed.java
+  build: 0.021 seconds
+  compile: 0.021 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/DatagramSocket/Send12k.java
+  build: 0.071 seconds
+  compile: 0.071 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/DatagramSocket/SendDatagramToBadAddress.java
+  build: 0.077 seconds
+  compile: 0.077 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/DatagramSocket/SendSize.java
+  build: 0.084 seconds
+  compile: 0.083 seconds
+  main: 0.05 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/DatagramSocket/SetReceiveBufferSize.java
+  build: 0.055 seconds
+  compile: 0.055 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/DatagramSocket/TestAfterClose.java
+  build: 0.073 seconds
+  compile: 0.072 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/DatagramSocketImpl/CheckDiscard.java
+  build: 0.064 seconds
+  compile: 0.064 seconds
+  main: 4.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/HttpCookie/ExpiredCookieTest.java
+  build: 0.052 seconds
+  compile: 0.051 seconds
+  main: 0.075 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/HttpCookie/IllegalCookieNameTest.java
+  build: 0.066 seconds
+  compile: 0.066 seconds
+  main: 0.294 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/HttpURLConnection/getResponseCode.java
+  build: 0.026 seconds
+  compile: 0.026 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/HttpURLConnection/HttpResponseCode.java
+  build: 0.067 seconds
+  compile: 0.067 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/HttpURLConnection/UnmodifiableMaps.java
+  build: 0.097 seconds
+  compile: 0.097 seconds
+  main: 0.059 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Inet4Address/isSiteLocalAddress.java
+  build: 0.096 seconds
+  compile: 0.096 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Inet4Address/PingThis.java
+  build: 0.071 seconds
+  compile: 0.071 seconds
+  main: 0.083 seconds
+  build: 0.001 seconds
+  main: 0.093 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Inet4Address/textToNumericFormat.java
+  build: 0.061 seconds
+  compile: 0.06 seconds
+  main: 1.18 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Inet6Address/serialize/Serialize.java
+  build: 0.035 seconds
+  compile: 0.032 seconds
+  main: 0.119 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Inet6Address/B4923906.java
+  build: 0.029 seconds
+  compile: 0.029 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Inet6Address/B6206527.java
+  build: 0.067 seconds
+  compile: 0.067 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Inet6Address/B6214234.java
+  build: 0.076 seconds
+  compile: 0.076 seconds
+  main: 0.076 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Inet6Address/B6558853.java
+  build: 0.074 seconds
+  compile: 0.072 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Inet6Address/IPv6AddressTypes.java
+  build: 0.063 seconds
+  compile: 0.063 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Inet6Address/IPv6Numeric.java
+  build: 0.056 seconds
+  compile: 0.055 seconds
+  main: 0.232 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Inet6Address/StringScope.java
+  build: 0.023 seconds
+  compile: 0.023 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/InetAddress/ptr/lookup.sh
+  build: 0.061 seconds
+  compile: 0.06 seconds
+  shell: 0.303 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/InetAddress/B5087907.java
+  build: 0.062 seconds
+  compile: 0.062 seconds
+  main: 0.099 seconds
+  build: 0.0 seconds
+  main: 0.1 seconds
+  build: 0.0 seconds
+  main: 0.097 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/InetAddress/B6246242.java
+  build: 0.063 seconds
+  compile: 0.063 seconds
+  main: 0.278 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/InetAddress/B6296240.java
+  build: 0.017 seconds
+  compile: 0.016 seconds
+  main: 0.076 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/InetAddress/BadDottedIPAddress.java
+  build: 0.06 seconds
+  compile: 0.059 seconds
+  main: 0.275 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/InetAddress/CachedUnknownHostName.java
+  build: 0.02 seconds
+  compile: 0.019 seconds
+  main: 0.257 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/InetAddress/GetLocalHostWithSM.java
+  build: 0.088 seconds
+  compile: 0.088 seconds
+  main: 0.111 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/InetAddress/GetLoopbackAddress.java
+  build: 0.022 seconds
+  compile: 0.022 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/InetAddress/HashSpread.java
+  build: 0.088 seconds
+  compile: 0.087 seconds
+  main: 0.393 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/InetAddress/IPv4Formats.java
+  build: 0.028 seconds
+  compile: 0.028 seconds
+  main: 0.729 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/InetAddress/IsHostReachableBug.java
+  build: 0.023 seconds
+  compile: 0.023 seconds
+  main: 0.108 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/InetAddress/IsReachable.java
+  build: 0.061 seconds
+  compile: 0.061 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/InetAddress/WhiteSpaceHostTest.java
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  main: 6.635 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/InetSocketAddress/B4849451.java
+  build: 0.024 seconds
+  compile: 0.023 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/InetSocketAddress/B6469803.java
+  build: 0.058 seconds
+  compile: 0.058 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/InetSocketAddress/CreateUnresolved.java
+  build: 0.063 seconds
+  compile: 0.063 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/InetSocketAddress/ToString.java
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  main: 0.377 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/InterfaceAddress/Equals.java
+  build: 0.039 seconds
+  compile: 0.038 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/InterfaceAddress/NetworkPrefixLength.java
+  build: 0.068 seconds
+  compile: 0.067 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/ipv6tests/B6521014.java
+  build: 0.073 seconds
+  compile: 0.072 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/ipv6tests/BadIPv6Addresses.java
+  build: 0.067 seconds
+  compile: 0.067 seconds
+  main: 5.829 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/ipv6tests/ScopeTests.java
+  build: 0.077 seconds
+  compile: 0.077 seconds
+  main: 0.046 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/ipv6tests/TcpTest.java
+  build: 0.077 seconds
+  compile: 0.077 seconds
+  main: 5.498 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/MulticastSocket/B6425815.java
+  build: 0.027 seconds
+  compile: 0.027 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/MulticastSocket/B6427403.java
+  build: 0.061 seconds
+  compile: 0.061 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/MulticastSocket/JoinGroup.java
+  build: 0.059 seconds
+  compile: 0.059 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/MulticastSocket/Leave.java
+  build: 0.055 seconds
+  compile: 0.054 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/MulticastSocket/MulticastTTL.java
+  build: 0.097 seconds
+  compile: 0.097 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/MulticastSocket/NoLoopbackPackets.java
+  build: 0.075 seconds
+  compile: 0.075 seconds
+  main: 15.105 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/MulticastSocket/SetLoopbackMode.java
+  build: 0.024 seconds
+  compile: 0.024 seconds
+  main: 2.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/MulticastSocket/SetOutgoingIf.java
+  build: 0.055 seconds
+  compile: 0.055 seconds
+  main: 0.045 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/MulticastSocket/SetTTLAndGetTTL.java
+  build: 0.1 seconds
+  compile: 0.1 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/MulticastSocket/SetTTLTo0.java
+  build: 0.096 seconds
+  compile: 0.096 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/MulticastSocket/Test.java
+  build: 0.076 seconds
+  compile: 0.076 seconds
+  main: 24.113 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/MulticastSocket/TestDefaults.java
+  build: 0.019 seconds
+  compile: 0.019 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/MulticastSocket/TestInterfaces.java
+  build: 0.07 seconds
+  compile: 0.07 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/MulticastSocket/TimeToLive.java
+  build: 0.065 seconds
+  compile: 0.065 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/NetworkInterface/Equals.java
+  build: 0.068 seconds
+  compile: 0.067 seconds
+  main: 0.126 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/NetworkInterface/IndexTest.java
+  build: 0.064 seconds
+  compile: 0.064 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/NetworkInterface/IPv4Only.java
+  build: 0.056 seconds
+  compile: 0.055 seconds
+  main: 0.096 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/NetworkInterface/NetParamsTest.java
+  build: 0.07 seconds
+  compile: 0.07 seconds
+  main: 0.088 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/NetworkInterface/Test.java
+  build: 0.072 seconds
+  compile: 0.072 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/PlainSocketImpl/BigBacklog.java
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/PlainSocketImpl/SetBufferSize.java
+  build: 0.054 seconds
+  compile: 0.053 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/PlainSocketImpl/SetOption.java
+  build: 0.058 seconds
+  compile: 0.057 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/PortUnreachableException/Concurrent.java
+  build: 0.056 seconds
+  compile: 0.056 seconds
+  main: 8.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/PortUnreachableException/OneExceptionOnly.java
+  build: 0.024 seconds
+  compile: 0.024 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/PortUnreachableException/Test.java
+  build: 0.059 seconds
+  compile: 0.059 seconds
+  main: 2.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/ProxySelector/B6563259.java
+  build: 0.018 seconds
+  compile: 0.017 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/ProxySelector/B6737819.java
+  build: 0.06 seconds
+  compile: 0.059 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/ProxySelector/LoopbackAddresses.java
+  build: 0.0 seconds
+  compile: 0.073 seconds
+  build: 0.0 seconds
+  main: 0.509 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/ProxySelector/MultiThreadedSystemProxies.java
+  build: 0.069 seconds
+  compile: 0.068 seconds
+  main: 0.257 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/ProxySelector/NullArguments.java
+  build: 0.058 seconds
+  compile: 0.058 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/ProxySelector/NullSelector.java
+  build: 0.056 seconds
+  compile: 0.055 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/ProxySelector/ProxyTest.java
+  build: 0.0 seconds
+  compile: 0.07 seconds
+  build: 0.0 seconds
+  main: 0.459 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/ResponseCache/B6181108.java
+  build: 0.075 seconds
+  compile: 0.074 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/ResponseCache/getResponseCode.java
+  build: 0.109 seconds
+  compile: 0.109 seconds
+  main: 0.096 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/ResponseCache/ResponseCacheTest.java
+  build: 0.145 seconds
+  compile: 0.145 seconds
+  main: 0.053 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/ResponseCache/Test.java
+  build: 0.066 seconds
+  compile: 0.066 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/ServerSocket/AcceptCauseFileDescriptorLeak.sh
+  build: 0.064 seconds
+  compile: 0.064 seconds
+  shell: 0.41 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/ServerSocket/TestAfterClose.java
+  build: 0.062 seconds
+  compile: 0.061 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/ServerSocket/ThreadStop.java
+  build: 0.097 seconds
+  compile: 0.097 seconds
+  main: 4.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/asyncClose/AsyncClose.java
+  build: 0.057 seconds
+  compile: 0.056 seconds
+  main: 16.052 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/asyncClose/BrokenPipe.java
+  build: 0.024 seconds
+  compile: 0.024 seconds
+  main: 5.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/asyncClose/Race.java
+  build: 0.028 seconds
+  compile: 0.028 seconds
+  main: 1.352 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/setReuseAddress/Basic.java
+  build: 0.037 seconds
+  compile: 0.036 seconds
+  main: 0.089 seconds
+  build: 0.0 seconds
+  main: 0.116 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/setReuseAddress/Restart.java
+  build: 0.06 seconds
+  compile: 0.059 seconds
+  main: 0.08 seconds
+  build: 0.0 seconds
+  main: 0.125 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/AddressTest.java
+  build: 0.063 seconds
+  compile: 0.063 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/B6210227.java
+  build: 0.062 seconds
+  compile: 0.062 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/CloseAvailable.java
+  build: 0.061 seconds
+  compile: 0.06 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/DeadlockTest.java
+  build: 0.113 seconds
+  compile: 0.113 seconds
+  main: 0.124 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/GetLocalAddress.java
+  build: 0.019 seconds
+  compile: 0.018 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/HttpProxy.java
+  build: 0.132 seconds
+  compile: 0.132 seconds
+  main: 0.095 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/IDNTest.java
+  build: 0.027 seconds
+  compile: 0.026 seconds
+  main: 0.581 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/InheritHandle.java
+  build: 0.034 seconds
+  compile: 0.034 seconds
+  main: 2.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/InheritTimeout.java
+  build: 0.03 seconds
+  compile: 0.03 seconds
+  main: 5.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/LingerTest.java
+  build: 0.024 seconds
+  compile: 0.024 seconds
+  main: 31.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/LinkLocal.java
+  build: 0.044 seconds
+  compile: 0.044 seconds
+  main: 0.045 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/NullHost.java
+  build: 0.097 seconds
+  compile: 0.097 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/OldImpl.java
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/OldSocketImpl.sh
+  shell: 0.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/ProxyCons.java
+  build: 0.061 seconds
+  compile: 0.061 seconds
+  main: 0.101 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/ReadTimeout.java
+  build: 0.061 seconds
+  compile: 0.061 seconds
+  main: 1.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/SetReceiveBufferSize.java
+  build: 0.019 seconds
+  compile: 0.019 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/SetSoLinger.java
+  build: 0.067 seconds
+  compile: 0.067 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/ShutdownBoth.java
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/ShutdownInput.java
+  build: 0.072 seconds
+  compile: 0.071 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/SocketGrowth.java
+  build: 0.056 seconds
+  compile: 0.056 seconds
+  main: 1.347 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/SocksConnectTimeout.java
+  build: 0.076 seconds
+  compile: 0.076 seconds
+  main: 0.587 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/SoTimeout.java
+  build: 0.026 seconds
+  compile: 0.026 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/Streams.java
+  build: 0.069 seconds
+  compile: 0.069 seconds
+  main: 0.147 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/TestAfterClose.java
+  build: 0.023 seconds
+  compile: 0.023 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/TestClose.java
+  build: 0.055 seconds
+  compile: 0.054 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/TestTcpNoDelay.java
+  build: 0.063 seconds
+  compile: 0.063 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/Timeout.java
+  build: 0.055 seconds
+  compile: 0.054 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/TrafficClass.java
+  build: 0.072 seconds
+  compile: 0.072 seconds
+  main: 0.088 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socket/UrgentDataTest.java
+  build: 0.071 seconds
+  compile: 0.07 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/SocketInputStream/SocketClosedException.java
+  build: 0.063 seconds
+  compile: 0.063 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/SocketInputStream/SocketTimeout.java
+  build: 0.059 seconds
+  compile: 0.059 seconds
+  main: 3.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/SocketPermission/ActionSpace.java
+  build: 0.015 seconds
+  compile: 0.014 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/SocketPermission/B4414825.java
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  main: 0.269 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/SocketPermission/Ctor.java
+  build: 0.015 seconds
+  compile: 0.015 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/SocketPermission/Equals.java
+  build: 0.052 seconds
+  compile: 0.052 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/SocketPermission/NoAction.java
+  build: 0.048 seconds
+  compile: 0.048 seconds
+  main: 0.076 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/SocketPermission/Wildcard.java
+  build: 0.053 seconds
+  compile: 0.053 seconds
+  main: 0.258 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socks/SocksProxyVersion.java
+  build: 0.029 seconds
+  compile: 0.028 seconds
+  main: 0.112 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/Socks/SocksV4Test.java
+  build: 0.12 seconds
+  compile: 0.12 seconds
+  build: 0.019 seconds
+  compile: 0.019 seconds
+  main: 0.271 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URI/RelativeEncoding.java
+  build: 0.02 seconds
+  compile: 0.02 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URI/Test.java
+  build: 0.346 seconds
+  compile: 0.345 seconds
+  main: 0.119 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URI/URItoURLTest.java
+  build: 0.034 seconds
+  compile: 0.034 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URL/B4148751.java
+  build: 0.065 seconds
+  compile: 0.065 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URL/B5086147.java
+  shell: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URL/B6529759.java
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URL/Constructor.java
+  build: 0.077 seconds
+  compile: 0.077 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URL/Equals.java
+  build: 0.068 seconds
+  compile: 0.068 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URL/GetContent.java
+  build: 0.065 seconds
+  compile: 0.065 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URL/GetDefaultPort.java
+  build: 0.057 seconds
+  compile: 0.055 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URL/HandlerLoop.java
+  build: 0.063 seconds
+  compile: 0.062 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URL/HashCode.java
+  build: 0.09 seconds
+  compile: 0.09 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URL/OpenConnection.java
+  build: 0.052 seconds
+  compile: 0.052 seconds
+  main: 0.118 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URL/OpenStream.java
+  build: 0.056 seconds
+  compile: 0.056 seconds
+  main: 0.276 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URL/ParseAuthority.java
+  build: 0.026 seconds
+  compile: 0.024 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URL/ParseURL.java
+  build: 0.055 seconds
+  compile: 0.055 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URL/PerConnectionProxy.java
+  build: 0.0 seconds
+  compile: 0.074 seconds
+  build: 0.0 seconds
+  main: 0.774 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URL/Protocol.java
+  build: 0.054 seconds
+  compile: 0.054 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URL/RelativePath.java
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URL/RelativeURL.java
+  build: 0.051 seconds
+  compile: 0.05 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URL/RelativeURLTest.java
+  build: 0.207 seconds
+  compile: 0.207 seconds
+  main: 0.042 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URL/RestoreURL.java
+  build: 0.064 seconds
+  compile: 0.064 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URL/SpecifyHandler.java
+  build: 0.053 seconds
+  compile: 0.052 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URL/Test.java
+  build: 0.116 seconds
+  compile: 0.116 seconds
+  main: 0.296 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URL/TestIPv6Addresses.java
+  build: 0.024 seconds
+  compile: 0.024 seconds
+  main: 0.569 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URL/TestPort.java
+  build: 0.06 seconds
+  compile: 0.059 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URL/TestRFC2732.java
+  build: 0.058 seconds
+  compile: 0.057 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URL/UppercaseScheme.java
+  build: 0.051 seconds
+  compile: 0.051 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URL/URIToURLTest.java
+  build: 0.087 seconds
+  compile: 0.087 seconds
+  main: 0.044 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLClassLoader/closetest/CloseTest.java
+  build: 0.001 seconds
+  shell: 2.572 seconds
+  build: 0.088 seconds
+  compile: 0.087 seconds
+  main: 3.153 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLClassLoader/closetest/GetResourceAsStream.java
+  shell: 0.898 seconds
+  build: 0.022 seconds
+  compile: 0.022 seconds
+  main: 0.131 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLClassLoader/getresourceasstream/test.sh
+  shell: 1.169 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLClassLoader/profiles/basic.sh
+  compile: 0.124 seconds
+  shell: 0.468 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLClassLoader/sealing/CheckSealed.java
+  shell: 1.014 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLClassLoader/AddURLTest.java
+  build: 0.029 seconds
+  compile: 0.028 seconds
+  main: 0.27 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLClassLoader/B5077773.sh
+  shell: 0.927 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLClassLoader/B6827999.java
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  main: 0.095 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLClassLoader/B6896088.java
+  build: 0.068 seconds
+  compile: 0.068 seconds
+  main: 0.097 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLClassLoader/B7050028.java
+  build: 0.072 seconds
+  compile: 0.072 seconds
+  main: 0.187 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLClassLoader/ClassLoad.java
+  build: 0.075 seconds
+  compile: 0.075 seconds
+  main: 0.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLClassLoader/ClassPathTest.java
+  build: 0.076 seconds
+  compile: 0.076 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLClassLoader/HttpTest.java
+  build: 0.088 seconds
+  compile: 0.088 seconds
+  main: 7.564 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLClassLoader/URLParsing.java
+  build: 0.02 seconds
+  compile: 0.019 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLConnection/6212146/test.sh
+  shell: 2.689 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLConnection/contentHandler/UserContentHandler.java
+  build: 0.068 seconds
+  compile: 0.067 seconds
+  build: 0.0 seconds
+  main: 0.118 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLConnection/B5052093.java
+  build: 0.0 seconds
+  build: 0.099 seconds
+  compile: 0.099 seconds
+  main: 0.065 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLConnection/Connect.java
+  build: 0.051 seconds
+  compile: 0.051 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLConnection/DisconnectAfterEOF.java
+  build: 0.068 seconds
+  compile: 0.068 seconds
+  main: 2.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLConnection/ExifContentGuesser.java
+  build: 0.02 seconds
+  compile: 0.019 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLConnection/GetContentType.java
+  build: 0.065 seconds
+  compile: 0.064 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLConnection/GetFileNameMap.java
+  build: 0.052 seconds
+  compile: 0.052 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLConnection/GetLastModified.java
+  build: 0.063 seconds
+  compile: 0.062 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLConnection/GetXmlContentType.java
+  build: 0.071 seconds
+  compile: 0.07 seconds
+  main: 0.103 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLConnection/HandleContentTypeWithAttrs.java
+  build: 0.113 seconds
+  compile: 0.113 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLConnection/HttpContinueStackOverflow.java
+  build: 0.065 seconds
+  compile: 0.064 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLConnection/Redirect307Test.java
+  build: 0.061 seconds
+  compile: 0.06 seconds
+  main: 0.091 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLConnection/RedirectLimit.java
+  build: 0.058 seconds
+  compile: 0.058 seconds
+  main: 0.104 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLConnection/RequestProperties.java
+  build: 0.064 seconds
+  compile: 0.063 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLConnection/RequestPropertyValues.java
+  build: 0.075 seconds
+  compile: 0.074 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLConnection/ResendPostBody.java
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  main: 0.585 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLConnection/Responses.java
+  build: 0.031 seconds
+  compile: 0.031 seconds
+  main: 0.098 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLConnection/SetIfModifiedSince.java
+  build: 0.064 seconds
+  compile: 0.064 seconds
+  main: 2.166 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLConnection/TimeoutTest.java
+  build: 0.059 seconds
+  compile: 0.059 seconds
+  main: 2.113 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLConnection/UNCTest.sh
+  shell: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLConnection/UnknownContentType.java
+  build: 0.059 seconds
+  compile: 0.059 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLConnection/URLConnectionHeaders.java
+  build: 0.083 seconds
+  compile: 0.083 seconds
+  main: 0.244 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLConnection/ZeroContentLength.java
+  build: 0.046 seconds
+  compile: 0.046 seconds
+  main: 2.047 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLDecoder/B6463990.java
+  build: 0.021 seconds
+  compile: 0.021 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLDecoder/EncodeDecode.java
+  build: 0.097 seconds
+  compile: 0.097 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLDecoder/URLDecoderArgs.java
+  build: 0.055 seconds
+  compile: 0.055 seconds
+  main: 0.076 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLEncoder/DecodeNonEncoded.java
+  build: 0.093 seconds
+  compile: 0.093 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLEncoder/Decoder.java
+  build: 0.056 seconds
+  compile: 0.056 seconds
+  main: 0.086 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLEncoder/SurrogatePairs.java
+  build: 0.084 seconds
+  compile: 0.084 seconds
+  main: 0.044 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLEncoder/URLEncodeDecode.java
+  build: 0.109 seconds
+  compile: 0.108 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/URLEncoder/URLEncoderEncodeArgs.java
+  build: 0.051 seconds
+  compile: 0.05 seconds
+  main: 0.11 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/net/B6499348.java
+  build: 0.2 seconds
+  compile: 0.2 seconds
+  main: 0.042 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/ftp/B6427768.java
+  build: 0.137 seconds
+  compile: 0.137 seconds
+  build: 0.243 seconds
+  compile: 0.243 seconds
+  main: 2.578 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/ftp/FtpGetContent.java
+  build: 0.052 seconds
+  compile: 0.052 seconds
+  main: 0.063 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/ftp/FtpURL.java
+  build: 0.095 seconds
+  compile: 0.094 seconds
+  main: 0.054 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/ftp/MarkResetTest.sh
+  shell: 1.909 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/idn/PunycodeTest.java
+  compile: 0.094 seconds
+  build: 0.0 seconds
+  main: 0.196 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/idn/TestStringPrep.java
+  compile: 0.086 seconds
+  build: 0.0 seconds
+  main: 0.521 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/InetAddress/nameservice/chaining/Providers.java
+  compile: 0.026 seconds
+  build: 0.058 seconds
+  compile: 0.058 seconds
+  main: 0.151 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/InetAddress/nameservice/deadlock/Hang.java
+  compile: 0.063 seconds
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  main: 0.121 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/InetAddress/nameservice/dns/cname.sh
+  build: 0.064 seconds
+  compile: 0.064 seconds
+  shell: 0.147 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/sdp/sanity.sh
+  build: 0.085 seconds
+  compile: 0.084 seconds
+  shell: 0.002 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/http/ChunkedInputStream/ChunkedEncodingTest.java
+  build: 0.026 seconds
+  compile: 0.026 seconds
+  main: 0.222 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/http/ChunkedInputStream/ChunkedEncodingWithProgressMonitorTest.java
+  build: 0.073 seconds
+  compile: 0.072 seconds
+  main: 0.22 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/http/ChunkedInputStream/TestAvailable.java
+  build: 0.03 seconds
+  compile: 0.03 seconds
+  main: 5.254 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/http/ChunkedOutputStream/checkError.java
+  build: 0.084 seconds
+  compile: 0.083 seconds
+  main: 0.128 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/http/ChunkedOutputStream/Test.java
+  build: 0.079 seconds
+  compile: 0.079 seconds
+  main: 3.326 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/http/HttpClient/B6726695.java
+  build: 0.037 seconds
+  compile: 0.037 seconds
+  main: 11.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/http/HttpClient/CookieHttpClientTest.java
+  build: 0.043 seconds
+  compile: 0.041 seconds
+  main: 0.042 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/http/HttpClient/GetProxyPort.java
+  build: 0.097 seconds
+  compile: 0.097 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/http/HttpClient/ImplicitFileName.java
+  build: 0.093 seconds
+  compile: 0.093 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/http/HttpClient/IsKeepingAlive.java
+  build: 0.106 seconds
+  compile: 0.105 seconds
+  main: 0.133 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/http/HttpClient/MultiThreadTest.java
+  build: 0.085 seconds
+  compile: 0.084 seconds
+  main: 19.314 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/http/HttpClient/OpenServer.java
+  build: 0.065 seconds
+  compile: 0.065 seconds
+  main: 0.138 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/http/HttpClient/ProxyFromCache.java
+  build: 0.068 seconds
+  compile: 0.068 seconds
+  main: 0.114 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/http/HttpClient/ProxyTest.java
+  build: 0.087 seconds
+  compile: 0.087 seconds
+  main: 0.047 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/http/HttpClient/RequestURI.java
+  build: 0.097 seconds
+  compile: 0.097 seconds
+  main: 0.13 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/http/HttpClient/RetryPost.sh
+  shell: 3.113 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/http/HttpClient/StreamingRetry.java
+  build: 0.069 seconds
+  compile: 0.069 seconds
+  main: 0.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/http/KeepAliveCache/B5045306.java
+  build: 0.001 seconds
+  build: 0.072 seconds
+  compile: 0.072 seconds
+  main: 12.483 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/http/KeepAliveCache/KeepAliveTimerThread.java
+  build: 0.061 seconds
+  compile: 0.06 seconds
+  main: 1.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/http/KeepAliveStream/InfiniteLoop.java
+  build: 0.034 seconds
+  compile: 0.033 seconds
+  main: 9.179 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/http/KeepAliveStream/KeepAliveStreamClose.java
+  build: 0.023 seconds
+  compile: 0.022 seconds
+  main: 4.113 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/http/KeepAliveStream/KeepAliveStreamCloseWithWrongContentLength.java
+  build: 0.069 seconds
+  compile: 0.069 seconds
+  main: 0.12 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/file/DirPermissionDenied.sh
+  build: 0.058 seconds
+  compile: 0.058 seconds
+  shell: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/file/EncodedMultiByteChar.java
+  build: 0.069 seconds
+  compile: 0.069 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/file/Equals.java
+  build: 0.058 seconds
+  compile: 0.058 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/file/FileMap.java
+  build: 0.049 seconds
+  compile: 0.049 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/file/FileURLTest.java
+  build: 0.059 seconds
+  compile: 0.059 seconds
+  main: 0.078 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/file/GetContentLength.java
+  build: 0.056 seconds
+  compile: 0.056 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/file/GetContentType.java
+  build: 0.052 seconds
+  compile: 0.052 seconds
+  main: 0.101 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/file/GetLastModified.java
+  build: 0.053 seconds
+  compile: 0.053 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/file/NonUTF8EncodedChar.java
+  build: 0.056 seconds
+  compile: 0.056 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/ftp/HandlerEquals.java
+  build: 0.054 seconds
+  compile: 0.054 seconds
+  main: 0.46 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/ftp/UserAndPasswordTest.java
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/6550798/test.java
+  build: 0.085 seconds
+  compile: 0.084 seconds
+  main: 0.23 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/AsyncDisconnect.java
+  build: 0.019 seconds
+  compile: 0.019 seconds
+  main: 1.148 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/B5017051.java
+  build: 0.084 seconds
+  compile: 0.083 seconds
+  main: 1.149 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/B6296310.java
+  build: 0.0 seconds
+  build: 0.029 seconds
+  compile: 0.028 seconds
+  main: 0.446 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/B6299712.java
+  build: 0.001 seconds
+  build: 0.074 seconds
+  compile: 0.074 seconds
+  main: 0.149 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/B6369510.java
+  build: 0.062 seconds
+  compile: 0.062 seconds
+  main: 1.138 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/B6518816.java
+  build: 0.078 seconds
+  compile: 0.077 seconds
+  main: 2.943 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/B6641309.java
+  build: 0.07 seconds
+  compile: 0.07 seconds
+  main: 0.294 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/B6660405.java
+  build: 0.187 seconds
+  compile: 0.186 seconds
+  main: 1.058 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/B6890349.java
+  build: 0.023 seconds
+  compile: 0.023 seconds
+  main: 0.102 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/BasicLongCredentials.java
+  build: 0.067 seconds
+  compile: 0.066 seconds
+  main: 0.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/ChunkedErrorStream.java
+  build: 0.079 seconds
+  compile: 0.078 seconds
+  main: 2.451 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/CloseOptionHeader.java
+  build: 0.028 seconds
+  compile: 0.027 seconds
+  main: 0.13 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/DigestTest.java
+  build: 0.087 seconds
+  compile: 0.087 seconds
+  main: 2.126 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/Finalizer.java
+  build: 0.031 seconds
+  compile: 0.031 seconds
+  main: 2.3 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/GetOutputStream.java
+  build: 0.015 seconds
+  compile: 0.015 seconds
+  main: 0.342 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/HttpInputStream.java
+  build: 0.031 seconds
+  compile: 0.03 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/HttpOnly.java
+  build: 0.094 seconds
+  compile: 0.094 seconds
+  main: 1.06 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/Modified.java
+  build: 0.027 seconds
+  compile: 0.025 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/NoCache.java
+  build: 0.075 seconds
+  compile: 0.074 seconds
+  main: 0.09 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/NoNTLM.java
+  build: 0.121 seconds
+  compile: 0.121 seconds
+  main: 0.092 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/NTLMTest.java
+  build: 0.027 seconds
+  compile: 0.026 seconds
+  main: 0.431 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/ProtocolRedirect.java
+  build: 0.068 seconds
+  compile: 0.067 seconds
+  main: 1.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/RelativeRedirect.java
+  build: 0.0 seconds
+  build: 0.023 seconds
+  compile: 0.023 seconds
+  main: 0.097 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/ResponseCacheStream.java
+  build: 0.001 seconds
+  build: 0.084 seconds
+  compile: 0.083 seconds
+  main: 0.147 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/RetryUponTimeout.java
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  main: 1.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/SetChunkedStreamingMode.java
+  build: 0.0 seconds
+  build: 0.027 seconds
+  compile: 0.027 seconds
+  main: 0.093 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/SetIfModifiedSince.java
+  build: 0.08 seconds
+  compile: 0.08 seconds
+  main: 0.045 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/StackTraceTest.java
+  build: 0.064 seconds
+  compile: 0.063 seconds
+  main: 0.077 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/StreamingOutputStream.java
+  build: 0.062 seconds
+  compile: 0.062 seconds
+  main: 1.129 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/TunnelThroughProxy.java
+  build: 0.079 seconds
+  compile: 0.078 seconds
+  main: 0.144 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/UserAgent.java
+  build: 0.066 seconds
+  compile: 0.065 seconds
+  main: 0.112 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/UserAuth.java
+  build: 0.074 seconds
+  compile: 0.074 seconds
+  main: 1.132 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/http/UserCookie.java
+  build: 0.0 seconds
+  main: 1.127 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/jar/jarbug/run.sh
+  shell: 3.064 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/jar/B4756443.java
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  main: 0.18 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/jar/B4957695.java
+  build: 0.033 seconds
+  compile: 0.032 seconds
+  main: 0.172 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/jar/B5105410.sh
+  shell: 0.868 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/jar/B6449504.java
+  shell: 0.005 seconds
+  build: 0.021 seconds
+  compile: 0.021 seconds
+  main: 0.083 seconds
+  build: 0.0 seconds
+  main: 0.084 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/jar/GetContentType.java
+  build: 0.053 seconds
+  compile: 0.053 seconds
+  shell: 0.109 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/protocol/mailto/HandlerParse.java
+  build: 0.06 seconds
+  compile: 0.059 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/AuthHeaderTest.java
+  build: 0.001 seconds
+  build: 0.068 seconds
+  compile: 0.068 seconds
+  main: 0.096 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/EmbeddedEquals.java
+  build: 0.094 seconds
+  compile: 0.093 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/HeaderTests.java
+  build: 0.109 seconds
+  compile: 0.109 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/MessageHeaderTest.java
+  build: 0.105 seconds
+  compile: 0.105 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/ParseUtil_4922813.java
+  build: 0.107 seconds
+  compile: 0.107 seconds
+  main: 0.155 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/ParseUtil_6274990.java
+  build: 0.054 seconds
+  compile: 0.054 seconds
+  main: 0.08 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/ParseUtil_6306697.java
+  build: 0.09 seconds
+  compile: 0.089 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/ParseUtil_6380332.java
+  build: 0.089 seconds
+  compile: 0.089 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/www/ParseUtil_6478588.java
+  build: 0.093 seconds
+  compile: 0.093 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/net/TelnetTest.java
+  build: 0.106 seconds
+  compile: 0.105 seconds
+  main: 0.079 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+Test results: passed: 371
+Report written to /home/saiubuntu/sources/jdk8_tl/jdk/build/linux-i586/testoutput/jdk_net/JTreport/html/report.html
+Results written to /home/saiubuntu/sources/jdk8_tl/jdk/build/linux-i586/testoutput/jdk_net/JTwork
+Summary: jdk_net
+TEST STATS: name=jdk_net  run=371  pass=371  fail=0  excluded=6
+EXIT CODE: 0
+EXIT CODE: 0
+make[2]: Leaving directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
+make[1]: Leaving directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
