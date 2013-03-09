@@ -1,33 +1,33 @@
 make -k -C  ../jdk/test  jdk_nio
-make[1]: Entering directory `/home/openjdk/sources/jdk8_tl/jdk/test'
+make[1]: Entering directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
 make SHARED_LIBRARY_DIR=java/nio/channels UNIQUE_DIR=jdk_nio shared_library_permissions
-make[2]: Entering directory `/home/openjdk/sources/jdk8_tl/jdk/test'
-if [ ! -d /home/openjdk/sources/jdk8_tl/jdk/test/../.hg ] ; then                          \
+make[2]: Entering directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
+if [ ! -d /home/saiubuntu/sources/jdk8_tl/jdk/test/../.hg ] ; then                          \
 	  find java/nio/channels \( -name \*.dll -o -name \*.DLL -o -name \*.so \)  \
 	        -exec chmod a+rx {} \; ;                             \
         fi
-make[2]: Leaving directory `/home/openjdk/sources/jdk8_tl/jdk/test'
+make[2]: Leaving directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
 echo "Running tests in agentvm mode: java/nio sun/nio"
 Running tests in agentvm mode: java/nio sun/nio
 make TEST_DEPENDENCIES="java/nio sun/nio" TESTDIRS="java/nio sun/nio" USE_JTREG_AGENTVM=true  UNIQUE_DIR=jdk_nio jtreg_tests
-make[2]: Entering directory `/home/openjdk/sources/jdk8_tl/jdk/test'
+make[2]: Entering directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
 Excluding list contains 0 items
 (                                                                    \
-	  ( JT_HOME=/home/openjdk/jtreg/;                   \
+	  ( JT_HOME=/home/saiubuntu/jtreg/;                   \
             export JT_HOME;                                                  \
-            /home/openjdk/jtreg//win32/bin/jtreg                              \
+            /home/saiubuntu/jtreg//win32/bin/jtreg                              \
               -agentvm   -a -ea -esa -v:fail,error,time -retain:fail,error -ignore:quiet -timeoutFactor:4 -J-Xmx512m                                         \
-              -r:/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/JTreport  \
-              -w:/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/JTwork    \
-              -jdk:/home/openjdk/sources//jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image/                \
-              -exclude:/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/excludelist.txt             \
+              -r:/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/JTreport  \
+              -w:/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/JTwork    \
+              -jdk:/home/saiubuntu/sources//jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image/                \
+              -exclude:/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/excludelist.txt             \
                                                         \
               java/nio sun/nio                                                    \
-	  ) ; ( jtregExitCode=$? && _summary="/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/JTreport/text/summary.txt"; rm -f -f /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/Stats.txt /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/runlist.txt /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/passlist.txt /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/faillist.txt /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/exitcode.txt; echo "${jtregExitCode}" > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/exitcode.txt; if [ -r "${_summary}" ] ; then echo "Summary: jdk_nio" > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/Stats.txt; expand ${_summary} | egrep -v ' Not run\.' > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/runlist.txt; egrep ' Passed\.' /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/runlist.txt | egrep -v ' Error\.' | egrep -v ' Failed\.' > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/passlist.txt; ( egrep ' Failed\.' /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/runlist.txt; egrep ' Error\.' /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/runlist.txt; egrep -v ' Passed\.' /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/runlist.txt ) | sort | uniq > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/faillist.txt; if [ ${jtregExitCode} != 0 -o -s /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/faillist.txt ] ; then expand /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/faillist.txt | cut -d' ' -f1 | sed -e 's@^@FAILED: @' >> /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/Stats.txt; if [ ${jtregExitCode} = 0 ] ; then jtregExitCode=1; fi; fi; runc="`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/runlist.txt      | wc -l | awk '{print $1;}'`"; passc="`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/passlist.txt    | wc -l | awk '{print $1;}'`"; failc="`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/faillist.txt    | wc -l | awk '{print $1;}'`"; exclc="`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/excludelist.txt | wc -l | awk '{print $1;}'`"; echo "TEST STATS: name=jdk_nio  run=${runc}  pass=${passc}  fail=${failc}  excluded=${exclc}" >> /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/Stats.txt; else echo "Missing file: ${_summary}" >> /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/Stats.txt; fi; if [ -f /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/Stats.txt ] ; then cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/Stats.txt; fi; ( mkdir -p `dirname /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/ARCHIVE_BUNDLE.zip` && cd /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio && chmod -R a+r . && zip -q -r /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/ARCHIVE_BUNDLE.zip . ) ; if [ ! -s /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/exitcode.txt; fi ; testExitCode=`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode} )                                          \
-	) 2>&1 | tee /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/output.txt ; if [ ! -s /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/exitcode.txt; fi ; testExitCode=`cat /home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode}
-Directory "/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/JTreport" not found: creating
-Directory "/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/JTwork" not found: creating
-Directory "/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/JTwork/scratch" not found: creating
+	  ) ; ( jtregExitCode=$? && _summary="/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/JTreport/text/summary.txt"; rm -f -f /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/Stats.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/runlist.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/passlist.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/faillist.txt /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/exitcode.txt; echo "${jtregExitCode}" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/exitcode.txt; if [ -r "${_summary}" ] ; then echo "Summary: jdk_nio" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/Stats.txt; expand ${_summary} | egrep -v ' Not run\.' > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/runlist.txt; egrep ' Passed\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/runlist.txt | egrep -v ' Error\.' | egrep -v ' Failed\.' > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/passlist.txt; ( egrep ' Failed\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/runlist.txt; egrep ' Error\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/runlist.txt; egrep -v ' Passed\.' /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/runlist.txt ) | sort | uniq > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/faillist.txt; if [ ${jtregExitCode} != 0 -o -s /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/faillist.txt ] ; then expand /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/faillist.txt | cut -d' ' -f1 | sed -e 's@^@FAILED: @' >> /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/Stats.txt; if [ ${jtregExitCode} = 0 ] ; then jtregExitCode=1; fi; fi; runc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/runlist.txt      | wc -l | awk '{print $1;}'`"; passc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/passlist.txt    | wc -l | awk '{print $1;}'`"; failc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/faillist.txt    | wc -l | awk '{print $1;}'`"; exclc="`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/excludelist.txt | wc -l | awk '{print $1;}'`"; echo "TEST STATS: name=jdk_nio  run=${runc}  pass=${passc}  fail=${failc}  excluded=${exclc}" >> /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/Stats.txt; else echo "Missing file: ${_summary}" >> /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/Stats.txt; fi; if [ -f /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/Stats.txt ] ; then cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/Stats.txt; fi; ( mkdir -p `dirname /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/ARCHIVE_BUNDLE.zip` && cd /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio && chmod -R a+r . && zip -q -r /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/ARCHIVE_BUNDLE.zip . ) ; if [ ! -s /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/exitcode.txt; fi ; testExitCode=`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode} )                                          \
+	) 2>&1 | tee /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/output.txt ; if [ ! -s /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/exitcode.txt; fi ; testExitCode=`cat /home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode}
+Directory "/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/JTreport" not found: creating
+Directory "/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/JTwork" not found: creating
+Directory "/home/saiubuntu/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_nio/JTwork/scratch" not found: creating
 --------------------------------------------------
 TEST: java/nio/Buffer/AllocateDirectInit.java
   build: 1.042 seconds
@@ -267,9 +267,9 @@ TEST: java/nio/channels/DatagramChannel/ChangingAddress.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/nio/channels/DatagramChannel/Connect.java
-JDK under test: (/home/openjdk/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
+JDK under test: (/home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
-OpenJDK Runtime Environment (build 1.8.0-internal-openjdk_2013_03_08_00_00-b00)
+OpenJDK Runtime Environment (build 1.8.0-internal-saiubuntu_2013_03_08_00_00-b00)
 OpenJDK Server VM (build 25.0-b20, mixed mode)
 
 
@@ -285,7 +285,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   0.085 seconds
 messages:
-command: compile /home/openjdk/sources/jdk8_tl/jdk/test/java/nio/channels/DatagramChannel/Connect.java
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/nio/channels/DatagramChannel/Connect.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 0.085
 
@@ -320,9 +320,9 @@ JavaTest Message: shutting down test
 TEST RESULT: Error. Timeout
 --------------------------------------------------
 TEST: java/nio/channels/DatagramChannel/ConnectedSend.java
-JDK under test: (/home/openjdk/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
+JDK under test: (/home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
-OpenJDK Runtime Environment (build 1.8.0-internal-openjdk_2013_03_08_00_00-b00)
+OpenJDK Runtime Environment (build 1.8.0-internal-saiubuntu_2013_03_08_00_00-b00)
 OpenJDK Server VM (build 25.0-b20, mixed mode)
 
 
@@ -338,7 +338,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   0.91 seconds
 messages:
-command: compile /home/openjdk/sources/jdk8_tl/jdk/test/java/nio/channels/DatagramChannel/ConnectedSend.java
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/nio/channels/DatagramChannel/ConnectedSend.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 0.91
 
@@ -1181,9 +1181,9 @@ TEST: java/nio/channels/spi/SelectorProvider/inheritedChannel/NullTest.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/nio/channels/spi/SelectorProvider/inheritedChannel/run_tests.sh
-JDK under test: (/home/openjdk/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
+JDK under test: (/home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
-OpenJDK Runtime Environment (build 1.8.0-internal-openjdk_2013_03_08_00_00-b00)
+OpenJDK Runtime Environment (build 1.8.0-internal-saiubuntu_2013_03_08_00_00-b00)
 OpenJDK Server VM (build 25.0-b20, mixed mode)
 
 
@@ -1199,7 +1199,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   0.153 seconds
 messages:
-command: compile /home/openjdk/sources/jdk8_tl/jdk/test/java/nio/channels/spi/SelectorProvider/inheritedChannel/StateTest.java /home/openjdk/sources/jdk8_tl/jdk/test/java/nio/channels/spi/SelectorProvider/inheritedChannel/StateTestService.java /home/openjdk/sources/jdk8_tl/jdk/test/java/nio/channels/spi/SelectorProvider/inheritedChannel/EchoTest.java /home/openjdk/sources/jdk8_tl/jdk/test/java/nio/channels/spi/SelectorProvider/inheritedChannel/EchoService.java /home/openjdk/sources/jdk8_tl/jdk/test/java/nio/channels/spi/SelectorProvider/inheritedChannel/CloseTest.java /home/openjdk/sources/jdk8_tl/jdk/test/java/nio/channels/spi/SelectorProvider/inheritedChannel/Launcher.java /home/openjdk/sources/jdk8_tl/jdk/test/java/nio/channels/spi/SelectorProvider/inheritedChannel/Util.java
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/nio/channels/spi/SelectorProvider/inheritedChannel/StateTest.java /home/saiubuntu/sources/jdk8_tl/jdk/test/java/nio/channels/spi/SelectorProvider/inheritedChannel/StateTestService.java /home/saiubuntu/sources/jdk8_tl/jdk/test/java/nio/channels/spi/SelectorProvider/inheritedChannel/EchoTest.java /home/saiubuntu/sources/jdk8_tl/jdk/test/java/nio/channels/spi/SelectorProvider/inheritedChannel/EchoService.java /home/saiubuntu/sources/jdk8_tl/jdk/test/java/nio/channels/spi/SelectorProvider/inheritedChannel/CloseTest.java /home/saiubuntu/sources/jdk8_tl/jdk/test/java/nio/channels/spi/SelectorProvider/inheritedChannel/Launcher.java /home/saiubuntu/sources/jdk8_tl/jdk/test/java/nio/channels/spi/SelectorProvider/inheritedChannel/Util.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 0.153
 
@@ -1213,10 +1213,10 @@ elapsed time (seconds): 6.495
 STDOUT:
 lib/linux-i586
 
-+ /home/openjdk/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image/bin/java StateTest
++ /home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image/bin/java StateTest
 All tests passed.
 
-+ /home/openjdk/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image/bin/java EchoTest
++ /home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image/bin/java EchoTest
 TCP echo test passed.
 java.net.SocketTimeoutException
 	at sun.nio.ch.DatagramSocketAdaptor.receive(DatagramSocketAdaptor.java:198)
@@ -1227,13 +1227,13 @@ java.net.SocketTimeoutException
 Exception in thread "main" java.lang.RuntimeException: Test failed - see log for details
 	at EchoTest.main(EchoTest.java:176)
 
-+ /home/openjdk/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image/bin/java CloseTest
++ /home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image/bin/java CloseTest
 Test passed - service closed connection.
 
-+ /home/openjdk/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image/bin/java StateTest -Djava.security.manager -Djava.security.policy=/home/openjdk/sources/jdk8_tl/jdk/test/java/nio/channels/spi/SelectorProvider/inheritedChannel/java.policy.pass
++ /home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image/bin/java StateTest -Djava.security.manager -Djava.security.policy=/home/saiubuntu/sources/jdk8_tl/jdk/test/java/nio/channels/spi/SelectorProvider/inheritedChannel/java.policy.pass
 All tests passed.
 
-+ /home/openjdk/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image/bin/java StateTest -expectFail -Djava.security.manager -Djava.security.policy=/home/openjdk/sources/jdk8_tl/jdk/test/java/nio/channels/spi/SelectorProvider/inheritedChannel/java.policy.fail
++ /home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image/bin/java StateTest -expectFail -Djava.security.manager -Djava.security.policy=/home/saiubuntu/sources/jdk8_tl/jdk/test/java/nio/channels/spi/SelectorProvider/inheritedChannel/java.policy.fail
 All tests passed.
 
 1 test(s) failed
@@ -1242,9 +1242,9 @@ STDERR:
 TEST RESULT: Failed. Execution failed: exit code 1
 --------------------------------------------------
 TEST: java/nio/channels/AsyncCloseAndInterrupt.java
-JDK under test: (/home/openjdk/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
+JDK under test: (/home/saiubuntu/sources/jdk8_tl/build/linux-x86-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
-OpenJDK Runtime Environment (build 1.8.0-internal-openjdk_2013_03_08_00_00-b00)
+OpenJDK Runtime Environment (build 1.8.0-internal-saiubuntu_2013_03_08_00_00-b00)
 OpenJDK Server VM (build 25.0-b20, mixed mode)
 
 
@@ -1260,7 +1260,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   0.116 seconds
 messages:
-command: compile /home/openjdk/sources/jdk8_tl/jdk/test/java/nio/channels/AsyncCloseAndInterrupt.java
+command: compile /home/saiubuntu/sources/jdk8_tl/jdk/test/java/nio/channels/AsyncCloseAndInterrupt.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 0.116
 
@@ -2336,8 +2336,8 @@ TEST: sun/nio/cs/ZeroedByteArrayEUCTWTest.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 Test results: passed: 316; failed: 2; error: 2
-Report written to /home/openjdk/sources/jdk8_tl/jdk/build/linux-i586/testoutput/jdk_nio/JTreport/html/report.html
-Results written to /home/openjdk/sources/jdk8_tl/jdk/build/linux-i586/testoutput/jdk_nio/JTwork
+Report written to /home/saiubuntu/sources/jdk8_tl/jdk/build/linux-i586/testoutput/jdk_nio/JTreport/html/report.html
+Results written to /home/saiubuntu/sources/jdk8_tl/jdk/build/linux-i586/testoutput/jdk_nio/JTwork
 Error: Some tests failed or other problems occurred.
 Summary: jdk_nio
 FAILED: java/nio/channels/AsyncCloseAndInterrupt.java
@@ -2348,7 +2348,7 @@ TEST STATS: name=jdk_nio  run=320  pass=316  fail=4  excluded=0
 EXIT CODE: 2
 EXIT CODE: 2
 make[2]: *** [jtreg_tests] Error 2
-make[2]: Leaving directory `/home/openjdk/sources/jdk8_tl/jdk/test'
+make[2]: Leaving directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
 make[1]: *** [jdk_nio] Error 2
-make[1]: Leaving directory `/home/openjdk/sources/jdk8_tl/jdk/test'
+make[1]: Leaving directory `/home/saiubuntu/sources/jdk8_tl/jdk/test'
 make: *** [jdk_nio] Error 2
