@@ -4,24 +4,24 @@ Running tests in othervm mode: com/sun/awt java/awt sun/awt javax/imageio javax/
 make TEST_DEPENDENCIES="com/sun/awt java/awt sun/awt javax/imageio javax/print sun/pisces" TESTDIRS="com/sun/awt java/awt sun/awt javax/imageio javax/print sun/pisces" USE_JTREG_AGENTVM=false UNIQUE_DIR=jdk_awt jtreg_tests
 Excluding list contains        0 items
 (                                                                    \
-	  ( JT_HOME=/Users/openjdk/jtreg;                   \
+	  ( JT_HOME=/Users/swami/jtreg;                   \
             export JT_HOME;                                                  \
-            /Users/openjdk/jtreg/win32/bin/jtreg                              \
+            /Users/swami/jtreg/win32/bin/jtreg                              \
                -a -ea -esa -v:fail,error,time -retain:fail,error -ignore:quiet -timeoutFactor:4 -J-Xmx512m                                         \
-              -r:/Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/JTreport  \
-              -w:/Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/JTwork    \
-              -jdk:/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image                \
-              -exclude:/Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/excludelist.txt             \
+              -r:/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/JTreport  \
+              -w:/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/JTwork    \
+              -jdk:/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image                \
+              -exclude:/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/excludelist.txt             \
                                                          \
               com/sun/awt java/awt sun/awt javax/imageio javax/print sun/pisces                                                    \
-	  ) ; ( jtregExitCode=$? && _summary="/Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/JTreport/text/summary.txt"; rm -f -f /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/Stats.txt /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/runlist.txt /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/passlist.txt /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/faillist.txt /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/exitcode.txt; echo "${jtregExitCode}" > /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/exitcode.txt; if [ -r "${_summary}" ] ; then echo "Summary: jdk_awt" > /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/Stats.txt; expand ${_summary} | egrep -v ' Not run\.' > /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/runlist.txt; egrep ' Passed\.' /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/runlist.txt | egrep -v ' Error\.' | egrep -v ' Failed\.' > /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/passlist.txt; ( egrep ' Failed\.' /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/runlist.txt; egrep ' Error\.' /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/runlist.txt; egrep -v ' Passed\.' /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/runlist.txt ) | sort | uniq > /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/faillist.txt; if [ ${jtregExitCode} != 0 -o -s /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/faillist.txt ] ; then expand /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/faillist.txt | cut -d' ' -f1 | sed -e 's@^@FAILED: @' >> /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/Stats.txt; if [ ${jtregExitCode} = 0 ] ; then jtregExitCode=1; fi; fi; runc="`cat /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/runlist.txt      | wc -l | awk '{print $1;}'`"; passc="`cat /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/passlist.txt    | wc -l | awk '{print $1;}'`"; failc="`cat /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/faillist.txt    | wc -l | awk '{print $1;}'`"; exclc="`cat /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/excludelist.txt | wc -l | awk '{print $1;}'`"; echo "TEST STATS: name=jdk_awt  run=${runc}  pass=${passc}  fail=${failc}  excluded=${exclc}" >> /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/Stats.txt; else echo "Missing file: ${_summary}" >> /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/Stats.txt; fi; if [ -f /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/Stats.txt ] ; then cat /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/Stats.txt; fi; ( mkdir -p `dirname /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/ARCHIVE_BUNDLE.zip` && cd /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt && chmod -R a+r . && zip -q -r /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/ARCHIVE_BUNDLE.zip . ) ; if [ ! -s /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/exitcode.txt; fi ; testExitCode=`cat /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode} )                                          \
-	) 2>&1 | tee /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/output.txt ; if [ ! -s /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/exitcode.txt; fi ; testExitCode=`cat /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode}
-Directory "/Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/JTreport" not found: creating
-Directory "/Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/JTwork" not found: creating
-Directory "/Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/JTwork/scratch" not found: creating
+	  ) ; ( jtregExitCode=$? && _summary="/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/JTreport/text/summary.txt"; rm -f -f /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/Stats.txt /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/runlist.txt /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/passlist.txt /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/faillist.txt /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/exitcode.txt; echo "${jtregExitCode}" > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/exitcode.txt; if [ -r "${_summary}" ] ; then echo "Summary: jdk_awt" > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/Stats.txt; expand ${_summary} | egrep -v ' Not run\.' > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/runlist.txt; egrep ' Passed\.' /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/runlist.txt | egrep -v ' Error\.' | egrep -v ' Failed\.' > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/passlist.txt; ( egrep ' Failed\.' /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/runlist.txt; egrep ' Error\.' /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/runlist.txt; egrep -v ' Passed\.' /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/runlist.txt ) | sort | uniq > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/faillist.txt; if [ ${jtregExitCode} != 0 -o -s /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/faillist.txt ] ; then expand /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/faillist.txt | cut -d' ' -f1 | sed -e 's@^@FAILED: @' >> /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/Stats.txt; if [ ${jtregExitCode} = 0 ] ; then jtregExitCode=1; fi; fi; runc="`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/runlist.txt      | wc -l | awk '{print $1;}'`"; passc="`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/passlist.txt    | wc -l | awk '{print $1;}'`"; failc="`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/faillist.txt    | wc -l | awk '{print $1;}'`"; exclc="`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/excludelist.txt | wc -l | awk '{print $1;}'`"; echo "TEST STATS: name=jdk_awt  run=${runc}  pass=${passc}  fail=${failc}  excluded=${exclc}" >> /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/Stats.txt; else echo "Missing file: ${_summary}" >> /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/Stats.txt; fi; if [ -f /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/Stats.txt ] ; then cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/Stats.txt; fi; ( mkdir -p `dirname /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/ARCHIVE_BUNDLE.zip` && cd /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt && chmod -R a+r . && zip -q -r /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/ARCHIVE_BUNDLE.zip . ) ; if [ ! -s /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/exitcode.txt; fi ; testExitCode=`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode} )                                          \
+	) 2>&1 | tee /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/output.txt ; if [ ! -s /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/exitcode.txt; fi ; testExitCode=`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode}
+Directory "/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/JTreport" not found: creating
+Directory "/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/JTwork" not found: creating
+Directory "/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_awt/JTwork/scratch" not found: creating
 --------------------------------------------------
 TEST: com/sun/awt/SecurityWarning/GetSizeShouldNotReturnZero.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -39,26 +39,26 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   2.751 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 2.751
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
 import java.awt.peer.FramePeer;
                     ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
                                 ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
         ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
                  ^
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 4 warnings
 
@@ -74,15 +74,15 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.543 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/com/sun/awt/SecurityWarning/GetSizeShouldNotReturnZero.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/com/sun/awt/SecurityWarning/GetSizeShouldNotReturnZero.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.543
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/com/sun/awt/SecurityWarning/GetSizeShouldNotReturnZero.java:44: warning: SecurityWarning is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/com/sun/awt/SecurityWarning/GetSizeShouldNotReturnZero.java:44: warning: SecurityWarning is internal proprietary API and may be removed in a future release
 import com.sun.awt.SecurityWarning;
                   ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/com/sun/awt/SecurityWarning/GetSizeShouldNotReturnZero.java:81: warning: SecurityWarning is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/com/sun/awt/SecurityWarning/GetSizeShouldNotReturnZero.java:81: warning: SecurityWarning is internal proprietary API and may be removed in a future release
         Dimension size = SecurityWarning.getSize(f);
                          ^
 2 warnings
@@ -140,7 +140,7 @@ TEST: java/awt/appletviewer/IOExceptionIfEncodedURLTest/IOExceptionIfEncodedURLT
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/Choice/ChoiceKeyEventReaction/ChoiceKeyEventReaction.html
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -158,26 +158,26 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.91 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.91
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
 import java.awt.peer.FramePeer;
                     ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
                                 ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
         ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
                  ^
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 4 warnings
 
@@ -193,7 +193,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.5 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceKeyEventReaction/ChoiceKeyEventReaction.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceKeyEventReaction/ChoiceKeyEventReaction.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.5
 STDOUT:
@@ -220,7 +220,7 @@ STATUS:Failed.Applet thread threw exception: java.lang.RuntimeException: Test fa
 TEST RESULT: Failed. Execution failed: Applet thread threw exception: java.lang.RuntimeException: Test failed. Exception thrown: java.lang.RuntimeException: Test failed. (XToolkit/MToolkit). KeyEvent was addressed to TextField.
 --------------------------------------------------
 TEST: java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -238,55 +238,55 @@ ACTION: compile -- Failed. Compilation failed: Compilation failed
 REASON: .class file out of date or does not exist
 TIME:   1.515 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.515
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:32: error: package test.java.awt.regtesthelpers does not exist
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:32: error: package test.java.awt.regtesthelpers does not exist
 import test.java.awt.regtesthelpers.Util;
                                    ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:90: error: cannot find symbol
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:90: error: cannot find symbol
             Util.waitForIdle(robot);
             ^
   symbol:   variable Util
   location: class ChoiceMouseWheelTest
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:104: error: cannot find symbol
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:104: error: cannot find symbol
                 Util.waitForIdle(robot);
                 ^
   symbol:   variable Util
   location: class ChoiceMouseWheelTest
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:113: error: cannot find symbol
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:113: error: cannot find symbol
             Util.waitForIdle(robot);
             ^
   symbol:   variable Util
   location: class ChoiceMouseWheelTest
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:115: error: cannot find symbol
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:115: error: cannot find symbol
             Util.waitForIdle(robot);
             ^
   symbol:   variable Util
   location: class ChoiceMouseWheelTest
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:120: error: cannot find symbol
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:120: error: cannot find symbol
                 Util.waitForIdle(robot);
                 ^
   symbol:   variable Util
   location: class ChoiceMouseWheelTest
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:129: error: cannot find symbol
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:129: error: cannot find symbol
             Util.waitForIdle(robot);
             ^
   symbol:   variable Util
   location: class ChoiceMouseWheelTest
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:132: error: cannot find symbol
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:132: error: cannot find symbol
             Util.waitForIdle(robot);
             ^
   symbol:   variable Util
   location: class ChoiceMouseWheelTest
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:137: error: cannot find symbol
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:137: error: cannot find symbol
             Util.waitForIdle(robot);
             ^
   symbol:   variable Util
   location: class ChoiceMouseWheelTest
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:139: error: cannot find symbol
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/Choice/ChoiceMouseWheelTest/ChoiceMouseWheelTest.java:139: error: cannot find symbol
             Util.waitForIdle(robot);
             ^
   symbol:   variable Util
@@ -338,7 +338,7 @@ TEST: java/awt/Component/isLightweightCrash/IsLightweightCrash.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/Component/isLightweightCrash/StubPeerCrash.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -356,39 +356,39 @@ ACTION: compile -- Failed. Compilation failed: Compilation failed
 REASON: .class file out of date or does not exist
 TIME:   1.593 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.593
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java:44: warning: CausedFocusEvent is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java:44: warning: CausedFocusEvent is internal proprietary API and may be removed in a future release
 import sun.awt.CausedFocusEvent;
               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java:45: warning: Region is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java:45: warning: Region is internal proprietary API and may be removed in a future release
 import sun.java2d.pipe.Region;
                       ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java:81: warning: ComponentPeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java:81: warning: ComponentPeer is internal proprietary API and may be removed in a future release
 class StubComponentPeer implements ComponentPeer {
                                    ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java:67: warning: ComponentPeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java:67: warning: ComponentPeer is internal proprietary API and may be removed in a future release
     private ComponentPeer peer = new StubComponentPeer();
             ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java:76: warning: ComponentPeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java:76: warning: ComponentPeer is internal proprietary API and may be removed in a future release
     public ComponentPeer getPeer(){
            ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java:81: error: StubComponentPeer is not abstract and does not override abstract method updateGraphicsData(GraphicsConfiguration) in ComponentPeer
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java:81: error: StubComponentPeer is not abstract and does not override abstract method updateGraphicsData(GraphicsConfiguration) in ComponentPeer
 class StubComponentPeer implements ComponentPeer {
 ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java:107: warning: CausedFocusEvent is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java:107: warning: CausedFocusEvent is internal proprietary API and may be removed in a future release
                                      long time, CausedFocusEvent.Cause cause){
                                                 ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java:130: warning: ContainerPeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java:130: warning: ContainerPeer is internal proprietary API and may be removed in a future release
     public void reparent(ContainerPeer newContainer){};
                          ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java:152: warning: Region is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java:152: warning: Region is internal proprietary API and may be removed in a future release
     public void applyShape(Region shape){};
                            ^
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Component/isLightweightCrash/StubPeerCrash.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 1 error
 8 warnings
@@ -446,7 +446,7 @@ TEST: java/awt/Cursor/PredefinedPrivate/PredefinedPrivate.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/DataFlavor/MissedHtmlAndRtfBug/MissedHtmlAndRtfBug.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -464,26 +464,26 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   2.134 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 2.134
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
 import java.awt.peer.FramePeer;
                     ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
                                 ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
         ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
                  ^
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 4 warnings
 
@@ -499,7 +499,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.411 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/process/ProcessResults.java /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/process/ProcessCommunicator.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/process/ProcessResults.java /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/process/ProcessCommunicator.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.411
 STDOUT:
@@ -517,24 +517,24 @@ ACTION: compile -- Failed. Compilation failed: Compilation failed
 REASON: .class file out of date or does not exist
 TIME:   1.234 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/DataFlavor/MissedHtmlAndRtfBug/MissedHtmlAndRtfBug.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/DataFlavor/MissedHtmlAndRtfBug/MissedHtmlAndRtfBug.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.234
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/DataFlavor/MissedHtmlAndRtfBug/MissedHtmlAndRtfBug.java:44: error: package test.java.awt.regtesthelpers.process does not exist
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/DataFlavor/MissedHtmlAndRtfBug/MissedHtmlAndRtfBug.java:44: error: package test.java.awt.regtesthelpers.process does not exist
 import test.java.awt.regtesthelpers.process.ProcessCommunicator;
                                            ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/DataFlavor/MissedHtmlAndRtfBug/MissedHtmlAndRtfBug.java:45: error: package test.java.awt.regtesthelpers.process does not exist
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/DataFlavor/MissedHtmlAndRtfBug/MissedHtmlAndRtfBug.java:45: error: package test.java.awt.regtesthelpers.process does not exist
 import test.java.awt.regtesthelpers.process.ProcessResults;
                                            ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/DataFlavor/MissedHtmlAndRtfBug/MissedHtmlAndRtfBug.java:47: warning: OSInfo is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/DataFlavor/MissedHtmlAndRtfBug/MissedHtmlAndRtfBug.java:47: warning: OSInfo is internal proprietary API and may be removed in a future release
 import sun.awt.OSInfo;
               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/DataFlavor/MissedHtmlAndRtfBug/MissedHtmlAndRtfBug.java:115: error: cannot access ProcessResults
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/DataFlavor/MissedHtmlAndRtfBug/MissedHtmlAndRtfBug.java:115: error: cannot access ProcessResults
     private static void verifyTestResults(ProcessResults processResults) {
                                           ^
-  bad source file: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/process/ProcessResults.java
+  bad source file: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/process/ProcessResults.java
     file does not contain class ProcessResults
     Please remove or make sure it appears in the correct subdirectory of the sourcepath.
 
@@ -567,7 +567,7 @@ TEST: java/awt/Dialog/DialogOverflowSizeTest/DialogSizeOverflowTest.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/Dialog/MakeWindowAlwaysOnTop/MakeWindowAlwaysOnTop.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -585,26 +585,26 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.977 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.977
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
 import java.awt.peer.FramePeer;
                     ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
                                 ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
         ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
                  ^
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 4 warnings
 
@@ -620,7 +620,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.408 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Dialog/MakeWindowAlwaysOnTop/MakeWindowAlwaysOnTop.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Dialog/MakeWindowAlwaysOnTop/MakeWindowAlwaysOnTop.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.408
 STDOUT:
@@ -681,7 +681,7 @@ TEST: java/awt/dnd/Button2DragTest/Button2DragTest.html
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/dnd/FileListBetweenJVMsTest/FileListBetweenJVMsTest.html
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -699,26 +699,26 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.946 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.946
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
 import java.awt.peer.FramePeer;
                     ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
                                 ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
         ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
                  ^
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 4 warnings
 
@@ -734,7 +734,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.43 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/process/ProcessResults.java /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/process/ProcessCommunicator.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/process/ProcessResults.java /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/process/ProcessCommunicator.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.43
 STDOUT:
@@ -752,12 +752,12 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.758 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/dnd/FileListBetweenJVMsTest/FileListBetweenJVMsTest.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/dnd/FileListBetweenJVMsTest/FileListBetweenJVMsTest.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.758
 STDOUT:
 STDERR:
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/dnd/FileListBetweenJVMsTest/TargetFileListFrame.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/dnd/FileListBetweenJVMsTest/TargetFileListFrame.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 
 ACTION: applet -- Failed. Execution failed: Applet thread threw exception: java.lang.RuntimeException: WARNING: Child process  error stream is not empty!
@@ -820,7 +820,7 @@ TEST: java/awt/dnd/ImageDecoratedDnDNegative/ImageDecoratedDnDNegative.html
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/dnd/URIListBetweenJVMsTest/URIListBetweenJVMsTest.html
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -838,26 +838,26 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   2.045 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 2.045
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
 import java.awt.peer.FramePeer;
                     ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
                                 ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
         ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
                  ^
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 4 warnings
 
@@ -873,7 +873,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.569 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/process/ProcessResults.java /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/process/ProcessCommunicator.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/process/ProcessResults.java /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/process/ProcessCommunicator.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.569
 STDOUT:
@@ -891,7 +891,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   2.078 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/dnd/URIListBetweenJVMsTest/URIListBetweenJVMsTest.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/dnd/URIListBetweenJVMsTest/URIListBetweenJVMsTest.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 2.078
 STDOUT:
@@ -907,16 +907,16 @@ elapsed time (seconds): 10.423
 STDOUT:
 Toolkit = sun.lwawt.macosx.LWCToolkit
 STDERR:
-2013-03-05 19:30:37.000 java[8934:707] __CFPasteboardIssueSandboxExtensionForPath: error for [/Users/openjdk/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_awt/JTwork/java/awt/dnd/URIListBetweenJVMsTest/URIListBetweenJVMsTest/ASSEMBLY_EXCEPTION]
-2013-03-05 19:30:37.002 java[8934:707] __CFPasteboardIssueSandboxExtensionForPath: error for [/Users/openjdk/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_awt/JTwork/java/awt/dnd/URIListBetweenJVMsTest/URIListBetweenJVMsTest/bin]
-2013-03-05 19:30:37.002 java[8934:707] __CFPasteboardIssueSandboxExtensionForPath: error for [/Users/openjdk/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_awt/JTwork/java/awt/dnd/URIListBetweenJVMsTest/URIListBetweenJVMsTest/lib]
-2013-03-05 19:30:37.003 java[8934:707] __CFPasteboardIssueSandboxExtensionForPath: error for [/Users/openjdk/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_awt/JTwork/java/awt/dnd/URIListBetweenJVMsTest/URIListBetweenJVMsTest/LICENSE]
-2013-03-05 19:30:37.003 java[8934:707] __CFPasteboardIssueSandboxExtensionForPath: error for [/Users/openjdk/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_awt/JTwork/java/awt/dnd/URIListBetweenJVMsTest/URIListBetweenJVMsTest/THIRD_PARTY_README]
-2013-03-05 19:30:37.004 java[8934:707] __CFPasteboardIssueSandboxExtensionForPath: error for [/Users/openjdk/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_awt/JTwork/java/awt/dnd/URIListBetweenJVMsTest/URIListBetweenJVMsTest/ASSEMBLY_EXCEPTION]
-2013-03-05 19:30:37.005 java[8934:707] __CFPasteboardIssueSandboxExtensionForPath: error for [/Users/openjdk/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_awt/JTwork/java/awt/dnd/URIListBetweenJVMsTest/URIListBetweenJVMsTest/bin]
-2013-03-05 19:30:37.005 java[8934:707] __CFPasteboardIssueSandboxExtensionForPath: error for [/Users/openjdk/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_awt/JTwork/java/awt/dnd/URIListBetweenJVMsTest/URIListBetweenJVMsTest/lib]
-2013-03-05 19:30:37.006 java[8934:707] __CFPasteboardIssueSandboxExtensionForPath: error for [/Users/openjdk/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_awt/JTwork/java/awt/dnd/URIListBetweenJVMsTest/URIListBetweenJVMsTest/LICENSE]
-2013-03-05 19:30:37.007 java[8934:707] __CFPasteboardIssueSandboxExtensionForPath: error for [/Users/openjdk/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_awt/JTwork/java/awt/dnd/URIListBetweenJVMsTest/URIListBetweenJVMsTest/THIRD_PARTY_README]
+2013-03-05 19:30:37.000 java[8934:707] __CFPasteboardIssueSandboxExtensionForPath: error for [/Users/swami/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_awt/JTwork/java/awt/dnd/URIListBetweenJVMsTest/URIListBetweenJVMsTest/ASSEMBLY_EXCEPTION]
+2013-03-05 19:30:37.002 java[8934:707] __CFPasteboardIssueSandboxExtensionForPath: error for [/Users/swami/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_awt/JTwork/java/awt/dnd/URIListBetweenJVMsTest/URIListBetweenJVMsTest/bin]
+2013-03-05 19:30:37.002 java[8934:707] __CFPasteboardIssueSandboxExtensionForPath: error for [/Users/swami/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_awt/JTwork/java/awt/dnd/URIListBetweenJVMsTest/URIListBetweenJVMsTest/lib]
+2013-03-05 19:30:37.003 java[8934:707] __CFPasteboardIssueSandboxExtensionForPath: error for [/Users/swami/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_awt/JTwork/java/awt/dnd/URIListBetweenJVMsTest/URIListBetweenJVMsTest/LICENSE]
+2013-03-05 19:30:37.003 java[8934:707] __CFPasteboardIssueSandboxExtensionForPath: error for [/Users/swami/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_awt/JTwork/java/awt/dnd/URIListBetweenJVMsTest/URIListBetweenJVMsTest/THIRD_PARTY_README]
+2013-03-05 19:30:37.004 java[8934:707] __CFPasteboardIssueSandboxExtensionForPath: error for [/Users/swami/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_awt/JTwork/java/awt/dnd/URIListBetweenJVMsTest/URIListBetweenJVMsTest/ASSEMBLY_EXCEPTION]
+2013-03-05 19:30:37.005 java[8934:707] __CFPasteboardIssueSandboxExtensionForPath: error for [/Users/swami/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_awt/JTwork/java/awt/dnd/URIListBetweenJVMsTest/URIListBetweenJVMsTest/bin]
+2013-03-05 19:30:37.005 java[8934:707] __CFPasteboardIssueSandboxExtensionForPath: error for [/Users/swami/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_awt/JTwork/java/awt/dnd/URIListBetweenJVMsTest/URIListBetweenJVMsTest/lib]
+2013-03-05 19:30:37.006 java[8934:707] __CFPasteboardIssueSandboxExtensionForPath: error for [/Users/swami/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_awt/JTwork/java/awt/dnd/URIListBetweenJVMsTest/URIListBetweenJVMsTest/LICENSE]
+2013-03-05 19:30:37.007 java[8934:707] __CFPasteboardIssueSandboxExtensionForPath: error for [/Users/swami/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_awt/JTwork/java/awt/dnd/URIListBetweenJVMsTest/URIListBetweenJVMsTest/THIRD_PARTY_README]
 2013-03-05 19:30:43.954 java[8934:707] *** CFMessagePort: dropping corrupt reply Mach message (0b100101)
 ========= Child VM System.err ========
 java.awt.datatransfer.UnsupportedFlavorException: text/uri-list
@@ -1005,7 +1005,7 @@ TEST: java/awt/event/KeyEvent/DeadKey/DeadKeyMacOSXInputText.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/event/KeyEvent/KeyTyped/CtrlASCII.html
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -1023,12 +1023,12 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.752 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/event/KeyEvent/KeyTyped/CtrlASCII.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/event/KeyEvent/KeyTyped/CtrlASCII.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.752
 STDOUT:
 STDERR:
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/event/KeyEvent/KeyTyped/CtrlASCII.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/event/KeyEvent/KeyTyped/CtrlASCII.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 
 ACTION: applet -- Failed. Execution failed: Applet thread threw exception: java.lang.RuntimeException: The test failed.
@@ -1039,7 +1039,7 @@ command: applet CtrlASCII.html
 reason: User specified action: run applet CtrlASCII.html 
 elapsed time (seconds): 45.57
 STDOUT:
- 0x16 0x17 0x14 0x15 0x12 0x13 0x10 0x11 0x1c 0x1d 0x1a 0x1b 0x18 0x19 0x7 0x6 0x60 0x5 0x4 0x3 0x2 0x1 0xf 0xe 0xd 0xc 0xb 0xa 0x9 0x8 0x34 0x35 0x36 0x37 0x30 0x31 0x32 0x33 0x3d 0x38 0x39 0x3a 0x22 0x0Unexpected keychar: \00
+ 0x16 0x17 0x14 0x15 0x12 0x13 0x10 0x11 0x1c 0x1d 0x1a 0x1b 0x18 0x19 0x7 0x6 0x60 0x5 0x4 0x3 0x2 0x1 0xf 0xe 0xd 0xc 0xb 0xa 0x9 0x8 0x34 0x35 0x36 0x37 0x30 0x31 0x32 0x33 0x3d 0x38 0x39 0x3a 0x22 0x0Unexpected keychar:  
  0x1f 0x2c 0x2f 0x2e
 STDERR:
 java.lang.RuntimeException: The test failed.
@@ -1280,7 +1280,7 @@ TEST: java/awt/Focus/ActualFocusedWindowTest/ActualFocusedWindowBlockingTest.jav
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/Focus/ActualFocusedWindowTest/ActualFocusedWindowRetaining.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -1298,26 +1298,26 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.942 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.942
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
 import java.awt.peer.FramePeer;
                     ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
                                 ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
         ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
                  ^
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 4 warnings
 
@@ -1333,7 +1333,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.61 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Focus/ActualFocusedWindowTest/ActualFocusedWindowRetaining.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Focus/ActualFocusedWindowTest/ActualFocusedWindowRetaining.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.61
 STDOUT:
@@ -1414,7 +1414,7 @@ TEST: java/awt/Focus/AppletInitialFocusTest/AppletInitialFocusTest1.html
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/Focus/AutoRequestFocusTest/AutoRequestFocusSetVisibleTest.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -1432,26 +1432,26 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.94 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.94
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
 import java.awt.peer.FramePeer;
                     ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
                                 ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
         ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
                  ^
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 4 warnings
 
@@ -1467,12 +1467,12 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.774 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Focus/AutoRequestFocusTest/AutoRequestFocusSetVisibleTest.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Focus/AutoRequestFocusTest/AutoRequestFocusSetVisibleTest.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.774
 STDOUT:
 STDERR:
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Focus/AutoRequestFocusTest/AutoRequestFocusSetVisibleTest.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Focus/AutoRequestFocusTest/AutoRequestFocusSetVisibleTest.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 
 ACTION: main -- Failed. Execution failed: `main' threw exception: TestFailedException: Test failed: the modal dialog must gain focus but it didn't!
@@ -1625,7 +1625,7 @@ TEST: java/awt/Focus/FrameMinimizeTest/FrameMinimizeTest.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/Focus/IconifiedFrameFocusChangeTest/IconifiedFrameFocusChangeTest.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -1643,26 +1643,26 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   2.101 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 2.101
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
 import java.awt.peer.FramePeer;
                     ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
                                 ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
         ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
                  ^
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 4 warnings
 
@@ -1678,7 +1678,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.396 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Focus/IconifiedFrameFocusChangeTest/IconifiedFrameFocusChangeTest.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Focus/IconifiedFrameFocusChangeTest/IconifiedFrameFocusChangeTest.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.396
 STDOUT:
@@ -1831,7 +1831,7 @@ TEST: java/awt/Focus/ToFrontFocusTest/ToFrontFocus.html
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/Focus/TranserFocusToWindow/TranserFocusToWindow.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -1849,26 +1849,26 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.991 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.991
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
 import java.awt.peer.FramePeer;
                     ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
                                 ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
         ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
                  ^
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 4 warnings
 
@@ -1884,7 +1884,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.345 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Focus/TranserFocusToWindow/TranserFocusToWindow.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Focus/TranserFocusToWindow/TranserFocusToWindow.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.345
 STDOUT:
@@ -1939,7 +1939,7 @@ STATUS:Failed.`main' threw exception: java.lang.RuntimeException: owner frame mu
 TEST RESULT: Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: owner frame must not receive WINDWO_GAINED_FOCUS
 --------------------------------------------------
 TEST: java/awt/Focus/TypeAhead/TestFocusFreeze.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -1957,26 +1957,26 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   2.036 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 2.036
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
 import java.awt.peer.FramePeer;
                     ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
                                 ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
         ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
                  ^
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 4 warnings
 
@@ -1992,7 +1992,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.503 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Focus/TypeAhead/TestFocusFreeze.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Focus/TypeAhead/TestFocusFreeze.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.503
 STDOUT:
@@ -2042,7 +2042,7 @@ TEST: java/awt/Focus/WindowInitialFocusTest/WindowInitialFocusTest.html
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/Focus/WrongKeyTypedConsumedTest/WrongKeyTypedConsumedTest.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -2060,26 +2060,26 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.971 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.971
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
 import java.awt.peer.FramePeer;
                     ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
                                 ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
         ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
                  ^
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 4 warnings
 
@@ -2095,12 +2095,12 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.526 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Focus/WrongKeyTypedConsumedTest/WrongKeyTypedConsumedTest.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Focus/WrongKeyTypedConsumedTest/WrongKeyTypedConsumedTest.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.526
 STDOUT:
 STDERR:
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Focus/WrongKeyTypedConsumedTest/WrongKeyTypedConsumedTest.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Focus/WrongKeyTypedConsumedTest/WrongKeyTypedConsumedTest.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 
 ACTION: main -- Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: Test Failed: focus wasn't transfered to text area
@@ -2250,7 +2250,7 @@ TEST: java/awt/font/Threads/FontThread.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/FontClass/CreateFont/fileaccess/FontFile.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -2268,7 +2268,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.4 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/FontClass/CreateFont/fileaccess/FontFile.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/FontClass/CreateFont/fileaccess/FontFile.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.4
 STDOUT:
@@ -2282,7 +2282,7 @@ command: main FontFile
 reason: Assumed action based on file name: run main FontFile 
 elapsed time (seconds): 0.337
 STDOUT:
-Will try to access /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/FontClass/CreateFont/fileaccess/../A.ttf
+Will try to access /Users/swami/sources/jdk8_tl/jdk/test/java/awt/FontClass/CreateFont/fileaccess/../A.ttf
 File is available. Verify no access under SM
 STDERR:
 java.security.AccessControlException: access denied ("java.io.FilePermission" "somefile" "read")
@@ -2306,7 +2306,7 @@ STATUS:Failed.`main' threw exception: java.security.AccessControlException: acce
 TEST RESULT: Failed. Execution failed: `main' threw exception: java.security.AccessControlException: access denied ("java.io.FilePermission" "somefile" "read")
 --------------------------------------------------
 TEST: java/awt/FontClass/CreateFont/bigfont.html
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -2324,7 +2324,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.655 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/FontClass/CreateFont/BigFont.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/FontClass/CreateFont/BigFont.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.655
 STDOUT:
@@ -2437,7 +2437,7 @@ TEST: java/awt/Frame/HugeFrame/HugeFrame.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/Frame/InvisibleOwner/InvisibleOwner.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -2455,26 +2455,26 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.973 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.973
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
 import java.awt.peer.FramePeer;
                     ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
                                 ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
         ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
                  ^
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 4 warnings
 
@@ -2490,7 +2490,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.406 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Frame/InvisibleOwner/InvisibleOwner.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Frame/InvisibleOwner/InvisibleOwner.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.406
 STDOUT:
@@ -2547,7 +2547,7 @@ TEST: java/awt/Frame/ResizeAfterSetFont/ResizeAfterSetFont.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/Frame/ShapeNotSetSometimes/ShapeNotSetSometimes.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -2565,7 +2565,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.681 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Frame/ShapeNotSetSometimes/ShapeNotSetSometimes.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Frame/ShapeNotSetSometimes/ShapeNotSetSometimes.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.681
 STDOUT:
@@ -2611,7 +2611,7 @@ TEST: java/awt/Frame/ShownOffScreenOnWin98/ShownOffScreenOnWin98Test.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/Frame/UnfocusableMaximizedFrameResizablity/UnfocusableMaximizedFrameResizablity.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -2630,26 +2630,26 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   2.0 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 2.0
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
 import java.awt.peer.FramePeer;
                     ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
                                 ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
         ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
                  ^
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 4 warnings
 
@@ -2665,13 +2665,13 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.59 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Frame/UnfocusableMaximizedFrameResizablity/UnfocusableMaximizedFrameResizablity.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Frame/UnfocusableMaximizedFrameResizablity/UnfocusableMaximizedFrameResizablity.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.59
 STDOUT:
 STDERR:
 
-ACTION: main -- Error. Program `/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image/bin/java' interrupted! (timed out?)
+ACTION: main -- Error. Program `/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image/bin/java' interrupted! (timed out?)
 REASON: User specified action: run main UnfocusableMaximizedFrameResizablity 
 TIME:   480.021 seconds
 messages:
@@ -2684,7 +2684,7 @@ Any messages for the tester will display here.
 Initial frame bounds: java.awt.Rectangle[x=0,y=22,width=1280,height=710]
 STDERR:
 
-TEST RESULT: Error. Program `/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image/bin/java' interrupted! (timed out?)
+TEST RESULT: Error. Program `/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image/bin/java' interrupted! (timed out?)
 --------------------------------------------------
 TEST: java/awt/Frame/WindowDragTest/WindowDragTest.java
   build: 2.094 seconds
@@ -2703,7 +2703,7 @@ TEST: java/awt/FullScreen/BufferStrategyExceptionTest/BufferStrategyExceptionTes
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/FullScreen/FullScreenInsets/FullScreenInsets.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -2721,15 +2721,15 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.527 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/FullScreen/FullScreenInsets/FullScreenInsets.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/FullScreen/FullScreenInsets/FullScreenInsets.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.527
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/FullScreen/FullScreenInsets/FullScreenInsets.java:37: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/FullScreen/FullScreenInsets/FullScreenInsets.java:37: warning: SunToolkit is internal proprietary API and may be removed in a future release
 import sun.awt.SunToolkit;
               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/FullScreen/FullScreenInsets/FullScreenInsets.java:150: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/FullScreen/FullScreenInsets/FullScreenInsets.java:150: warning: SunToolkit is internal proprietary API and may be removed in a future release
         ((SunToolkit) Toolkit.getDefaultToolkit()).realSync();
           ^
 2 warnings
@@ -2778,7 +2778,7 @@ TEST: java/awt/FullScreen/SetFSWindow/FSFrame.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/FullScreen/TranslucentWindow/TranslucentWindow.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -2796,21 +2796,21 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.41 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/FullScreen/TranslucentWindow/TranslucentWindow.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/FullScreen/TranslucentWindow/TranslucentWindow.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.41
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/FullScreen/TranslucentWindow/TranslucentWindow.java:37: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/FullScreen/TranslucentWindow/TranslucentWindow.java:37: warning: SunToolkit is internal proprietary API and may be removed in a future release
 import sun.awt.SunToolkit;
               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/FullScreen/TranslucentWindow/TranslucentWindow.java:49: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/FullScreen/TranslucentWindow/TranslucentWindow.java:49: warning: SunToolkit is internal proprietary API and may be removed in a future release
         ((SunToolkit)Toolkit.getDefaultToolkit()).realSync();
           ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/FullScreen/TranslucentWindow/TranslucentWindow.java:52: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/FullScreen/TranslucentWindow/TranslucentWindow.java:52: warning: SunToolkit is internal proprietary API and may be removed in a future release
         ((SunToolkit)Toolkit.getDefaultToolkit()).realSync();
           ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/FullScreen/TranslucentWindow/TranslucentWindow.java:66: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/FullScreen/TranslucentWindow/TranslucentWindow.java:66: warning: SunToolkit is internal proprietary API and may be removed in a future release
         ((SunToolkit)Toolkit.getDefaultToolkit()).realSync();
           ^
 4 warnings
@@ -2880,7 +2880,7 @@ TEST: java/awt/geom/Path2D/FillPPathTest.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/grab/EmbeddedFrameTest1/EmbeddedFrameTest1.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -2898,26 +2898,26 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   2.047 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 2.047
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
 import java.awt.peer.FramePeer;
                     ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
                                 ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
         ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
                  ^
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 4 warnings
 
@@ -2933,18 +2933,18 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.663 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/grab/EmbeddedFrameTest1/EmbeddedFrameTest1.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/grab/EmbeddedFrameTest1/EmbeddedFrameTest1.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.663
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/grab/EmbeddedFrameTest1/EmbeddedFrameTest1.java:54: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/grab/EmbeddedFrameTest1/EmbeddedFrameTest1.java:54: warning: SunToolkit is internal proprietary API and may be removed in a future release
 import sun.awt.SunToolkit;
               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/grab/EmbeddedFrameTest1/EmbeddedFrameTest1.java:73: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/grab/EmbeddedFrameTest1/EmbeddedFrameTest1.java:73: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit tk = (SunToolkit) Toolkit.getDefaultToolkit();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/grab/EmbeddedFrameTest1/EmbeddedFrameTest1.java:73: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/grab/EmbeddedFrameTest1/EmbeddedFrameTest1.java:73: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit tk = (SunToolkit) Toolkit.getDefaultToolkit();
                          ^
 3 warnings
@@ -3032,7 +3032,7 @@ TEST: java/awt/Graphics2D/DrawString/LCDTextSrcEa.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/Graphics2D/DrawString/RotTransText.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -3050,12 +3050,12 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.433 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Graphics2D/DrawString/RotTransText.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Graphics2D/DrawString/RotTransText.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.433
 STDOUT:
 STDERR:
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Graphics2D/DrawString/RotTransText.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Graphics2D/DrawString/RotTransText.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 
 ACTION: main -- Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: Ratio of blue to red is too great: 0.5461029037187978
@@ -3228,7 +3228,7 @@ TEST: java/awt/image/ConvolveOp/OpCompatibleImageTest.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/image/ImagingOpsNoExceptionsTest/ImagingOpsNoExceptionsTest.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -3246,7 +3246,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.5 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/image/ImagingOpsNoExceptionsTest/ImagingOpsNoExceptionsTest.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/image/ImagingOpsNoExceptionsTest/ImagingOpsNoExceptionsTest.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.5
 STDOUT:
@@ -3480,7 +3480,7 @@ TEST: java/awt/Menu/NullMenuLabelTest/NullMenuLabelTest.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/Menu/OpensWithNoGrab/OpensWithNoGrab.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -3498,26 +3498,26 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.928 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.928
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
 import java.awt.peer.FramePeer;
                     ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
                                 ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
         ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
                  ^
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 4 warnings
 
@@ -3533,7 +3533,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.718 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Menu/OpensWithNoGrab/OpensWithNoGrab.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Menu/OpensWithNoGrab/OpensWithNoGrab.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.718
 STDOUT:
@@ -3594,7 +3594,7 @@ TEST: java/awt/MenuBar/DeadlockTest1/DeadlockTest1.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/MenuBar/MenuBarSetFont/MenuBarSetFont.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -3612,15 +3612,15 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.442 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/MenuBar/MenuBarSetFont/MenuBarSetFont.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/MenuBar/MenuBarSetFont/MenuBarSetFont.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.442
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/MenuBar/MenuBarSetFont/MenuBarSetFont.java:24: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/MenuBar/MenuBarSetFont/MenuBarSetFont.java:24: warning: SunToolkit is internal proprietary API and may be removed in a future release
 import sun.awt.SunToolkit;
               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/MenuBar/MenuBarSetFont/MenuBarSetFont.java:119: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/MenuBar/MenuBarSetFont/MenuBarSetFont.java:119: warning: SunToolkit is internal proprietary API and may be removed in a future release
         ((SunToolkit) Toolkit.getDefaultToolkit()).realSync();
           ^
 2 warnings
@@ -3684,7 +3684,7 @@ TEST: java/awt/Mixing/LWPopupMenu.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/Mixing/MixingInHwPanel.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -3702,26 +3702,26 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   2.069 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 2.069
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
 import java.awt.peer.FramePeer;
                     ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
                                 ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
         ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
                  ^
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 4 warnings
 
@@ -3737,7 +3737,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.574 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Mixing/MixingInHwPanel.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Mixing/MixingInHwPanel.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.574
 STDOUT:
@@ -3793,7 +3793,7 @@ TEST: java/awt/Mixing/MixingOnShrinkingHWButton.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/Mixing/NonOpaqueInternalFrame.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -3811,26 +3811,26 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   2.02 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 2.02
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
 import java.awt.peer.FramePeer;
                     ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
                                 ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
         ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
                  ^
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 4 warnings
 
@@ -3846,7 +3846,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.614 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Mixing/NonOpaqueInternalFrame.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Mixing/NonOpaqueInternalFrame.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.614
 STDOUT:
@@ -3969,7 +3969,7 @@ TEST: java/awt/Mouse/EnterExitEvents/DragWindowTest.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/Mouse/EnterExitEvents/ResizingFrameTest.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -3987,18 +3987,18 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.578 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Mouse/EnterExitEvents/ResizingFrameTest.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Mouse/EnterExitEvents/ResizingFrameTest.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.578
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Mouse/EnterExitEvents/ResizingFrameTest.java:39: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/Mouse/EnterExitEvents/ResizingFrameTest.java:39: warning: SunToolkit is internal proprietary API and may be removed in a future release
 import sun.awt.SunToolkit;
               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Mouse/EnterExitEvents/ResizingFrameTest.java:49: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/Mouse/EnterExitEvents/ResizingFrameTest.java:49: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Mouse/EnterExitEvents/ResizingFrameTest.java:49: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/Mouse/EnterExitEvents/ResizingFrameTest.java:49: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
                               ^
 3 warnings
@@ -4033,7 +4033,7 @@ STATUS:Failed.`main' threw exception: java.lang.RuntimeException: No Mouse Enter
 TEST RESULT: Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: No Mouse Entered/Exited events!
 --------------------------------------------------
 TEST: java/awt/Mouse/ExtraMouseClick/ExtraMouseClick.html
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -4051,26 +4051,26 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.948 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.948
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
 import java.awt.peer.FramePeer;
                     ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
                                 ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
         ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
                  ^
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 4 warnings
 
@@ -4086,7 +4086,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.713 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Mouse/ExtraMouseClick/ExtraMouseClick.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Mouse/ExtraMouseClick/ExtraMouseClick.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.713
 STDOUT:
@@ -4145,7 +4145,7 @@ STATUS:Failed.Applet thread threw exception: java.lang.RuntimeException: Test fa
 TEST RESULT: Failed. Execution failed: Applet thread threw exception: java.lang.RuntimeException: Test failed. Clicked event follows by Dragged. Dragged = true. Clicked = true : distance = 2
 --------------------------------------------------
 TEST: java/awt/Mouse/MaximizedFrameTest/MaximizedFrameTest.html
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -4163,7 +4163,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.484 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Mouse/MaximizedFrameTest/MaximizedFrameTest.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Mouse/MaximizedFrameTest/MaximizedFrameTest.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.484
 STDOUT:
@@ -4193,7 +4193,7 @@ TEST: java/awt/Mouse/MouseModifiersUnitTest/ExtraButtonDrag.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/Mouse/MouseModifiersUnitTest/MouseModifiersUnitTest_Extra.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -4211,12 +4211,12 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   2.078 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Mouse/MouseModifiersUnitTest/MouseModifiersUnitTest_Extra.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Mouse/MouseModifiersUnitTest/MouseModifiersUnitTest_Extra.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 2.078
 STDOUT:
 STDERR:
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Mouse/MouseModifiersUnitTest/MouseModifiersUnitTest_Extra.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Mouse/MouseModifiersUnitTest/MouseModifiersUnitTest_Extra.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 
 ACTION: main -- Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: Test failed :  Released. modifiersEx != curStandardExModifiers. Got: 32768 , Expected: 0
@@ -4287,7 +4287,7 @@ STATUS:Failed.`main' threw exception: java.lang.RuntimeException: Test failed : 
 TEST RESULT: Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: Test failed :  Released. modifiersEx != curStandardExModifiers. Got: 32768 , Expected: 0
 --------------------------------------------------
 TEST: java/awt/Mouse/MouseModifiersUnitTest/MouseModifiersUnitTest_Standard.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -4305,7 +4305,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   2.012 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Mouse/MouseModifiersUnitTest/MouseModifiersUnitTest_Standard.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Mouse/MouseModifiersUnitTest/MouseModifiersUnitTest_Standard.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 2.012
 STDOUT:
@@ -4481,7 +4481,7 @@ TEST: java/awt/PrintJob/RoundedRectTest/RoundedRectTest.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/PrintJob/Security/SecurityDialogTest.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -4499,7 +4499,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.462 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/PrintJob/Security/SecurityDialogTest.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/PrintJob/Security/SecurityDialogTest.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.462
 STDOUT:
@@ -4617,7 +4617,7 @@ TEST: java/awt/TextArea/TextAreaTwicePack/TextAreaTwicePack.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/TextArea/UsingWithMouse/SelectionAutoscrollTest.html
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -4635,26 +4635,26 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.925 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.925
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
 import java.awt.peer.FramePeer;
                     ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
                                 ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
         ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
                  ^
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 4 warnings
 
@@ -4670,7 +4670,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.586 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/TextArea/UsingWithMouse/SelectionAutoscrollTest.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/TextArea/UsingWithMouse/SelectionAutoscrollTest.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.586
 STDOUT:
@@ -4744,7 +4744,7 @@ TEST: java/awt/Toolkit/Headless/GetPrintJob/GetPrintJobHeadless.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/Toolkit/Headless/WrappedToolkitTest/WrappedToolkitTest.sh
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -4754,7 +4754,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: User specified action: run compile TestWrapped.java 
 TIME:   1.348 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Toolkit/Headless/WrappedToolkitTest/TestWrapped.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Toolkit/Headless/WrappedToolkitTest/TestWrapped.java
 reason: User specified action: run compile TestWrapped.java 
 elapsed time (seconds): 1.348
 STDOUT:
@@ -4859,7 +4859,7 @@ TEST: java/awt/Window/AlwaysOnTop/AlwaysOnTopEvenOfWindow.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/Window/Grab/GrabTest.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -4877,26 +4877,26 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   2.511 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 2.511
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
 import java.awt.peer.FramePeer;
                     ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
                                 ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
         ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
                  ^
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 4 warnings
 
@@ -4912,21 +4912,21 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   2.189 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Window/Grab/GrabTest.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Window/Grab/GrabTest.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 2.189
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Window/Grab/GrabTest.java:47: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/Window/Grab/GrabTest.java:47: warning: SunToolkit is internal proprietary API and may be removed in a future release
     private static sun.awt.SunToolkit tk;
                           ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Window/Grab/GrabTest.java:65: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/Window/Grab/GrabTest.java:65: warning: SunToolkit is internal proprietary API and may be removed in a future release
             }, sun.awt.SunToolkit.GRAB_EVENT_MASK);
                       ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Window/Grab/GrabTest.java:61: warning: UngrabEvent is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/Window/Grab/GrabTest.java:61: warning: UngrabEvent is internal proprietary API and may be removed in a future release
                     if (e instanceof sun.awt.UngrabEvent) {
                                             ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Window/Grab/GrabTest.java:101: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/Window/Grab/GrabTest.java:101: warning: SunToolkit is internal proprietary API and may be removed in a future release
         tk = (sun.awt.SunToolkit)Toolkit.getDefaultToolkit();
                      ^
 4 warnings
@@ -4966,7 +4966,7 @@ STATUS:Failed.`main' threw exception: java.lang.RuntimeException: Test failed.
 TEST RESULT: Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: Test failed.
 --------------------------------------------------
 TEST: java/awt/Window/GrabSequence/GrabSequence.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -4984,26 +4984,26 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   2.457 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 2.457
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:65: warning: FramePeer is internal proprietary API and may be removed in a future release
 import java.awt.peer.FramePeer;
                     ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:96: warning: FramePeer is internal proprietary API and may be removed in a future release
         FramePeer frame_peer = (FramePeer) embedder.getPeer();
                                 ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java:189: warning: SunToolkit is internal proprietary API and may be removed in a future release
         ((sun.awt.SunToolkit)Toolkit.getDefaultToolkit()).realSync();
                  ^
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/regtesthelpers/Util.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 4 warnings
 
@@ -5019,7 +5019,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   2.184 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/Window/GrabSequence/GrabSequence.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/Window/GrabSequence/GrabSequence.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 2.184
 STDOUT:
@@ -5094,7 +5094,7 @@ TEST: java/awt/WMSpecificTests/Mutter/MutterMaximizeTest.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: java/awt/xembed/server/RunTestXEmbed.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -5104,30 +5104,30 @@ ACTION: compile -- Passed. Compilation successful
 REASON: User specified action: run compile JavaClient.java TesterClient.java TestXEmbedServer.java 
 TIME:   2.339 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/xembed/server/JavaClient.java /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/xembed/server/TesterClient.java /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/xembed/server/TestXEmbedServer.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/xembed/server/JavaClient.java /Users/swami/sources/jdk8_tl/jdk/test/java/awt/xembed/server/TesterClient.java /Users/swami/sources/jdk8_tl/jdk/test/java/awt/xembed/server/TestXEmbedServer.java
 reason: User specified action: run compile JavaClient.java TesterClient.java TestXEmbedServer.java 
 elapsed time (seconds): 2.339
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/xembed/server/TestXEmbedServer.java:29: warning: WindowIDProvider is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/xembed/server/TestXEmbedServer.java:29: warning: WindowIDProvider is internal proprietary API and may be removed in a future release
 import sun.awt.WindowIDProvider;
               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/xembed/server/JavaClient.java:42: warning: EmbeddedFrame is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/xembed/server/JavaClient.java:42: warning: EmbeddedFrame is internal proprietary API and may be removed in a future release
         final EmbeddedFrame ef = createEmbeddedFrame(xtoolkit, Long.parseLong(args[0]));
               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/xembed/server/JavaClient.java:50: warning: EmbeddedFrame is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/xembed/server/JavaClient.java:50: warning: EmbeddedFrame is internal proprietary API and may be removed in a future release
     private static EmbeddedFrame createEmbeddedFrame(boolean xtoolkit, long window) {
                    ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/xembed/server/JavaClient.java:54: warning: EmbeddedFrame is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/xembed/server/JavaClient.java:54: warning: EmbeddedFrame is internal proprietary API and may be removed in a future release
             return (EmbeddedFrame)cons.newInstance(new Object[] {window, true});
                     ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/xembed/server/TestXEmbedServer.java:185: warning: WindowIDProvider is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/xembed/server/TestXEmbedServer.java:185: warning: WindowIDProvider is internal proprietary API and may be removed in a future release
         WindowIDProvider pid = (WindowIDProvider)client.getPeer();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/xembed/server/TestXEmbedServer.java:185: warning: WindowIDProvider is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/java/awt/xembed/server/TestXEmbedServer.java:185: warning: WindowIDProvider is internal proprietary API and may be removed in a future release
         WindowIDProvider pid = (WindowIDProvider)client.getPeer();
                                 ^
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/xembed/server/TestXEmbedServer.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/xembed/server/TestXEmbedServer.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 Note: Some input files use unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
@@ -5145,12 +5145,12 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.607 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/xembed/server/RunTestXEmbed.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/awt/xembed/server/RunTestXEmbed.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.607
 STDOUT:
 STDERR:
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/java/awt/xembed/server/RunTestXEmbed.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/java/awt/xembed/server/RunTestXEmbed.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 
 ACTION: main -- Failed. Execution failed: `main' threw exception: java.lang.ClassCastException: sun.lwawt.LWCanvasPeer cannot be cast to sun.awt.WindowIDProvider
@@ -5477,7 +5477,7 @@ TEST: javax/print/TestRaceCond.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: sun/awt/font/ClassLoaderLeakTest.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -5495,14 +5495,14 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.937 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/sun/awt/font/ClassLoaderLeakTest.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/sun/awt/font/ClassLoaderLeakTest.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.937
 STDOUT:
 STDERR:
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/sun/awt/font/ClassLoaderLeakTest.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/sun/awt/font/ClassLoaderLeakTest.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/sun/awt/font/ClassLoaderLeakTest.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/sun/awt/font/ClassLoaderLeakTest.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 
 ACTION: main -- Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: Test failed: classloader is still alive
@@ -5513,7 +5513,7 @@ command: main ClassLoaderLeakTest FontManagerTest
 reason: User specified action: run main/othervm ClassLoaderLeakTest FontManagerTest 
 elapsed time (seconds): 10.115
 STDOUT:
-PWD: file:/Users/openjdk/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_awt/JTwork/classes/sun/awt/font/
+PWD: file:/Users/swami/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_awt/JTwork/classes/sun/awt/font/
 Testcase: FontManagerTest
 Wait +..+..+..
 STDERR:
@@ -5564,8 +5564,8 @@ TEST: sun/pisces/JoinMiterTest.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 Test results: passed: 313; failed: 40; error: 1
-Report written to /Users/openjdk/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_awt/JTreport/html/report.html
-Results written to /Users/openjdk/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_awt/JTwork
+Report written to /Users/swami/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_awt/JTreport/html/report.html
+Results written to /Users/swami/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_awt/JTwork
 Error: Some tests failed or other problems occurred.
 Summary: jdk_awt
 FAILED: com/sun/awt/SecurityWarning/GetSizeShouldNotReturnZero.java

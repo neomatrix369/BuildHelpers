@@ -1,11 +1,11 @@
 make -k -C  ../langtools/test  jtreg
 make[1]: *** No rule to make target `/java/re/jtreg/4.1/promoted/latest/binaries/jtreg/linux/bin/jtreg', needed by `check-jtreg'.
-if [ -r /Users/openjdk/sources/jdk8_tl/langtools/build/bsd-i586/test/langtools/jtreg/status.txt ]; then \
+if [ -r /Users/swami/sources/jdk8_tl/langtools/build/bsd-i586/test/langtools/jtreg/status.txt ]; then \
 	    echo ; echo "Summary of jtreg test failures" ; \
-	    cat /Users/openjdk/sources/jdk8_tl/langtools/build/bsd-i586/test/langtools/jtreg/JTreport/text/summary.txt | \
+	    cat /Users/swami/sources/jdk8_tl/langtools/build/bsd-i586/test/langtools/jtreg/JTreport/text/summary.txt | \
 		grep -v 'Not run' | grep -v 'Passed' ; \
 	    echo ; \
-	    exit `cat /Users/openjdk/sources/jdk8_tl/langtools/build/bsd-i586/test/langtools/jtreg/status.txt` ; \
+	    exit `cat /Users/swami/sources/jdk8_tl/langtools/build/bsd-i586/test/langtools/jtreg/status.txt` ; \
 	fi
 make[1]: Target `jtreg' not remade because of errors.
 make: *** [langtools_jtreg] Error 2

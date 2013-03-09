@@ -4,21 +4,21 @@ Running tests in othervm mode: javax/swing sun/java2d com/sun/java/swing
 make TEST_DEPENDENCIES="javax/swing sun/java2d com/sun/java/swing" TESTDIRS="javax/swing sun/java2d com/sun/java/swing" USE_JTREG_AGENTVM=false UNIQUE_DIR=jdk_swing jtreg_tests
 Excluding list contains        0 items
 (                                                                    \
-	  ( JT_HOME=/Users/openjdk/jtreg;                   \
+	  ( JT_HOME=/Users/swami/jtreg;                   \
             export JT_HOME;                                                  \
-            /Users/openjdk/jtreg/win32/bin/jtreg                              \
+            /Users/swami/jtreg/win32/bin/jtreg                              \
                -a -ea -esa -v:fail,error,time -retain:fail,error -ignore:quiet -timeoutFactor:4 -J-Xmx512m                                         \
-              -r:/Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/JTreport  \
-              -w:/Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/JTwork    \
-              -jdk:/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image                \
-              -exclude:/Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/excludelist.txt             \
+              -r:/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/JTreport  \
+              -w:/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/JTwork    \
+              -jdk:/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image                \
+              -exclude:/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/excludelist.txt             \
                                                          \
               javax/swing sun/java2d com/sun/java/swing                                                    \
-	  ) ; ( jtregExitCode=$? && _summary="/Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/JTreport/text/summary.txt"; rm -f -f /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/Stats.txt /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/runlist.txt /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/passlist.txt /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/faillist.txt /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/exitcode.txt; echo "${jtregExitCode}" > /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/exitcode.txt; if [ -r "${_summary}" ] ; then echo "Summary: jdk_swing" > /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/Stats.txt; expand ${_summary} | egrep -v ' Not run\.' > /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/runlist.txt; egrep ' Passed\.' /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/runlist.txt | egrep -v ' Error\.' | egrep -v ' Failed\.' > /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/passlist.txt; ( egrep ' Failed\.' /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/runlist.txt; egrep ' Error\.' /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/runlist.txt; egrep -v ' Passed\.' /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/runlist.txt ) | sort | uniq > /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/faillist.txt; if [ ${jtregExitCode} != 0 -o -s /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/faillist.txt ] ; then expand /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/faillist.txt | cut -d' ' -f1 | sed -e 's@^@FAILED: @' >> /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/Stats.txt; if [ ${jtregExitCode} = 0 ] ; then jtregExitCode=1; fi; fi; runc="`cat /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/runlist.txt      | wc -l | awk '{print $1;}'`"; passc="`cat /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/passlist.txt    | wc -l | awk '{print $1;}'`"; failc="`cat /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/faillist.txt    | wc -l | awk '{print $1;}'`"; exclc="`cat /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/excludelist.txt | wc -l | awk '{print $1;}'`"; echo "TEST STATS: name=jdk_swing  run=${runc}  pass=${passc}  fail=${failc}  excluded=${exclc}" >> /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/Stats.txt; else echo "Missing file: ${_summary}" >> /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/Stats.txt; fi; if [ -f /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/Stats.txt ] ; then cat /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/Stats.txt; fi; ( mkdir -p `dirname /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/ARCHIVE_BUNDLE.zip` && cd /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing && chmod -R a+r . && zip -q -r /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/ARCHIVE_BUNDLE.zip . ) ; if [ ! -s /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/exitcode.txt; fi ; testExitCode=`cat /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode} )                                          \
-	) 2>&1 | tee /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/output.txt ; if [ ! -s /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/exitcode.txt; fi ; testExitCode=`cat /Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode}
-Directory "/Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/JTreport" not found: creating
-Directory "/Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/JTwork" not found: creating
-Directory "/Users/openjdk/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/JTwork/scratch" not found: creating
+	  ) ; ( jtregExitCode=$? && _summary="/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/JTreport/text/summary.txt"; rm -f -f /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/Stats.txt /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/runlist.txt /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/passlist.txt /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/faillist.txt /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/exitcode.txt; echo "${jtregExitCode}" > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/exitcode.txt; if [ -r "${_summary}" ] ; then echo "Summary: jdk_swing" > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/Stats.txt; expand ${_summary} | egrep -v ' Not run\.' > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/runlist.txt; egrep ' Passed\.' /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/runlist.txt | egrep -v ' Error\.' | egrep -v ' Failed\.' > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/passlist.txt; ( egrep ' Failed\.' /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/runlist.txt; egrep ' Error\.' /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/runlist.txt; egrep -v ' Passed\.' /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/runlist.txt ) | sort | uniq > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/faillist.txt; if [ ${jtregExitCode} != 0 -o -s /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/faillist.txt ] ; then expand /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/faillist.txt | cut -d' ' -f1 | sed -e 's@^@FAILED: @' >> /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/Stats.txt; if [ ${jtregExitCode} = 0 ] ; then jtregExitCode=1; fi; fi; runc="`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/runlist.txt      | wc -l | awk '{print $1;}'`"; passc="`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/passlist.txt    | wc -l | awk '{print $1;}'`"; failc="`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/faillist.txt    | wc -l | awk '{print $1;}'`"; exclc="`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/excludelist.txt | wc -l | awk '{print $1;}'`"; echo "TEST STATS: name=jdk_swing  run=${runc}  pass=${passc}  fail=${failc}  excluded=${exclc}" >> /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/Stats.txt; else echo "Missing file: ${_summary}" >> /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/Stats.txt; fi; if [ -f /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/Stats.txt ] ; then cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/Stats.txt; fi; ( mkdir -p `dirname /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/ARCHIVE_BUNDLE.zip` && cd /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing && chmod -R a+r . && zip -q -r /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/ARCHIVE_BUNDLE.zip . ) ; if [ ! -s /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/exitcode.txt; fi ; testExitCode=`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode} )                                          \
+	) 2>&1 | tee /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/output.txt ; if [ ! -s /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/exitcode.txt; fi ; testExitCode=`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode}
+Directory "/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/JTreport" not found: creating
+Directory "/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/JTwork" not found: creating
+Directory "/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_swing/JTwork/scratch" not found: creating
 --------------------------------------------------
 TEST: com/sun/java/swing/plaf/gtk/Test6635110.java
   build: 2.303 seconds
@@ -45,7 +45,7 @@ TEST: com/sun/java/swing/plaf/windows/Test6824600.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/swing/AbstractButton/6711682/bug6711682.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -63,18 +63,18 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.726 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/AbstractButton/6711682/bug6711682.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/javax/swing/AbstractButton/6711682/bug6711682.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.726
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/AbstractButton/6711682/bug6711682.java:31: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/AbstractButton/6711682/bug6711682.java:31: warning: SunToolkit is internal proprietary API and may be removed in a future release
 import sun.awt.SunToolkit;
               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/AbstractButton/6711682/bug6711682.java:50: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/AbstractButton/6711682/bug6711682.java:50: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/AbstractButton/6711682/bug6711682.java:50: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/AbstractButton/6711682/bug6711682.java:50: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
                               ^
 3 warnings
@@ -329,7 +329,7 @@ TEST: javax/swing/JComponent/4337267/bug4337267.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/swing/JComponent/6683775/bug6683775.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -347,36 +347,36 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.564 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JComponent/6683775/bug6683775.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JComponent/6683775/bug6683775.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.564
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JComponent/6683775/bug6683775.java:8: warning: AWTUtilities is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JComponent/6683775/bug6683775.java:8: warning: AWTUtilities is internal proprietary API and may be removed in a future release
 import com.sun.awt.AWTUtilities;
                   ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JComponent/6683775/bug6683775.java:9: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JComponent/6683775/bug6683775.java:9: warning: SunToolkit is internal proprietary API and may be removed in a future release
 import sun.awt.SunToolkit;
               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JComponent/6683775/bug6683775.java:19: warning: AWTUtilities is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JComponent/6683775/bug6683775.java:19: warning: AWTUtilities is internal proprietary API and may be removed in a future release
                 AWTUtilities.Translucency.PERPIXEL_TRANSLUCENT)
                 ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JComponent/6683775/bug6683775.java:18: warning: AWTUtilities is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JComponent/6683775/bug6683775.java:18: warning: AWTUtilities is internal proprietary API and may be removed in a future release
         if (!AWTUtilities.isTranslucencySupported(
              ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JComponent/6683775/bug6683775.java:23: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JComponent/6683775/bug6683775.java:23: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JComponent/6683775/bug6683775.java:23: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JComponent/6683775/bug6683775.java:23: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
                               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JComponent/6683775/bug6683775.java:41: warning: AWTUtilities is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JComponent/6683775/bug6683775.java:41: warning: AWTUtilities is internal proprietary API and may be removed in a future release
                 AWTUtilities.setWindowOpaque(testFrame, false);
                 ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JComponent/6683775/bug6683775.java:64: warning: AWTUtilities is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JComponent/6683775/bug6683775.java:64: warning: AWTUtilities is internal proprietary API and may be removed in a future release
         if (!AWTUtilities.isTranslucencyCapable(transparencyCapableGC)) {
              ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JComponent/6683775/bug6683775.java:74: warning: AWTUtilities is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JComponent/6683775/bug6683775.java:74: warning: AWTUtilities is internal proprietary API and may be removed in a future release
                     if (AWTUtilities.isTranslucencyCapable(configs[j])) {
                         ^
 9 warnings
@@ -413,7 +413,7 @@ TEST: javax/swing/JComponent/6989617/bug6989617.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/swing/JComponent/7154030/bug7154030.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -439,21 +439,21 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.493 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JComponent/7154030/bug7154030.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JComponent/7154030/bug7154030.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.493
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JComponent/7154030/bug7154030.java:32: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JComponent/7154030/bug7154030.java:32: warning: SunToolkit is internal proprietary API and may be removed in a future release
 import sun.awt.SunToolkit;
               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JComponent/7154030/bug7154030.java:64: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JComponent/7154030/bug7154030.java:64: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JComponent/7154030/bug7154030.java:64: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JComponent/7154030/bug7154030.java:64: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
                               ^
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JComponent/7154030/bug7154030.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JComponent/7154030/bug7154030.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 3 warnings
 
@@ -575,7 +575,7 @@ TEST: javax/swing/JFileChooser/6713352/bug6713352.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/swing/JFileChooser/6738668/bug6738668.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -593,7 +593,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.281 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JFileChooser/6738668/bug6738668.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JFileChooser/6738668/bug6738668.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.281
 STDOUT:
@@ -675,7 +675,7 @@ TEST: javax/swing/JFormattedTextField/Test6462562.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/swing/JFrame/4962534/bug4962534.html
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -694,23 +694,23 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.833 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JFrame/4962534/bug4962534.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JFrame/4962534/bug4962534.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.833
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JFrame/4962534/bug4962534.java:36: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JFrame/4962534/bug4962534.java:36: warning: SunToolkit is internal proprietary API and may be removed in a future release
 import sun.awt.SunToolkit;
               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JFrame/4962534/bug4962534.java:48: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JFrame/4962534/bug4962534.java:48: warning: SunToolkit is internal proprietary API and may be removed in a future release
     SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
     ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JFrame/4962534/bug4962534.java:48: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JFrame/4962534/bug4962534.java:48: warning: SunToolkit is internal proprietary API and may be removed in a future release
     SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
                           ^
 3 warnings
 
-ACTION: applet -- Error. Program `/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image/bin/java' interrupted! (timed out?)
+ACTION: applet -- Error. Program `/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image/bin/java' interrupted! (timed out?)
 REASON: User specified action: run applet bug4962534.html 
 TIME:   480.02 seconds
 messages:
@@ -737,10 +737,10 @@ Mouse  lies in java.awt.Point[x=426,y=19]
 Now Frame lies in java.awt.Point[x=426,y=19]
 STDERR:
 
-TEST RESULT: Error. Program `/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image/bin/java' interrupted! (timed out?)
+TEST RESULT: Error. Program `/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image/bin/java' interrupted! (timed out?)
 --------------------------------------------------
 TEST: javax/swing/JInternalFrame/5066752/bug5066752.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -766,15 +766,15 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.927 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JInternalFrame/5066752/bug5066752.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JInternalFrame/5066752/bug5066752.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.927
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JInternalFrame/5066752/bug5066752.java:42: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JInternalFrame/5066752/bug5066752.java:42: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit tk = (SunToolkit)Toolkit.getDefaultToolkit();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JInternalFrame/5066752/bug5066752.java:42: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JInternalFrame/5066752/bug5066752.java:42: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit tk = (SunToolkit)Toolkit.getDefaultToolkit();
                          ^
 2 warnings
@@ -817,7 +817,7 @@ TEST: javax/swing/JInternalFrame/6725409/bug6725409.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/swing/JInternalFrame/Test6325652.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -835,21 +835,21 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.661 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JInternalFrame/Test6325652.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JInternalFrame/Test6325652.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.661
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/SwingTest.java:24: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/SwingTest.java:24: warning: SunToolkit is internal proprietary API and may be removed in a future release
 import sun.awt.SunToolkit;
               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/SwingTest.java:138: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/SwingTest.java:138: warning: SunToolkit is internal proprietary API and may be removed in a future release
             if (tk instanceof SunToolkit) {
                               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/SwingTest.java:139: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/SwingTest.java:139: warning: SunToolkit is internal proprietary API and may be removed in a future release
                 SunToolkit stk = (SunToolkit) tk;
                 ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/SwingTest.java:139: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/SwingTest.java:139: warning: SunToolkit is internal proprietary API and may be removed in a future release
                 SunToolkit stk = (SunToolkit) tk;
                                   ^
 4 warnings
@@ -1019,7 +1019,7 @@ TEST: javax/swing/JMenuItem/ActionListenerCalledTwice/ActionListenerCalledTwiceT
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/swing/JOptionPane/6464022/bug6464022.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -1045,7 +1045,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.528 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JOptionPane/6464022/bug6464022.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JOptionPane/6464022/bug6464022.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.528
 STDOUT:
@@ -1114,7 +1114,7 @@ TEST: javax/swing/JOptionPane/7138665/bug7138665.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/swing/JPopupMenu/4966112/bug4966112.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -1140,18 +1140,18 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.714 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/4966112/bug4966112.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/4966112/bug4966112.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.714
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/4966112/bug4966112.java:38: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/4966112/bug4966112.java:38: warning: SunToolkit is internal proprietary API and may be removed in a future release
 import sun.awt.SunToolkit;
               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/4966112/bug4966112.java:53: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/4966112/bug4966112.java:53: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/4966112/bug4966112.java:53: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/4966112/bug4966112.java:53: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
                               ^
 3 warnings
@@ -1212,7 +1212,7 @@ TEST: javax/swing/JPopupMenu/6694823/bug6694823.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/swing/JPopupMenu/6800513/bug6800513.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -1238,18 +1238,18 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.666 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/6800513/bug6800513.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/6800513/bug6800513.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.666
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/6800513/bug6800513.java:35: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/6800513/bug6800513.java:35: warning: SunToolkit is internal proprietary API and may be removed in a future release
 import sun.awt.SunToolkit;
               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/6800513/bug6800513.java:53: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/6800513/bug6800513.java:53: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/6800513/bug6800513.java:53: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/6800513/bug6800513.java:53: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
                               ^
 3 warnings
@@ -1281,7 +1281,7 @@ STATUS:Failed.`main' threw exception: java.lang.Exception: popup class is: javax
 TEST RESULT: Failed. Execution failed: `main' threw exception: java.lang.Exception: popup class is: javax.swing.PopupFactory$HeavyWeightPopup, expected: javax.swing.PopupFactory$LightWeightPopup
 --------------------------------------------------
 TEST: javax/swing/JPopupMenu/6827786/bug6827786.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -1307,18 +1307,18 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.562 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/6827786/bug6827786.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/6827786/bug6827786.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.562
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/6827786/bug6827786.java:36: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/6827786/bug6827786.java:36: warning: SunToolkit is internal proprietary API and may be removed in a future release
 import sun.awt.SunToolkit;
               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/6827786/bug6827786.java:44: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/6827786/bug6827786.java:44: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/6827786/bug6827786.java:44: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/6827786/bug6827786.java:44: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
                               ^
 3 warnings
@@ -1374,7 +1374,7 @@ TEST: javax/swing/JPopupMenu/6987844/bug6987844.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/swing/JPopupMenu/7156657/bug7156657.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -1392,27 +1392,27 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.672 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/7156657/bug7156657.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/7156657/bug7156657.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.672
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/7156657/bug7156657.java:24: warning: AWTUtilities is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/7156657/bug7156657.java:24: warning: AWTUtilities is internal proprietary API and may be removed in a future release
 import com.sun.awt.AWTUtilities;
                   ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/7156657/bug7156657.java:25: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/7156657/bug7156657.java:25: warning: SunToolkit is internal proprietary API and may be removed in a future release
 import sun.awt.SunToolkit;
               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/7156657/bug7156657.java:47: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/7156657/bug7156657.java:47: warning: SunToolkit is internal proprietary API and may be removed in a future release
         final SunToolkit toolkit = ((SunToolkit) Toolkit.getDefaultToolkit());
               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/7156657/bug7156657.java:47: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/7156657/bug7156657.java:47: warning: SunToolkit is internal proprietary API and may be removed in a future release
         final SunToolkit toolkit = ((SunToolkit) Toolkit.getDefaultToolkit());
                                      ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/7156657/bug7156657.java:54: warning: AWTUtilities is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/7156657/bug7156657.java:54: warning: AWTUtilities is internal proprietary API and may be removed in a future release
                 if (!AWTUtilities.isTranslucencyCapable(frame.getGraphicsConfiguration())) {
                      ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/7156657/bug7156657.java:70: warning: AWTUtilities is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JPopupMenu/7156657/bug7156657.java:70: warning: AWTUtilities is internal proprietary API and may be removed in a future release
                 AWTUtilities.setWindowOpaque(frame, false);
                 ^
 6 warnings
@@ -1575,7 +1575,7 @@ TEST: javax/swing/JSplitPane/4201995/bug4201995.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/swing/JSplitPane/4885629/bug4885629.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -1593,18 +1593,18 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.607 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JSplitPane/4885629/bug4885629.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JSplitPane/4885629/bug4885629.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.607
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JSplitPane/4885629/bug4885629.java:31: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JSplitPane/4885629/bug4885629.java:31: warning: SunToolkit is internal proprietary API and may be removed in a future release
 import sun.awt.SunToolkit;
               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JSplitPane/4885629/bug4885629.java:94: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JSplitPane/4885629/bug4885629.java:94: warning: SunToolkit is internal proprietary API and may be removed in a future release
         ((SunToolkit) SunToolkit.getDefaultToolkit()).realSync();
           ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JSplitPane/4885629/bug4885629.java:94: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JSplitPane/4885629/bug4885629.java:94: warning: SunToolkit is internal proprietary API and may be removed in a future release
         ((SunToolkit) SunToolkit.getDefaultToolkit()).realSync();
                       ^
 3 warnings
@@ -1653,7 +1653,7 @@ STATUS:Failed.`main' threw exception: java.lang.reflect.InvocationTargetExceptio
 TEST RESULT: Failed. Execution failed: `main' threw exception: java.lang.reflect.InvocationTargetException
 --------------------------------------------------
 TEST: javax/swing/JTabbedPane/4624207/bug4624207.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -1679,18 +1679,18 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.592 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JTabbedPane/4624207/bug4624207.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JTabbedPane/4624207/bug4624207.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.592
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JTabbedPane/4624207/bug4624207.java:40: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JTabbedPane/4624207/bug4624207.java:40: warning: SunToolkit is internal proprietary API and may be removed in a future release
 import sun.awt.SunToolkit;
               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JTabbedPane/4624207/bug4624207.java:66: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JTabbedPane/4624207/bug4624207.java:66: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JTabbedPane/4624207/bug4624207.java:66: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JTabbedPane/4624207/bug4624207.java:66: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
                               ^
 3 warnings
@@ -1908,7 +1908,7 @@ TEST: javax/swing/JTree/6505523/bug6505523.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/swing/JTree/8003400/Test8003400.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -1926,18 +1926,18 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.625 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JTree/8003400/Test8003400.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JTree/8003400/Test8003400.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.625
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JTree/8003400/Test8003400.java:35: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JTree/8003400/Test8003400.java:35: warning: SunToolkit is internal proprietary API and may be removed in a future release
 import sun.awt.SunToolkit;
               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JTree/8003400/Test8003400.java:88: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JTree/8003400/Test8003400.java:88: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JTree/8003400/Test8003400.java:88: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JTree/8003400/Test8003400.java:88: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
                               ^
 3 warnings
@@ -1992,7 +1992,7 @@ TEST: javax/swing/JTree/8003830/bug8003830.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/swing/JTree/8004298/bug8004298.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -2018,18 +2018,18 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.61 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JTree/8004298/bug8004298.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JTree/8004298/bug8004298.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.61
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JTree/8004298/bug8004298.java:39: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JTree/8004298/bug8004298.java:39: warning: SunToolkit is internal proprietary API and may be removed in a future release
 import sun.awt.SunToolkit;
               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JTree/8004298/bug8004298.java:50: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JTree/8004298/bug8004298.java:50: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/JTree/8004298/bug8004298.java:50: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/JTree/8004298/bug8004298.java:50: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
                               ^
 3 warnings
@@ -2079,7 +2079,7 @@ TEST: javax/swing/LookAndFeel/6474153/bug6474153.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/swing/MultiUIDefaults/4300666/bug4300666.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -2098,13 +2098,13 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.395 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/MultiUIDefaults/4300666/bug4300666.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/javax/swing/MultiUIDefaults/4300666/bug4300666.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.395
 STDOUT:
 STDERR:
 
-ACTION: applet -- Error. Program `/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image/bin/java' interrupted! (timed out?)
+ACTION: applet -- Error. Program `/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image/bin/java' interrupted! (timed out?)
 REASON: User specified action: run applet bug4300666.html 
 TIME:   480.019 seconds
 messages:
@@ -2114,7 +2114,7 @@ elapsed time (seconds): 480.019
 STDOUT:
 STDERR:
 
-TEST RESULT: Error. Program `/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image/bin/java' interrupted! (timed out?)
+TEST RESULT: Error. Program `/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image/bin/java' interrupted! (timed out?)
 --------------------------------------------------
 TEST: javax/swing/MultiUIDefaults/4331767/bug4331767.java
   build: 1.539 seconds
@@ -2129,7 +2129,7 @@ TEST: javax/swing/MultiUIDefaults/Test6860438.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/swing/plaf/basic/BasicHTML/4251579/bug4251579.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -2147,18 +2147,18 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.523 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/plaf/basic/BasicHTML/4251579/bug4251579.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/javax/swing/plaf/basic/BasicHTML/4251579/bug4251579.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.523
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/plaf/basic/BasicHTML/4251579/bug4251579.java:35: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/plaf/basic/BasicHTML/4251579/bug4251579.java:35: warning: SunToolkit is internal proprietary API and may be removed in a future release
 import sun.awt.SunToolkit;
               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/plaf/basic/BasicHTML/4251579/bug4251579.java:42: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/plaf/basic/BasicHTML/4251579/bug4251579.java:42: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/plaf/basic/BasicHTML/4251579/bug4251579.java:42: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/plaf/basic/BasicHTML/4251579/bug4251579.java:42: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
                               ^
 3 warnings
@@ -2333,7 +2333,7 @@ TEST: javax/swing/plaf/windows/WindowsRootPaneUI/WrongAltProcessing/WrongAltProc
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/swing/PopupFactory/6276087/NonOpaquePopupMenuTest.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -2351,18 +2351,18 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.538 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/PopupFactory/6276087/NonOpaquePopupMenuTest.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/javax/swing/PopupFactory/6276087/NonOpaquePopupMenuTest.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.538
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/PopupFactory/6276087/NonOpaquePopupMenuTest.java:34: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/PopupFactory/6276087/NonOpaquePopupMenuTest.java:34: warning: SunToolkit is internal proprietary API and may be removed in a future release
 import sun.awt.SunToolkit;
               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/PopupFactory/6276087/NonOpaquePopupMenuTest.java:56: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/PopupFactory/6276087/NonOpaquePopupMenuTest.java:56: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/PopupFactory/6276087/NonOpaquePopupMenuTest.java:56: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/PopupFactory/6276087/NonOpaquePopupMenuTest.java:56: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
                               ^
 3 warnings
@@ -2429,7 +2429,7 @@ TEST: javax/swing/Security/6938813/bug6938813.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/swing/SpringLayout/4726194/bug4726194.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -2447,12 +2447,12 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.682 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/SpringLayout/4726194/bug4726194.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/javax/swing/SpringLayout/4726194/bug4726194.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.682
 STDOUT:
 STDERR:
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/SpringLayout/4726194/bug4726194.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/javax/swing/SpringLayout/4726194/bug4726194.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 
 ACTION: main -- Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: FAILED: SwingUtilities.invokeAndWait method failed!
@@ -2549,7 +2549,7 @@ TEST: javax/swing/SwingUtilities/6797139/bug6797139.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/swing/SwingUtilities/7088744/bug7088744.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -2567,18 +2567,18 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.684 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/SwingUtilities/7088744/bug7088744.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/javax/swing/SwingUtilities/7088744/bug7088744.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.684
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/SwingUtilities/7088744/bug7088744.java:30: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/SwingUtilities/7088744/bug7088744.java:30: warning: SunToolkit is internal proprietary API and may be removed in a future release
 import sun.awt.SunToolkit;
               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/SwingUtilities/7088744/bug7088744.java:144: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/SwingUtilities/7088744/bug7088744.java:144: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/SwingUtilities/7088744/bug7088744.java:144: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/SwingUtilities/7088744/bug7088744.java:144: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
                               ^
 3 warnings
@@ -2701,7 +2701,7 @@ TEST: javax/swing/text/DefaultStyledDocument/6636983/bug6636983.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/swing/text/html/CSS/4530474/bug4530474.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -2719,21 +2719,21 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.591 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/text/html/CSS/4530474/bug4530474.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/javax/swing/text/html/CSS/4530474/bug4530474.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.591
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/text/html/CSS/4530474/bug4530474.java:37: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/text/html/CSS/4530474/bug4530474.java:37: warning: SunToolkit is internal proprietary API and may be removed in a future release
 import sun.awt.SunToolkit;
               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/text/html/CSS/4530474/bug4530474.java:46: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/text/html/CSS/4530474/bug4530474.java:46: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
         ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/text/html/CSS/4530474/bug4530474.java:46: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/text/html/CSS/4530474/bug4530474.java:46: warning: SunToolkit is internal proprietary API and may be removed in a future release
         SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
                               ^
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/text/html/CSS/4530474/bug4530474.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/javax/swing/text/html/CSS/4530474/bug4530474.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 3 warnings
 
@@ -2848,7 +2848,7 @@ TEST: javax/swing/text/NavigationFilter/6735293/bug6735293.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/swing/text/StyledEditorKit/4506788/bug4506788.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -2866,18 +2866,18 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.586 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/text/StyledEditorKit/4506788/bug4506788.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/javax/swing/text/StyledEditorKit/4506788/bug4506788.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.586
 STDOUT:
 STDERR:
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/text/StyledEditorKit/4506788/bug4506788.java:36: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/text/StyledEditorKit/4506788/bug4506788.java:36: warning: SunToolkit is internal proprietary API and may be removed in a future release
 import sun.awt.SunToolkit;
               ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/text/StyledEditorKit/4506788/bug4506788.java:42: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/text/StyledEditorKit/4506788/bug4506788.java:42: warning: SunToolkit is internal proprietary API and may be removed in a future release
     private SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
             ^
-/Users/openjdk/sources/jdk8_tl/jdk/test/javax/swing/text/StyledEditorKit/4506788/bug4506788.java:42: warning: SunToolkit is internal proprietary API and may be removed in a future release
+/Users/swami/sources/jdk8_tl/jdk/test/javax/swing/text/StyledEditorKit/4506788/bug4506788.java:42: warning: SunToolkit is internal proprietary API and may be removed in a future release
     private SunToolkit toolkit = (SunToolkit) Toolkit.getDefaultToolkit();
                                   ^
 3 warnings
@@ -2985,7 +2985,7 @@ TEST: sun/java2d/cmm/ColorConvertOp/ConstructorsNullTest/ConstructorsNullTest.ht
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: sun/java2d/cmm/ColorConvertOp/ColConvCCMTest.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -3003,7 +3003,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.946 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/sun/java2d/cmm/ColorConvertOp/ColConvCCMTest.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/sun/java2d/cmm/ColorConvertOp/ColConvCCMTest.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.946
 STDOUT:
@@ -3051,7 +3051,7 @@ STATUS:Failed.`main' threw exception: java.lang.RuntimeException: java.lang.Runt
 TEST RESULT: Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: java.lang.RuntimeException: Invalid result of the ColorConvertOp for ColorSpace:CS_LINEAR_RGB Data type:TYPE_BYTE. Golden image:BufferedImage@4ce39522: type = 5 ColorModel: #pixelBits = 24 numComponents = 3 color space = java.awt.color.ICC_ColorSpace@50826580 transparency = 1 has alpha = false isAlphaPre = false ByteInterleavedRaster: width = 256 height = 256 #numDataElements 3 dataOff[0] = 2
 --------------------------------------------------
 TEST: sun/java2d/cmm/ColorConvertOp/ColConvDCMTest.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -3069,7 +3069,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.529 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/sun/java2d/cmm/ColorConvertOp/ColConvDCMTest.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/sun/java2d/cmm/ColorConvertOp/ColConvDCMTest.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.529
 STDOUT:
@@ -3147,7 +3147,7 @@ TEST: sun/java2d/cmm/ColorConvertOp/InvalidRenderIntentTest.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: sun/java2d/cmm/ColorConvertOp/MTColConvTest.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -3165,7 +3165,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.236 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/sun/java2d/cmm/ColorConvertOp/MTColConvTest.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/sun/java2d/cmm/ColorConvertOp/MTColConvTest.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.236
 STDOUT:
@@ -3209,7 +3209,7 @@ STATUS:Failed.`main' threw exception: java.lang.RuntimeException: java.lang.Runt
 TEST RESULT: Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: java.lang.RuntimeException: Invalid result of the ColorConvertOp for ColorSpace:CS_LINEAR_RGB Image type:TYPE_INT_ARGB. Golden image:LRGB.png
 --------------------------------------------------
 TEST: sun/java2d/cmm/ColorConvertOp/MTSafetyTest.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -3227,7 +3227,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.386 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/sun/java2d/cmm/ColorConvertOp/MTSafetyTest.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/sun/java2d/cmm/ColorConvertOp/MTSafetyTest.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.386
 STDOUT:
@@ -4303,7 +4303,7 @@ TEST: sun/java2d/cmm/ProfileOp/ReadProfileTest.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: sun/java2d/cmm/ProfileOp/ReadWriteProfileTest.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -4321,12 +4321,12 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.525 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/sun/java2d/cmm/ProfileOp/ReadWriteProfileTest.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/sun/java2d/cmm/ProfileOp/ReadWriteProfileTest.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.525
 STDOUT:
 STDERR:
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/sun/java2d/cmm/ProfileOp/ReadWriteProfileTest.java uses unchecked or unsafe operations.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/sun/java2d/cmm/ProfileOp/ReadWriteProfileTest.java uses unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
 
 ACTION: main -- Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: Incorrect result of getData(int)
@@ -4397,7 +4397,7 @@ TEST: sun/java2d/DirectX/InfiniteValidationLoopTest/InfiniteValidationLoopTest.j
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: sun/java2d/DirectX/OnScreenRenderingResizeTest/OnScreenRenderingResizeTest.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -4415,7 +4415,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.653 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/sun/java2d/DirectX/OnScreenRenderingResizeTest/OnScreenRenderingResizeTest.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/sun/java2d/DirectX/OnScreenRenderingResizeTest/OnScreenRenderingResizeTest.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.653
 STDOUT:
@@ -4459,7 +4459,7 @@ TEST: sun/java2d/DirectX/OpaqueImageToSurfaceBlitTest/OpaqueImageToSurfaceBlitTe
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: sun/java2d/DirectX/OverriddenInsetsTest/OverriddenInsetsTest.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -4477,7 +4477,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.664 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/sun/java2d/DirectX/OverriddenInsetsTest/OverriddenInsetsTest.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/sun/java2d/DirectX/OverriddenInsetsTest/OverriddenInsetsTest.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.664
 STDOUT:
@@ -4511,7 +4511,7 @@ STATUS:Failed.`main' threw exception: java.lang.RuntimeException: Test FAILED.
 TEST RESULT: Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: Test FAILED.
 --------------------------------------------------
 TEST: sun/java2d/DirectX/RenderingToCachedGraphicsTest/RenderingToCachedGraphicsTest.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -4529,7 +4529,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.65 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/sun/java2d/DirectX/RenderingToCachedGraphicsTest/RenderingToCachedGraphicsTest.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/sun/java2d/DirectX/RenderingToCachedGraphicsTest/RenderingToCachedGraphicsTest.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.65
 STDOUT:
@@ -4593,7 +4593,7 @@ TEST: sun/java2d/DirectX/DrawBitmaskToSurfaceTest.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: sun/java2d/GdiRendering/InsetClipping.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -4611,7 +4611,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.563 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/sun/java2d/GdiRendering/InsetClipping.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/sun/java2d/GdiRendering/InsetClipping.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.563
 STDOUT:
@@ -4667,7 +4667,7 @@ TEST: sun/java2d/OpenGL/DrawBufImgOp.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: sun/java2d/OpenGL/GradientPaints.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -4685,7 +4685,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.794 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/sun/java2d/OpenGL/GradientPaints.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/sun/java2d/OpenGL/GradientPaints.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.794
 STDOUT:
@@ -4800,7 +4800,7 @@ TEST: sun/java2d/pisces/Test7036754.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: sun/java2d/SunGraphics2D/SourceClippingBlitTest/SourceClippingBlitTest.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -4818,7 +4818,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.597 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/sun/java2d/SunGraphics2D/SourceClippingBlitTest/SourceClippingBlitTest.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/sun/java2d/SunGraphics2D/SourceClippingBlitTest/SourceClippingBlitTest.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.597
 STDOUT:
@@ -4899,7 +4899,7 @@ STATUS:Failed.`main' threw exception: java.lang.RuntimeException: Test failed at
 TEST RESULT: Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: Test failed at x=0 y=0
 --------------------------------------------------
 TEST: sun/java2d/SunGraphics2D/DrawImageBilinear.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -4917,7 +4917,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.546 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/sun/java2d/SunGraphics2D/DrawImageBilinear.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/sun/java2d/SunGraphics2D/DrawImageBilinear.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.546
 STDOUT:
@@ -4951,7 +4951,7 @@ STATUS:Failed.`main' threw exception: java.lang.RuntimeException: Test failed at
 TEST RESULT: Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: Test failed at x=10 y=10 (expected=0xffff0000 actual=0xffe6251e)
 --------------------------------------------------
 TEST: sun/java2d/SunGraphics2D/PolyVertTest.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -4969,12 +4969,12 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   2.138 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/sun/java2d/SunGraphics2D/PolyVertTest.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/sun/java2d/SunGraphics2D/PolyVertTest.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 2.138
 STDOUT:
 STDERR:
-Note: /Users/openjdk/sources/jdk8_tl/jdk/test/sun/java2d/SunGraphics2D/PolyVertTest.java uses or overrides a deprecated API.
+Note: /Users/swami/sources/jdk8_tl/jdk/test/sun/java2d/SunGraphics2D/PolyVertTest.java uses or overrides a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 
 ACTION: main -- Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: Error at 0, 0 while testing: Screen
@@ -5005,7 +5005,7 @@ STATUS:Failed.`main' threw exception: java.lang.RuntimeException: Error at 0, 0 
 TEST RESULT: Failed. Execution failed: `main' threw exception: java.lang.RuntimeException: Error at 0, 0 while testing: Screen
 --------------------------------------------------
 TEST: sun/java2d/SunGraphics2D/SimplePrimQuality.java
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -5023,7 +5023,7 @@ ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
 TIME:   1.652 seconds
 messages:
-command: compile /Users/openjdk/sources/jdk8_tl/jdk/test/sun/java2d/SunGraphics2D/SimplePrimQuality.java
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/sun/java2d/SunGraphics2D/SimplePrimQuality.java
 reason: .class file out of date or does not exist
 elapsed time (seconds): 1.652
 STDOUT:
@@ -5073,7 +5073,7 @@ TEST: sun/java2d/X11SurfaceData/DrawImageBgTest/DrawImageBgTest.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: sun/java2d/X11SurfaceData/SharedMemoryPixmapsTest/SharedMemoryPixmapsTest.sh
-JDK under test: (/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
 openjdk version "1.8.0-internal"
 OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
 OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
@@ -5087,9 +5087,9 @@ command: shell SharedMemoryPixmapsTest.sh []
 reason: Assumed action based on file name: run shell SharedMemoryPixmapsTest.sh 
 elapsed time (seconds): 4.293
 STDOUT:
-TESTJAVA=/Users/openjdk/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image
-TESTSRC=/Users/openjdk/sources/jdk8_tl/jdk/test/sun/java2d/X11SurfaceData/SharedMemoryPixmapsTest
-TESTCLASSES=/Users/openjdk/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_swing/JTwork/classes/sun/java2d/X11SurfaceData/SharedMemoryPixmapsTest
+TESTJAVA=/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image
+TESTSRC=/Users/swami/sources/jdk8_tl/jdk/test/sun/java2d/X11SurfaceData/SharedMemoryPixmapsTest
+TESTCLASSES=/Users/swami/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_swing/JTwork/classes/sun/java2d/X11SurfaceData/SharedMemoryPixmapsTest
 Test failed!
 STDERR:
 Incorrect pixel at 0x0 : ffe6251e
@@ -5104,8 +5104,8 @@ TEST: sun/java2d/XRenderBlitsTest.java
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 Test results: passed: 251; failed: 36; error: 2
-Report written to /Users/openjdk/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_swing/JTreport/html/report.html
-Results written to /Users/openjdk/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_swing/JTwork
+Report written to /Users/swami/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_swing/JTreport/html/report.html
+Results written to /Users/swami/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_swing/JTwork
 Error: Some tests failed or other problems occurred.
 Summary: jdk_swing
 FAILED: javax/swing/AbstractButton/6711682/bug6711682.java
