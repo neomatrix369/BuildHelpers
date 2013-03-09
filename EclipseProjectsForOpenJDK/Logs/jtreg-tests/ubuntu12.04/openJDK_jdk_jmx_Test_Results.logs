@@ -23,391 +23,391 @@ Directory "/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput
 Directory "/home/openjdk/sources/jdk8_tl/jdk/test/../build/linux-i586/testoutput/jdk_jmx/JTwork/scratch" not found: creating
 --------------------------------------------------
 TEST: com/sun/jmx/remote/NotificationMarshalVersions/TestSerializationMismatch.sh
-  shell: 6.343 seconds
+  shell: 6.393 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: com/sun/jmx/remote/CCAdminReconnectTest.java
   clean: 0.0 seconds
-  build: 0.985 seconds
-  compile: 0.979 seconds
-  build: 0.0 seconds
-  main: 3.107 seconds
+  build: 0.999 seconds
+  compile: 0.995 seconds
+  build: 0.001 seconds
+  main: 3.11 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: com/sun/jmx/snmp/SnmpOidHashCode.java
-  build: 1.18 seconds
-  compile: 1.18 seconds
+  build: 1.211 seconds
+  compile: 1.211 seconds
   build: 0.0 seconds
-  main: 0.092 seconds
+  main: 0.093 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: com/sun/jmx/snmp/TimeTicksWrapping.java
-  build: 1.046 seconds
-  compile: 1.046 seconds
+  build: 1.045 seconds
+  compile: 1.045 seconds
   build: 0.0 seconds
-  main: 0.103 seconds
+  main: 0.088 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/descriptor/DefaultDescriptorTest.java
-  clean: 0.0 seconds
-  build: 1.03 seconds
-  compile: 1.029 seconds
+  clean: 0.001 seconds
+  build: 1.025 seconds
+  compile: 1.025 seconds
   build: 0.0 seconds
-  main: 0.15 seconds
+  main: 0.144 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/descriptor/DescriptorTest.java
   clean: 0.0 seconds
-  build: 1.703 seconds
-  compile: 1.703 seconds
+  build: 1.719 seconds
+  compile: 1.719 seconds
   build: 0.0 seconds
-  main: 0.153 seconds
+  main: 0.139 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/descriptor/EqualsHashCodeTest.java
   clean: 0.0 seconds
-  build: 0.954 seconds
-  compile: 0.953 seconds
+  build: 0.937 seconds
+  compile: 0.937 seconds
   build: 0.0 seconds
-  main: 0.107 seconds
+  main: 0.099 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/descriptor/ImmutableArrayFieldTest.java
   clean: 0.0 seconds
-  build: 0.933 seconds
-  compile: 0.933 seconds
+  build: 0.903 seconds
+  compile: 0.903 seconds
   build: 0.0 seconds
-  main: 0.096 seconds
+  main: 0.09 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/descriptor/ImmutableDescriptorSerialTest.java
   clean: 0.0 seconds
-  build: 0.935 seconds
-  compile: 0.934 seconds
+  build: 0.943 seconds
+  compile: 0.942 seconds
   build: 0.0 seconds
-  main: 0.127 seconds
+  main: 0.12 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/descriptor/ImmutableDescriptorSetFieldsTest.java
   clean: 0.0 seconds
-  build: 0.948 seconds
-  compile: 0.948 seconds
-  build: 0.001 seconds
-  main: 0.097 seconds
+  build: 0.883 seconds
+  compile: 0.883 seconds
+  build: 0.0 seconds
+  main: 0.095 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/descriptor/MBeanInfoInteropTest.java
   clean: 0.0 seconds
-  build: 1.271 seconds
-  compile: 1.271 seconds
+  build: 1.276 seconds
+  compile: 1.276 seconds
   build: 0.0 seconds
-  main: 0.173 seconds
+  main: 0.16 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/descriptor/UnionTest.java
   clean: 0.0 seconds
-  build: 1.022 seconds
-  compile: 1.021 seconds
+  build: 0.964 seconds
+  compile: 0.964 seconds
   build: 0.0 seconds
-  main: 0.112 seconds
+  main: 0.117 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/generified/GenericTest.java
   clean: 0.0 seconds
-  build: 1.53 seconds
-  compile: 1.53 seconds
+  build: 1.425 seconds
+  compile: 1.424 seconds
   build: 0.0 seconds
-  main: 0.216 seconds
+  main: 0.217 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/generified/ListTypeCheckTest.java
   clean: 0.0 seconds
-  build: 1.01 seconds
-  compile: 1.01 seconds
+  build: 0.909 seconds
+  compile: 0.909 seconds
   build: 0.0 seconds
-  main: 0.084 seconds
+  main: 0.096 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/ImplementationVersion/ImplVersionTest.java
   clean: 0.0 seconds
-  build: 0.94 seconds
-  compile: 0.939 seconds
+  build: 0.985 seconds
+  compile: 0.985 seconds
   build: 0.0 seconds
-  main: 0.222 seconds
+  main: 0.22 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/Introspector/AnnotationSecurityTest.java
   clean: 0.0 seconds
-  build: 1.061 seconds
-  compile: 1.06 seconds
-  build: 0.001 seconds
-  main: 0.222 seconds
+  build: 1.064 seconds
+  compile: 1.063 seconds
+  build: 0.0 seconds
+  main: 0.215 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/Introspector/AnnotationTest.java
   clean: 0.0 seconds
-  build: 0.953 seconds
-  compile: 0.953 seconds
+  build: 0.962 seconds
+  compile: 0.962 seconds
   build: 0.0 seconds
-  main: 0.203 seconds
+  main: 0.201 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/Introspector/ChangingNotifsTest.java
   clean: 0.0 seconds
-  build: 0.982 seconds
-  compile: 0.981 seconds
+  build: 0.955 seconds
+  compile: 0.955 seconds
   build: 0.001 seconds
-  main: 0.113 seconds
+  main: 0.124 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/Introspector/ClassLeakTest.java
   clean: 0.0 seconds
   build: 0.992 seconds
   compile: 0.992 seconds
-  build: 0.0 seconds
-  main: 0.134 seconds
+  build: 0.001 seconds
+  main: 0.128 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/Introspector/DuplicateGetterTest.java
-  build: 0.945 seconds
-  compile: 0.945 seconds
-  main: 0.107 seconds
+  build: 0.911 seconds
+  compile: 0.91 seconds
+  main: 0.111 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/Introspector/FeatureOrderTest.java
-  build: 1.091 seconds
-  compile: 1.09 seconds
-  main: 0.155 seconds
+  build: 1.066 seconds
+  compile: 1.066 seconds
+  main: 0.168 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/Introspector/GetMBeanInfoExceptionTest.java
   clean: 0.0 seconds
-  build: 0.903 seconds
-  compile: 0.902 seconds
-  build: 0.0 seconds
-  main: 0.108 seconds
+  build: 0.889 seconds
+  compile: 0.889 seconds
+  build: 0.001 seconds
+  main: 0.109 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/Introspector/IdenticalMBeanInfoTest.java
   clean: 0.0 seconds
-  build: 0.9 seconds
-  compile: 0.9 seconds
+  build: 0.932 seconds
+  compile: 0.932 seconds
   build: 0.0 seconds
-  main: 0.114 seconds
+  main: 0.116 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/Introspector/ImmutableNotificationInfoTest.java
   clean: 0.0 seconds
-  build: 0.915 seconds
-  compile: 0.915 seconds
+  build: 0.872 seconds
+  compile: 0.872 seconds
   build: 0.0 seconds
-  main: 0.118 seconds
+  main: 0.124 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/Introspector/InvokeGettersTest.java
-  clean: 0.0 seconds
-  build: 1.004 seconds
-  compile: 1.003 seconds
-  build: 0.001 seconds
+  clean: 0.001 seconds
+  build: 0.972 seconds
+  compile: 0.972 seconds
+  build: 0.0 seconds
   main: 0.113 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/Introspector/IsMethodTest.java
   clean: 0.0 seconds
-  build: 0.933 seconds
-  compile: 0.933 seconds
+  build: 0.911 seconds
+  compile: 0.911 seconds
   build: 0.0 seconds
-  main: 0.115 seconds
+  main: 0.118 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/Introspector/NotAnMBeanTest.java
   clean: 0.0 seconds
-  build: 0.914 seconds
-  compile: 0.914 seconds
+  build: 0.834 seconds
+  compile: 0.834 seconds
   build: 0.0 seconds
-  main: 0.124 seconds
+  main: 0.133 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/Introspector/NotCompliantCauseTest.java
   clean: 0.0 seconds
-  build: 0.964 seconds
-  compile: 0.964 seconds
+  build: 0.953 seconds
+  compile: 0.953 seconds
   build: 0.0 seconds
-  main: 0.12 seconds
+  main: 0.114 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/Introspector/SetWrongTypeAttributeTest.java
   clean: 0.0 seconds
-  build: 1.012 seconds
-  compile: 1.012 seconds
+  build: 1.009 seconds
+  compile: 1.009 seconds
   build: 0.0 seconds
-  main: 0.147 seconds
+  main: 0.131 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/Introspector/UnregisterMBeanExceptionTest.java
   clean: 0.0 seconds
-  build: 0.936 seconds
-  compile: 0.936 seconds
+  build: 0.955 seconds
+  compile: 0.955 seconds
   build: 0.0 seconds
-  main: 0.108 seconds
+  main: 0.11 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/loading/LibraryLoader/LibraryLoaderTest.java
   clean: 0.0 seconds
-  build: 0.958 seconds
-  compile: 0.957 seconds
+  build: 0.926 seconds
+  compile: 0.925 seconds
   build: 0.001 seconds
-  main: 0.086 seconds
+  main: 0.089 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/loading/MLetCLR/MLetCommand.java
   clean: 0.0 seconds
-  build: 0.879 seconds
-  compile: 0.879 seconds
+  build: 0.862 seconds
+  compile: 0.861 seconds
   build: 0.0 seconds
-  main: 0.137 seconds
+  main: 0.141 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/loading/ArrayClassTest.java
   clean: 0.0 seconds
-  build: 0.987 seconds
-  compile: 0.987 seconds
+  build: 0.989 seconds
+  compile: 0.988 seconds
   build: 0.0 seconds
-  main: 0.148 seconds
+  main: 0.139 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/loading/DocumentRootTest.java
   clean: 0.0 seconds
-  build: 0.909 seconds
-  compile: 0.909 seconds
+  build: 0.9 seconds
+  compile: 0.9 seconds
   build: 0.0 seconds
-  main: 0.119 seconds
+  main: 0.108 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/loading/GetMBeansFromURLTest.java
   clean: 0.0 seconds
   build: 0.914 seconds
-  compile: 0.914 seconds
+  compile: 0.913 seconds
   build: 0.0 seconds
-  main: 0.13 seconds
+  main: 0.117 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/loading/MLetContentTest.java
   clean: 0.0 seconds
-  build: 0.964 seconds
-  compile: 0.963 seconds
+  build: 0.982 seconds
+  compile: 0.981 seconds
   build: 0.0 seconds
-  main: 0.091 seconds
+  main: 0.086 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/loading/ParserInfiniteLoopTest.java
   clean: 0.0 seconds
-  build: 0.943 seconds
-  compile: 0.943 seconds
+  build: 0.947 seconds
+  compile: 0.947 seconds
+  build: 0.001 seconds
+  main: 0.114 seconds
   build: 0.0 seconds
-  main: 0.12 seconds
+  main: 0.112 seconds
   build: 0.0 seconds
   main: 0.117 seconds
-  build: 0.001 seconds
-  main: 0.115 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/loading/SystemClassLoaderTest.java
   clean: 0.0 seconds
-  build: 0.906 seconds
-  compile: 0.906 seconds
+  build: 0.863 seconds
+  compile: 0.863 seconds
   build: 0.0 seconds
-  main: 0.115 seconds
+  main: 0.114 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/MBeanInfo/EqualExceptionTest.java
   clean: 0.0 seconds
-  build: 0.876 seconds
-  compile: 0.876 seconds
+  build: 0.816 seconds
+  compile: 0.816 seconds
   build: 0.0 seconds
-  main: 0.093 seconds
+  main: 0.095 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/MBeanInfo/MBeanInfoEqualsTest.java
   clean: 0.0 seconds
-  build: 1.212 seconds
-  compile: 1.211 seconds
+  build: 1.086 seconds
+  compile: 1.085 seconds
   build: 0.0 seconds
-  main: 0.109 seconds
+  main: 0.107 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/MBeanInfo/NotificationInfoTest.java
   clean: 0.0 seconds
-  build: 1.138 seconds
-  compile: 1.137 seconds
+  build: 1.127 seconds
+  compile: 1.126 seconds
   build: 0.0 seconds
-  main: 0.484 seconds
+  main: 0.501 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/MBeanInfo/NullInfoArraysTest.java
   clean: 0.0 seconds
-  build: 1.047 seconds
-  compile: 1.047 seconds
+  build: 0.947 seconds
+  compile: 0.946 seconds
   build: 0.0 seconds
-  main: 0.111 seconds
+  main: 0.116 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/MBeanInfo/SerializationTest.java
   clean: 0.0 seconds
-  build: 0.806 seconds
-  compile: 0.806 seconds
+  build: 0.839 seconds
+  compile: 0.839 seconds
   build: 0.0 seconds
-  main: 0.13 seconds
+  main: 0.119 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/MBeanInfo/SerializationTest1.java
   clean: 0.0 seconds
-  build: 0.85 seconds
-  compile: 0.85 seconds
+  build: 0.858 seconds
+  compile: 0.857 seconds
   build: 0.0 seconds
-  main: 0.131 seconds
+  main: 0.13 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/MBeanInfo/TooManyFooTest.java
   clean: 0.0 seconds
-  build: 1.111 seconds
-  compile: 1.111 seconds
-  build: 0.0 seconds
-  main: 0.175 seconds
+  build: 1.182 seconds
+  compile: 1.182 seconds
+  build: 0.001 seconds
+  main: 0.171 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/MBeanServer/AttributeListTypeSafeTest.java
-  build: 0.994 seconds
-  compile: 0.994 seconds
-  main: 0.092 seconds
+  build: 1.119 seconds
+  compile: 1.119 seconds
+  main: 0.099 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/MBeanServer/MBeanExceptionTest.java
-  compile: 1.132 seconds
+  compile: 1.142 seconds
   build: 0.0 seconds
-  main: 0.136 seconds
+  main: 0.117 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/MBeanServer/MBeanServerInvocationHandlerExceptionTest.java
   clean: 0.0 seconds
-  build: 0.903 seconds
-  compile: 0.902 seconds
+  build: 0.929 seconds
+  compile: 0.929 seconds
   build: 0.0 seconds
   main: 0.122 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/MBeanServer/MBeanServerNotificationTest.java
-  compile: 1.036 seconds
+  compile: 1.076 seconds
   build: 0.0 seconds
-  main: 0.12 seconds
+  main: 0.122 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/MBeanServer/NewMBeanListenerTest.java
   clean: 0.0 seconds
-  build: 0.982 seconds
-  compile: 0.981 seconds
+  build: 1.05 seconds
+  compile: 1.05 seconds
   build: 0.0 seconds
-  main: 0.113 seconds
+  main: 0.118 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/MBeanServer/NotifDeadlockTest.java
@@ -415,348 +415,529 @@ TEST: javax/management/MBeanServer/NotifDeadlockTest.java
   build: 0.925 seconds
   compile: 0.925 seconds
   build: 0.0 seconds
-  main: 0.107 seconds
+  main: 0.118 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/MBeanServer/OldMBeanServerTest.java
-  build: 3.421 seconds
-  compile: 3.421 seconds
-  main: 0.795 seconds
+  build: 3.458 seconds
+  compile: 3.458 seconds
+  main: 0.77 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/MBeanServer/PostExceptionTest.java
-  compile: 1.399 seconds
-  build: 0.001 seconds
-  main: 0.155 seconds
+  compile: 1.42 seconds
+  build: 0.0 seconds
+  main: 0.154 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/MBeanServer/PostRegisterDeadlockTest.java
   clean: 0.0 seconds
-  build: 1.003 seconds
-  compile: 1.003 seconds
-  build: 0.0 seconds
-  main: 0.115 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/MBeanServer/PostRegisterDeadlockTest2.java
-  build: 0.938 seconds
-  compile: 0.938 seconds
-  main: 0.117 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/MBeanServer/PreDeregisterDeadlockTest.java
-  clean: 0.0 seconds
-  build: 0.939 seconds
-  compile: 0.938 seconds
-  build: 0.0 seconds
-  main: 0.625 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/MBeanServer/PreRegisterTest.java
-  clean: 0.0 seconds
-  build: 0.924 seconds
-  compile: 0.924 seconds
-  build: 0.0 seconds
-  main: 0.122 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/MBeanServerFactory/ReleaseMBeanServerTest.java
-  clean: 0.0 seconds
-  build: 0.888 seconds
-  compile: 0.888 seconds
-  build: 0.001 seconds
-  main: 0.117 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/modelmbean/ModelMBeanInfoSupport/GetAllDescriptorsTest.java
-  clean: 0.0 seconds
-  build: 1.07 seconds
-  compile: 1.07 seconds
-  build: 0.0 seconds
-  main: 0.382 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/modelmbean/SimpleModelMBean/SimpleModelMBeanCommand.java
-  clean: 0.0 seconds
-  build: 1.1 seconds
-  compile: 1.1 seconds
-  build: 0.0 seconds
-  main: 0.203 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/modelmbean/AddAttributeChangeNotificationListenerTest.java
-  clean: 0.0 seconds
-  build: 0.954 seconds
-  compile: 0.953 seconds
+  build: 0.986 seconds
+  compile: 0.986 seconds
   build: 0.0 seconds
   main: 0.118 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
+TEST: javax/management/MBeanServer/PostRegisterDeadlockTest2.java
+  build: 0.917 seconds
+  compile: 0.917 seconds
+  main: 0.122 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/MBeanServer/PreDeregisterDeadlockTest.java
+  clean: 0.0 seconds
+  build: 0.944 seconds
+  compile: 0.944 seconds
+  build: 0.0 seconds
+  main: 0.619 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/MBeanServer/PreRegisterTest.java
+  clean: 0.0 seconds
+  build: 0.923 seconds
+  compile: 0.923 seconds
+  build: 0.001 seconds
+  main: 0.104 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/MBeanServerFactory/ReleaseMBeanServerTest.java
+  clean: 0.0 seconds
+  build: 0.881 seconds
+  compile: 0.881 seconds
+  build: 0.0 seconds
+  main: 0.109 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/modelmbean/ModelMBeanInfoSupport/GetAllDescriptorsTest.java
+  clean: 0.0 seconds
+  build: 1.152 seconds
+  compile: 1.152 seconds
+  build: 0.0 seconds
+  main: 0.19 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/modelmbean/SimpleModelMBean/SimpleModelMBeanCommand.java
+  clean: 0.0 seconds
+  build: 1.079 seconds
+  compile: 1.079 seconds
+  build: 0.0 seconds
+  main: 0.198 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/modelmbean/AddAttributeChangeNotificationListenerTest.java
+  clean: 0.0 seconds
+  build: 0.955 seconds
+  compile: 0.955 seconds
+  build: 0.001 seconds
+  main: 0.128 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
 TEST: javax/management/modelmbean/DescriptorSupportSerialTest.java
   clean: 0.0 seconds
-  build: 0.922 seconds
-  compile: 0.922 seconds
+  build: 0.982 seconds
+  compile: 0.982 seconds
   build: 0.0 seconds
-  main: 0.594 seconds
+  main: 0.565 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/modelmbean/DescriptorSupportTest.java
   clean: 0.0 seconds
-  build: 1.1 seconds
-  compile: 1.1 seconds
+  build: 1.086 seconds
+  compile: 1.086 seconds
   build: 0.0 seconds
-  main: 0.124 seconds
+  main: 0.123 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/modelmbean/DescriptorSupportXMLTest.java
   clean: 0.0 seconds
-  build: 1.011 seconds
-  compile: 1.011 seconds
+  build: 1.18 seconds
+  compile: 1.179 seconds
   build: 0.0 seconds
-  main: 0.111 seconds
+  main: 0.155 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/modelmbean/ExoticTargetTypeTest.java
   clean: 0.0 seconds
-  build: 0.95 seconds
-  compile: 0.949 seconds
+  build: 0.969 seconds
+  compile: 0.969 seconds
   build: 0.0 seconds
-  main: 0.106 seconds
+  main: 0.116 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/modelmbean/InfoSupportTest.java
   clean: 0.0 seconds
-  build: 1.064 seconds
-  compile: 1.064 seconds
+  build: 1.108 seconds
+  compile: 1.108 seconds
   build: 0.0 seconds
   main: 0.106 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/modelmbean/LoggingExceptionTest.java
-  build: 0.924 seconds
-  compile: 0.924 seconds
-  main: 0.11 seconds
+  build: 0.989 seconds
+  compile: 0.988 seconds
+  main: 0.114 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/modelmbean/OnUnregisterTest.java
   clean: 0.0 seconds
-  build: 0.857 seconds
-  compile: 0.856 seconds
+  build: 0.82 seconds
+  compile: 0.819 seconds
   build: 0.0 seconds
-  main: 0.114 seconds
+  main: 0.118 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/modelmbean/RequiredModelMBeanGetAttributeTest.java
   clean: 0.0 seconds
-  build: 1.104 seconds
-  compile: 1.104 seconds
-  build: 0.001 seconds
-  main: 0.138 seconds
+  build: 1.083 seconds
+  compile: 1.082 seconds
+  build: 0.0 seconds
+  main: 0.155 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/modelmbean/RequiredModelMBeanMethodTest.java
   clean: 0.001 seconds
-  build: 1.049 seconds
-  compile: 1.049 seconds
+  build: 1.217 seconds
+  compile: 1.217 seconds
   build: 0.0 seconds
-  main: 0.143 seconds
+  main: 0.133 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/modelmbean/RequiredModelMBeanSetAttributeTest.java
-  clean: 0.001 seconds
-  build: 0.968 seconds
-  compile: 0.968 seconds
+  clean: 0.0 seconds
+  build: 0.933 seconds
+  compile: 0.933 seconds
   build: 0.0 seconds
-  main: 0.123 seconds
+  main: 0.117 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/modelmbean/UnserializableTargetObjectTest.java
-  clean: 0.001 seconds
-  build: 0.959 seconds
-  compile: 0.959 seconds
-  build: 0.0 seconds
-  main: 0.573 seconds
+  clean: 0.0 seconds
+  build: 0.964 seconds
+  compile: 0.964 seconds
+  build: 0.001 seconds
+  main: 0.571 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/monitor/AttributeArbitraryDataTypeTest.java
-  clean: 0.001 seconds
-  build: 1.298 seconds
-  compile: 1.298 seconds
-  build: 0.001 seconds
-  main: 27.179 seconds
+  clean: 0.0 seconds
+  build: 1.252 seconds
+  compile: 1.251 seconds
+  build: 0.0 seconds
+  main: 27.185 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/monitor/CounterMonitorDeadlockTest.java
   clean: 0.0 seconds
-  build: 1.045 seconds
-  compile: 1.045 seconds
+  build: 1.036 seconds
+  compile: 1.036 seconds
   build: 0.0 seconds
-  main: 0.213 seconds
+  main: 0.222 seconds
   build: 0.0 seconds
-  main: 0.225 seconds
+  main: 0.211 seconds
   build: 0.0 seconds
-  main: 0.218 seconds
+  main: 0.246 seconds
   build: 0.0 seconds
-  main: 0.224 seconds
+  main: 0.25 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/monitor/CounterMonitorInitThresholdTest.java
   clean: 0.0 seconds
-  build: 1.071 seconds
-  compile: 1.071 seconds
+  build: 1.206 seconds
+  compile: 1.206 seconds
   build: 0.0 seconds
-  main: 5.014 seconds
+  main: 5.023 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/monitor/CounterMonitorTest.java
   clean: 0.0 seconds
-  build: 0.987 seconds
-  compile: 0.986 seconds
+  build: 1.145 seconds
+  compile: 1.144 seconds
   build: 0.0 seconds
-  main: 2.636 seconds
+  main: 2.642 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/monitor/CounterMonitorThresholdTest.java
   clean: 0.0 seconds
-  build: 1.022 seconds
-  compile: 1.021 seconds
+  build: 1.082 seconds
+  compile: 1.082 seconds
   build: 0.0 seconds
-  main: 19.423 seconds
+  main: 19.428 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/monitor/DerivedGaugeMonitorTest.java
   clean: 0.0 seconds
-  build: 1.018 seconds
-  compile: 1.018 seconds
+  build: 1.073 seconds
+  compile: 1.073 seconds
   build: 0.0 seconds
-  main: 0.369 seconds
+  main: 0.359 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/monitor/GaugeMonitorDeadlockTest.java
   clean: 0.0 seconds
-  build: 1.058 seconds
-  compile: 1.058 seconds
+  build: 1.044 seconds
+  compile: 1.043 seconds
   build: 0.0 seconds
-  main: 0.212 seconds
+  main: 0.222 seconds
   build: 0.0 seconds
-  main: 0.212 seconds
+  main: 0.222 seconds
   build: 0.0 seconds
-  main: 0.241 seconds
-  build: 0.0 seconds
-  main: 0.219 seconds
+  main: 0.235 seconds
+  build: 0.001 seconds
+  main: 0.217 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/monitor/MultiMonitorTest.java
   clean: 0.0 seconds
-  build: 1.03 seconds
-  compile: 1.029 seconds
+  build: 1.047 seconds
+  compile: 1.047 seconds
   build: 0.0 seconds
-  main: 1.331 seconds
+  main: 1.339 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/monitor/NonComparableAttributeValueTest.java
   clean: 0.0 seconds
-  build: 1.039 seconds
-  compile: 1.039 seconds
+  build: 1.119 seconds
+  compile: 1.118 seconds
   build: 0.0 seconds
-  main: 3.153 seconds
+  main: 3.152 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/monitor/NullAttributeValueTest.java
   clean: 0.0 seconds
-  build: 1.106 seconds
-  compile: 1.106 seconds
+  build: 1.083 seconds
+  compile: 1.083 seconds
   build: 0.0 seconds
-  main: 3.149 seconds
+  main: 3.144 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/monitor/ReflectionExceptionTest.java
   clean: 0.0 seconds
-  build: 1.097 seconds
-  compile: 1.097 seconds
+  build: 1.159 seconds
+  compile: 1.159 seconds
   build: 0.0 seconds
-  main: 3.17 seconds
+  main: 3.216 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/monitor/RuntimeExceptionTest.java
-  clean: 0.001 seconds
-  build: 1.152 seconds
-  compile: 1.152 seconds
+  clean: 0.0 seconds
+  build: 1.148 seconds
+  compile: 1.148 seconds
   build: 0.0 seconds
-  main: 3.166 seconds
+  main: 3.181 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/monitor/StartStopTest.java
   clean: 0.0 seconds
-  build: 1.044 seconds
-  compile: 1.044 seconds
+  build: 1.037 seconds
+  compile: 1.037 seconds
   build: 0.0 seconds
-  main: 2.143 seconds
+  main: 2.15 seconds
   build: 0.0 seconds
-  main: 2.137 seconds
-  build: 0.001 seconds
-  main: 2.148 seconds
-  build: 0.0 seconds
-  main: 2.147 seconds
-  build: 0.0 seconds
-  main: 2.148 seconds
-  build: 0.001 seconds
   main: 2.135 seconds
-  build: 0.001 seconds
-  main: 2.142 seconds
   build: 0.0 seconds
-  main: 2.143 seconds
+  main: 2.135 seconds
   build: 0.0 seconds
-  main: 2.149 seconds
+  main: 2.145 seconds
+  build: 0.0 seconds
+  main: 2.146 seconds
+  build: 0.0 seconds
+  main: 2.171 seconds
+  build: 0.0 seconds
+  main: 2.151 seconds
+  build: 0.0 seconds
+  main: 2.14 seconds
+  build: 0.0 seconds
+  main: 2.133 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/monitor/StringMonitorDeadlockTest.java
   clean: 0.0 seconds
-  build: 1.059 seconds
-  compile: 1.059 seconds
-  build: 0.0 seconds
-  main: 0.216 seconds
+  build: 1.109 seconds
+  compile: 1.109 seconds
   build: 0.001 seconds
-  main: 0.215 seconds
+  main: 0.22 seconds
   build: 0.0 seconds
-  main: 0.233 seconds
+  main: 0.21 seconds
   build: 0.0 seconds
-  main: 0.226 seconds
+  main: 0.219 seconds
+  build: 0.0 seconds
+  main: 0.232 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/monitor/ThreadPoolAccTest.java
   clean: 0.0 seconds
-  build: 1.041 seconds
-  compile: 1.041 seconds
+  build: 1.109 seconds
+  compile: 1.109 seconds
   build: 0.0 seconds
-  main: 2.153 seconds
+  main: 2.156 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/monitor/ThreadPoolTest.java
   clean: 0.0 seconds
-  build: 1.01 seconds
-  compile: 1.01 seconds
-  build: 0.001 seconds
-  main: 0.198 seconds
+  build: 1.063 seconds
+  compile: 1.063 seconds
+  build: 0.0 seconds
+  main: 0.199 seconds
   build: 0.0 seconds
   main: 0.195 seconds
+  build: 0.001 seconds
+  main: 0.203 seconds
   build: 0.0 seconds
-  main: 0.193 seconds
+  main: 0.189 seconds
   build: 0.0 seconds
-  main: 0.188 seconds
+  main: 0.192 seconds
   build: 0.0 seconds
   main: 0.196 seconds
   build: 0.0 seconds
-  main: 0.194 seconds
-  build: 0.001 seconds
-  main: 0.197 seconds
+  main: 0.183 seconds
   build: 0.0 seconds
-  main: 0.195 seconds
+  main: 0.188 seconds
   build: 0.0 seconds
-  main: 0.189 seconds
+  main: 0.18 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/MustBeValidMBeanInfo/MustBeValidCommand.java
+  clean: 0.0 seconds
+  build: 0.89 seconds
+  compile: 0.89 seconds
+  build: 0.0 seconds
+  main: 0.09 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/mxbean/AmbiguousConstructorTest.java
+  clean: 0.0 seconds
+  build: 0.907 seconds
+  compile: 0.906 seconds
+  build: 0.0 seconds
+  main: 0.146 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/mxbean/ComparatorExceptionTest.java
+  build: 0.97 seconds
+  compile: 0.97 seconds
+  main: 0.117 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/mxbean/ExceptionDiagnosisTest.java
+  build: 1.146 seconds
+  compile: 1.146 seconds
+  main: 0.157 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/mxbean/GenericArrayTypeTest.java
+  clean: 0.0 seconds
+  build: 1.255 seconds
+  compile: 1.255 seconds
+  build: 0.0 seconds
+  main: 0.758 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/mxbean/GenericTypeTest.java
+  build: 1.12 seconds
+  compile: 1.12 seconds
+  main: 0.145 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/mxbean/InvalidMXBeanRegistrationTest.java
+  clean: 0.0 seconds
+  build: 0.926 seconds
+  compile: 0.926 seconds
+  build: 0.0 seconds
+  main: 0.123 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/mxbean/LeakTest.java
+  build: 1.508 seconds
+  compile: 1.508 seconds
+  build: 0.0 seconds
+  main: 0.381 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/mxbean/MBeanOperationInfoTest.java
+  clean: 0.0 seconds
+  build: 0.972 seconds
+  compile: 0.972 seconds
+  build: 0.0 seconds
+  main: 0.152 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/mxbean/MiscTest.java
+  clean: 0.0 seconds
+  build: 1.414 seconds
+  compile: 1.413 seconds
+  build: 0.0 seconds
+  main: 0.259 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/mxbean/MXBeanAnnotationTest.java
+  clean: 0.0 seconds
+  build: 0.975 seconds
+  compile: 0.975 seconds
+  build: 0.001 seconds
+  main: 0.126 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/mxbean/MXBeanFlagTest.java
+  clean: 0.0 seconds
+  build: 0.983 seconds
+  compile: 0.983 seconds
+  build: 0.0 seconds
+  main: 0.127 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/mxbean/MXBeanPreRegisterTest.java
+  clean: 0.0 seconds
+  build: 0.991 seconds
+  compile: 0.991 seconds
+  build: 0.001 seconds
+  main: 0.111 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/mxbean/MXBeanRefTest.java
+  clean: 0.0 seconds
+  build: 0.997 seconds
+  compile: 0.997 seconds
+  build: 0.0 seconds
+  main: 0.132 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/mxbean/MXBeanTest.java
+  clean: 0.0 seconds
+  build: 1.788 seconds
+  compile: 1.788 seconds
+  build: 0.0 seconds
+  main: 1.261 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/mxbean/OperationImpactTest.java
+  clean: 0.0 seconds
+  build: 0.957 seconds
+  compile: 0.957 seconds
+  build: 0.0 seconds
+  main: 0.115 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/mxbean/OverloadTest.java
+  clean: 0.0 seconds
+  build: 0.927 seconds
+  compile: 0.927 seconds
+  build: 0.0 seconds
+  main: 0.174 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/mxbean/PreRegisterNameTest.java
+  build: 1.011 seconds
+  compile: 1.011 seconds
+  main: 0.165 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/mxbean/PropertyNamesTest.java
+  clean: 0.0 seconds
+  build: 1.031 seconds
+  compile: 1.031 seconds
+  build: 0.0 seconds
+  main: 0.159 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/mxbean/SameObjectTwoNamesTest.java
+  build: 0.928 seconds
+  compile: 0.928 seconds
+  main: 0.102 seconds
+  build: 0.0 seconds
+  main: 0.105 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/mxbean/StandardMBeanOverrideTest.java
+  clean: 0.0 seconds
+  build: 1.079 seconds
+  compile: 1.079 seconds
+  build: 0.0 seconds
+  main: 0.187 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/mxbean/ThreadMXBeanTest.java
+  clean: 0.0 seconds
+  build: 0.99 seconds
+  compile: 0.99 seconds
+  build: 0.0 seconds
+  main: 0.151 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/mxbean/TypeNameTest.java
+  build: 1.055 seconds
+  compile: 1.055 seconds
+  main: 0.121 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/notification/BroadcasterSupportDeadlockTest.java
+  clean: 0.0 seconds
+  build: 1.012 seconds
+  compile: 1.012 seconds
+  build: 0.0 seconds
+  main: 0.372 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/notification/FilterExceptionTest.java
   clean: 0.0 seconds
   build: 0.908 seconds
   compile: 0.908 seconds
@@ -764,577 +945,396 @@ TEST: javax/management/MustBeValidMBeanInfo/MustBeValidCommand.java
   main: 0.092 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
-TEST: javax/management/mxbean/AmbiguousConstructorTest.java
-  clean: 0.0 seconds
-  build: 0.891 seconds
-  compile: 0.891 seconds
-  build: 0.0 seconds
-  main: 0.15 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/mxbean/ComparatorExceptionTest.java
-  build: 0.945 seconds
-  compile: 0.945 seconds
-  main: 0.135 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/mxbean/ExceptionDiagnosisTest.java
-  build: 1.022 seconds
-  compile: 1.022 seconds
-  main: 0.164 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/mxbean/GenericArrayTypeTest.java
-  clean: 0.0 seconds
-  build: 1.158 seconds
-  compile: 1.157 seconds
-  build: 0.0 seconds
-  main: 0.774 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/mxbean/GenericTypeTest.java
-  build: 0.978 seconds
-  compile: 0.977 seconds
-  main: 0.137 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/mxbean/InvalidMXBeanRegistrationTest.java
-  clean: 0.0 seconds
-  build: 0.905 seconds
-  compile: 0.905 seconds
-  build: 0.0 seconds
-  main: 0.122 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/mxbean/LeakTest.java
-  build: 1.434 seconds
-  compile: 1.434 seconds
-  build: 0.0 seconds
-  main: 0.376 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/mxbean/MBeanOperationInfoTest.java
-  clean: 0.0 seconds
-  build: 0.944 seconds
-  compile: 0.944 seconds
-  build: 0.0 seconds
-  main: 0.153 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/mxbean/MiscTest.java
-  clean: 0.0 seconds
-  build: 1.396 seconds
-  compile: 1.396 seconds
-  build: 0.0 seconds
-  main: 0.251 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/mxbean/MXBeanAnnotationTest.java
-  clean: 0.0 seconds
-  build: 0.94 seconds
-  compile: 0.94 seconds
-  build: 0.0 seconds
-  main: 0.128 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/mxbean/MXBeanFlagTest.java
-  clean: 0.0 seconds
-  build: 0.917 seconds
-  compile: 0.917 seconds
-  build: 0.0 seconds
-  main: 0.13 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/mxbean/MXBeanPreRegisterTest.java
-  clean: 0.0 seconds
-  build: 0.919 seconds
-  compile: 0.919 seconds
-  build: 0.0 seconds
-  main: 0.113 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/mxbean/MXBeanRefTest.java
-  clean: 0.0 seconds
-  build: 0.978 seconds
-  compile: 0.978 seconds
-  build: 0.001 seconds
-  main: 0.128 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/mxbean/MXBeanTest.java
-  clean: 0.0 seconds
-  build: 1.741 seconds
-  compile: 1.741 seconds
-  build: 0.0 seconds
-  main: 1.358 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/mxbean/OperationImpactTest.java
-  clean: 0.0 seconds
-  build: 0.872 seconds
-  compile: 0.871 seconds
-  build: 0.001 seconds
-  main: 0.117 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/mxbean/OverloadTest.java
-  clean: 0.0 seconds
-  build: 0.933 seconds
-  compile: 0.932 seconds
-  build: 0.0 seconds
-  main: 0.173 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/mxbean/PreRegisterNameTest.java
-  build: 0.991 seconds
-  compile: 0.991 seconds
-  main: 0.17 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/mxbean/PropertyNamesTest.java
-  clean: 0.0 seconds
-  build: 1.01 seconds
-  compile: 1.01 seconds
-  build: 0.0 seconds
-  main: 0.155 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/mxbean/SameObjectTwoNamesTest.java
-  build: 0.887 seconds
-  compile: 0.887 seconds
-  main: 0.115 seconds
-  build: 0.001 seconds
-  main: 0.118 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/mxbean/StandardMBeanOverrideTest.java
-  clean: 0.0 seconds
-  build: 1.047 seconds
-  compile: 1.047 seconds
-  build: 0.001 seconds
-  main: 0.17 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/mxbean/ThreadMXBeanTest.java
-  clean: 0.0 seconds
-  build: 0.946 seconds
-  compile: 0.946 seconds
-  build: 0.0 seconds
-  main: 0.149 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/mxbean/TypeNameTest.java
-  build: 0.997 seconds
-  compile: 0.996 seconds
-  main: 0.127 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/notification/BroadcasterSupportDeadlockTest.java
-  clean: 0.0 seconds
-  build: 0.994 seconds
-  compile: 0.994 seconds
-  build: 0.0 seconds
-  main: 0.363 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/notification/FilterExceptionTest.java
-  clean: 0.0 seconds
-  build: 0.884 seconds
-  compile: 0.884 seconds
-  build: 0.0 seconds
-  main: 0.101 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
 TEST: javax/management/notification/NotifExecutorTest.java
   clean: 0.0 seconds
-  build: 1.038 seconds
-  compile: 1.038 seconds
-  build: 0.0 seconds
+  build: 1.028 seconds
+  compile: 1.028 seconds
+  build: 0.001 seconds
   main: 3.138 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/notification/NotifInfoTest.java
   clean: 0.0 seconds
-  build: 0.909 seconds
-  compile: 0.909 seconds
+  build: 0.876 seconds
+  compile: 0.875 seconds
   build: 0.0 seconds
-  main: 0.095 seconds
+  main: 0.101 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/ObjectInstance/MBeanInfoFailTest.java
   clean: 0.0 seconds
-  build: 1.091 seconds
-  compile: 1.091 seconds
+  build: 1.101 seconds
+  compile: 1.101 seconds
   build: 0.0 seconds
-  main: 0.134 seconds
+  main: 0.137 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/ObjectInstance/ObjectInstanceNullTest.java
   clean: 0.0 seconds
-  build: 1.021 seconds
-  compile: 1.021 seconds
+  build: 1.039 seconds
+  compile: 1.039 seconds
   build: 0.0 seconds
-  main: 0.094 seconds
+  main: 0.091 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/ObjectInstance/ToStringMethodTest.java
   clean: 0.0 seconds
-  build: 0.868 seconds
-  compile: 0.868 seconds
+  build: 0.866 seconds
+  compile: 0.866 seconds
   build: 0.0 seconds
   main: 0.086 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/ObjectName/ApplyWildcardTest.java
   clean: 0.0 seconds
-  build: 0.996 seconds
-  compile: 0.995 seconds
-  build: 0.0 seconds
-  main: 0.12 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/ObjectName/ComparatorTest.java
-  clean: 0.0 seconds
-  build: 0.95 seconds
-  compile: 0.949 seconds
-  build: 0.0 seconds
-  main: 0.11 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/ObjectName/DelegateNameWildcardNameTest.java
-  clean: 0.0 seconds
-  build: 0.894 seconds
-  compile: 0.894 seconds
-  build: 0.0 seconds
-  main: 0.093 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/ObjectName/NullEmptyKeyValueTest.java
-  clean: 0.0 seconds
-  build: 1.033 seconds
-  compile: 1.033 seconds
-  build: 0.0 seconds
-  main: 0.093 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/ObjectName/ObjectNameGetInstanceTest.java
-  clean: 0.0 seconds
-  build: 0.869 seconds
-  compile: 0.869 seconds
-  build: 0.0 seconds
-  main: 0.095 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/ObjectName/RepositoryWildcardTest.java
-  clean: 0.0 seconds
-  build: 1.096 seconds
-  compile: 1.096 seconds
-  build: 0.0 seconds
-  main: 0.133 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/ObjectName/SerialCompatTest.java
-  clean: 0.0 seconds
-  build: 1.086 seconds
-  compile: 1.085 seconds
+  build: 0.992 seconds
+  compile: 0.991 seconds
   build: 0.0 seconds
   main: 0.119 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
+TEST: javax/management/ObjectName/ComparatorTest.java
+  clean: 0.0 seconds
+  build: 0.951 seconds
+  compile: 0.951 seconds
+  build: 0.0 seconds
+  main: 0.116 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/ObjectName/DelegateNameWildcardNameTest.java
+  clean: 0.0 seconds
+  build: 0.874 seconds
+  compile: 0.874 seconds
+  build: 0.0 seconds
+  main: 0.106 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/ObjectName/NullEmptyKeyValueTest.java
+  clean: 0.0 seconds
+  build: 1.034 seconds
+  compile: 1.034 seconds
+  build: 0.0 seconds
+  main: 0.095 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/ObjectName/ObjectNameGetInstanceTest.java
+  clean: 0.0 seconds
+  build: 0.838 seconds
+  compile: 0.838 seconds
+  build: 0.0 seconds
+  main: 0.091 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/ObjectName/RepositoryWildcardTest.java
+  clean: 0.0 seconds
+  build: 1.072 seconds
+  compile: 1.072 seconds
+  build: 0.0 seconds
+  main: 0.134 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/ObjectName/SerialCompatTest.java
+  clean: 0.0 seconds
+  build: 1.054 seconds
+  compile: 1.054 seconds
+  build: 0.0 seconds
+  main: 0.114 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
 TEST: javax/management/ObjectName/ValueWildcardTest.java
   clean: 0.0 seconds
-  build: 1.172 seconds
-  compile: 1.172 seconds
+  build: 1.154 seconds
+  compile: 1.152 seconds
   build: 0.0 seconds
-  main: 0.122 seconds
+  main: 0.115 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/openmbean/ArrayTypeTest.java
   clean: 0.0 seconds
-  build: 1.131 seconds
-  compile: 1.131 seconds
-  build: 0.001 seconds
-  main: 0.114 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/openmbean/BadConstraintTest.java
-  clean: 0.0 seconds
-  build: 1.204 seconds
-  compile: 1.204 seconds
-  build: 0.0 seconds
-  main: 0.135 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/openmbean/CompositeDataStringTest.java
-  build: 0.923 seconds
-  compile: 0.922 seconds
-  main: 0.104 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/openmbean/ConstraintTest.java
-  clean: 0.0 seconds
-  build: 1.366 seconds
-  compile: 1.366 seconds
-  build: 0.0 seconds
-  main: 0.166 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/openmbean/EqualsTest.java
-  clean: 0.0 seconds
-  build: 0.935 seconds
-  compile: 0.935 seconds
-  build: 0.0 seconds
-  main: 0.099 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/openmbean/IsValueTest.java
-  build: 0.946 seconds
-  compile: 0.946 seconds
-  main: 0.107 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/openmbean/NullConstructorParamsTest.java
-  build: 0.917 seconds
-  compile: 0.917 seconds
-  main: 0.092 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/openmbean/OpenTypeDescriptorTest.java
-  clean: 0.0 seconds
-  build: 1.452 seconds
-  compile: 1.452 seconds
-  build: 0.0 seconds
-  main: 0.207 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/openmbean/TabularDataOrderTest.java
-  build: 1.038 seconds
-  compile: 1.037 seconds
-  main: 0.174 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/proxy/NotificationEmitterProxy.java
-  clean: 0.0 seconds
-  build: 1.024 seconds
-  compile: 1.024 seconds
-  build: 0.0 seconds
-  main: 0.647 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/proxy/ProxyObjectMethodsTest.java
-  clean: 0.0 seconds
-  build: 0.994 seconds
-  compile: 0.994 seconds
-  build: 0.001 seconds
-  main: 0.607 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/query/CustomQueryTest.java
-  build: 0.959 seconds
-  compile: 0.959 seconds
-  main: 0.172 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/query/InstanceOfExpTest.java
-  clean: 0.001 seconds
-  build: 0.891 seconds
-  compile: 0.891 seconds
-  build: 0.0 seconds
-  main: 0.158 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/query/QueryExpStringTest.java
-  clean: 0.0 seconds
-  build: 1.177 seconds
-  compile: 1.176 seconds
-  build: 0.0 seconds
-  main: 0.113 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/query/QueryMatchTest.java
-  clean: 0.0 seconds
-  build: 1.016 seconds
-  compile: 1.016 seconds
-  build: 0.0 seconds
-  main: 0.219 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/query/QuerySubstringTest.java
-  clean: 0.0 seconds
-  build: 0.939 seconds
-  compile: 0.938 seconds
-  build: 0.0 seconds
-  main: 0.185 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/relation/NonArrayListTest.java
-  clean: 0.0 seconds
-  build: 1.016 seconds
-  compile: 1.016 seconds
-  build: 0.0 seconds
-  main: 0.137 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/relation/RelationNotificationSeqNoTest.java
-  build: 1.007 seconds
-  compile: 1.007 seconds
-  main: 0.153 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/relation/RelationNotificationSourceTest.java
-  clean: 0.0 seconds
-  build: 0.926 seconds
-  compile: 0.926 seconds
-  build: 0.0 seconds
-  main: 0.102 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/relation/RelationTypeTest.java
-  clean: 0.0 seconds
-  build: 0.964 seconds
-  compile: 0.964 seconds
-  build: 0.0 seconds
-  main: 0.124 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/remote/mandatory/connection/AddressableTest.java
-  clean: 0.0 seconds
-  build: 0.979 seconds
-  compile: 0.978 seconds
-  build: 0.0 seconds
-  main: 0.67 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/remote/mandatory/connection/BrokenConnectionTest.java
-  clean: 0.0 seconds
-  build: 1.438 seconds
-  compile: 1.437 seconds
-  build: 0.0 seconds
-  main: 0.904 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/remote/mandatory/connection/CloseableTest.java
-  clean: 0.0 seconds
-  build: 0.917 seconds
-  compile: 0.917 seconds
-  build: 0.0 seconds
-  main: 0.148 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/remote/mandatory/connection/CloseFailedClientTest.java
-  clean: 0.0 seconds
-  build: 0.912 seconds
-  compile: 0.912 seconds
-  build: 0.0 seconds
-  main: 0.232 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/remote/mandatory/connection/CloseServerTest.java
-  clean: 0.0 seconds
-  build: 0.928 seconds
-  compile: 0.928 seconds
-  build: 0.0 seconds
-  main: 0.784 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/remote/mandatory/connection/CloseUnconnectedTest.java
-  clean: 0.0 seconds
-  build: 0.909 seconds
-  compile: 0.909 seconds
-  build: 0.0 seconds
-  main: 0.593 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/remote/mandatory/connection/ConnectionListenerNullTest.java
-  clean: 0.0 seconds
-  build: 0.949 seconds
-  compile: 0.949 seconds
-  build: 0.0 seconds
-  main: 0.123 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/remote/mandatory/connection/ConnectionTest.java
-  clean: 0.0 seconds
-  build: 1.185 seconds
+  build: 1.186 seconds
   compile: 1.185 seconds
-  build: 0.0 seconds
-  main: 0.827 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/remote/mandatory/connection/DaemonRMIExporterTest.java
-  build: 0.954 seconds
-  compile: 0.953 seconds
-  main: 0.542 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/remote/mandatory/connection/DeadLockTest.java
-  clean: 0.0 seconds
-  build: 0.955 seconds
-  compile: 0.955 seconds
-  build: 0.0 seconds
-  main: 5.146 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/remote/mandatory/connection/FailedConnectionTest.java
-  clean: 0.0 seconds
-  build: 0.953 seconds
-  compile: 0.952 seconds
-  build: 0.0 seconds
-  main: 2.694 seconds
-TEST RESULT: Passed. Execution successful
---------------------------------------------------
-TEST: javax/management/remote/mandatory/connection/GetConnectionTest.java
-  clean: 0.0 seconds
-  build: 0.947 seconds
-  compile: 0.947 seconds
   build: 0.0 seconds
   main: 0.136 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
+TEST: javax/management/openmbean/BadConstraintTest.java
+  clean: 0.0 seconds
+  build: 1.215 seconds
+  compile: 1.215 seconds
+  build: 0.0 seconds
+  main: 0.13 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/openmbean/CompositeDataStringTest.java
+  build: 0.862 seconds
+  compile: 0.862 seconds
+  main: 0.105 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/openmbean/ConstraintTest.java
+  clean: 0.0 seconds
+  build: 1.337 seconds
+  compile: 1.337 seconds
+  build: 0.0 seconds
+  main: 0.158 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/openmbean/EqualsTest.java
+  clean: 0.0 seconds
+  build: 0.936 seconds
+  compile: 0.936 seconds
+  build: 0.0 seconds
+  main: 0.096 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/openmbean/IsValueTest.java
+  build: 0.935 seconds
+  compile: 0.935 seconds
+  main: 0.109 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/openmbean/NullConstructorParamsTest.java
+  build: 0.829 seconds
+  compile: 0.829 seconds
+  main: 0.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/openmbean/OpenTypeDescriptorTest.java
+  clean: 0.0 seconds
+  build: 1.407 seconds
+  compile: 1.407 seconds
+  build: 0.0 seconds
+  main: 0.212 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/openmbean/TabularDataOrderTest.java
+  build: 0.972 seconds
+  compile: 0.971 seconds
+  main: 0.182 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/proxy/NotificationEmitterProxy.java
+  clean: 0.0 seconds
+  build: 1.017 seconds
+  compile: 1.017 seconds
+  build: 0.0 seconds
+  main: 0.628 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/proxy/ProxyObjectMethodsTest.java
+  clean: 0.0 seconds
+  build: 1.0 seconds
+  compile: 0.999 seconds
+  build: 0.0 seconds
+  main: 0.595 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/query/CustomQueryTest.java
+  build: 0.963 seconds
+  compile: 0.963 seconds
+  main: 0.183 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/query/InstanceOfExpTest.java
+  clean: 0.0 seconds
+  build: 0.931 seconds
+  compile: 0.931 seconds
+  build: 0.0 seconds
+  main: 0.152 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/query/QueryExpStringTest.java
+  clean: 0.0 seconds
+  build: 1.206 seconds
+  compile: 1.206 seconds
+  build: 0.0 seconds
+  main: 0.115 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/query/QueryMatchTest.java
+  clean: 0.0 seconds
+  build: 1.035 seconds
+  compile: 1.034 seconds
+  build: 0.0 seconds
+  main: 0.209 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/query/QuerySubstringTest.java
+  clean: 0.0 seconds
+  build: 0.923 seconds
+  compile: 0.923 seconds
+  build: 0.0 seconds
+  main: 0.186 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/relation/NonArrayListTest.java
+  clean: 0.0 seconds
+  build: 1.013 seconds
+  compile: 1.013 seconds
+  build: 0.001 seconds
+  main: 0.139 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/relation/RelationNotificationSeqNoTest.java
+  build: 1.012 seconds
+  compile: 1.011 seconds
+  main: 0.139 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/relation/RelationNotificationSourceTest.java
+  clean: 0.0 seconds
+  build: 0.941 seconds
+  compile: 0.941 seconds
+  build: 0.001 seconds
+  main: 0.094 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/relation/RelationTypeTest.java
+  clean: 0.0 seconds
+  build: 0.909 seconds
+  compile: 0.908 seconds
+  build: 0.0 seconds
+  main: 0.121 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/remote/mandatory/connection/AddressableTest.java
+  clean: 0.0 seconds
+  build: 1.017 seconds
+  compile: 1.016 seconds
+  build: 0.0 seconds
+  main: 0.668 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/remote/mandatory/connection/BrokenConnectionTest.java
+  clean: 0.0 seconds
+  build: 1.369 seconds
+  compile: 1.368 seconds
+  build: 0.0 seconds
+  main: 0.9 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/remote/mandatory/connection/CloseableTest.java
+  clean: 0.0 seconds
+  build: 0.885 seconds
+  compile: 0.885 seconds
+  build: 0.0 seconds
+  main: 0.159 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/remote/mandatory/connection/CloseFailedClientTest.java
+  clean: 0.0 seconds
+  build: 0.885 seconds
+  compile: 0.885 seconds
+  build: 0.0 seconds
+  main: 0.229 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/remote/mandatory/connection/CloseServerTest.java
+  clean: 0.0 seconds
+  build: 0.99 seconds
+  compile: 0.99 seconds
+  build: 0.001 seconds
+  main: 0.774 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/remote/mandatory/connection/CloseUnconnectedTest.java
+  clean: 0.0 seconds
+  build: 0.959 seconds
+  compile: 0.959 seconds
+  build: 0.001 seconds
+  main: 0.625 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/remote/mandatory/connection/ConnectionListenerNullTest.java
+  clean: 0.0 seconds
+  build: 0.963 seconds
+  compile: 0.962 seconds
+  build: 0.0 seconds
+  main: 0.118 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/remote/mandatory/connection/ConnectionTest.java
+  clean: 0.0 seconds
+  build: 1.208 seconds
+  compile: 1.208 seconds
+  build: 0.0 seconds
+  main: 0.816 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/remote/mandatory/connection/DaemonRMIExporterTest.java
+  build: 0.98 seconds
+  compile: 0.98 seconds
+  main: 0.534 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/remote/mandatory/connection/DeadLockTest.java
+  clean: 0.0 seconds
+  build: 0.943 seconds
+  compile: 0.942 seconds
+  build: 0.0 seconds
+  main: 5.132 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/remote/mandatory/connection/FailedConnectionTest.java
+  clean: 0.0 seconds
+  build: 0.968 seconds
+  compile: 0.968 seconds
+  build: 0.0 seconds
+  main: 2.687 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: javax/management/remote/mandatory/connection/GetConnectionTest.java
+  clean: 0.0 seconds
+  build: 0.984 seconds
+  compile: 0.984 seconds
+  build: 0.0 seconds
+  main: 0.13 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
 TEST: javax/management/remote/mandatory/connection/IdleTimeoutTest.java
   clean: 0.0 seconds
-  build: 1.262 seconds
-  compile: 1.262 seconds
+  build: 1.308 seconds
+  compile: 1.308 seconds
   build: 0.0 seconds
   main: 7.83 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/connection/IIOPURLTest.java
   clean: 0.0 seconds
-  build: 0.921 seconds
-  compile: 0.92 seconds
+  build: 1.087 seconds
+  compile: 1.087 seconds
   build: 0.0 seconds
-  main: 0.596 seconds
+  main: 0.616 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/connection/MultiOpenCloseTest.java
   clean: 0.0 seconds
-  build: 0.926 seconds
-  compile: 0.926 seconds
+  build: 1.401 seconds
+  compile: 1.401 seconds
   build: 0.0 seconds
-  main: 1.067 seconds
+  main: 1.07 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/connection/MultiThreadDeadLockTest.java
   clean: 0.0 seconds
-  build: 1.033 seconds
-  compile: 1.033 seconds
-  build: 0.0 seconds
-  main: 3.94 seconds
+  build: 1.235 seconds
+  compile: 1.235 seconds
+  build: 0.001 seconds
+  main: 3.896 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/connection/NoIIOP.java
-  build: 1.013 seconds
-  compile: 1.013 seconds
-  main: 0.082 seconds
+  build: 0.979 seconds
+  compile: 0.979 seconds
+  main: 0.083 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/connection/ReconnectTest.java
   clean: 0.0 seconds
-  build: 0.952 seconds
-  compile: 0.952 seconds
+  build: 1.045 seconds
+  compile: 1.045 seconds
   build: 0.0 seconds
-  main: 12.766 seconds
+  main: 12.761 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/connection/RMIConnectionIdTest.java
@@ -1354,19 +1354,19 @@ elapsed time (seconds): 0.0
 
 ACTION: build -- Passed. Build successful
 REASON: User specified action: run build RMIConnectionIdTest 
-TIME:   0.935 seconds
+TIME:   0.976 seconds
 messages:
 command: build RMIConnectionIdTest
 reason: User specified action: run build RMIConnectionIdTest 
-elapsed time (seconds): 0.935
+elapsed time (seconds): 0.976
 
 ACTION: compile -- Passed. Compilation successful
 REASON: .class file out of date or does not exist
-TIME:   0.935 seconds
+TIME:   0.976 seconds
 messages:
 command: compile /home/openjdk/sources/jdk8_tl/jdk/test/javax/management/remote/mandatory/connection/RMIConnectionIdTest.java
 reason: .class file out of date or does not exist
-elapsed time (seconds): 0.935
+elapsed time (seconds): 0.976
 STDOUT:
 STDERR:
 
@@ -1380,11 +1380,11 @@ elapsed time (seconds): 0.0
 
 ACTION: main -- Failed. Unexpected exit from test [exit code: 1]
 REASON: User specified action: run main RMIConnectionIdTest 
-TIME:   0.529 seconds
+TIME:   0.513 seconds
 messages:
 command: main RMIConnectionIdTest
 reason: User specified action: run main RMIConnectionIdTest 
-elapsed time (seconds): 0.529
+elapsed time (seconds): 0.513
 STDOUT:
 Testing that RMI connection id includes client host name
 Got connection id: rmi://127.0.0.1  1
@@ -1396,458 +1396,458 @@ TEST RESULT: Failed. Unexpected exit from test [exit code: 1]
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/connection/RMIConnector_NPETest.java
   clean: 0.0 seconds
-  build: 0.931 seconds
-  compile: 0.931 seconds
+  build: 0.898 seconds
+  compile: 0.898 seconds
   build: 0.0 seconds
-  main: 5.482 seconds
+  main: 5.554 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/connection/RMIExitTest.java
   clean: 0.0 seconds
-  build: 0.925 seconds
-  compile: 0.924 seconds
+  build: 1.068 seconds
+  compile: 1.068 seconds
   build: 0.0 seconds
-  main: 0.541 seconds
+  main: 0.586 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/connection/RMISerializeTest.java
   clean: 0.0 seconds
-  build: 0.898 seconds
-  compile: 0.898 seconds
+  build: 1.124 seconds
+  compile: 1.123 seconds
   build: 0.0 seconds
-  main: 0.131 seconds
+  main: 0.138 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/connectorServer/ConnectorStopDeadlockTest.java
-  build: 0.932 seconds
-  compile: 0.932 seconds
-  main: 0.529 seconds
+  build: 1.255 seconds
+  compile: 1.254 seconds
+  main: 0.585 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/connectorServer/JNDIFailureTest.java
   clean: 0.0 seconds
-  build: 0.922 seconds
-  compile: 0.922 seconds
+  build: 1.045 seconds
+  compile: 1.045 seconds
   build: 0.0 seconds
-  main: 0.489 seconds
+  main: 0.463 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/connectorServer/MBSFPreStartPostStartTest.java
   clean: 0.0 seconds
-  build: 0.977 seconds
-  compile: 0.977 seconds
+  build: 1.16 seconds
+  compile: 1.16 seconds
   build: 0.001 seconds
-  main: 0.542 seconds
+  main: 0.575 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/connectorServer/RMIExporterTest.java
   clean: 0.0 seconds
-  build: 0.972 seconds
-  compile: 0.972 seconds
-  build: 0.001 seconds
-  main: 0.54 seconds
+  build: 1.189 seconds
+  compile: 1.189 seconds
+  build: 0.0 seconds
+  main: 0.555 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/connectorServer/SetMBeanServerForwarder.java
-  clean: 0.0 seconds
-  build: 1.142 seconds
-  compile: 1.142 seconds
+  clean: 0.001 seconds
+  build: 1.241 seconds
+  compile: 1.241 seconds
   build: 0.0 seconds
-  main: 0.15 seconds
+  main: 0.13 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/loading/DefaultProviderTest.java
   clean: 0.0 seconds
-  build: 0.946 seconds
-  compile: 0.946 seconds
+  build: 0.976 seconds
+  compile: 0.976 seconds
   build: 0.0 seconds
-  main: 0.104 seconds
+  main: 0.106 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/loading/DeserializeEncodedURLTest.java
   clean: 0.0 seconds
-  build: 1.08 seconds
-  compile: 1.08 seconds
+  build: 1.06 seconds
+  compile: 1.059 seconds
   build: 0.0 seconds
-  main: 0.499 seconds
+  main: 0.484 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/loading/MethodResultTest.java
   clean: 0.0 seconds
-  build: 1.192 seconds
-  compile: 1.19 seconds
+  build: 1.28 seconds
+  compile: 1.28 seconds
   build: 0.0 seconds
-  main: 0.836 seconds
+  main: 0.808 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/loading/MissingClassTest.java
   clean: 0.0 seconds
-  build: 1.454 seconds
-  compile: 1.454 seconds
+  build: 1.579 seconds
+  compile: 1.579 seconds
   build: 0.0 seconds
-  main: 1.858 seconds
+  main: 1.71 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/loading/RMIDownloadTest.java
-  build: 1.043 seconds
-  compile: 1.042 seconds
-  main: 0.607 seconds
+  build: 1.175 seconds
+  compile: 1.175 seconds
+  main: 0.585 seconds
   build: 0.0 seconds
-  main: 0.649 seconds
+  main: 0.645 seconds
   build: 0.0 seconds
-  main: 0.624 seconds
+  main: 0.6 seconds
   build: 0.0 seconds
-  main: 0.621 seconds
+  main: 0.613 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/loading/TargetMBeanTest.java
   clean: 0.0 seconds
-  build: 0.971 seconds
-  compile: 0.971 seconds
+  build: 1.1 seconds
+  compile: 1.1 seconds
   build: 0.0 seconds
-  main: 0.091 seconds
+  main: 0.105 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/loading/UserClassLoaderTest.java
   clean: 0.0 seconds
-  build: 0.931 seconds
-  compile: 0.931 seconds
+  build: 1.123 seconds
+  compile: 1.122 seconds
   build: 0.0 seconds
-  main: 0.711 seconds
+  main: 0.733 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/notif/AddRemoveTest.java
   clean: 0.0 seconds
-  build: 0.956 seconds
-  compile: 0.956 seconds
+  build: 1.18 seconds
+  compile: 1.179 seconds
   build: 0.0 seconds
-  main: 0.82 seconds
+  main: 0.834 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/notif/ConcurrentModificationTest.java
-  build: 0.97 seconds
-  compile: 0.97 seconds
-  main: 5.244 seconds
+  build: 1.117 seconds
+  compile: 1.117 seconds
+  main: 5.554 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/notif/DeadListenerTest.java
-  build: 1.052 seconds
-  compile: 1.051 seconds
-  main: 0.945 seconds
+  build: 1.135 seconds
+  compile: 1.135 seconds
+  main: 0.94 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/notif/DiffHBTest.java
   clean: 0.0 seconds
-  build: 0.994 seconds
-  compile: 0.994 seconds
+  build: 1.012 seconds
+  compile: 1.011 seconds
   build: 0.0 seconds
-  main: 0.817 seconds
+  main: 0.84 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/notif/EmptyDomainNotificationTest.java
   clean: 0.0 seconds
-  build: 0.948 seconds
-  compile: 0.948 seconds
+  build: 1.0 seconds
+  compile: 0.999 seconds
   build: 0.0 seconds
-  main: 0.581 seconds
+  main: 0.566 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/notif/ListenerScaleTest.java
-  build: 1.001 seconds
-  compile: 1.001 seconds
-  main: 11.524 seconds
+  build: 1.01 seconds
+  compile: 1.01 seconds
+  main: 11.582 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/notif/NotifBufferSizePropertyNameTest.java
   clean: 0.0 seconds
-  build: 0.941 seconds
-  compile: 0.94 seconds
+  build: 1.03 seconds
+  compile: 1.03 seconds
   build: 0.0 seconds
-  main: 0.901 seconds
+  main: 0.836 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/notif/NotificationAccessControllerTest.java
   clean: 0.0 seconds
-  build: 1.169 seconds
-  compile: 1.169 seconds
-  build: 0.0 seconds
-  main: 6.703 seconds
+  build: 1.178 seconds
+  compile: 1.178 seconds
+  build: 0.001 seconds
+  main: 6.705 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/notif/NotificationBufferCreationTest.java
   clean: 0.0 seconds
-  build: 0.962 seconds
-  compile: 0.962 seconds
+  build: 0.974 seconds
+  compile: 0.973 seconds
   build: 0.0 seconds
-  main: 0.711 seconds
+  main: 0.728 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/notif/NotificationBufferDeadlockTest.java
   clean: 0.0 seconds
-  build: 1.091 seconds
-  compile: 1.091 seconds
+  build: 1.195 seconds
+  compile: 1.195 seconds
   build: 0.0 seconds
-  main: 0.849 seconds
+  main: 0.889 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/notif/NotificationBufferTest.java
   clean: 0.0 seconds
-  build: 1.362 seconds
-  compile: 1.361 seconds
+  build: 1.415 seconds
+  compile: 1.414 seconds
   build: 0.0 seconds
   main: 0.383 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/notif/NotificationEmissionTest.java
   clean: 0.0 seconds
-  build: 1.164 seconds
-  compile: 1.164 seconds
+  build: 1.163 seconds
+  compile: 1.163 seconds
   build: 0.0 seconds
-  main: 0.79 seconds
+  main: 0.89 seconds
+  build: 0.0 seconds
+  main: 0.595 seconds
+  build: 0.0 seconds
+  main: 0.634 seconds
   build: 0.001 seconds
-  main: 0.6 seconds
+  main: 0.609 seconds
   build: 0.0 seconds
-  main: 0.608 seconds
-  build: 0.0 seconds
-  main: 0.608 seconds
-  build: 0.0 seconds
-  main: 0.604 seconds
+  main: 0.606 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/notif/NotifReconnectDeadlockTest.java
   clean: 0.0 seconds
-  build: 0.957 seconds
-  compile: 0.956 seconds
+  build: 1.016 seconds
+  compile: 1.016 seconds
   build: 0.0 seconds
-  main: 6.693 seconds
+  main: 6.712 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/notif/NotSerializableNotifTest.java
   clean: 0.0 seconds
-  build: 0.99 seconds
-  compile: 0.99 seconds
-  build: 0.001 seconds
-  main: 0.895 seconds
+  build: 1.015 seconds
+  compile: 1.014 seconds
+  build: 0.0 seconds
+  main: 0.906 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/notif/RMINotifTest.java
   clean: 0.0 seconds
-  build: 0.983 seconds
-  compile: 0.983 seconds
+  build: 0.999 seconds
+  compile: 0.998 seconds
   build: 0.0 seconds
-  main: 0.583 seconds
+  main: 0.593 seconds
   build: 0.0 seconds
-  main: 0.6 seconds
+  main: 0.589 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/notif/ServerNotifs.java
   clean: 0.0 seconds
-  build: 1.012 seconds
-  compile: 1.012 seconds
+  build: 1.058 seconds
+  compile: 1.057 seconds
   build: 0.0 seconds
-  main: 0.728 seconds
+  main: 0.727 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/notif/UnexpectedNotifTest.java
   clean: 0.0 seconds
-  build: 1.039 seconds
-  compile: 1.038 seconds
+  build: 1.044 seconds
+  compile: 1.044 seconds
   build: 0.0 seconds
-  main: 6.613 seconds
+  main: 6.606 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/passwordAccessFile/NonJMXPrincipalsTest.java
-  clean: 0.001 seconds
-  build: 1.174 seconds
-  compile: 1.174 seconds
+  clean: 0.0 seconds
+  build: 1.198 seconds
+  compile: 1.198 seconds
   build: 0.0 seconds
-  main: 0.629 seconds
+  main: 0.631 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/passwordAccessFile/PasswordAccessFileTest.java
   clean: 0.0 seconds
-  build: 1.147 seconds
-  compile: 1.147 seconds
+  build: 1.182 seconds
+  compile: 1.182 seconds
   build: 0.0 seconds
-  main: 0.629 seconds
+  main: 0.638 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/passwordAuthenticator/RMIAltAuthTest.java
   clean: 0.0 seconds
-  build: 1.175 seconds
-  compile: 1.174 seconds
+  build: 1.182 seconds
+  compile: 1.182 seconds
   build: 0.0 seconds
-  main: 0.608 seconds
+  main: 0.657 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/passwordAuthenticator/RMIPasswdAuthTest.java
-  clean: 0.001 seconds
-  build: 1.045 seconds
-  compile: 1.045 seconds
-  build: 0.0 seconds
-  main: 0.608 seconds
+  clean: 0.0 seconds
+  build: 1.068 seconds
+  compile: 1.068 seconds
+  build: 0.001 seconds
+  main: 0.656 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/provider/ProviderTest.java
   clean: 0.0 seconds
-  build: 1.01 seconds
-  compile: 1.009 seconds
-  build: 0.0 seconds
-  main: 0.663 seconds
+  build: 1.018 seconds
+  compile: 1.017 seconds
+  build: 0.001 seconds
+  main: 0.676 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/serverError/JMXServerErrorTest.java
-  clean: 0.001 seconds
-  build: 1.08 seconds
-  compile: 1.08 seconds
+  clean: 0.0 seconds
+  build: 1.118 seconds
+  compile: 1.118 seconds
   build: 0.0 seconds
-  main: 0.749 seconds
+  main: 0.831 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/socketFactories/RMISocketFactoriesTest.java
   clean: 0.0 seconds
-  build: 0.99 seconds
-  compile: 0.99 seconds
+  build: 1.017 seconds
+  compile: 1.016 seconds
   build: 0.0 seconds
-  main: 0.472 seconds
+  main: 0.466 seconds
   build: 0.0 seconds
-  main: 0.527 seconds
+  main: 0.515 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/subjectDelegation/SubjectDelegation1Test.java
   clean: 0.0 seconds
-  build: 1.237 seconds
-  compile: 1.236 seconds
-  build: 0.001 seconds
-  main: 0.085 seconds
+  build: 1.225 seconds
+  compile: 1.224 seconds
   build: 0.0 seconds
-  main: 0.082 seconds
-  build: 0.001 seconds
-  main: 0.086 seconds
-  build: 0.001 seconds
+  main: 0.083 seconds
+  build: 0.0 seconds
+  main: 0.084 seconds
+  build: 0.0 seconds
+  main: 0.097 seconds
+  build: 0.0 seconds
+  main: 0.084 seconds
+  build: 0.0 seconds
   main: 0.091 seconds
   build: 0.0 seconds
-  main: 0.088 seconds
-  build: 0.0 seconds
-  main: 0.095 seconds
+  main: 0.086 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/subjectDelegation/SubjectDelegation2Test.java
   clean: 0.0 seconds
-  build: 1.207 seconds
-  compile: 1.207 seconds
-  build: 0.001 seconds
-  main: 0.093 seconds
+  build: 1.29 seconds
+  compile: 1.29 seconds
+  build: 0.0 seconds
+  main: 0.084 seconds
+  build: 0.0 seconds
+  main: 0.094 seconds
   build: 0.0 seconds
   main: 0.088 seconds
   build: 0.0 seconds
-  main: 0.088 seconds
+  main: 0.086 seconds
   build: 0.0 seconds
-  main: 0.087 seconds
-  build: 0.0 seconds
-  main: 0.09 seconds
+  main: 0.089 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/subjectDelegation/SubjectDelegation3Test.java
-  clean: 0.0 seconds
-  build: 1.19 seconds
-  compile: 1.19 seconds
+  clean: 0.001 seconds
+  build: 1.331 seconds
+  compile: 1.331 seconds
+  build: 0.001 seconds
+  main: 0.082 seconds
+  build: 0.001 seconds
+  main: 0.085 seconds
   build: 0.0 seconds
-  main: 0.091 seconds
+  main: 0.085 seconds
   build: 0.0 seconds
-  main: 0.091 seconds
-  build: 0.0 seconds
-  main: 0.089 seconds
-  build: 0.0 seconds
-  main: 0.089 seconds
-  build: 0.0 seconds
-  main: 0.089 seconds
+  main: 0.095 seconds
+  build: 0.001 seconds
+  main: 0.079 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/threads/ExecutorTest.java
   clean: 0.0 seconds
-  build: 1.047 seconds
-  compile: 1.046 seconds
-  build: 0.0 seconds
-  main: 1.039 seconds
+  build: 1.098 seconds
+  compile: 1.098 seconds
+  build: 0.001 seconds
+  main: 1.006 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/threads/NoServerTimeoutTest.java
   clean: 0.0 seconds
-  build: 1.026 seconds
-  compile: 1.026 seconds
-  build: 0.001 seconds
-  main: 0.757 seconds
+  build: 1.018 seconds
+  compile: 1.018 seconds
+  build: 0.0 seconds
+  main: 0.773 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/util/CacheMapTest.java
   clean: 0.0 seconds
-  build: 1.014 seconds
-  compile: 1.014 seconds
-  build: 0.001 seconds
+  build: 1.044 seconds
+  compile: 1.044 seconds
+  build: 0.0 seconds
   main: 0.138 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/util/MapNullValuesTest.java
   clean: 0.0 seconds
-  build: 1.213 seconds
-  compile: 1.213 seconds
+  build: 1.254 seconds
+  compile: 1.254 seconds
   build: 0.0 seconds
-  main: 0.626 seconds
+  main: 0.61 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/version/ImplVersionTest.java
   clean: 0.0 seconds
-  build: 0.988 seconds
-  compile: 0.988 seconds
+  build: 0.999 seconds
+  compile: 0.999 seconds
   build: 0.0 seconds
-  main: 0.19 seconds
+  main: 0.331 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/remote/mandatory/URLTest.java
   clean: 0.0 seconds
-  build: 0.916 seconds
-  compile: 0.916 seconds
+  build: 0.929 seconds
+  compile: 0.929 seconds
   build: 0.0 seconds
-  main: 0.606 seconds
+  main: 0.634 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/security/AvoidGetMBeanInfoCallsTest.java
   clean: 0.0 seconds
-  build: 0.913 seconds
-  compile: 0.912 seconds
+  build: 1.008 seconds
+  compile: 1.006 seconds
   build: 0.0 seconds
   main: 0.115 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/security/MBeanPermissionTest.java
-  clean: 0.001 seconds
-  build: 0.872 seconds
-  compile: 0.872 seconds
+  clean: 0.0 seconds
+  build: 0.987 seconds
+  compile: 0.987 seconds
   build: 0.0 seconds
-  main: 0.085 seconds
+  main: 0.091 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/standardmbean/DeadlockTest.java
-  build: 0.896 seconds
-  compile: 0.895 seconds
-  main: 4.114 seconds
+  build: 0.945 seconds
+  compile: 0.945 seconds
+  main: 4.109 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/timer/MissingNotificationTest.java
   clean: 0.0 seconds
-  build: 0.945 seconds
-  compile: 0.945 seconds
+  build: 1.009 seconds
+  compile: 1.009 seconds
   build: 0.0 seconds
-  main: 2.31 seconds
+  main: 2.339 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 TEST: javax/management/timer/StartTest.java
   clean: 0.0 seconds
-  build: 0.935 seconds
-  compile: 0.935 seconds
-  build: 0.001 seconds
-  main: 0.343 seconds
+  build: 1.017 seconds
+  compile: 1.017 seconds
+  build: 0.0 seconds
+  main: 0.358 seconds
 TEST RESULT: Passed. Execution successful
 --------------------------------------------------
 Test results: passed: 217; failed: 1
