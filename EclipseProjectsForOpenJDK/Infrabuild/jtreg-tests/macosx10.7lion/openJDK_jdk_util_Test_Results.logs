@@ -1,0 +1,2750 @@
+make -k -C  ../jdk/test  jdk_util
+echo "Running tests in agentvm mode: java/util sun/util"
+Running tests in agentvm mode: java/util sun/util
+make TEST_DEPENDENCIES="java/util sun/util" TESTDIRS="java/util sun/util" USE_JTREG_AGENTVM=true  UNIQUE_DIR=jdk_util jtreg_tests
+Excluding list contains        2 items
+Excluding: java/util/concurrent/ThreadPoolExecutor/CoreThreadTimeOut.java
+Excluding: java/util/concurrent/locks/ReentrantLock/CancelledLockLoops.java
+(                                                                    \
+	  ( JT_HOME=/Users/swami/jtreg;                   \
+            export JT_HOME;                                                  \
+            /Users/swami/jtreg/win32/bin/jtreg                              \
+              -agentvm   -a -ea -esa -v:fail,error,time -retain:fail,error -ignore:quiet -timeoutFactor:4 -J-Xmx512m                                         \
+              -r:/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/JTreport  \
+              -w:/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/JTwork    \
+              -jdk:/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image                \
+              -exclude:/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/excludelist.txt             \
+                                                        \
+              java/util sun/util                                                    \
+	  ) ; ( jtregExitCode=$? && _summary="/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/JTreport/text/summary.txt"; rm -f -f /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/Stats.txt /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/runlist.txt /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/passlist.txt /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/faillist.txt /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/exitcode.txt; echo "${jtregExitCode}" > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/exitcode.txt; if [ -r "${_summary}" ] ; then echo "Summary: jdk_util" > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/Stats.txt; expand ${_summary} | egrep -v ' Not run\.' > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/runlist.txt; egrep ' Passed\.' /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/runlist.txt | egrep -v ' Error\.' | egrep -v ' Failed\.' > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/passlist.txt; ( egrep ' Failed\.' /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/runlist.txt; egrep ' Error\.' /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/runlist.txt; egrep -v ' Passed\.' /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/runlist.txt ) | sort | uniq > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/faillist.txt; if [ ${jtregExitCode} != 0 -o -s /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/faillist.txt ] ; then expand /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/faillist.txt | cut -d' ' -f1 | sed -e 's@^@FAILED: @' >> /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/Stats.txt; if [ ${jtregExitCode} = 0 ] ; then jtregExitCode=1; fi; fi; runc="`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/runlist.txt      | wc -l | awk '{print $1;}'`"; passc="`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/passlist.txt    | wc -l | awk '{print $1;}'`"; failc="`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/faillist.txt    | wc -l | awk '{print $1;}'`"; exclc="`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/excludelist.txt | wc -l | awk '{print $1;}'`"; echo "TEST STATS: name=jdk_util  run=${runc}  pass=${passc}  fail=${failc}  excluded=${exclc}" >> /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/Stats.txt; else echo "Missing file: ${_summary}" >> /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/Stats.txt; fi; if [ -f /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/Stats.txt ] ; then cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/Stats.txt; fi; ( mkdir -p `dirname /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/ARCHIVE_BUNDLE.zip` && cd /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util && chmod -R a+r . && zip -q -r /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/ARCHIVE_BUNDLE.zip . ) ; if [ ! -s /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/exitcode.txt; fi ; testExitCode=`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode} )                                          \
+	) 2>&1 | tee /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/output.txt ; if [ ! -s /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/exitcode.txt; fi ; testExitCode=`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode}
+Directory "/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/JTreport" not found: creating
+Directory "/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/JTwork" not found: creating
+Directory "/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_util/JTwork/scratch" not found: creating
+--------------------------------------------------
+TEST: java/util/AbstractCollection/ToArrayTest.java
+  build: 2.071 seconds
+  compile: 2.061 seconds
+  main: 0.018 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/AbstractCollection/ToString.java
+  build: 0.245 seconds
+  compile: 0.245 seconds
+  main: 0.027 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/AbstractList/FailFastIterator.java
+  build: 0.126 seconds
+  compile: 0.126 seconds
+  main: 0.006 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/AbstractList/HasNextAfterException.java
+  build: 0.098 seconds
+  compile: 0.097 seconds
+  main: 0.042 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/AbstractMap/AbstractMapClone.java
+  build: 0.094 seconds
+  compile: 0.094 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/AbstractMap/Equals.java
+  build: 0.086 seconds
+  compile: 0.086 seconds
+  main: 0.006 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/AbstractMap/SimpleEntries.java
+  build: 0.209 seconds
+  compile: 0.208 seconds
+  main: 0.025 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/AbstractMap/ToString.java
+  build: 0.077 seconds
+  compile: 0.077 seconds
+  main: 0.025 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/AbstractSequentialList/AddAll.java
+  build: 0.143 seconds
+  compile: 0.14 seconds
+  main: 0.006 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ArrayList/AddAll.java
+  build: 0.123 seconds
+  compile: 0.122 seconds
+  main: 0.418 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ArrayList/Bug6533203.java
+  build: 0.129 seconds
+  compile: 0.129 seconds
+  main: 0.008 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ArrayList/EnsureCapacity.java
+  build: 0.073 seconds
+  compile: 0.073 seconds
+  main: 0.009 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Arrays/ArrayObjectMethods.java
+  build: 0.514 seconds
+  compile: 0.514 seconds
+  main: 2.009 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Arrays/Big.java
+  build: 0.111 seconds
+  compile: 0.111 seconds
+  main: 0.131 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Arrays/CopyMethods.java
+  build: 0.382 seconds
+  compile: 0.381 seconds
+  main: 1.022 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Arrays/Correct.java
+  build: 0.056 seconds
+  compile: 0.056 seconds
+  main: 0.467 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Arrays/Fill.java
+  build: 0.052 seconds
+  compile: 0.052 seconds
+  main: 0.006 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Arrays/FloatDoubleOrder.java
+  build: 0.096 seconds
+  compile: 0.096 seconds
+  main: 0.006 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Arrays/ParallelSorting.java
+  build: 1.136 seconds
+  compile: 1.136 seconds
+  main: 4.769 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Arrays/Sorting.java
+  build: 0.599 seconds
+  compile: 0.598 seconds
+  build: 0.0 seconds
+  main: 2.065 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Base64/TestBase64.java
+  build: 0.47 seconds
+  compile: 0.47 seconds
+  main: 5.781 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Base64/TestBase64Golden.java
+  build: 0.106 seconds
+  compile: 0.106 seconds
+  main: 0.342 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/BitSet/And.java
+  build: 0.024 seconds
+  compile: 0.023 seconds
+  main: 0.006 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/BitSet/BSMethods.java
+  build: 0.319 seconds
+  compile: 0.319 seconds
+  main: 1.354 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/BitSet/ImportExport.java
+  build: 0.115 seconds
+  compile: 0.115 seconds
+  main: 0.015 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/BitSet/MemoryLeak.java
+  build: 0.023 seconds
+  compile: 0.023 seconds
+  main: 0.018 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/BitSet/PreviousBits.java
+  build: 0.136 seconds
+  compile: 0.136 seconds
+  main: 0.182 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/BitSet/StickySize.java
+  build: 0.056 seconds
+  compile: 0.056 seconds
+  main: 0.019 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Calendar/Builder/BuilderTest.java
+  build: 0.091 seconds
+  compile: 0.091 seconds
+  main: 0.072 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Calendar/Bug6645263.java
+  build: 0.029 seconds
+  compile: 0.029 seconds
+  main: 0.024 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Calendar/Bug7017458.java
+  build: 0.054 seconds
+  compile: 0.054 seconds
+  main: 0.069 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Calendar/Bug8007038.java
+  compile: 0.129 seconds
+  build: 0.0 seconds
+  main: 0.085 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Calendar/CalendarTypeTest.java
+  build: 0.058 seconds
+  compile: 0.057 seconds
+  main: 0.021 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Calendar/CldrFormatNamesTest.java
+  compile: 0.091 seconds
+  build: 0.0 seconds
+  main: 0.362 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Calendar/GenericTimeZoneNamesTest.sh
+  compile: 0.04 seconds
+  shell: 0.7 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Calendar/JavatimeTest.java
+  build: 0.07 seconds
+  compile: 0.07 seconds
+  main: 2.72 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Calendar/NarrowNamesTest.sh
+  build: 0.047 seconds
+  compile: 0.046 seconds
+  shell: 0.598 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Calendar/WeekDateTest.java
+  build: 0.084 seconds
+  compile: 0.083 seconds
+  main: 0.044 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collection/BiggernYours.java
+  build: 0.319 seconds
+  compile: 0.318 seconds
+  main: 0.042 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collection/HotPotatoes.java
+  build: 0.066 seconds
+  compile: 0.066 seconds
+  main: 0.675 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collection/IteratorAtEnd.java
+  build: 0.074 seconds
+  compile: 0.074 seconds
+  main: 0.028 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collection/MOAT.java
+  build: 0.854 seconds
+  compile: 0.853 seconds
+  main: 0.415 seconds
+  build: 0.0 seconds
+  main: 0.578 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/AddAll.java
+  build: 0.047 seconds
+  compile: 0.047 seconds
+  main: 0.008 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/AsLifoQueue.java
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  main: 0.008 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/BigBinarySearch.java
+  build: 0.054 seconds
+  compile: 0.053 seconds
+  main: 0.009 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/BinarySearchNullComparator.java
+  build: 0.024 seconds
+  compile: 0.024 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/CheckedIdentityMap.java
+  build: 0.112 seconds
+  compile: 0.112 seconds
+  main: 0.007 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/CheckedListBash.java
+  build: 0.088 seconds
+  compile: 0.088 seconds
+  main: 0.15 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/CheckedMapBash.java
+  build: 0.047 seconds
+  compile: 0.047 seconds
+  main: 0.193 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/CheckedNull.java
+  build: 0.133 seconds
+  compile: 0.133 seconds
+  main: 0.023 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/CheckedQueue.java
+  build: 0.083 seconds
+  compile: 0.082 seconds
+  main: 0.013 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/CheckedSetBash.java
+  build: 0.063 seconds
+  compile: 0.063 seconds
+  main: 0.146 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/Disjoint.java
+  build: 0.037 seconds
+  compile: 0.036 seconds
+  main: 0.021 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/EmptyCollectionSerialization.java
+  build: 0.028 seconds
+  compile: 0.027 seconds
+  main: 0.017 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/EmptyIterator.java
+  build: 0.136 seconds
+  compile: 0.135 seconds
+  main: 0.025 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/EmptySortedSet.java
+  build: 0.072 seconds
+  compile: 0.072 seconds
+  main: 0.032 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/Enum.java
+  build: 0.034 seconds
+  compile: 0.034 seconds
+  main: 0.012 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/EqualsTest.java
+  build: 0.061 seconds
+  compile: 0.06 seconds
+  main: 0.013 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/FindSubList.java
+  build: 0.053 seconds
+  compile: 0.053 seconds
+  main: 1.395 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/Frequency.java
+  build: 0.027 seconds
+  compile: 0.027 seconds
+  main: 0.158 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/MinMax.java
+  build: 0.085 seconds
+  compile: 0.085 seconds
+  main: 0.006 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/NCopies.java
+  build: 0.039 seconds
+  compile: 0.039 seconds
+  main: 0.011 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/NullComparator.java
+  build: 0.052 seconds
+  compile: 0.052 seconds
+  main: 0.011 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/RacingCollections.java
+  build: 0.246 seconds
+  compile: 0.245 seconds
+  main: 4.789 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/ReplaceAll.java
+  build: 0.032 seconds
+  compile: 0.032 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/ReverseOrder.java
+  build: 0.03 seconds
+  compile: 0.03 seconds
+  main: 0.008 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/ReverseOrder2.java
+  build: 0.067 seconds
+  compile: 0.067 seconds
+  main: 0.014 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/Rotate.java
+  build: 0.047 seconds
+  compile: 0.047 seconds
+  main: 0.414 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/RotateEmpty.java
+  build: 0.018 seconds
+  compile: 0.018 seconds
+  main: 0.002 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/Ser.java
+  build: 0.032 seconds
+  compile: 0.031 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/SetFromMap.java
+  build: 0.029 seconds
+  compile: 0.029 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/Swap.java
+  build: 0.026 seconds
+  compile: 0.026 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/T5078378.java
+  compile: 0.02 seconds
+  compile: 0.023 seconds
+TEST RESULT: Passed. Compilation failed as expected
+--------------------------------------------------
+TEST: java/util/Collections/T6433170.java
+  build: 0.07 seconds
+  compile: 0.07 seconds
+  main: 0.007 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/ViewSynch.java
+  build: 0.035 seconds
+  compile: 0.034 seconds
+  main: 0.067 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Collections/WrappedNull.java
+  build: 0.041 seconds
+  compile: 0.041 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/atomic/AtomicUpdaters.java
+  build: 0.089 seconds
+  compile: 0.089 seconds
+  main: 0.21 seconds
+  build: 0.0 seconds
+  main: 0.227 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/atomic/DoubleAdderDemo.java
+  build: 0.038 seconds
+  compile: 0.037 seconds
+  main: 0.399 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/atomic/Lazy.java
+  build: 0.072 seconds
+  compile: 0.072 seconds
+  main: 0.035 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/atomic/LongAdderDemo.java
+  build: 0.037 seconds
+  compile: 0.037 seconds
+  main: 0.355 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/atomic/VMSupportsCS8.java
+  compile: 0.017 seconds
+  build: 0.001 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/BlockingQueue/CancelledProducerConsumerLoops.java
+  compile: 0.081 seconds
+  build: 0.0 seconds
+  main: 25.472 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/BlockingQueue/Interrupt.java
+  build: 0.09 seconds
+  compile: 0.09 seconds
+  main: 0.863 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/BlockingQueue/LastElement.java
+  build: 0.039 seconds
+  compile: 0.039 seconds
+  main: 0.006 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/BlockingQueue/MultipleProducersSingleConsumerLoops.java
+  compile: 0.044 seconds
+  build: 0.0 seconds
+  main: 27.207 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/BlockingQueue/OfferDrainToLoops.java
+  build: 0.062 seconds
+  compile: 0.062 seconds
+  main: 1.889 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/BlockingQueue/PollMemoryLeak.java
+  compile: 0.02 seconds
+  build: 0.0 seconds
+  main: 10.168 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/BlockingQueue/ProducerConsumerLoops.java
+  compile: 0.041 seconds
+  build: 0.0 seconds
+  main: 4.958 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/BlockingQueue/SingleProducerMultipleConsumerLoops.java
+  compile: 0.041 seconds
+  build: 0.0 seconds
+  main: 4.06 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/ConcurrentHashMap/DistinctEntrySetElements.java
+  build: 0.023 seconds
+  compile: 0.023 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/ConcurrentHashMap/MapCheck.java
+  compile: 0.088 seconds
+  build: 0.0 seconds
+  main: 3.018 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/ConcurrentHashMap/MapLoops.java
+  compile: 0.069 seconds
+  build: 0.0 seconds
+  main: 2.928 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/ConcurrentHashMap/toArray.java
+  build: 0.031 seconds
+  compile: 0.031 seconds
+  main: 0.017 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/ConcurrentMap/ConcurrentModification.java
+  build: 0.037 seconds
+  compile: 0.037 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/ConcurrentQueues/ConcurrentQueueLoops.java
+  build: 0.138 seconds
+  compile: 0.138 seconds
+  main: 5.157 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/ConcurrentQueues/GCRetention.java
+  build: 0.046 seconds
+  compile: 0.045 seconds
+  main: 5.846 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/ConcurrentQueues/IteratorWeakConsistency.java
+  build: 0.035 seconds
+  compile: 0.035 seconds
+  main: 0.006 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/ConcurrentQueues/OfferRemoveLoops.java
+  build: 0.05 seconds
+  compile: 0.05 seconds
+  main: 2.717 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/ConcurrentQueues/RemovePollRace.java
+  build: 0.053 seconds
+  compile: 0.053 seconds
+  main: 0.187 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/CopyOnWriteArrayList/EqualsRace.java
+  build: 0.03 seconds
+  compile: 0.029 seconds
+  main: 0.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/CopyOnWriteArraySet/RacingCows.java
+  build: 0.039 seconds
+  compile: 0.039 seconds
+  main: 0.353 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/CountDownLatch/Basic.java
+  build: 0.049 seconds
+  compile: 0.049 seconds
+  main: 0.024 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/CyclicBarrier/Basic.java
+  build: 0.083 seconds
+  compile: 0.083 seconds
+  main: 0.159 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/DelayQueue/Iterate.java
+  build: 0.031 seconds
+  compile: 0.031 seconds
+  main: 0.007 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/DelayQueue/PollUnexpired.java
+  build: 0.037 seconds
+  compile: 0.037 seconds
+  main: 0.311 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/Exchanger/ExchangeLoops.java
+  compile: 0.045 seconds
+  build: 0.0 seconds
+  main: 0.782 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/ExecutorCompletionService/ExecutorCompletionServiceLoops.java
+  compile: 0.046 seconds
+  build: 0.001 seconds
+  main: 0.961 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/Executors/AutoShutdown.java
+  build: 0.048 seconds
+  compile: 0.047 seconds
+  main: 0.227 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/Executors/PrivilegedCallables.java
+  build: 0.049 seconds
+  compile: 0.049 seconds
+  main: 0.224 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/Executors/Throws.java
+  build: 0.069 seconds
+  compile: 0.069 seconds
+  main: 0.016 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/ExecutorService/Invoke.java
+  build: 0.032 seconds
+  compile: 0.032 seconds
+  main: 0.411 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/forkjoin/Integrate.java
+  build: 0.045 seconds
+  compile: 0.045 seconds
+  main: 1.207 seconds
+  build: 0.0 seconds
+  main: 1.938 seconds
+  build: 0.0 seconds
+  main: 2.679 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/forkjoin/NQueensCS.java
+  build: 0.036 seconds
+  compile: 0.035 seconds
+  main: 0.336 seconds
+  build: 0.0 seconds
+  main: 0.334 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/forkjoin/ThreadLessCommon.java
+  build: 0.046 seconds
+  compile: 0.046 seconds
+  main: 0.309 seconds
+  build: 0.0 seconds
+  main: 0.219 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/forkjoin/ThrowingRunnable.java
+  build: 0.025 seconds
+  compile: 0.024 seconds
+  main: 0.21 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/FutureTask/BlockingTaskExecutor.java
+  build: 0.033 seconds
+  compile: 0.033 seconds
+  main: 0.117 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/FutureTask/CancelledFutureLoops.java
+  compile: 0.04 seconds
+  build: 0.0 seconds
+  main: 0.895 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/FutureTask/Customized.java
+  build: 0.069 seconds
+  compile: 0.069 seconds
+  main: 0.011 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/FutureTask/DoneTimedGetLoops.java
+  build: 0.047 seconds
+  compile: 0.047 seconds
+  main: 0.319 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/FutureTask/ExplicitSet.java
+  build: 0.032 seconds
+  compile: 0.031 seconds
+  main: 2.351 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/FutureTask/Throw.java
+  build: 0.069 seconds
+  compile: 0.069 seconds
+  main: 0.025 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/LinkedBlockingQueue/ToArray.java
+  build: 0.021 seconds
+  compile: 0.021 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/locks/Lock/FlakyMutex.java
+  build: 0.064 seconds
+  compile: 0.064 seconds
+  main: 0.414 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/locks/Lock/TimedAcquire.java
+  build: 0.018 seconds
+  compile: 0.018 seconds
+  main: 0.014 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/locks/Lock/TimedAcquireLeak.java
+  build: 0.078 seconds
+  compile: 0.077 seconds
+  main: 12.392 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/locks/ReentrantLock/LockOncePerThreadLoops.java
+  compile: 0.055 seconds
+  build: 0.001 seconds
+  main: 2.072 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/locks/ReentrantLock/SimpleReentrantLockLoops.java
+  compile: 0.057 seconds
+  build: 0.0 seconds
+  main: 1.356 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/locks/ReentrantLock/TimeoutLockLoops.java
+  compile: 0.041 seconds
+  build: 0.0 seconds
+  main: 2.51 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/locks/ReentrantReadWriteLock/Bug6571733.java
+  build: 0.028 seconds
+  compile: 0.028 seconds
+  main: 0.009 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/locks/ReentrantReadWriteLock/Count.java
+  build: 0.092 seconds
+  compile: 0.092 seconds
+  main: 0.075 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/locks/ReentrantReadWriteLock/MapLoops.java
+  compile: 0.07 seconds
+  build: 0.001 seconds
+  main: 8.417 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/locks/StampedLock/Basic.java
+  build: 0.152 seconds
+  compile: 0.151 seconds
+  main: 35.863 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/Phaser/Arrive.java
+  build: 0.036 seconds
+  compile: 0.035 seconds
+  main: 0.128 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/Phaser/Basic.java
+  build: 0.095 seconds
+  compile: 0.094 seconds
+  main: 18.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/Phaser/FickleRegister.java
+  build: 0.045 seconds
+  compile: 0.045 seconds
+  main: 0.308 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/Phaser/PhaseOverflow.java
+  build: 0.038 seconds
+  compile: 0.038 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/Phaser/TieredArriveLoops.java
+  build: 0.066 seconds
+  compile: 0.066 seconds
+  main: 0.305 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/ScheduledThreadPoolExecutor/BasicCancelTest.java
+  build: 0.041 seconds
+  compile: 0.04 seconds
+  main: 2.018 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/ScheduledThreadPoolExecutor/DecorateTask.java
+  build: 0.039 seconds
+  compile: 0.039 seconds
+  main: 0.012 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/ScheduledThreadPoolExecutor/DelayOverflow.java
+  build: 0.041 seconds
+  compile: 0.041 seconds
+  main: 0.039 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/ScheduledThreadPoolExecutor/ZeroCorePoolSize.java
+  build: 0.03 seconds
+  compile: 0.03 seconds
+  main: 1.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/Semaphore/PermitOverflow.java
+  build: 0.021 seconds
+  compile: 0.021 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/Semaphore/RacingReleases.java
+  build: 0.046 seconds
+  compile: 0.046 seconds
+  main: 3.97 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/SynchronousQueue/Fairness.java
+  build: 0.026 seconds
+  compile: 0.026 seconds
+  main: 0.021 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/ThreadPoolExecutor/ConfigChanges.java
+  build: 0.061 seconds
+  compile: 0.061 seconds
+  main: 0.28 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/ThreadPoolExecutor/Custom.java
+  build: 0.059 seconds
+  compile: 0.059 seconds
+  main: 2.033 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/ThreadPoolExecutor/ModifyCorePoolSize.java
+  build: 0.03 seconds
+  compile: 0.03 seconds
+  main: 0.016 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/ThreadPoolExecutor/ScheduledTickleService.java
+  build: 0.045 seconds
+  compile: 0.044 seconds
+  main: 0.286 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/ThreadPoolExecutor/SelfInterrupt.java
+  build: 0.033 seconds
+  compile: 0.033 seconds
+  main: 0.082 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/ThreadPoolExecutor/ShutdownNowExecuteRace.java
+  build: 0.039 seconds
+  compile: 0.039 seconds
+  main: 0.014 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/ThreadPoolExecutor/ThrowingTasks.java
+  build: 0.082 seconds
+  compile: 0.082 seconds
+  main: 0.252 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/ThreadPoolExecutor/TimeOutShrink.java
+  build: 0.03 seconds
+  compile: 0.03 seconds
+  main: 1.125 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/concurrent/TimeUnit/Basic.java
+  build: 0.036 seconds
+  compile: 0.035 seconds
+  main: 0.009 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Currency/Bug4512215.java
+  build: 0.022 seconds
+  compile: 0.021 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Currency/Bug6807534.java
+  build: 0.021 seconds
+  compile: 0.021 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Currency/CurrencyTest.java
+  build: 0.068 seconds
+  compile: 0.068 seconds
+  main: 0.099 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Currency/PropertiesTest.sh
+  build: 0.051 seconds
+  compile: 0.051 seconds
+  shell: 1.601 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Currency/ValidateISO4217.java
+  build: 0.053 seconds
+  compile: 0.053 seconds
+  main: 0.028 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Deque/ChorusLine.java
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  main: 0.016 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/EnumMap/DistinctEntrySetElements.java
+  build: 0.031 seconds
+  compile: 0.031 seconds
+  main: 0.009 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/EnumMap/EntrySetIteratorRemoveInvalidatesEntry.java
+  build: 0.023 seconds
+  compile: 0.023 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/EnumMap/EnumMapBash.java
+  build: 0.317 seconds
+  compile: 0.317 seconds
+  main: 0.367 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/EnumMap/ProperEntrySetOnClone.java
+  build: 0.026 seconds
+  compile: 0.025 seconds
+  main: 0.016 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/EnumMap/SimpleSerialization.java
+  build: 0.035 seconds
+  compile: 0.035 seconds
+  main: 0.006 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/EnumMap/ToArray.java
+  build: 0.029 seconds
+  compile: 0.029 seconds
+  main: 0.008 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/EnumMap/UniqueNullValue.java
+  build: 0.029 seconds
+  compile: 0.029 seconds
+  main: 0.008 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/EnumSet/AllOf.java
+  build: 0.064 seconds
+  compile: 0.063 seconds
+  main: 0.013 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/EnumSet/BogusEnumSet.java
+  build: 0.062 seconds
+  compile: 0.061 seconds
+  main: 0.01 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/EnumSet/ComplementOf.java
+  build: 0.098 seconds
+  compile: 0.098 seconds
+  main: 0.02 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/EnumSet/EnumSetBash.java
+  build: 0.3 seconds
+  compile: 0.3 seconds
+  main: 3.326 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/EnumSet/InsertWrongType.java
+  build: 0.092 seconds
+  compile: 0.092 seconds
+  main: 0.032 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/EnumSet/JumboRange.java
+  build: 0.042 seconds
+  compile: 0.042 seconds
+  main: 0.009 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/EnumSet/LargeEnumIteratorRemoveResilience.java
+  build: 0.067 seconds
+  compile: 0.067 seconds
+  main: 0.013 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/EnumSet/OneUniverse.java
+  build: 0.038 seconds
+  compile: 0.038 seconds
+  main: 0.02 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/EnumSet/Range.java
+  build: 0.495 seconds
+  compile: 0.495 seconds
+  main: 0.008 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/EnumSet/RetainAll.java
+  build: 0.058 seconds
+  compile: 0.058 seconds
+  main: 0.011 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/EnumSet/SmallEnumIteratorRemoveResilience.java
+  build: 0.033 seconds
+  compile: 0.033 seconds
+  main: 0.009 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Formattable/StockName.java
+  build: 0.042 seconds
+  compile: 0.042 seconds
+  main: 0.021 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Formatter/Basic.java
+  shell: 9.595 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Formatter/Close.java
+  build: 0.028 seconds
+  compile: 0.028 seconds
+  main: 0.012 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Formatter/Constructors.java
+  build: 0.096 seconds
+  compile: 0.096 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Formatter/FailingConstructors.java
+  build: 0.029 seconds
+  compile: 0.029 seconds
+  main: 0.023 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Formatter/Flush.java
+  build: 0.034 seconds
+  compile: 0.034 seconds
+  main: 0.041 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/HashMap/HashMapCloneLeak.java
+  build: 0.024 seconds
+  compile: 0.024 seconds
+  main: 0.356 seconds
+  build: 0.0 seconds
+  main: 0.359 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/HashMap/KeySetRemove.java
+  build: 0.018 seconds
+  compile: 0.018 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/HashMap/NullKeyAtResize.java
+  build: 0.024 seconds
+  compile: 0.024 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/HashMap/SetValue.java
+  build: 0.018 seconds
+  compile: 0.017 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/HashMap/ToString.java
+  build: 0.018 seconds
+  compile: 0.018 seconds
+  main: 0.008 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Hashtable/EqualsCast.java
+  build: 0.027 seconds
+  compile: 0.027 seconds
+  main: 0.014 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Hashtable/HashCode.java
+  build: 0.024 seconds
+  compile: 0.022 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Hashtable/IllegalLoadFactor.java
+  build: 0.038 seconds
+  compile: 0.038 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Hashtable/ReadObject.java
+  build: 0.024 seconds
+  compile: 0.023 seconds
+  main: 0.011 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Hashtable/SelfRef.java
+  build: 0.021 seconds
+  compile: 0.021 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Hashtable/SerializationDeadlock.java
+  build: 0.044 seconds
+  compile: 0.044 seconds
+  main: 0.009 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Hashtable/SimpleSerialization.java
+  build: 0.031 seconds
+  compile: 0.03 seconds
+  main: 0.006 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/IdentityHashMap/DistinctEntrySetElements.java
+  build: 0.021 seconds
+  compile: 0.021 seconds
+  main: 0.007 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/IdentityHashMap/EntrySetIteratorRemoveInvalidatesEntry.java
+  build: 0.027 seconds
+  compile: 0.027 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/IdentityHashMap/ToArray.java
+  build: 0.038 seconds
+  compile: 0.038 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/IdentityHashMap/ToString.java
+  build: 0.02 seconds
+  compile: 0.02 seconds
+  main: 0.013 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/IllegalFormatException/Constructors.java
+  build: 0.037 seconds
+  compile: 0.037 seconds
+  main: 0.007 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/jar/Attributes/Name.java
+  build: 0.018 seconds
+  compile: 0.017 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/jar/Attributes/PutAndPutAll.java
+  build: 0.019 seconds
+  compile: 0.019 seconds
+  main: 0.007 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/jar/JarEntry/GetMethodsReturnClones.java
+  build: 0.026 seconds
+  compile: 0.025 seconds
+  main: 0.056 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/jar/JarFile/Constructor.java
+  build: 0.028 seconds
+  compile: 0.028 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/jar/JarFile/JarNoManifest.java
+  build: 0.018 seconds
+  compile: 0.017 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/jar/JarFile/MevNPE.java
+  build: 0.02 seconds
+  compile: 0.02 seconds
+  main: 0.029 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/jar/JarFile/ScanSignedJar.java
+  build: 0.067 seconds
+  compile: 0.066 seconds
+  main: 0.034 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/jar/JarFile/SignedJarFileGetInputStream.java
+  build: 0.018 seconds
+  compile: 0.018 seconds
+  main: 0.013 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/jar/JarFile/SorryClosed.java
+  build: 0.02 seconds
+  compile: 0.02 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/jar/JarFile/TurkCert.java
+  build: 0.028 seconds
+  compile: 0.027 seconds
+  main: 0.01 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/jar/JarFile/VerifySignedJar.java
+  build: 0.023 seconds
+  compile: 0.022 seconds
+  main: 0.008 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/jar/JarInputStream/EmptyJar.java
+  build: 0.023 seconds
+  compile: 0.023 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/jar/JarInputStream/ScanSignedJar.java
+  build: 0.028 seconds
+  compile: 0.027 seconds
+  main: 0.011 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/jar/JarInputStream/TestIndexedJarWithBadSignature.java
+  build: 0.022 seconds
+  compile: 0.022 seconds
+  main: 0.061 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/jar/Manifest/CreateManifest.java
+  compile: 0.035 seconds
+  build: 0.0 seconds
+  main: 0.074 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/jar/TestExtra.java
+  build: 0.045 seconds
+  compile: 0.045 seconds
+  main: 0.011 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/LinkedHashMap/Basic.java
+  build: 0.066 seconds
+  compile: 0.066 seconds
+  main: 0.255 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/LinkedHashMap/Cache.java
+  build: 0.028 seconds
+  compile: 0.028 seconds
+  main: 0.011 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/LinkedHashMap/EmptyMapIterator.java
+  build: 0.024 seconds
+  compile: 0.024 seconds
+  main: 0.017 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/LinkedHashSet/Basic.java
+  build: 0.051 seconds
+  compile: 0.051 seconds
+  main: 0.901 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/LinkedList/AddAll.java
+  build: 0.058 seconds
+  compile: 0.058 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/LinkedList/Clone.java
+  build: 0.038 seconds
+  compile: 0.038 seconds
+  main: 0.015 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/LinkedList/ComodifiedRemove.java
+  build: 0.03 seconds
+  compile: 0.03 seconds
+  main: 0.021 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/LinkedList/Remove.java
+  build: 0.021 seconds
+  compile: 0.02 seconds
+  main: 0.006 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/List/LockStep.java
+  build: 0.213 seconds
+  compile: 0.213 seconds
+  main: 0.022 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Locale/bug4122700.java
+  build: 0.025 seconds
+  compile: 0.025 seconds
+  main: 0.102 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Locale/Bug4152725.java
+  build: 0.021 seconds
+  compile: 0.021 seconds
+  main: 0.293 seconds
+  build: 0.0 seconds
+  main: 0.171 seconds
+  build: 0.0 seconds
+  main: 0.163 seconds
+  build: 0.0 seconds
+  main: 0.163 seconds
+  build: 0.0 seconds
+  main: 0.163 seconds
+  build: 0.001 seconds
+  main: 0.162 seconds
+  build: 0.0 seconds
+  main: 0.163 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Locale/Bug4175998Test.java
+  compile: 0.046 seconds
+  build: 0.001 seconds
+  main: 0.009 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Locale/Bug4184873Test.java
+  build: 0.028 seconds
+  compile: 0.027 seconds
+  main: 0.026 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Locale/Bug4210525.java
+  build: 0.017 seconds
+  compile: 0.017 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Locale/Bug4316602.java
+  build: 0.019 seconds
+  compile: 0.019 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Locale/Bug4518797.java
+  build: 0.03 seconds
+  compile: 0.03 seconds
+  main: 10.031 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Locale/bug6277243.java
+  build: 0.021 seconds
+  compile: 0.021 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Locale/bug6312358.java
+  build: 0.022 seconds
+  compile: 0.021 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Locale/Bug6989440.java
+  compile: 0.034 seconds
+  build: 0.0 seconds
+  main: 0.029 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Locale/Bug7069824.java
+  build: 0.108 seconds
+  compile: 0.107 seconds
+  main: 0.015 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Locale/Bug8001562.java
+  build: 0.03 seconds
+  compile: 0.03 seconds
+  main: 0.038 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Locale/ExtensionsTest.java
+  build: 0.031 seconds
+  compile: 0.031 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Locale/HashCodeTest.java
+  build: 0.034 seconds
+  compile: 0.034 seconds
+  main: 0.009 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Locale/InternationalBAT.java
+  build: 0.059 seconds
+  compile: 0.059 seconds
+  main: 0.17 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Locale/LocaleCategory.sh
+  build: 0.03 seconds
+  compile: 0.03 seconds
+  shell: 0.465 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Locale/LocaleEnhanceTest.java
+  compile: 0.17 seconds
+  build: 0.0 seconds
+  main: 0.492 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Locale/LocaleProviders.sh
+  compile: 0.03 seconds
+  shell: 4.646 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Locale/LocaleTest.java
+  build: 0.105 seconds
+  compile: 0.105 seconds
+  main: 0.06 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Locale/ThaiGov.java
+  build: 0.032 seconds
+  compile: 0.032 seconds
+  main: 0.011 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/logging/AnonLoggerWeakRefLeak.sh
+  build: 0.03 seconds
+  compile: 0.029 seconds
+  build: 0.024 seconds
+  compile: 0.022 seconds
+  shell: 14.533 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/logging/CheckLockLocationTest.java
+  build: 0.046 seconds
+  compile: 0.046 seconds
+  main: 0.2 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/logging/ClassLoaderLeakTest.java
+  build: 0.032 seconds
+  compile: 0.032 seconds
+  main: 5.197 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/logging/GetGlobalTest.java
+  build: 0.015 seconds
+  compile: 0.015 seconds
+  build: 0.0 seconds
+  main: 0.009 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/logging/Listeners.java
+  build: 0.06 seconds
+  compile: 0.06 seconds
+  main: 0.201 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/logging/ListenersWithSM.java
+  build: 0.022 seconds
+  compile: 0.022 seconds
+  main: 0.216 seconds
+  build: 0.0 seconds
+  main: 0.208 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/logging/LoggerResourceBundleRace.java
+  build: 0.138 seconds
+  compile: 0.138 seconds
+  build: 0.0 seconds
+  main: 15.22 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/logging/LoggerSubclass.java
+  build: 0.043 seconds
+  compile: 0.043 seconds
+  main: 0.006 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/logging/LoggerSupplierAPIsTest.java
+  build: 0.116 seconds
+  compile: 0.116 seconds
+  testng: 0.774 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/logging/LoggerWeakRefLeak.sh
+  build: 0.0 seconds
+  build: 0.025 seconds
+  compile: 0.025 seconds
+  shell: 25.161 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/logging/LoggingDeadlock.java
+  build: 0.028 seconds
+  compile: 0.027 seconds
+  build: 0.0 seconds
+  main: 0.347 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/logging/LoggingDeadlock2.java
+  build: 0.051 seconds
+  compile: 0.051 seconds
+  build: 0.0 seconds
+  main: 0.213 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/logging/LoggingDeadlock3.java
+  build: 0.057 seconds
+  compile: 0.04 seconds
+  build: 0.0 seconds
+  main: 15.31 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/logging/LoggingDeadlock4.java
+  compile: 0.035 seconds
+  build: 0.0 seconds
+  main: 0.231 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/logging/LoggingMXBeanTest.java
+  build: 0.038 seconds
+  compile: 0.038 seconds
+  build: 0.0 seconds
+  main: 0.744 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/logging/LoggingMXBeanTest2.java
+  build: 0.041 seconds
+  compile: 0.041 seconds
+  build: 0.0 seconds
+  main: 0.022 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/logging/LoggingNIOChange.java
+  build: 0.021 seconds
+  compile: 0.021 seconds
+  main: 0.011 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/logging/MemoryHandlerTest.java
+  build: 0.034 seconds
+  compile: 0.033 seconds
+  main: 0.301 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/logging/ParentLoggersTest.java
+  build: 0.039 seconds
+  compile: 0.039 seconds
+  build: 0.0 seconds
+  main: 0.334 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/logging/Reflect.java
+  build: 0.023 seconds
+  compile: 0.023 seconds
+  main: 0.012 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/logging/SimpleFormatterFormat.java
+  build: 0.116 seconds
+  compile: 0.116 seconds
+  main: 0.409 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Map/Collisions.java
+  build: 0.089 seconds
+  compile: 0.088 seconds
+  main: 18.462 seconds
+  build: 0.0 seconds
+  main: 18.317 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Map/EntryHashCode.java
+  build: 0.036 seconds
+  compile: 0.036 seconds
+  main: 0.012 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Map/Get.java
+  build: 0.039 seconds
+  compile: 0.038 seconds
+  main: 0.013 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Map/LockStep.java
+  build: 0.038 seconds
+  compile: 0.038 seconds
+  main: 0.15 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Map/ToArray.java
+  build: 0.042 seconds
+  compile: 0.041 seconds
+  main: 0.266 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/MissingFormatArgumentException/GetFormatSpecifier.java
+  build: 0.018 seconds
+  compile: 0.018 seconds
+  main: 0.014 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/NavigableMap/LockStep.java
+  build: 0.424 seconds
+  compile: 0.424 seconds
+  main: 1.833 seconds
+  build: 0.0 seconds
+  main: 3.192 seconds
+  build: 0.0 seconds
+  main: 4.41 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Objects/BasicObjectsTest.java
+  build: 0.037 seconds
+  compile: 0.036 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Observable/ClearChanged.java
+  build: 0.016 seconds
+  compile: 0.016 seconds
+  main: 0.006 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/PluggableLocale/BreakIteratorProviderTest.sh
+  shell: 2.409 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/PluggableLocale/CalendarDataProviderTest.sh
+  shell: 1.812 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/PluggableLocale/CalendarNameProviderTest.sh
+  shell: 1.763 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/PluggableLocale/ClasspathTest.sh
+  shell: 1.695 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/PluggableLocale/CollatorProviderTest.sh
+  shell: 3.13 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/PluggableLocale/CurrencyNameProviderTest.sh
+  shell: 4.825 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/PluggableLocale/DateFormatProviderTest.sh
+  shell: 3.044 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/PluggableLocale/DateFormatSymbolsProviderTest.sh
+  shell: 2.507 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/PluggableLocale/DecimalFormatSymbolsProviderTest.sh
+  shell: 2.196 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/PluggableLocale/GenericTest.sh
+  shell: 1.906 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/PluggableLocale/LocaleNameProviderTest.sh
+  shell: 5.201 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/PluggableLocale/NumberFormatProviderTest.sh
+  shell: 2.415 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/PluggableLocale/SupportedLocalesTest.java
+  build: 0.026 seconds
+  compile: 0.026 seconds
+  main: 0.009 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/PluggableLocale/TimeZoneNameProviderTest.sh
+  shell: 10.47 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/prefs/AddNodeChangeListener.java
+  build: 0.04 seconds
+  compile: 0.04 seconds
+  main: 9.267 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/prefs/CheckUserPrefsStorage.sh
+  build: 0.016 seconds
+  compile: 0.016 seconds
+  shell: 0.329 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/prefs/CommentsInXml.java
+  build: 0.017 seconds
+  compile: 0.017 seconds
+  main: 0.229 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/prefs/ConflictInFlush.java
+  build: 0.017 seconds
+  compile: 0.017 seconds
+  main: 0.184 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/prefs/ExportNode.java
+  build: 0.015 seconds
+  compile: 0.015 seconds
+  main: 0.245 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/prefs/ExportSubtree.java
+  build: 0.024 seconds
+  compile: 0.024 seconds
+  main: 0.268 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/prefs/PrefsSpi.sh
+  build: 0.018 seconds
+  compile: 0.018 seconds
+  shell: 2.27 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/prefs/RemoveNullKeyCheck.java
+  build: 0.02 seconds
+  compile: 0.02 seconds
+  main: 0.186 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/prefs/RemoveReadOnlyNode.java
+  build: 0.026 seconds
+  compile: 0.026 seconds
+  main: 0.226 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/prefs/RemoveUnregedListener.java
+  build: 0.017 seconds
+  compile: 0.017 seconds
+  main: 0.186 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/prefs/SerializeExceptions.java
+  build: 0.016 seconds
+  compile: 0.016 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/PriorityQueue/ForgetMeNot.java
+  build: 0.046 seconds
+  compile: 0.046 seconds
+  main: 0.012 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/PriorityQueue/NoNulls.java
+  build: 0.078 seconds
+  compile: 0.078 seconds
+  main: 0.026 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/PriorityQueue/PriorityQueueSort.java
+  build: 0.024 seconds
+  compile: 0.024 seconds
+  main: 0.305 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/PriorityQueue/RemoveContains.java
+  build: 0.028 seconds
+  compile: 0.027 seconds
+  main: 0.023 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Properties/CompatibilityTest.java
+  build: 0.023 seconds
+  compile: 0.023 seconds
+  main: 0.082 seconds
+  build: 0.0 seconds
+  main: 0.19 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Properties/ConcurrentLoadAndStoreXML.java
+  build: 0.027 seconds
+  compile: 0.027 seconds
+  main: 2.06 seconds
+  build: 0.0 seconds
+  main: 2.427 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Properties/CustomProvider.java
+  compile: 0.024 seconds
+  build: 0.0 seconds
+  main: 0.319 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Properties/LoadAndStoreXML.java
+  build: 0.041 seconds
+  compile: 0.04 seconds
+  main: 0.223 seconds
+  build: 0.0 seconds
+  main: 0.508 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Random/DistinctSeeds.java
+  build: 0.041 seconds
+  compile: 0.041 seconds
+  main: 0.587 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Random/NextBytes.java
+  build: 0.022 seconds
+  compile: 0.022 seconds
+  main: 0.018 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Random/NextIntPowerOfTwoMod.java
+  build: 0.018 seconds
+  compile: 0.017 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/regex/RegExTest.java
+  build: 0.774 seconds
+  compile: 0.774 seconds
+  main: 12.724 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/Control/BadControlsTest.java
+  build: 0.065 seconds
+  compile: 0.064 seconds
+  main: 0.014 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/Control/Bug6530694.java
+  build: 0.045 seconds
+  compile: 0.045 seconds
+  main: 0.341 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/Control/ControlFactoryTest.java
+  build: 0.032 seconds
+  compile: 0.031 seconds
+  main: 0.018 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/Control/DefaultControlTest.java
+  build: 0.016 seconds
+  compile: 0.015 seconds
+  build: 0.017 seconds
+  compile: 0.017 seconds
+  build: 0.076 seconds
+  compile: 0.068 seconds
+  main: 0.018 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/Control/LoadingStrategiesTest.java
+  build: 0.029 seconds
+  compile: 0.029 seconds
+  main: 0.043 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/Control/MissingResourceCauseTest.sh
+  build: 0.036 seconds
+  compile: 0.036 seconds
+  build: 0.026 seconds
+  compile: 0.026 seconds
+  shell: 0.183 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/Control/PackagePrivateTest.java
+  build: 0.015 seconds
+  compile: 0.014 seconds
+  build: 0.026 seconds
+  compile: 0.026 seconds
+  main: 0.2 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/Control/StressTest.java
+  build: 0.035 seconds
+  compile: 0.034 seconds
+  main: 15.2 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/Control/XMLResourceBundleTest.java
+  build: 0.031 seconds
+  compile: 0.031 seconds
+  main: 0.035 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/Bug4083270Test.java
+  build: 0.039 seconds
+  compile: 0.039 seconds
+  main: 0.022 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/Bug4168625Test.java
+  build: 0.026 seconds
+  compile: 0.026 seconds
+  build: 0.087 seconds
+  compile: 0.087 seconds
+  main: 5.443 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/Bug4177489Test.java
+  build: 0.019 seconds
+  compile: 0.019 seconds
+  build: 0.022 seconds
+  compile: 0.021 seconds
+  main: 0.016 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/Bug4195978Test.java
+  build: 0.021 seconds
+  compile: 0.02 seconds
+  main: 0.013 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/Bug4257318.java
+  build: 0.023 seconds
+  compile: 0.023 seconds
+  build: 0.023 seconds
+  compile: 0.022 seconds
+  main: 0.025 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/Bug4353454.java
+  build: 0.026 seconds
+  compile: 0.026 seconds
+  main: 0.008 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/Bug4396021.java
+  build: 0.02 seconds
+  compile: 0.02 seconds
+  build: 0.02 seconds
+  compile: 0.02 seconds
+  main: 0.018 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/Bug6190861.java
+  build: 0.043 seconds
+  compile: 0.042 seconds
+  main: 0.015 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/Bug6204853.java
+  build: 0.027 seconds
+  compile: 0.027 seconds
+  main: 0.008 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/Bug6287579.java
+  build: 0.035 seconds
+  compile: 0.034 seconds
+  main: 0.209 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/Bug6299235Test.sh
+  build: 0.04 seconds
+  compile: 0.04 seconds
+  shell: 0.204 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/Bug6355009.java
+  build: 0.021 seconds
+  compile: 0.021 seconds
+  main: 0.009 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/Bug6356571.java
+  build: 0.028 seconds
+  compile: 0.028 seconds
+  main: 0.013 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/Bug6359330.java
+  build: 0.044 seconds
+  compile: 0.044 seconds
+  main: 0.255 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/Bug6572242.java
+  build: 0.021 seconds
+  compile: 0.02 seconds
+  main: 0.011 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/KeySetTest.java
+  build: 0.022 seconds
+  compile: 0.022 seconds
+  build: 0.038 seconds
+  compile: 0.038 seconds
+  main: 0.025 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/ReferencesTest.java
+  build: 0.03 seconds
+  compile: 0.03 seconds
+  main: 0.347 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/ResourceBundleTest.java
+  build: 0.027 seconds
+  compile: 0.027 seconds
+  build: 0.018 seconds
+  compile: 0.018 seconds
+  build: 0.044 seconds
+  compile: 0.043 seconds
+  main: 0.028 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/Test4314141.java
+  build: 0.02 seconds
+  compile: 0.02 seconds
+  build: 0.059 seconds
+  compile: 0.059 seconds
+  main: 0.023 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/Test4318520.java
+  build: 0.024 seconds
+  compile: 0.023 seconds
+  main: 0.009 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ResourceBundle/TestBug4179766.java
+  build: 0.024 seconds
+  compile: 0.024 seconds
+  build: 0.085 seconds
+  compile: 0.085 seconds
+  main: 0.028 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Scanner/FailingConstructors.java
+  build: 0.028 seconds
+  compile: 0.027 seconds
+  main: 0.02 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ServiceLoader/basic.sh
+  build: 0.049 seconds
+  compile: 0.048 seconds
+  shell: 3.485 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/ServiceLoader/NPE.java
+  build: 0.022 seconds
+  compile: 0.022 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/spi/ResourceBundleControlProvider/UserDefaultControlTest.java
+  build: 0.02 seconds
+  compile: 0.019 seconds
+  shell: 0.244 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/StringTokenizer/FormFeed.java
+  build: 0.015 seconds
+  compile: 0.015 seconds
+  main: 0.002 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/StringTokenizer/ResetPos.java
+  build: 0.021 seconds
+  compile: 0.021 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/StringTokenizer/Supplementary.java
+  build: 0.019 seconds
+  compile: 0.019 seconds
+  main: 0.006 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Timer/Args.java
+  build: 0.096 seconds
+  compile: 0.096 seconds
+  main: 0.033 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Timer/DelayOverflow.java
+  build: 0.034 seconds
+  compile: 0.034 seconds
+  main: 0.06 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Timer/KillThread.java
+  build: 0.021 seconds
+  compile: 0.02 seconds
+  main: 0.105 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Timer/NameConstructors.java
+  build: 0.022 seconds
+  compile: 0.021 seconds
+  main: 1.01 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Timer/Purge.java
+  build: 0.022 seconds
+  compile: 0.022 seconds
+  main: 0.007 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/TimeZone/Bug6772689.java
+  build: 0.023 seconds
+  compile: 0.023 seconds
+  main: 2.843 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/TimeZone/Bug6912560.java
+  build: 0.018 seconds
+  compile: 0.018 seconds
+  main: 0.22 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/TimeZone/CLDRDisplayNamesTest.java
+  build: 0.018 seconds
+  compile: 0.018 seconds
+  main: 0.283 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/TimeZone/DaylightTimeTest.java
+  build: 0.026 seconds
+  compile: 0.025 seconds
+  main: 1.311 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/TimeZone/ListTimeZones.java
+  build: 0.014 seconds
+  compile: 0.014 seconds
+  main: 0.014 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/TimeZone/OldIDMappingTest.sh
+  build: 0.053 seconds
+  compile: 0.053 seconds
+  shell: 3.422 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/TimeZone/TimeZoneDatePermissionCheck.sh
+  build: 0.014 seconds
+  compile: 0.014 seconds
+  shell: 1.453 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/TreeMap/Clone.java
+  build: 0.019 seconds
+  compile: 0.019 seconds
+  main: 0.167 seconds
+  build: 0.001 seconds
+  main: 0.22 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/TreeMap/ContainsValue.java
+  build: 0.014 seconds
+  compile: 0.014 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/TreeMap/EmptyMapAndNulls.java
+  build: 0.026 seconds
+  compile: 0.026 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/TreeMap/HeadTailTypeError.java
+  build: 0.024 seconds
+  compile: 0.024 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/TreeMap/NullAtEnd.java
+  build: 0.035 seconds
+  compile: 0.035 seconds
+  main: 0.012 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/TreeMap/NullPermissiveComparator.java
+  build: 0.035 seconds
+  compile: 0.035 seconds
+  main: 0.031 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/TreeMap/SubMap.java
+  build: 0.023 seconds
+  compile: 0.023 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/TreeMap/SubMapClear.java
+  build: 0.019 seconds
+  compile: 0.018 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/UUID/Serial.java
+  build: 0.019 seconds
+  compile: 0.018 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/UUID/UUIDTest.java
+  build: 0.031 seconds
+  compile: 0.031 seconds
+  main: 0.03 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Vector/ComodifiedRemoveAllElements.java
+  build: 0.016 seconds
+  compile: 0.016 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Vector/CopyInto.java
+  build: 0.024 seconds
+  compile: 0.024 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Vector/IllegalConstructorArgs.java
+  build: 0.018 seconds
+  compile: 0.018 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Vector/LastIndexOf.java
+  build: 0.018 seconds
+  compile: 0.018 seconds
+  main: 0.006 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Vector/SerializationDeadlock.java
+  build: 0.026 seconds
+  compile: 0.025 seconds
+  main: 0.022 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Vector/SimpleSerialization.java
+  build: 0.069 seconds
+  compile: 0.069 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/Vector/SyncLastIndexOf.java
+  build: 0.024 seconds
+  compile: 0.023 seconds
+  main: 0.018 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/WeakHashMap/Iteration.java
+  build: 0.017 seconds
+  compile: 0.017 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/WeakHashMap/ZeroInitCap.java
+  build: 0.017 seconds
+  compile: 0.017 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/GZIP/Accordion.java
+  build: 0.032 seconds
+  compile: 0.031 seconds
+  main: 0.036 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/GZIP/GZIPInputStreamRead.java
+  build: 0.023 seconds
+  compile: 0.023 seconds
+  main: 0.813 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/GZIP/ReadUByte.java
+  build: 0.02 seconds
+  compile: 0.02 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/InflaterInputStream/MarkReset.java
+  build: 0.016 seconds
+  compile: 0.016 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/ZipEntry/Clone.java
+  build: 0.015 seconds
+  compile: 0.015 seconds
+  main: 0.019 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/ZipEntry/Constructor.java
+  build: 0.016 seconds
+  compile: 0.016 seconds
+  main: 0.002 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/ZipFile/Assortment.java
+  build: 0.042 seconds
+  compile: 0.042 seconds
+  main: 0.217 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/ZipFile/ClearStaleZipFileInputStreams.java
+  build: 0.026 seconds
+  compile: 0.026 seconds
+  main: 1.829 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/ZipFile/Comment.java
+  build: 0.029 seconds
+  compile: 0.028 seconds
+  main: 0.021 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/ZipFile/Constructor.java
+  build: 0.019 seconds
+  compile: 0.019 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/ZipFile/CopyJar.java
+  build: 0.019 seconds
+  compile: 0.018 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/ZipFile/CorruptedZipFiles.java
+  build: 0.036 seconds
+  compile: 0.036 seconds
+  main: 0.015 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/ZipFile/DeleteTempJar.java
+  build: 0.032 seconds
+  compile: 0.032 seconds
+  shell: 0.329 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/ZipFile/EnumAfterClose.java
+  build: 0.017 seconds
+  compile: 0.017 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/ZipFile/FinalizeInflater.java
+  build: 0.021 seconds
+  compile: 0.021 seconds
+  main: 0.549 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/ZipFile/FinalizeZipFile.java
+  build: 0.027 seconds
+  compile: 0.027 seconds
+  main: 0.238 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/ZipFile/GetDirEntry.java
+  build: 0.017 seconds
+  compile: 0.016 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/ZipFile/ManyEntries.java
+  build: 0.031 seconds
+  compile: 0.031 seconds
+  main: 34.24 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/ZipFile/ManyZipFiles.java
+  build: 0.034 seconds
+  compile: 0.034 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/ZipFile/ReadAfterClose.java
+  build: 0.017 seconds
+  compile: 0.016 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/ZipFile/ReadLongZipFileName.java
+  build: 0.029 seconds
+  compile: 0.029 seconds
+  main: 0.013 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/ZipFile/ReadZip.java
+  build: 0.039 seconds
+  compile: 0.039 seconds
+  main: 0.013 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/ZipFile/ReleaseInflater.java
+  build: 0.026 seconds
+  compile: 0.026 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/ZipFile/ShortRead.java
+  build: 0.023 seconds
+  compile: 0.023 seconds
+  main: 0.006 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/ZipInputStream/Constructor.java
+  build: 0.015 seconds
+  compile: 0.015 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/ZipInputStream/Skip.java
+  build: 0.017 seconds
+  compile: 0.017 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/Available.java
+  build: 0.022 seconds
+  compile: 0.022 seconds
+  main: 0.007 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/Bounds.java
+  build: 0.019 seconds
+  compile: 0.019 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/ConstructDeflaterInput.java
+  build: 0.028 seconds
+  compile: 0.028 seconds
+  main: 0.006 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/ConstructInflaterOutput.java
+  build: 0.025 seconds
+  compile: 0.024 seconds
+  main: 0.007 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/DataDescriptor.java
+  build: 0.027 seconds
+  compile: 0.027 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/DeflateIn_InflateOut.java
+  build: 0.036 seconds
+  compile: 0.035 seconds
+  main: 5.263 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/DeInflate.java
+  build: 0.025 seconds
+  compile: 0.025 seconds
+  main: 3.938 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/FlaterTest.java
+  build: 0.031 seconds
+  compile: 0.031 seconds
+  main: 0.453 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/InflateIn_DeflateOut.java
+  build: 0.039 seconds
+  compile: 0.038 seconds
+  main: 0.161 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/InflaterBufferSize.java
+  build: 0.029 seconds
+  compile: 0.029 seconds
+  main: 0.459 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/InfoZip.java
+  build: 0.026 seconds
+  compile: 0.025 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/InterruptibleZip.java
+  build: 0.027 seconds
+  compile: 0.027 seconds
+  main: 0.006 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/NoExtensionSignature.java
+  build: 0.02 seconds
+  compile: 0.02 seconds
+  main: 0.018 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/ReadLoc.java
+  build: 0.022 seconds
+  compile: 0.022 seconds
+  main: 0.25 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/StoredCRC.java
+  build: 0.028 seconds
+  compile: 0.028 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/StreamConstructor.java
+  build: 0.024 seconds
+  compile: 0.024 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/StreamIOAfterClose.java
+  build: 0.022 seconds
+  compile: 0.022 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/TestEmptyZip.java
+  build: 0.031 seconds
+  compile: 0.03 seconds
+  main: 0.009 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/TestZipError.java
+  build: 0.027 seconds
+  compile: 0.027 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/TimeChecksum.java
+  build: 0.039 seconds
+  compile: 0.039 seconds
+  main: 0.01 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/TotalInOut.java
+  build: 0.034 seconds
+  compile: 0.034 seconds
+  main: 7.172 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/util/zip/ZipCoding.java
+  build: 0.034 seconds
+  compile: 0.034 seconds
+  main: 0.018 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/util/calendar/zi/TestZoneInfo310.java
+  build: 0.758 seconds
+  compile: 0.757 seconds
+  main: 1.041 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/util/calendar/Bug6653944.java
+  build: 0.029 seconds
+  compile: 0.029 seconds
+  main: 0.013 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/util/logging/PlatformLoggerTest.java
+  compile: 0.027 seconds
+  build: 0.0 seconds
+  main: 0.283 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/util/logging/SourceClassName.java
+  compile: 0.022 seconds
+  build: 0.0 seconds
+  main: 0.277 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/util/resources/Calendar/Bug4518811.java
+  build: 0.023 seconds
+  compile: 0.022 seconds
+  main: 0.014 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/util/resources/Calendar/Bug4527203.java
+  build: 0.016 seconds
+  compile: 0.016 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/util/resources/Locale/Bug4429024.java
+  build: 0.022 seconds
+  compile: 0.022 seconds
+  main: 0.013 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/util/resources/Locale/Bug4965260.java
+  build: 0.022 seconds
+  compile: 0.022 seconds
+  main: 0.031 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/util/resources/Locale/Bug6275682.java
+  build: 0.046 seconds
+  compile: 0.046 seconds
+  main: 0.009 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/util/resources/TimeZone/Bug4640234.java
+  build: 0.037 seconds
+  compile: 0.037 seconds
+  main: 1.436 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/util/resources/TimeZone/Bug4848242.java
+  build: 0.019 seconds
+  compile: 0.019 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/util/resources/TimeZone/Bug4858517.java
+  build: 0.02 seconds
+  compile: 0.019 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/util/resources/TimeZone/Bug4938846.java
+  build: 0.015 seconds
+  compile: 0.014 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/util/resources/TimeZone/Bug6271396.java
+  build: 0.02 seconds
+  compile: 0.02 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/util/resources/TimeZone/Bug6317929.java
+  build: 0.039 seconds
+  compile: 0.039 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/util/resources/TimeZone/Bug6377794.java
+  build: 0.028 seconds
+  compile: 0.028 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/util/resources/TimeZone/Bug6442006.java
+  build: 0.02 seconds
+  compile: 0.02 seconds
+  main: 0.002 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+Test results: passed: 445
+Report written to /Users/swami/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_util/JTreport/html/report.html
+Results written to /Users/swami/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_util/JTwork
+Summary: jdk_util
+TEST STATS: name=jdk_util  run=445  pass=445  fail=0  excluded=2
+EXIT CODE: 0
+EXIT CODE: 0

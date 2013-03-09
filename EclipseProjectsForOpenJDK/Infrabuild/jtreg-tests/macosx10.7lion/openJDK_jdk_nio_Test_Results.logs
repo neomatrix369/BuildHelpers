@@ -1,0 +1,1996 @@
+make -k -C  ../jdk/test  jdk_nio
+make SHARED_LIBRARY_DIR=java/nio/channels UNIQUE_DIR=jdk_nio shared_library_permissions
+if [ ! -d /Users/swami/sources/jdk8_tl/jdk/test/../.hg ] ; then                          \
+	  find java/nio/channels \( -name \*.dll -o -name \*.DLL -o -name \*.so \)  \
+	        -exec chmod a+rx {} \; ;                             \
+        fi
+echo "Running tests in agentvm mode: java/nio sun/nio"
+Running tests in agentvm mode: java/nio sun/nio
+make TEST_DEPENDENCIES="java/nio sun/nio" TESTDIRS="java/nio sun/nio" USE_JTREG_AGENTVM=true  UNIQUE_DIR=jdk_nio jtreg_tests
+Excluding list contains        5 items
+Excluding: java/nio/channels/AsyncCloseAndInterrupt.java
+Excluding: java/nio/channels/AsynchronousFileChannel/Lock.java
+Excluding: java/nio/channels/FileChannel/Transfer.java
+Excluding: java/nio/channels/DatagramChannel/ChangingAddress.java
+Excluding: java/nio/channels/Selector/OutOfBand.java
+(                                                                    \
+	  ( JT_HOME=/Users/swami/jtreg;                   \
+            export JT_HOME;                                                  \
+            /Users/swami/jtreg/win32/bin/jtreg                              \
+              -agentvm   -a -ea -esa -v:fail,error,time -retain:fail,error -ignore:quiet -timeoutFactor:4 -J-Xmx512m                                         \
+              -r:/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/JTreport  \
+              -w:/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/JTwork    \
+              -jdk:/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image                \
+              -exclude:/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/excludelist.txt             \
+                                                        \
+              java/nio sun/nio                                                    \
+	  ) ; ( jtregExitCode=$? && _summary="/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/JTreport/text/summary.txt"; rm -f -f /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/Stats.txt /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/runlist.txt /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/passlist.txt /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/faillist.txt /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/exitcode.txt; echo "${jtregExitCode}" > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/exitcode.txt; if [ -r "${_summary}" ] ; then echo "Summary: jdk_nio" > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/Stats.txt; expand ${_summary} | egrep -v ' Not run\.' > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/runlist.txt; egrep ' Passed\.' /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/runlist.txt | egrep -v ' Error\.' | egrep -v ' Failed\.' > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/passlist.txt; ( egrep ' Failed\.' /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/runlist.txt; egrep ' Error\.' /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/runlist.txt; egrep -v ' Passed\.' /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/runlist.txt ) | sort | uniq > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/faillist.txt; if [ ${jtregExitCode} != 0 -o -s /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/faillist.txt ] ; then expand /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/faillist.txt | cut -d' ' -f1 | sed -e 's@^@FAILED: @' >> /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/Stats.txt; if [ ${jtregExitCode} = 0 ] ; then jtregExitCode=1; fi; fi; runc="`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/runlist.txt      | wc -l | awk '{print $1;}'`"; passc="`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/passlist.txt    | wc -l | awk '{print $1;}'`"; failc="`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/faillist.txt    | wc -l | awk '{print $1;}'`"; exclc="`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/excludelist.txt | wc -l | awk '{print $1;}'`"; echo "TEST STATS: name=jdk_nio  run=${runc}  pass=${passc}  fail=${failc}  excluded=${exclc}" >> /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/Stats.txt; else echo "Missing file: ${_summary}" >> /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/Stats.txt; fi; if [ -f /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/Stats.txt ] ; then cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/Stats.txt; fi; ( mkdir -p `dirname /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/ARCHIVE_BUNDLE.zip` && cd /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio && chmod -R a+r . && zip -q -r /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/ARCHIVE_BUNDLE.zip . ) ; if [ ! -s /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/exitcode.txt; fi ; testExitCode=`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode} )                                          \
+	) 2>&1 | tee /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/output.txt ; if [ ! -s /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/exitcode.txt; fi ; testExitCode=`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode}
+Directory "/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/JTreport" not found: creating
+Directory "/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/JTwork" not found: creating
+Directory "/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_nio/JTwork/scratch" not found: creating
+--------------------------------------------------
+TEST: java/nio/Buffer/AllocateDirectInit.java
+  build: 1.894 seconds
+  compile: 1.886 seconds
+  main: 0.036 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/Buffer/Basic.java
+  build: 3.023 seconds
+  compile: 3.023 seconds
+  main: 4.688 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/Buffer/CharAt.java
+  build: 0.065 seconds
+  compile: 0.064 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/Buffer/Chew.java
+  build: 0.094 seconds
+  compile: 0.094 seconds
+  main: 0.661 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/Buffer/CopyDirectMemory.java
+  build: 0.0 seconds
+  build: 0.18 seconds
+  compile: 0.18 seconds
+  main: 0.529 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/Buffer/LimitDirectMemory.sh
+  build: 0.091 seconds
+  compile: 0.09 seconds
+  shell: 2.292 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/Buffer/Order.java
+  build: 0.141 seconds
+  compile: 0.14 seconds
+  main: 0.062 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/Buffer/StringCharBufferSliceTest.java
+  build: 0.086 seconds
+  compile: 0.086 seconds
+  main: 0.011 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/ByteOrder/NativeOrder.java
+  build: 0.032 seconds
+  compile: 0.032 seconds
+  main: 0.015 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/AsynchronousChannelGroup/BadProperties.java
+  build: 0.035 seconds
+  compile: 0.034 seconds
+  build: 0.001 seconds
+  main: 0.319 seconds
+  build: 0.0 seconds
+  main: 0.337 seconds
+  build: 0.0 seconds
+  main: 0.211 seconds
+  build: 0.0 seconds
+  main: 0.186 seconds
+TEST RESULT: Passed. Execution failed as expected
+--------------------------------------------------
+TEST: java/nio/channels/AsynchronousChannelGroup/Basic.java
+  build: 0.1 seconds
+  compile: 0.099 seconds
+  build: 0.0 seconds
+  main: 6.946 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/AsynchronousChannelGroup/GroupOfOne.java
+  build: 0.133 seconds
+  compile: 0.133 seconds
+  main: 0.029 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/AsynchronousChannelGroup/Identity.java
+  build: 0.184 seconds
+  compile: 0.184 seconds
+  main: 0.04 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/AsynchronousChannelGroup/Restart.java
+  build: 0.126 seconds
+  compile: 0.126 seconds
+  build: 0.0 seconds
+  main: 3.88 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/AsynchronousChannelGroup/run_any_task.sh
+  build: 0.085 seconds
+  compile: 0.085 seconds
+  shell: 0.432 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/AsynchronousChannelGroup/Unbounded.java
+  build: 0.098 seconds
+  compile: 0.098 seconds
+  main: 0.263 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/AsynchronousFileChannel/Basic.java
+  build: 0.313 seconds
+  compile: 0.313 seconds
+  main: 1.274 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/AsynchronousFileChannel/CustomThreadPool.java
+  build: 0.047 seconds
+  compile: 0.046 seconds
+  build: 0.0 seconds
+  main: 0.315 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/AsynchronousFileChannel/LotsOfWrites.java
+  build: 0.05 seconds
+  compile: 0.05 seconds
+  main: 0.573 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/AsynchronousServerSocketChannel/Basic.java
+  build: 0.076 seconds
+  compile: 0.075 seconds
+  main: 0.134 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/AsynchronousServerSocketChannel/WithSecurityManager.java
+  build: 0.033 seconds
+  compile: 0.032 seconds
+  build: 0.001 seconds
+  main: 0.602 seconds
+  build: 0.0 seconds
+  main: 0.579 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/AsynchronousSocketChannel/Basic.java
+  build: 0.359 seconds
+  compile: 0.358 seconds
+  main: 25.7 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/AsynchronousSocketChannel/DieBeforeComplete.java
+  build: 0.066 seconds
+  compile: 0.066 seconds
+  main: 5.229 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/AsynchronousSocketChannel/Leaky.java
+  build: 0.054 seconds
+  compile: 0.053 seconds
+  main: 1.348 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/AsynchronousSocketChannel/StressLoopback.java
+  build: 0.105 seconds
+  compile: 0.105 seconds
+  main: 20.627 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Channels/Basic.java
+  build: 0.167 seconds
+  compile: 0.166 seconds
+  main: 0.146 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Channels/Basic2.java
+  build: 0.065 seconds
+  compile: 0.065 seconds
+  main: 0.031 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Channels/ReadByte.java
+  build: 0.035 seconds
+  compile: 0.035 seconds
+  main: 0.015 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Channels/ReadOffset.java
+  build: 0.036 seconds
+  compile: 0.035 seconds
+  main: 0.009 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Channels/ShortWrite.java
+  build: 0.037 seconds
+  compile: 0.037 seconds
+  main: 0.016 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Channels/TinyBuffers.java
+  build: 0.038 seconds
+  compile: 0.038 seconds
+  main: 0.007 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Channels/Write.java
+  build: 0.032 seconds
+  compile: 0.031 seconds
+  main: 0.039 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/DatagramChannel/AdaptDatagramSocket.java
+  build: 0.212 seconds
+  compile: 0.212 seconds
+  main: 1.731 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/DatagramChannel/BasicMulticastTests.java
+  build: 0.072 seconds
+  compile: 0.072 seconds
+  build: 0.001 seconds
+  main: 0.022 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/DatagramChannel/BindNull.java
+  build: 0.026 seconds
+  compile: 0.026 seconds
+  main: 0.182 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/DatagramChannel/Connect.java
+  build: 0.049 seconds
+  compile: 0.048 seconds
+  main: 0.01 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/DatagramChannel/ConnectedSend.java
+  build: 0.049 seconds
+  compile: 0.049 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/DatagramChannel/Disconnect.java
+  build: 0.033 seconds
+  compile: 0.032 seconds
+  main: 0.007 seconds
+  build: 0.0 seconds
+  main: 0.207 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/DatagramChannel/EmptyBuffer.java
+  build: 0.112 seconds
+  compile: 0.111 seconds
+  main: 2.032 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/DatagramChannel/IsBound.java
+  build: 0.033 seconds
+  compile: 0.032 seconds
+  main: 0.009 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/DatagramChannel/IsConnected.java
+  build: 0.232 seconds
+  compile: 0.232 seconds
+  main: 0.011 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/DatagramChannel/MulticastSendReceiveTests.java
+  build: 0.062 seconds
+  compile: 0.062 seconds
+  build: 0.0 seconds
+  main: 0.055 seconds
+  build: 0.0 seconds
+  main: 0.235 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/DatagramChannel/NoSender.java
+  build: 0.023 seconds
+  compile: 0.022 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/DatagramChannel/NotBound.java
+  build: 0.041 seconds
+  compile: 0.04 seconds
+  main: 0.058 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/DatagramChannel/Receive.java
+  build: 0.024 seconds
+  compile: 0.023 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/DatagramChannel/ReceiveISA.java
+  build: 0.031 seconds
+  compile: 0.03 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/DatagramChannel/Refused.java
+  build: 0.054 seconds
+  compile: 0.054 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/DatagramChannel/SelectWhenRefused.java
+  build: 0.049 seconds
+  compile: 0.049 seconds
+  main: 4.01 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/DatagramChannel/Sender.java
+  build: 0.038 seconds
+  compile: 0.038 seconds
+  main: 0.007 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/DatagramChannel/SendToUnresolved.java
+  build: 0.03 seconds
+  compile: 0.03 seconds
+  main: 0.055 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/DatagramChannel/SocketOptionTests.java
+  build: 0.074 seconds
+  compile: 0.073 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/DatagramChannel/SRTest.java
+  build: 0.056 seconds
+  compile: 0.056 seconds
+  main: 0.427 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/DatagramChannel/ThereCanBeOnlyOne.java
+  build: 0.03 seconds
+  compile: 0.029 seconds
+  main: 10.01 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/DatagramChannel/UseDGWithIPv6.java
+  build: 0.042 seconds
+  compile: 0.041 seconds
+  main: 0.006 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/etc/AdaptorCloseAndInterrupt.java
+  build: 0.048 seconds
+  compile: 0.048 seconds
+  main: 180.028 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/etc/NetworkChannelTests.java
+  build: 0.05 seconds
+  compile: 0.05 seconds
+  main: 0.038 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/etc/Shadow.java
+  build: 0.046 seconds
+  compile: 0.046 seconds
+  main: 0.019 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/FileChannel/Args.java
+  build: 0.051 seconds
+  compile: 0.051 seconds
+  main: 0.025 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/FileChannel/AtomicAppend.java
+  build: 0.065 seconds
+  compile: 0.065 seconds
+  main: 0.172 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/FileChannel/ClosedByInterrupt.java
+  build: 0.054 seconds
+  compile: 0.054 seconds
+  main: 16.702 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/FileChannel/ClosedChannelTransfer.java
+  build: 0.027 seconds
+  compile: 0.026 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/FileChannel/ExpandingMap.java
+  build: 0.036 seconds
+  compile: 0.036 seconds
+  main: 18.54 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/FileChannel/Force.java
+  build: 0.026 seconds
+  compile: 0.026 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/FileChannel/Lock.java
+  build: 0.043 seconds
+  compile: 0.043 seconds
+  main: 0.349 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/FileChannel/LongTransferTest.java
+  build: 0.043 seconds
+  compile: 0.043 seconds
+  main: 0.033 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/FileChannel/MapAssertions.java
+  build: 0.033 seconds
+  compile: 0.033 seconds
+  main: 0.199 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/FileChannel/MapOverEnd.java
+  build: 0.238 seconds
+  compile: 0.238 seconds
+  main: 0.19 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/FileChannel/MapReadOnly.java
+  build: 0.022 seconds
+  compile: 0.021 seconds
+  main: 0.189 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/FileChannel/MapTest.java
+  build: 0.094 seconds
+  compile: 0.093 seconds
+  main: 0.499 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/FileChannel/Mode.java
+  build: 0.023 seconds
+  compile: 0.023 seconds
+  main: 0.189 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/FileChannel/Position.java
+  build: 0.039 seconds
+  compile: 0.039 seconds
+  main: 0.03 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/FileChannel/Pread.java
+  build: 0.039 seconds
+  compile: 0.038 seconds
+  main: 0.024 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/FileChannel/Pwrite.java
+  build: 0.043 seconds
+  compile: 0.043 seconds
+  main: 0.024 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/FileChannel/Read.java
+  build: 0.04 seconds
+  compile: 0.04 seconds
+  main: 0.025 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/FileChannel/ReadFull.java
+  build: 0.024 seconds
+  compile: 0.024 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/FileChannel/ReadToLimit.java
+  build: 0.039 seconds
+  compile: 0.039 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/FileChannel/Release.java
+  build: 0.024 seconds
+  compile: 0.024 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/FileChannel/ReleaseOnCloseDeadlock.java
+  build: 0.042 seconds
+  compile: 0.042 seconds
+  main: 3.829 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/FileChannel/ScatteringRead.java
+  build: 0.035 seconds
+  compile: 0.035 seconds
+  main: 0.2 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/FileChannel/Size.java
+  build: 0.029 seconds
+  compile: 0.028 seconds
+  main: 0.364 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/FileChannel/Transfers.java
+  build: 0.082 seconds
+  compile: 0.081 seconds
+  main: 6.593 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/FileChannel/TransferToChannel.java
+  build: 0.037 seconds
+  compile: 0.036 seconds
+  main: 1.67 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/FileChannel/TransferToNonWritable.java
+  build: 0.023 seconds
+  compile: 0.022 seconds
+  main: 0.012 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/FileChannel/Truncate.java
+  build: 0.047 seconds
+  compile: 0.047 seconds
+  main: 0.087 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/FileChannel/TryLock.java
+  build: 0.028 seconds
+  compile: 0.028 seconds
+  main: 0.017 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/FileChannel/Write.java
+  build: 0.042 seconds
+  compile: 0.042 seconds
+  main: 0.191 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Pipe/EmptyRead.java
+  build: 0.02 seconds
+  compile: 0.019 seconds
+  main: 0.012 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Pipe/NonBlocking.java
+  build: 0.022 seconds
+  compile: 0.022 seconds
+  main: 0.011 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Pipe/PipeChannel.java
+  build: 0.028 seconds
+  compile: 0.028 seconds
+  main: 0.016 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Pipe/PipeInterrupt.java
+  build: 0.023 seconds
+  compile: 0.022 seconds
+  main: 0.212 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Pipe/ScatteringRead.java
+  build: 0.022 seconds
+  compile: 0.022 seconds
+  main: 0.014 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Pipe/SelectPipe.java
+  build: 0.025 seconds
+  compile: 0.025 seconds
+  main: 0.015 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SelectionKey/AtomicAttachTest.java
+  build: 0.029 seconds
+  compile: 0.029 seconds
+  main: 1.089 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SelectionKey/RacyRegister.java
+  build: 0.026 seconds
+  compile: 0.026 seconds
+  main: 0.032 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/Alias.java
+  build: 0.179 seconds
+  compile: 0.179 seconds
+  main: 4.499 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/BasicAccept.java
+  build: 0.062 seconds
+  compile: 0.062 seconds
+  main: 0.031 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/BasicConnect.java
+  build: 0.048 seconds
+  compile: 0.048 seconds
+  main: 0.253 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/ChangingInterests.java
+  build: 0.043 seconds
+  compile: 0.043 seconds
+  main: 24.313 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/CheckLocking.java
+  build: 0.027 seconds
+  compile: 0.027 seconds
+  main: 1.021 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/Close.java
+  build: 0.024 seconds
+  compile: 0.024 seconds
+  main: 0.019 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/CloseInvalidatesKeys.java
+  build: 0.019 seconds
+  compile: 0.019 seconds
+  main: 0.01 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/CloseThenRegister.java
+  build: 0.022 seconds
+  compile: 0.022 seconds
+  main: 0.011 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/CloseWhenKeyIdle.java
+  build: 0.029 seconds
+  compile: 0.029 seconds
+  main: 5.039 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/Connect.java
+  build: 0.029 seconds
+  compile: 0.029 seconds
+  main: 10.47 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/ConnectWrite.java
+  build: 0.033 seconds
+  compile: 0.033 seconds
+  main: 0.028 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/HelperSlowToDie.java
+  build: 0.03 seconds
+  compile: 0.03 seconds
+  main: 0.024 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/KeySets.java
+  build: 0.084 seconds
+  compile: 0.084 seconds
+  main: 0.033 seconds
+  build: 0.0 seconds
+  main: 0.203 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/KeysReady.java
+  build: 0.029 seconds
+  compile: 0.028 seconds
+  main: 0.043 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/lots_of_updates.sh
+  build: 0.02 seconds
+  compile: 0.02 seconds
+  shell: 0.296 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/LotsOfChannels.java
+  build: 0.027 seconds
+  compile: 0.027 seconds
+  main: 0.035 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/OpRead.java
+  build: 0.031 seconds
+  compile: 0.03 seconds
+  main: 0.264 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/RacyDeregister.java
+  build: 0.039 seconds
+  compile: 0.039 seconds
+  main: 4.179 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/ReadAfterConnect.java
+  build: 0.031 seconds
+  compile: 0.03 seconds
+  main: 0.036 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/RegAfterPreClose.java
+  build: 0.033 seconds
+  compile: 0.032 seconds
+  main: 1.122 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/SelectAfterRead.java
+  build: 0.029 seconds
+  compile: 0.029 seconds
+  main: 0.033 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/SelectAndCancel.java
+  build: 0.035 seconds
+  compile: 0.035 seconds
+  main: 6.038 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/SelectAndClose.java
+  build: 0.028 seconds
+  compile: 0.027 seconds
+  main: 6.03 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/SelectNowWhenEmpty.java
+  build: 0.024 seconds
+  compile: 0.024 seconds
+  main: 0.011 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/SelectorLimit.java
+  build: 0.038 seconds
+  compile: 0.038 seconds
+  build: 0.0 seconds
+  main: 1.091 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/SelectorTest.java
+  build: 0.074 seconds
+  compile: 0.073 seconds
+  main: 1.265 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/SelectWrite.java
+  build: 0.038 seconds
+  compile: 0.038 seconds
+  main: 0.026 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/TemporarySelector.java
+  build: 0.026 seconds
+  compile: 0.026 seconds
+  main: 10.209 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/Wakeup.java
+  build: 0.043 seconds
+  compile: 0.042 seconds
+  main: 0.58 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/WakeupAfterClose.java
+  build: 0.022 seconds
+  compile: 0.022 seconds
+  main: 1.034 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/WakeupEmpty.java
+  build: 0.022 seconds
+  compile: 0.021 seconds
+  main: 0.116 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/WakeupNow.java
+  build: 0.024 seconds
+  compile: 0.023 seconds
+  main: 8.021 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/WakeupOverflow.java
+  build: 0.024 seconds
+  compile: 0.024 seconds
+  main: 0.011 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/Selector/WakeupSpeed.java
+  build: 0.02 seconds
+  compile: 0.02 seconds
+  main: 0.01 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/ServerSocketChannel/AdaptServerSocket.java
+  build: 0.032 seconds
+  compile: 0.031 seconds
+  main: 0.153 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/ServerSocketChannel/Basic.java
+  build: 0.049 seconds
+  compile: 0.049 seconds
+  main: 0.247 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/ServerSocketChannel/NonBlockingAccept.java
+  build: 0.048 seconds
+  compile: 0.048 seconds
+  build: 0.019 seconds
+  compile: 0.019 seconds
+  main: 0.128 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/ServerSocketChannel/Open.java
+  build: 0.018 seconds
+  compile: 0.018 seconds
+  main: 0.012 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/ServerSocketChannel/SocketOptionTests.java
+  build: 0.044 seconds
+  compile: 0.043 seconds
+  main: 0.013 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/AdaptSocket.java
+  build: 0.103 seconds
+  compile: 0.102 seconds
+  main: 0.333 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/AsyncCloseChannel.java
+  build: 0.049 seconds
+  compile: 0.047 seconds
+  main: 2.21 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/Basic.java
+  build: 0.028 seconds
+  compile: 0.027 seconds
+  main: 0.246 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/BigReadWrite.java
+  build: 0.02 seconds
+  compile: 0.02 seconds
+  main: 0.014 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/Bind.java
+  build: 0.02 seconds
+  compile: 0.02 seconds
+  main: 0.012 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/BufferSize.java
+  build: 0.023 seconds
+  compile: 0.023 seconds
+  main: 0.01 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/Close.java
+  build: 0.027 seconds
+  compile: 0.027 seconds
+  main: 0.011 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/CloseAfterConnect.java
+  build: 0.023 seconds
+  compile: 0.023 seconds
+  main: 0.029 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/CloseDuringWrite.java
+  build: 0.035 seconds
+  compile: 0.034 seconds
+  main: 39.449 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/CloseRegisteredChannel.java
+  build: 0.028 seconds
+  compile: 0.028 seconds
+  main: 0.019 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/CloseTimeoutChannel.java
+  build: 0.061 seconds
+  compile: 0.061 seconds
+  main: 0.139 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/Connect.java
+  build: 0.035 seconds
+  compile: 0.035 seconds
+  main: 0.032 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/ConnectState.java
+  build: 0.088 seconds
+  compile: 0.087 seconds
+  main: 0.047 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/ExceptionTranslation.java
+  build: 0.022 seconds
+  compile: 0.021 seconds
+  main: 0.059 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/FinishConnect.java
+  build: 0.045 seconds
+  compile: 0.044 seconds
+  main: 0.88 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/GetChannel.java
+  build: 0.026 seconds
+  compile: 0.025 seconds
+  main: 0.017 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/Hangup.java
+  build: 0.001 seconds
+  build: 0.05 seconds
+  compile: 0.05 seconds
+  main: 0.681 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/IsConnectable.java
+  build: 0.031 seconds
+  compile: 0.03 seconds
+  main: 0.043 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/LocalAddress.java
+  build: 0.025 seconds
+  compile: 0.025 seconds
+  main: 0.038 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/Open.java
+  build: 0.023 seconds
+  compile: 0.023 seconds
+  shell: 0.015 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/OpenLeak.java
+  build: 0.021 seconds
+  compile: 0.02 seconds
+  build: 0.0 seconds
+  main: 28.224 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/OutOfBand.java
+  build: 0.045 seconds
+  compile: 0.044 seconds
+  main: 0.053 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/ShortWrite.java
+  build: 0.038 seconds
+  compile: 0.037 seconds
+  main: 0.139 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/Shutdown.java
+  build: 0.028 seconds
+  compile: 0.027 seconds
+  main: 0.014 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/SocketInheritance.java
+  build: 0.041 seconds
+  compile: 0.04 seconds
+  main: 0.016 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/SocketOptionTests.java
+  build: 0.074 seconds
+  compile: 0.074 seconds
+  main: 0.015 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/Stream.java
+  build: 0.027 seconds
+  compile: 0.027 seconds
+  main: 0.031 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/Trivial.java
+  build: 0.024 seconds
+  compile: 0.023 seconds
+  main: 0.011 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/UnboundSocketTests.java
+  build: 0.042 seconds
+  compile: 0.042 seconds
+  main: 0.03 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/VectorIO.java
+  build: 0.067 seconds
+  compile: 0.066 seconds
+  main: 0.236 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/VectorParams.java
+  build: 0.047 seconds
+  compile: 0.047 seconds
+  main: 0.03 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/SocketChannel/Write.java
+  build: 0.038 seconds
+  compile: 0.037 seconds
+  main: 3.081 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/spi/AsynchronousChannelProvider/custom_provider.sh
+  build: 0.028 seconds
+  compile: 0.027 seconds
+  shell: 0.317 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/spi/SelectorProvider/inheritedChannel/ClosedStreams.java
+  build: 0.018 seconds
+  compile: 0.018 seconds
+  build: 0.0 seconds
+  main: 0.172 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/spi/SelectorProvider/inheritedChannel/NullTest.java
+  build: 0.017 seconds
+  compile: 0.016 seconds
+  main: 0.01 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/spi/SelectorProvider/inheritedChannel/run_tests.sh
+  build: 0.103 seconds
+  compile: 0.103 seconds
+  shell: 0.035 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/channels/ConfigureBlocking.java
+  build: 0.224 seconds
+  compile: 0.224 seconds
+  main: 0.011 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/Charset/AvailableCharsetNames.java
+  build: 0.02 seconds
+  compile: 0.02 seconds
+  main: 0.3 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/Charset/CharsetContainmentTest.java
+  build: 0.022 seconds
+  compile: 0.022 seconds
+  main: 0.019 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/Charset/Contains.java
+  build: 0.024 seconds
+  compile: 0.024 seconds
+  main: 0.024 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/Charset/default.sh
+  build: 0.024 seconds
+  compile: 0.024 seconds
+  shell: 0.028 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/Charset/EmptyCharsetName.java
+  build: 0.032 seconds
+  compile: 0.031 seconds
+  build: 0.0 seconds
+  main: 0.047 seconds
+  build: 0.001 seconds
+  main: 0.236 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/Charset/EncDec.java
+  build: 0.021 seconds
+  compile: 0.02 seconds
+  main: 0.021 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/Charset/IllegalCharsetName.java
+  build: 0.019 seconds
+  compile: 0.019 seconds
+  main: 0.054 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/Charset/NIOCharsetAvailabilityTest.java
+  build: 0.114 seconds
+  compile: 0.114 seconds
+  main: 6.425 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/Charset/NullCharsetName.java
+  build: 0.023 seconds
+  compile: 0.022 seconds
+  main: 0.012 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/Charset/RegisteredCharsets.java
+  build: 0.053 seconds
+  compile: 0.052 seconds
+  main: 0.017 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/CharsetDecoder/AverageMax.java
+  build: 0.032 seconds
+  compile: 0.032 seconds
+  build: 0.001 seconds
+  main: 0.031 seconds
+  build: 0.001 seconds
+  main: 0.173 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/CharsetDecoder/EmptyInput.java
+  build: 0.019 seconds
+  compile: 0.019 seconds
+  main: 0.011 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/CharsetEncoder/CanEncode.java
+  build: 0.031 seconds
+  compile: 0.03 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/CharsetEncoder/Flush.java
+  build: 0.079 seconds
+  compile: 0.079 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/coders/BashCache.java
+  build: 0.025 seconds
+  compile: 0.025 seconds
+  main: 0.124 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/coders/BashStreams.java
+  build: 0.063 seconds
+  compile: 0.062 seconds
+  main: 2.793 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/coders/Check.java
+  build: 0.035 seconds
+  compile: 0.034 seconds
+  build: 0.038 seconds
+  compile: 0.038 seconds
+  main: 0.306 seconds
+  build: 0.001 seconds
+  main: 0.588 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/coders/CheckSJISMappingProp.sh
+  build: 0.016 seconds
+  compile: 0.016 seconds
+  shell: 1.166 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/coders/Errors.java
+  build: 0.055 seconds
+  compile: 0.054 seconds
+  build: 0.001 seconds
+  main: 0.023 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/coders/FullRead.java
+  build: 0.025 seconds
+  compile: 0.025 seconds
+  main: 0.469 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/coders/IOCoders.java
+  build: 0.024 seconds
+  compile: 0.024 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/coders/IsLegalReplacement.java
+  build: 0.037 seconds
+  compile: 0.036 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/coders/ResetISO2022JP.java
+  build: 0.059 seconds
+  compile: 0.058 seconds
+  main: 0.01 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/coders/StreamTimeout.java
+  build: 0.117 seconds
+  compile: 0.116 seconds
+  main: 0.333 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/coders/Surrogates.java
+  build: 0.031 seconds
+  compile: 0.031 seconds
+  main: 0.009 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/RemovingSunIO/SunioAlias.java
+  build: 0.08 seconds
+  compile: 0.08 seconds
+  main: 0.032 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/RemovingSunIO/TestCOMP.java
+  build: 0.023 seconds
+  compile: 0.023 seconds
+  main: 0.026 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/RemovingSunIO/TestUnmappableForLength.java
+  build: 0.018 seconds
+  compile: 0.017 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/spi/basic.sh
+  build: 0.042 seconds
+  compile: 0.042 seconds
+  shell: 2.113 seconds
+  shell: 1.977 seconds
+  shell: 0.03 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/charset/StandardCharsets/Standard.java
+  build: 0.055 seconds
+  compile: 0.055 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/attribute/AclEntry/EmptySet.java
+  build: 0.018 seconds
+  compile: 0.017 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/attribute/AclFileAttributeView/Basic.java
+  build: 0.122 seconds
+  compile: 0.122 seconds
+  main: 0.028 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/attribute/BasicFileAttributeView/Basic.java
+  build: 0.053 seconds
+  compile: 0.053 seconds
+  main: 0.03 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/attribute/DosFileAttributeView/Basic.java
+  build: 0.058 seconds
+  compile: 0.057 seconds
+  main: 0.017 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/attribute/FileTime/Basic.java
+  build: 0.064 seconds
+  compile: 0.064 seconds
+  main: 0.024 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/attribute/PosixFileAttributeView/Basic.java
+  build: 0.098 seconds
+  compile: 0.097 seconds
+  main: 0.107 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/attribute/UserDefinedFileAttributeView/Basic.java
+  build: 0.115 seconds
+  compile: 0.115 seconds
+  main: 0.03 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/DirectoryStream/Basic.java
+  build: 0.073 seconds
+  compile: 0.073 seconds
+  main: 0.036 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/DirectoryStream/DriveLetter.java
+  build: 0.067 seconds
+  compile: 0.066 seconds
+  main: 0.007 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/DirectoryStream/SecureDS.java
+  build: 0.289 seconds
+  compile: 0.289 seconds
+  main: 0.031 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/etc/Exceptions.java
+  build: 0.063 seconds
+  compile: 0.062 seconds
+  main: 0.047 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/Files/probeContentType/Basic.java
+  build: 0.027 seconds
+  compile: 0.027 seconds
+  build: 0.001 seconds
+  main: 0.353 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/Files/probeContentType/ForceLoad.java
+  build: 0.018 seconds
+  compile: 0.018 seconds
+  main: 0.014 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/Files/walkFileTree/Nulls.java
+  build: 0.05 seconds
+  compile: 0.047 seconds
+  main: 0.026 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/Files/walkFileTree/walk_file_tree.sh
+  build: 0.112 seconds
+  compile: 0.112 seconds
+  shell: 1.329 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/Files/walkFileTree/WalkWithSecurity.java
+  build: 0.043 seconds
+  compile: 0.043 seconds
+  build: 0.0 seconds
+  main: 0.212 seconds
+  build: 0.001 seconds
+  main: 0.202 seconds
+  build: 0.001 seconds
+  main: 0.2 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/Files/BytesAndLines.java
+  build: 0.053 seconds
+  compile: 0.053 seconds
+  main: 0.19 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/Files/CheckPermissions.java
+  build: 0.124 seconds
+  compile: 0.124 seconds
+  build: 0.0 seconds
+  main: 0.284 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/Files/CopyAndMove.java
+  build: 0.426 seconds
+  compile: 0.426 seconds
+  build: 0.0 seconds
+  main: 1.007 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/Files/CustomOptions.java
+  build: 0.035 seconds
+  compile: 0.035 seconds
+  build: 0.0 seconds
+  main: 0.021 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/Files/delete_on_close.sh
+  build: 0.026 seconds
+  compile: 0.024 seconds
+  shell: 0.269 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/Files/FileAttributes.java
+  build: 0.089 seconds
+  compile: 0.089 seconds
+  main: 0.027 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/Files/InterruptCopy.java
+  build: 0.172 seconds
+  compile: 0.172 seconds
+  main: 13.248 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/Files/Links.java
+  build: 0.04 seconds
+  compile: 0.039 seconds
+  build: 0.0 seconds
+  main: 0.218 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/Files/Misc.java
+  build: 0.058 seconds
+  compile: 0.057 seconds
+  main: 0.034 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/Files/SBC.java
+  build: 0.079 seconds
+  compile: 0.079 seconds
+  main: 39.738 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/Files/TemporaryFiles.java
+  build: 0.059 seconds
+  compile: 0.059 seconds
+  main: 0.022 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/FileStore/Basic.java
+  build: 0.053 seconds
+  compile: 0.053 seconds
+  main: 0.041 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/FileSystem/Basic.java
+  build: 0.057 seconds
+  compile: 0.057 seconds
+  main: 0.017 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/Path/MacPathTest.java
+  build: 0.071 seconds
+  compile: 0.071 seconds
+  shell: 0.31 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/Path/Misc.java
+  build: 0.033 seconds
+  compile: 0.033 seconds
+  main: 0.023 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/Path/PathOps.java
+  build: 0.103 seconds
+  compile: 0.103 seconds
+  main: 0.033 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/Path/UriImportExport.java
+  build: 0.033 seconds
+  compile: 0.033 seconds
+  main: 0.016 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/PathMatcher/Basic.java
+  build: 0.026 seconds
+  compile: 0.026 seconds
+  main: 0.021 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/spi/SetDefaultProvider.java
+  build: 0.06 seconds
+  compile: 0.059 seconds
+  build: 0.0 seconds
+  main: 0.195 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/WatchService/Basic.java
+  build: 0.086 seconds
+  compile: 0.085 seconds
+  main: 81.063 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/WatchService/FileTreeModifier.java
+  build: 0.037 seconds
+  compile: 0.036 seconds
+  main: 0.006 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/WatchService/LotsOfEvents.java
+  build: 0.043 seconds
+  compile: 0.042 seconds
+  main: 124.035 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/WatchService/MayFlies.java
+  build: 0.047 seconds
+  compile: 0.047 seconds
+  main: 35.026 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/WatchService/SensitivityModifier.java
+  build: 0.036 seconds
+  compile: 0.036 seconds
+  main: 150.098 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/file/WatchService/WithSecurityManager.java
+  build: 0.026 seconds
+  compile: 0.025 seconds
+  build: 0.0 seconds
+  main: 0.386 seconds
+  build: 0.001 seconds
+  main: 0.192 seconds
+  build: 0.001 seconds
+  main: 0.206 seconds
+  build: 0.0 seconds
+  main: 0.206 seconds
+  build: 0.001 seconds
+  main: 0.217 seconds
+  build: 0.0 seconds
+  main: 0.211 seconds
+  build: 0.001 seconds
+  main: 0.212 seconds
+  build: 0.0 seconds
+  main: 0.208 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/MappedByteBuffer/Basic.java
+  build: 0.021 seconds
+  compile: 0.021 seconds
+  main: 0.613 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/MappedByteBuffer/Force.java
+  build: 0.023 seconds
+  compile: 0.022 seconds
+  main: 0.712 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/MappedByteBuffer/Truncate.java
+  build: 0.029 seconds
+  compile: 0.028 seconds
+  main: 0.2 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/nio/MappedByteBuffer/ZeroMap.java
+  build: 0.019 seconds
+  compile: 0.019 seconds
+  main: 0.709 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/ch/Basic.java
+  build: 0.016 seconds
+  compile: 0.015 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/ch/SelProvider.java
+  build: 0.018 seconds
+  compile: 0.018 seconds
+  main: 0.009 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/ch/TempBuffer.java
+  build: 0.031 seconds
+  compile: 0.03 seconds
+  main: 0.083 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/OLD/TestIBMDB.java
+  build: 1.849 seconds
+  compile: 1.847 seconds
+  build: 0.134 seconds
+  compile: 0.134 seconds
+  main: 50.637 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/BufferUnderflowEUCTWTest.java
+  build: 0.025 seconds
+  compile: 0.025 seconds
+  main: 0.007 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/CheckCaseInsensitiveEncAliases.java
+  build: 0.02 seconds
+  compile: 0.019 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/CheckHistoricalNames.java
+  build: 0.03 seconds
+  compile: 0.03 seconds
+  main: 0.019 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/CheckICNE.java
+  build: 0.018 seconds
+  compile: 0.018 seconds
+  main: 0.007 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/ConvertSingle.java
+  build: 0.022 seconds
+  compile: 0.022 seconds
+  main: 0.008 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/DecoderOverflow.java
+  build: 0.035 seconds
+  compile: 0.035 seconds
+  main: 0.022 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/EncodingNothing.java
+  build: 0.028 seconds
+  compile: 0.027 seconds
+  main: 0.013 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/EucJpLinux0212.java
+  build: 0.036 seconds
+  compile: 0.036 seconds
+  main: 0.011 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/EucJpLinuxDecoderRecoveryTest.java
+  build: 0.055 seconds
+  compile: 0.054 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/EUCJPUnderflowDecodeTest.java
+  build: 0.019 seconds
+  compile: 0.019 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/EuroConverter.java
+  build: 0.03 seconds
+  compile: 0.03 seconds
+  main: 0.021 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/FindASCIICodingBugs.java
+  build: 0.026 seconds
+  compile: 0.026 seconds
+  main: 0.018 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/FindASCIIRangeCodingBugs.java
+  build: 0.026 seconds
+  compile: 0.026 seconds
+  main: 0.062 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/FindASCIIReplBugs.java
+  build: 0.028 seconds
+  compile: 0.028 seconds
+  main: 0.017 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/FindCanEncodeBugs.java
+  build: 0.031 seconds
+  compile: 0.03 seconds
+  main: 25.064 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/FindDecoderBugs.java
+  build: 0.074 seconds
+  compile: 0.073 seconds
+  main: 68.696 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/FindEncoderBugs.java
+  build: 0.078 seconds
+  compile: 0.077 seconds
+  main: 29.398 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/FindOneCharEncoderBugs.java
+  build: 0.047 seconds
+  compile: 0.047 seconds
+  main: 9.933 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/HWKatakanaMS932EncodeTest.java
+  build: 0.02 seconds
+  compile: 0.019 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/ISCIITest.java
+  build: 0.028 seconds
+  compile: 0.028 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/ISO8859x.java
+  build: 0.03 seconds
+  compile: 0.03 seconds
+  main: 0.019 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/JISAutoDetectTest.java
+  build: 0.028 seconds
+  compile: 0.027 seconds
+  main: 0.017 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/LatinCharReplacementTWTest.java
+  build: 0.024 seconds
+  compile: 0.023 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/LeftOverSurrogate.java
+  build: 0.029 seconds
+  compile: 0.029 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/MalformedSurrogates.java
+  build: 0.025 seconds
+  compile: 0.024 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/NIOJISAutoDetectTest.java
+  build: 0.041 seconds
+  compile: 0.041 seconds
+  main: 0.306 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/ReadZero.java
+  build: 0.026 seconds
+  compile: 0.026 seconds
+  main: 0.01 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/SJISCanEncode.java
+  build: 0.02 seconds
+  compile: 0.02 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/StreamEncoderClose.java
+  build: 0.023 seconds
+  compile: 0.023 seconds
+  main: 0.008 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/SurrogateGB18030Test.java
+  build: 0.026 seconds
+  compile: 0.026 seconds
+  main: 0.488 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/SurrogateTestEUCTW.java
+  build: 0.025 seconds
+  compile: 0.024 seconds
+  main: 0.127 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/SurrogateTestHKSCS.java
+  build: 0.1 seconds
+  compile: 0.1 seconds
+  main: 0.007 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/Test4200310.sh
+  shell: 1.75 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/Test4206507.java
+  build: 0.02 seconds
+  compile: 0.02 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/Test6254467.java
+  build: 0.018 seconds
+  compile: 0.018 seconds
+  main: 0.002 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/Test6275027.java
+  build: 0.019 seconds
+  compile: 0.019 seconds
+  main: 0.01 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/TestCompoundTest.java
+  build: 0.021 seconds
+  compile: 0.021 seconds
+  main: 0.006 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/TestConverterDroppedCharacters.java
+  build: 0.031 seconds
+  compile: 0.031 seconds
+  main: 0.109 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/TestCp834_SBCS.java
+  build: 0.022 seconds
+  compile: 0.021 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/TestCp93xSISO.java
+  build: 0.031 seconds
+  compile: 0.031 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/TestEUC_TW.java
+  build: 0.225 seconds
+  compile: 0.225 seconds
+  main: 6.778 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/TestIBM1364.java
+  build: 0.055 seconds
+  compile: 0.055 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/TestIBMBugs.java
+  build: 0.037 seconds
+  compile: 0.037 seconds
+  main: 0.787 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/TestIllegalISO2022Esc.java
+  build: 0.063 seconds
+  compile: 0.063 seconds
+  main: 0.014 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/TestIllegalSJIS.java
+  build: 0.028 seconds
+  compile: 0.028 seconds
+  main: 0.006 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/TestISO2022CNDecoder.java
+  build: 0.071 seconds
+  compile: 0.071 seconds
+  main: 0.007 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/TestISO2022JP.java
+  build: 0.184 seconds
+  compile: 0.183 seconds
+  main: 0.011 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/TestISO2022JPEncoder.java
+  build: 0.027 seconds
+  compile: 0.027 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/TestISO2022JPSubBytes.java
+  build: 0.049 seconds
+  compile: 0.041 seconds
+  main: 0.011 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/TestJIS0208Decoder.java
+  build: 0.036 seconds
+  compile: 0.036 seconds
+  main: 0.009 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/TestJIS0212Decoder.java
+  build: 0.025 seconds
+  compile: 0.025 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/TestMiscEUC_JP.java
+  build: 0.05 seconds
+  compile: 0.05 seconds
+  main: 0.011 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/TestMS5022X.java
+  build: 0.131 seconds
+  compile: 0.131 seconds
+  main: 0.007 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/TestSJIS0213_SM.java
+  build: 0.02 seconds
+  compile: 0.02 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/TestSJIS0213.java
+  build: 0.063 seconds
+  compile: 0.062 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/TestStringCoding.java
+  build: 0.146 seconds
+  compile: 0.146 seconds
+  main: 40.721 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/TestStringCodingUTF8.java
+  build: 0.052 seconds
+  compile: 0.052 seconds
+  main: 4.766 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/TestTrailingEscapesISO2022JP.java
+  build: 0.024 seconds
+  compile: 0.023 seconds
+  main: 0.071 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/TestUni2HKSCS.java
+  build: 0.045 seconds
+  compile: 0.045 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/TestUTF_16.java
+  build: 0.028 seconds
+  compile: 0.027 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/TestUTF8.java
+  build: 0.07 seconds
+  compile: 0.069 seconds
+  main: 1.352 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/TestUTF8BOM.java
+  build: 0.025 seconds
+  compile: 0.025 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/TestX11CNS.java
+  build: 0.056 seconds
+  compile: 0.056 seconds
+  main: 0.128 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/TestX11JIS0201.java
+  build: 0.037 seconds
+  compile: 0.037 seconds
+  main: 0.12 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/UkrainianIsNotRussian.java
+  build: 0.043 seconds
+  compile: 0.042 seconds
+  main: 0.01 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/nio/cs/ZeroedByteArrayEUCTWTest.java
+  build: 0.024 seconds
+  compile: 0.023 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+Test results: passed: 315
+Report written to /Users/swami/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_nio/JTreport/html/report.html
+Results written to /Users/swami/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_nio/JTwork
+Summary: jdk_nio
+TEST STATS: name=jdk_nio  run=315  pass=315  fail=0  excluded=5
+EXIT CODE: 0
+EXIT CODE: 0

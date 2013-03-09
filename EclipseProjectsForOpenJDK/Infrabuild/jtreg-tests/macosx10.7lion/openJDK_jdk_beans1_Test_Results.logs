@@ -1,0 +1,732 @@
+make -k -C  ../jdk/test  jdk_beans1
+echo "Running tests in othervm mode: java/beans/beancontext java/beans/PropertyChangeSupport java/beans/Introspector java/beans/Performance java/beans/VetoableChangeSupport java/beans/Statement"
+Running tests in othervm mode: java/beans/beancontext java/beans/PropertyChangeSupport java/beans/Introspector java/beans/Performance java/beans/VetoableChangeSupport java/beans/Statement
+make TEST_DEPENDENCIES="java/beans/beancontext java/beans/PropertyChangeSupport java/beans/Introspector java/beans/Performance java/beans/VetoableChangeSupport java/beans/Statement" TESTDIRS="java/beans/beancontext java/beans/PropertyChangeSupport java/beans/Introspector java/beans/Performance java/beans/VetoableChangeSupport java/beans/Statement" USE_JTREG_AGENTVM=false UNIQUE_DIR=jdk_beans1 jtreg_tests
+Excluding list contains        0 items
+(                                                                    \
+	  ( JT_HOME=/Users/swami/jtreg;                   \
+            export JT_HOME;                                                  \
+            /Users/swami/jtreg/win32/bin/jtreg                              \
+               -a -ea -esa -v:fail,error,time -retain:fail,error -ignore:quiet -timeoutFactor:4 -J-Xmx512m                                         \
+              -r:/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/JTreport  \
+              -w:/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/JTwork    \
+              -jdk:/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image                \
+              -exclude:/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/excludelist.txt             \
+                                                         \
+              java/beans/beancontext java/beans/PropertyChangeSupport java/beans/Introspector java/beans/Performance java/beans/VetoableChangeSupport java/beans/Statement                                                    \
+	  ) ; ( jtregExitCode=$? && _summary="/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/JTreport/text/summary.txt"; rm -f -f /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/Stats.txt /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/runlist.txt /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/passlist.txt /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/faillist.txt /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/exitcode.txt; echo "${jtregExitCode}" > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/exitcode.txt; if [ -r "${_summary}" ] ; then echo "Summary: jdk_beans1" > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/Stats.txt; expand ${_summary} | egrep -v ' Not run\.' > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/runlist.txt; egrep ' Passed\.' /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/runlist.txt | egrep -v ' Error\.' | egrep -v ' Failed\.' > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/passlist.txt; ( egrep ' Failed\.' /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/runlist.txt; egrep ' Error\.' /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/runlist.txt; egrep -v ' Passed\.' /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/runlist.txt ) | sort | uniq > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/faillist.txt; if [ ${jtregExitCode} != 0 -o -s /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/faillist.txt ] ; then expand /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/faillist.txt | cut -d' ' -f1 | sed -e 's@^@FAILED: @' >> /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/Stats.txt; if [ ${jtregExitCode} = 0 ] ; then jtregExitCode=1; fi; fi; runc="`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/runlist.txt      | wc -l | awk '{print $1;}'`"; passc="`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/passlist.txt    | wc -l | awk '{print $1;}'`"; failc="`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/faillist.txt    | wc -l | awk '{print $1;}'`"; exclc="`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/excludelist.txt | wc -l | awk '{print $1;}'`"; echo "TEST STATS: name=jdk_beans1  run=${runc}  pass=${passc}  fail=${failc}  excluded=${exclc}" >> /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/Stats.txt; else echo "Missing file: ${_summary}" >> /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/Stats.txt; fi; if [ -f /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/Stats.txt ] ; then cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/Stats.txt; fi; ( mkdir -p `dirname /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/ARCHIVE_BUNDLE.zip` && cd /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1 && chmod -R a+r . && zip -q -r /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/ARCHIVE_BUNDLE.zip . ) ; if [ ! -s /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/exitcode.txt; fi ; testExitCode=`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode} )                                          \
+	) 2>&1 | tee /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/output.txt ; if [ ! -s /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/exitcode.txt; fi ; testExitCode=`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode}
+Directory "/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/JTreport" not found: creating
+Directory "/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/JTwork" not found: creating
+Directory "/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_beans1/JTwork/scratch" not found: creating
+--------------------------------------------------
+TEST: java/beans/beancontext/Test4132698.java
+  build: 2.646 seconds
+  compile: 2.573 seconds
+  main: 0.208 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/beancontext/Test4233980.java
+  build: 1.298 seconds
+  compile: 1.297 seconds
+  main: 0.169 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/beancontext/Test4328406.java
+  build: 1.495 seconds
+  compile: 1.495 seconds
+  main: 0.203 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/4168475/Test4168475.java
+  build: 1.308 seconds
+  compile: 1.308 seconds
+  main: 0.358 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/4520754/Test4520754.java
+  build: 1.565 seconds
+  compile: 1.565 seconds
+  main: 0.674 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/4750368/Test4750368.java
+  build: 1.352 seconds
+  compile: 1.352 seconds
+  main: 0.27 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/6380849/TestBeanInfo.java
+  build: 1.348 seconds
+  compile: 1.348 seconds
+  main: 0.216 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/6976577/Test6976577.java
+  build: 1.396 seconds
+  compile: 1.396 seconds
+  main: 0.165 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/7064279/Test7064279.java
+  build: 1.394 seconds
+  compile: 1.393 seconds
+  main: 0.637 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/7122138/Test7122138.java
+  build: 1.468 seconds
+  compile: 1.467 seconds
+  main: 0.18 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/memory/Test4508780.java
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+openjdk version "1.8.0-internal"
+OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
+OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
+
+
+ACTION: build -- Passed. Build successful
+REASON: Named class compiled on demand
+TIME:   1.508 seconds
+messages:
+command: build Test4508780
+reason: Named class compiled on demand
+elapsed time (seconds): 1.508
+
+ACTION: compile -- Passed. Compilation successful
+REASON: .class file out of date or does not exist
+TIME:   1.508 seconds
+messages:
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/beans/Introspector/memory/Test4508780.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.508
+STDOUT:
+STDERR:
+
+ACTION: main -- Failed. Execution failed: `main' threw exception: java.lang.AssertionError
+REASON: Assumed action based on file name: run main Test4508780 
+TIME:   0.287 seconds
+messages:
+command: main Test4508780
+reason: Assumed action based on file name: run main Test4508780 
+elapsed time (seconds): 0.287
+STDOUT:
+class Bean
+ - loader: SimpleClassLoader@62b29807
+class Bean3
+ - loader: SimpleClassLoader@7b28077c
+class Bean4
+ - loader: SimpleClassLoader@2e833b0c
+class Bean2
+ - loader: SimpleClassLoader@42177f8d
+class Bean
+ - loader: SimpleClassLoader@5b9a7704
+class Bean4
+ - loader: SimpleClassLoader@575a5e64
+class Bean3
+ - loader: SimpleClassLoader@9320c4d
+class Bean2
+ - loader: SimpleClassLoader@4c2a3b04
+class Bean
+ - loader: SimpleClassLoader@1ed88bb6
+class Bean4
+ - loader: SimpleClassLoader@631b5ec1
+class Bean3
+ - loader: SimpleClassLoader@256c798c
+class Bean2
+ - loader: SimpleClassLoader@58ca1f4e
+class Bean4
+ - loader: SimpleClassLoader@397924d6
+class Bean
+ - loader: SimpleClassLoader@7e92cde0
+class Bean3
+ - loader: SimpleClassLoader@26acf318
+class Bean2
+ - loader: SimpleClassLoader@6ebcd875
+class Bean
+ - loader: SimpleClassLoader@7d054531
+class Bean4
+ - loader: SimpleClassLoader@627dc4e0
+class Bean3
+ - loader: SimpleClassLoader@7470bb67
+class Bean2
+ - loader: SimpleClassLoader@3d8a4420
+class Bean
+ - loader: SimpleClassLoader@32b0b2d8
+class Bean4
+ - loader: SimpleClassLoader@27744000
+class Bean3
+ - loader: SimpleClassLoader@3ba1a8f8
+class Bean2
+ - loader: SimpleClassLoader@7a89807b
+class Bean
+ - loader: SimpleClassLoader@18d717da
+class Bean4
+ - loader: SimpleClassLoader@6599acf5
+class Bean
+ - loader: SimpleClassLoader@575a5e64
+class Bean2
+ - loader: SimpleClassLoader@3b2d0f25
+class Bean3
+ - loader: SimpleClassLoader@3f811ef1
+class Bean4
+ - loader: SimpleClassLoader@3f811ef1
+class Bean
+ - loader: SimpleClassLoader@3f811ef1
+class Bean3
+ - loader: SimpleClassLoader@3b2d0f25
+class Bean2
+ - loader: SimpleClassLoader@3f811ef1
+class Bean4
+ - loader: SimpleClassLoader@3b2d0f25
+class Bean
+ - loader: SimpleClassLoader@3b2d0f25
+class Bean
+ - loader: SimpleClassLoader@2e833b0c
+class Bean2
+ - loader: SimpleClassLoader@2e833b0c
+class Bean3
+ - loader: SimpleClassLoader@2e833b0c
+class Bean
+ - loader: SimpleClassLoader@6599acf5
+class Bean2
+ - loader: SimpleClassLoader@6599acf5
+class Bean
+ - loader: SimpleClassLoader@7175f9a7
+class Bean2
+ - loader: SimpleClassLoader@575a5e64
+class Bean4
+ - loader: SimpleClassLoader@7b28077c
+class Bean2
+ - loader: SimpleClassLoader@7175f9a7
+class Bean3
+ - loader: SimpleClassLoader@7a89807b
+class Bean3
+ - loader: SimpleClassLoader@7175f9a7
+class Bean4
+ - loader: SimpleClassLoader@7a89807b
+class Bean
+ - loader: SimpleClassLoader@7b28077c
+class Bean4
+ - loader: SimpleClassLoader@50e0dd80
+class Bean3
+ - loader: SimpleClassLoader@4c4007ec
+class Bean2
+ - loader: SimpleClassLoader@32b0b2d8
+class Bean4
+ - loader: SimpleClassLoader@4c4007ec
+class Bean3
+ - loader: SimpleClassLoader@6599acf5
+class Bean
+ - loader: SimpleClassLoader@4c4007ec
+class Bean2
+ - loader: SimpleClassLoader@4c4007ec
+class Bean3
+ - loader: SimpleClassLoader@3d8a4420
+class Bean2
+ - loader: SimpleClassLoader@5b87a0b5
+STDERR:
+java.lang.AssertionError
+	at sun.reflect.generics.reflectiveObjects.WildcardTypeImpl.getLowerBoundASTs(WildcardTypeImpl.java:94)
+	at sun.reflect.generics.reflectiveObjects.WildcardTypeImpl.getLowerBounds(WildcardTypeImpl.java:165)
+	at com.sun.beans.TypeResolver.resolve(TypeResolver.java:176)
+	at com.sun.beans.TypeResolver.resolve(TypeResolver.java:218)
+	at com.sun.beans.TypeResolver.resolve(TypeResolver.java:169)
+	at com.sun.beans.TypeResolver.resolveInClass(TypeResolver.java:81)
+	at java.beans.FeatureDescriptor.getReturnType(FeatureDescriptor.java:370)
+	at java.beans.Introspector.getTargetEventInfo(Introspector.java:996)
+	at java.beans.Introspector.getBeanInfo(Introspector.java:417)
+	at java.beans.Introspector.getBeanInfo(Introspector.java:163)
+	at java.beans.Introspector.getBeanInfo(Introspector.java:250)
+	at java.beans.Introspector.<init>(Introspector.java:397)
+	at java.beans.Introspector.getBeanInfo(Introspector.java:163)
+	at Test4508780.getPropertyDescriptors(Test4508780.java:127)
+	at Test4508780.run(Test4508780.java:86)
+	at java.lang.Thread.run(Thread.java:722)
+STATUS:Failed.`main' threw exception: java.lang.AssertionError
+
+TEST RESULT: Failed. Execution failed: `main' threw exception: java.lang.AssertionError
+--------------------------------------------------
+TEST: java/beans/Introspector/memory/Test4809008.java
+  build: 0.0 seconds
+  build: 1.252 seconds
+  compile: 1.252 seconds
+  main: 1.674 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test4072197.java
+  build: 1.279 seconds
+  compile: 1.278 seconds
+  main: 0.161 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test4144543.java
+  build: 1.183 seconds
+  compile: 1.182 seconds
+  main: 0.216 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test4168833.java
+  build: 1.529 seconds
+  compile: 1.529 seconds
+  main: 0.187 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test4274639.java
+  build: 1.458 seconds
+  compile: 1.458 seconds
+  main: 0.179 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test4498236.java
+  build: 1.524 seconds
+  compile: 1.523 seconds
+  main: 0.184 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test4619536.java
+  build: 1.447 seconds
+  compile: 1.445 seconds
+  main: 0.217 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test4619792.java
+  build: 1.371 seconds
+  compile: 1.37 seconds
+  main: 0.308 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test4634390.java
+  build: 1.381 seconds
+  compile: 1.38 seconds
+  main: 0.896 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test4896879.java
+  build: 1.507 seconds
+  compile: 1.507 seconds
+  main: 0.193 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test4918902.java
+  build: 1.371 seconds
+  compile: 1.371 seconds
+  main: 0.208 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test4935607.java
+  build: 1.64 seconds
+  compile: 1.639 seconds
+  main: 0.625 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test4948761.java
+  build: 1.225 seconds
+  compile: 1.225 seconds
+  main: 0.189 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test4984912.java
+  build: 1.359 seconds
+  compile: 1.358 seconds
+  main: 0.177 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test5063390.java
+  build: 1.333 seconds
+  compile: 1.332 seconds
+  main: 0.174 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test5102804.java
+  build: 1.455 seconds
+  compile: 1.455 seconds
+  main: 0.23 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test6194788.java
+  build: 1.399 seconds
+  compile: 1.399 seconds
+  main: 0.184 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test6277246.java
+  build: 1.347 seconds
+  compile: 1.346 seconds
+  main: 0.346 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test6311051.java
+  build: 1.337 seconds
+  compile: 1.336 seconds
+  main: 0.169 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test6422403.java
+  build: 1.357 seconds
+  compile: 1.356 seconds
+  main: 0.184 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test6447751.java
+  build: 1.436 seconds
+  compile: 1.436 seconds
+  main: 0.192 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test6528714.java
+  build: 1.31 seconds
+  compile: 1.309 seconds
+  main: 0.175 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test6660539.java
+  build: 1.282 seconds
+  compile: 1.282 seconds
+  main: 0.191 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test6707234.java
+  build: 1.297 seconds
+  compile: 1.297 seconds
+  main: 0.175 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test6723447.java
+  build: 1.358 seconds
+  compile: 1.358 seconds
+  main: 0.242 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test6868189.java
+  build: 1.34 seconds
+  compile: 1.34 seconds
+  main: 0.176 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test6963811.java
+  build: 1.329 seconds
+  compile: 1.329 seconds
+  main: 1.187 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test7186794.java
+  build: 1.28 seconds
+  compile: 1.28 seconds
+  main: 0.194 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test7189112.java
+  build: 1.297 seconds
+  compile: 1.297 seconds
+  main: 0.194 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test7192955.java
+  build: 1.253 seconds
+  compile: 1.253 seconds
+  main: 0.195 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test7193977.java
+  build: 1.474 seconds
+  compile: 1.474 seconds
+  main: 0.195 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test7195106.java
+  build: 1.328 seconds
+  compile: 1.327 seconds
+  main: 1.19 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/Test8005065.java
+  build: 1.478 seconds
+  compile: 1.478 seconds
+  main: 0.244 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Introspector/TestTypeResolver.java
+JDK under test: (/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image)
+openjdk version "1.8.0-internal"
+OpenJDK Runtime Environment (build 1.8.0-internal-sami_2013_03_04_18_12-b00)
+OpenJDK 64-Bit Server VM (build 25.0-b19, mixed mode)
+
+
+ACTION: build -- Failed. Compilation failed: Compilation failed
+REASON: Named class compiled on demand
+TIME:   1.799 seconds
+messages:
+command: build TestTypeResolver
+reason: Named class compiled on demand
+elapsed time (seconds): 1.799
+
+ACTION: compile -- Failed. Compilation failed: Compilation failed
+REASON: .class file out of date or does not exist
+TIME:   1.798 seconds
+messages:
+command: compile /Users/swami/sources/jdk8_tl/jdk/test/java/beans/Introspector/TestTypeResolver.java
+reason: .class file out of date or does not exist
+elapsed time (seconds): 1.798
+STDOUT:
+STDERR:
+/Users/swami/sources/jdk8_tl/jdk/test/java/beans/Introspector/TestTypeResolver.java:30: warning: TypeResolver is internal proprietary API and may be removed in a future release
+import com.sun.beans.TypeResolver;
+                    ^
+/Users/swami/sources/jdk8_tl/jdk/test/java/beans/Introspector/TestTypeResolver.java:45: warning: GenericArrayTypeImpl is internal proprietary API and may be removed in a future release
+import sun.reflect.generics.reflectiveObjects.GenericArrayTypeImpl;
+                                             ^
+/Users/swami/sources/jdk8_tl/jdk/test/java/beans/Introspector/TestTypeResolver.java:46: warning: ParameterizedTypeImpl is internal proprietary API and may be removed in a future release
+import sun.reflect.generics.reflectiveObjects.ParameterizedTypeImpl;
+                                             ^
+/Users/swami/sources/jdk8_tl/jdk/test/java/beans/Introspector/TestTypeResolver.java:111: warning: TypeResolver is internal proprietary API and may be removed in a future release
+        t = TypeResolver.resolveInClass(c, t);
+            ^
+/Users/swami/sources/jdk8_tl/jdk/test/java/beans/Introspector/TestTypeResolver.java:204: error: ClassTypeVariable is not abstract and does not override abstract method getAnnotatedBounds() in TypeVariable
+    private static class ClassTypeVariable extends TypeVariableImpl<Class<?>> {
+                   ^
+/Users/swami/sources/jdk8_tl/jdk/test/java/beans/Introspector/TestTypeResolver.java:210: error: MethodTypeVariable is not abstract and does not override abstract method getAnnotatedBounds() in TypeVariable
+    private static class MethodTypeVariable extends TypeVariableImpl<Method> {
+                   ^
+/Users/swami/sources/jdk8_tl/jdk/test/java/beans/Introspector/TestTypeResolver.java:330: warning: ParameterizedTypeImpl is internal proprietary API and may be removed in a future release
+        static final Type expect = ParameterizedTypeImpl.make(
+                                   ^
+/Users/swami/sources/jdk8_tl/jdk/test/java/beans/Introspector/TestTypeResolver.java:335: warning: ParameterizedTypeImpl is internal proprietary API and may be removed in a future release
+        static final Type expect = ParameterizedTypeImpl.make(
+                                   ^
+/Users/swami/sources/jdk8_tl/jdk/test/java/beans/Introspector/TestTypeResolver.java:344: warning: ParameterizedTypeImpl is internal proprietary API and may be removed in a future release
+        static final Type expect = ParameterizedTypeImpl.make(
+                                   ^
+/Users/swami/sources/jdk8_tl/jdk/test/java/beans/Introspector/TestTypeResolver.java:349: warning: ParameterizedTypeImpl is internal proprietary API and may be removed in a future release
+        static final Type expect = ParameterizedTypeImpl.make(
+                                   ^
+/Users/swami/sources/jdk8_tl/jdk/test/java/beans/Introspector/TestTypeResolver.java:354: warning: ParameterizedTypeImpl is internal proprietary API and may be removed in a future release
+        static final Type expect = ParameterizedTypeImpl.make(
+                                   ^
+/Users/swami/sources/jdk8_tl/jdk/test/java/beans/Introspector/TestTypeResolver.java:363: warning: ParameterizedTypeImpl is internal proprietary API and may be removed in a future release
+        static final Type expect = ParameterizedTypeImpl.make(
+                                   ^
+/Users/swami/sources/jdk8_tl/jdk/test/java/beans/Introspector/TestTypeResolver.java:440: warning: GenericArrayTypeImpl is internal proprietary API and may be removed in a future release
+        static final Type expect = GenericArrayTypeImpl.make(
+                                   ^
+/Users/swami/sources/jdk8_tl/jdk/test/java/beans/Introspector/TestTypeResolver.java:441: warning: ParameterizedTypeImpl is internal proprietary API and may be removed in a future release
+                ParameterizedTypeImpl.make(List.class, new Type[] {String.class}, null));
+                ^
+/Users/swami/sources/jdk8_tl/jdk/test/java/beans/Introspector/TestTypeResolver.java:445: warning: GenericArrayTypeImpl is internal proprietary API and may be removed in a future release
+        static final Type expect = GenericArrayTypeImpl.make(
+                                   ^
+/Users/swami/sources/jdk8_tl/jdk/test/java/beans/Introspector/TestTypeResolver.java:454: warning: ParameterizedTypeImpl is internal proprietary API and may be removed in a future release
+        static final Type expect = ParameterizedTypeImpl.make(
+                                   ^
+/Users/swami/sources/jdk8_tl/jdk/test/java/beans/Introspector/TestTypeResolver.java:459: warning: ParameterizedTypeImpl is internal proprietary API and may be removed in a future release
+        static final Type expect = ParameterizedTypeImpl.make(
+                                   ^
+/Users/swami/sources/jdk8_tl/jdk/test/java/beans/Introspector/TestTypeResolver.java:469: warning: ParameterizedTypeImpl is internal proprietary API and may be removed in a future release
+        static final Type expect = ParameterizedTypeImpl.make(
+                                   ^
+/Users/swami/sources/jdk8_tl/jdk/test/java/beans/Introspector/TestTypeResolver.java:488: warning: ParameterizedTypeImpl is internal proprietary API and may be removed in a future release
+        static final Type expect = ParameterizedTypeImpl.make(
+                                   ^
+/Users/swami/sources/jdk8_tl/jdk/test/java/beans/Introspector/TestTypeResolver.java:498: warning: ParameterizedTypeImpl is internal proprietary API and may be removed in a future release
+        static final Type expect = ParameterizedTypeImpl.make(
+                                   ^
+/Users/swami/sources/jdk8_tl/jdk/test/java/beans/Introspector/TestTypeResolver.java:508: warning: ParameterizedTypeImpl is internal proprietary API and may be removed in a future release
+        static final Type expect = ParameterizedTypeImpl.make(
+                                   ^
+/Users/swami/sources/jdk8_tl/jdk/test/java/beans/Introspector/TestTypeResolver.java:521: warning: ParameterizedTypeImpl is internal proprietary API and may be removed in a future release
+        static final Type expect = ParameterizedTypeImpl.make(
+                                   ^
+/Users/swami/sources/jdk8_tl/jdk/test/java/beans/Introspector/TestTypeResolver.java:531: warning: ParameterizedTypeImpl is internal proprietary API and may be removed in a future release
+                        ParameterizedTypeImpl.make(
+                        ^
+/Users/swami/sources/jdk8_tl/jdk/test/java/beans/Introspector/TestTypeResolver.java:528: warning: ParameterizedTypeImpl is internal proprietary API and may be removed in a future release
+        static final Type expect = ParameterizedTypeImpl.make(
+                                   ^
+/Users/swami/sources/jdk8_tl/jdk/test/java/beans/Introspector/TestTypeResolver.java:542: warning: ParameterizedTypeImpl is internal proprietary API and may be removed in a future release
+                        ParameterizedTypeImpl.make(
+                        ^
+/Users/swami/sources/jdk8_tl/jdk/test/java/beans/Introspector/TestTypeResolver.java:539: warning: ParameterizedTypeImpl is internal proprietary API and may be removed in a future release
+        static final Type expect = ParameterizedTypeImpl.make(
+                                   ^
+2 errors
+24 warnings
+
+TEST RESULT: Failed. Compilation failed: Compilation failed
+--------------------------------------------------
+TEST: java/beans/PropertyChangeSupport/Test4092905.java
+  build: 1.36 seconds
+  compile: 1.36 seconds
+  main: 0.274 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyChangeSupport/Test4353056.java
+  build: 1.412 seconds
+  compile: 1.412 seconds
+  main: 0.408 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyChangeSupport/Test4682386.java
+  build: 1.829 seconds
+  compile: 1.829 seconds
+  main: 3.729 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyChangeSupport/Test4985020.java
+  build: 1.443 seconds
+  compile: 1.443 seconds
+  main: 0.161 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyChangeSupport/Test7087429.java
+  build: 1.18 seconds
+  compile: 1.18 seconds
+  main: 0.159 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyChangeSupport/Test7148143.java
+  build: 1.293 seconds
+  compile: 1.293 seconds
+  main: 0.161 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyChangeSupport/TestEquals.java
+  build: 1.362 seconds
+  compile: 1.361 seconds
+  main: 0.162 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyChangeSupport/TestListeners.java
+  build: 1.404 seconds
+  compile: 1.404 seconds
+  main: 0.161 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyChangeSupport/TestMethods.java
+  build: 1.43 seconds
+  compile: 1.43 seconds
+  main: 0.161 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyChangeSupport/TestSerialization.java
+  build: 1.508 seconds
+  compile: 1.507 seconds
+  main: 0.222 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/PropertyChangeSupport/TestSynchronization.java
+  build: 1.433 seconds
+  compile: 1.433 seconds
+  main: 0.569 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Statement/Test4530962.java
+  build: 1.287 seconds
+  compile: 1.287 seconds
+  main: 0.216 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Statement/Test4653179.java
+  build: 1.364 seconds
+  compile: 1.364 seconds
+  main: 0.619 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Statement/Test6224433.java
+  build: 1.305 seconds
+  compile: 1.305 seconds
+  main: 0.191 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Statement/Test6707226.java
+  build: 1.151 seconds
+  compile: 1.15 seconds
+  main: 0.168 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/Statement/Test6788531.java
+  build: 1.2 seconds
+  compile: 1.2 seconds
+  main: 0.189 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/VetoableChangeSupport/Test4076065.java
+  build: 1.115 seconds
+  compile: 1.115 seconds
+  main: 0.17 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/VetoableChangeSupport/Test4092906.java
+  build: 1.331 seconds
+  compile: 1.331 seconds
+  main: 0.199 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/VetoableChangeSupport/Test4425885.java
+  build: 1.318 seconds
+  compile: 1.318 seconds
+  main: 0.161 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/VetoableChangeSupport/Test4994635.java
+  build: 1.422 seconds
+  compile: 1.422 seconds
+  main: 0.159 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/VetoableChangeSupport/Test6630275.java
+  build: 1.3 seconds
+  compile: 1.3 seconds
+  main: 0.16 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/VetoableChangeSupport/Test7148143.java
+  build: 1.284 seconds
+  compile: 1.284 seconds
+  main: 0.161 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/VetoableChangeSupport/TestEquals.java
+  build: 1.356 seconds
+  compile: 1.355 seconds
+  main: 0.16 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/VetoableChangeSupport/TestListeners.java
+  build: 1.456 seconds
+  compile: 1.455 seconds
+  main: 0.16 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/VetoableChangeSupport/TestMethods.java
+  build: 1.406 seconds
+  compile: 1.406 seconds
+  main: 0.16 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/VetoableChangeSupport/TestSerialization.java
+  build: 1.516 seconds
+  compile: 1.515 seconds
+  main: 0.225 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/beans/VetoableChangeSupport/TestSynchronization.java
+  build: 1.333 seconds
+  compile: 1.332 seconds
+  main: 0.162 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+Test results: passed: 70; failed: 2
+Report written to /Users/swami/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_beans1/JTreport/html/report.html
+Results written to /Users/swami/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_beans1/JTwork
+Error: Some tests failed or other problems occurred.
+Summary: jdk_beans1
+FAILED: java/beans/Introspector/TestTypeResolver.java
+FAILED: java/beans/Introspector/memory/Test4508780.java
+TEST STATS: name=jdk_beans1  run=72  pass=70  fail=2  excluded=0
+EXIT CODE: 1
+EXIT CODE: 1
+make[2]: *** [jtreg_tests] Error 1
+make[1]: *** [jdk_beans1] Error 2
+make: *** [jdk_beans1] Error 2

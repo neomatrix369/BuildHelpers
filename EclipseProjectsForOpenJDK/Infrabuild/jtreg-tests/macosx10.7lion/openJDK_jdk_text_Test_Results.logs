@@ -1,0 +1,312 @@
+make -k -C  ../jdk/test  jdk_text
+echo "Running tests in agentvm mode: java/text sun/text"
+Running tests in agentvm mode: java/text sun/text
+make TEST_DEPENDENCIES="java/text sun/text" TESTDIRS="java/text sun/text" USE_JTREG_AGENTVM=true  UNIQUE_DIR=jdk_text jtreg_tests
+Excluding list contains        0 items
+(                                                                    \
+	  ( JT_HOME=/Users/swami/jtreg;                   \
+            export JT_HOME;                                                  \
+            /Users/swami/jtreg/win32/bin/jtreg                              \
+              -agentvm   -a -ea -esa -v:fail,error,time -retain:fail,error -ignore:quiet -timeoutFactor:4 -J-Xmx512m                                         \
+              -r:/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/JTreport  \
+              -w:/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/JTwork    \
+              -jdk:/Users/swami/sources/jdk8_tl/build/macosx-x86_64-normal-server-release/images/j2sdk-image                \
+              -exclude:/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/excludelist.txt             \
+                                                        \
+              java/text sun/text                                                    \
+	  ) ; ( jtregExitCode=$? && _summary="/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/JTreport/text/summary.txt"; rm -f -f /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/Stats.txt /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/runlist.txt /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/passlist.txt /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/faillist.txt /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/exitcode.txt; echo "${jtregExitCode}" > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/exitcode.txt; if [ -r "${_summary}" ] ; then echo "Summary: jdk_text" > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/Stats.txt; expand ${_summary} | egrep -v ' Not run\.' > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/runlist.txt; egrep ' Passed\.' /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/runlist.txt | egrep -v ' Error\.' | egrep -v ' Failed\.' > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/passlist.txt; ( egrep ' Failed\.' /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/runlist.txt; egrep ' Error\.' /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/runlist.txt; egrep -v ' Passed\.' /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/runlist.txt ) | sort | uniq > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/faillist.txt; if [ ${jtregExitCode} != 0 -o -s /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/faillist.txt ] ; then expand /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/faillist.txt | cut -d' ' -f1 | sed -e 's@^@FAILED: @' >> /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/Stats.txt; if [ ${jtregExitCode} = 0 ] ; then jtregExitCode=1; fi; fi; runc="`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/runlist.txt      | wc -l | awk '{print $1;}'`"; passc="`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/passlist.txt    | wc -l | awk '{print $1;}'`"; failc="`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/faillist.txt    | wc -l | awk '{print $1;}'`"; exclc="`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/excludelist.txt | wc -l | awk '{print $1;}'`"; echo "TEST STATS: name=jdk_text  run=${runc}  pass=${passc}  fail=${failc}  excluded=${exclc}" >> /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/Stats.txt; else echo "Missing file: ${_summary}" >> /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/Stats.txt; fi; if [ -f /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/Stats.txt ] ; then cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/Stats.txt; fi; ( mkdir -p `dirname /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/ARCHIVE_BUNDLE.zip` && cd /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text && chmod -R a+r . && zip -q -r /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/ARCHIVE_BUNDLE.zip . ) ; if [ ! -s /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/exitcode.txt; fi ; testExitCode=`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode} )                                          \
+	) 2>&1 | tee /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/output.txt ; if [ ! -s /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/exitcode.txt ] ; then echo "ERROR: EXITCODE file not filled in."; echo "1" > /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/exitcode.txt; fi ; testExitCode=`cat /Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/exitcode.txt`; echo "EXIT CODE: ${testExitCode}"; exit ${testExitCode}
+Directory "/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/JTreport" not found: creating
+Directory "/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/JTwork" not found: creating
+Directory "/Users/swami/sources/jdk8_tl/jdk/test/../build/macosx-i586/testoutput/jdk_text/JTwork/scratch" not found: creating
+--------------------------------------------------
+TEST: java/text/Bidi/BidiBug.java
+  build: 1.63 seconds
+  compile: 1.62 seconds
+  main: 0.019 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/Bidi/BidiConformance.java
+  build: 1.392 seconds
+  compile: 1.392 seconds
+  main: 0.248 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/Bidi/BidiEmbeddingTest.java
+  build: 0.224 seconds
+  compile: 0.224 seconds
+  main: 0.005 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/Bidi/BidiSurrogateTest.java
+  build: 0.113 seconds
+  compile: 0.112 seconds
+  main: 0.007 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/Bidi/Bug6665028.java
+  build: 0.135 seconds
+  compile: 0.134 seconds
+  build: 0.0 seconds
+  main: 10.349 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/Bidi/Bug6850113.java
+  compile: 0.088 seconds
+  build: 0.0 seconds
+  main: 0.01 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/Bidi/Bug7002398.java
+  build: 0.058 seconds
+  compile: 0.058 seconds
+  main: 0.007 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/Bidi/Bug7041232.java
+  build: 0.038 seconds
+  compile: 0.037 seconds
+  main: 0.007 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/Bidi/Bug7042148.java
+  build: 0.085 seconds
+  compile: 0.084 seconds
+  main: 0.006 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/Bidi/Bug7051769.java
+  build: 0.086 seconds
+  compile: 0.086 seconds
+  main: 0.011 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/Bidi/Bug8005277.java
+  build: 0.067 seconds
+  compile: 0.067 seconds
+  main: 0.003 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/BreakIterator/Bug7104012.java
+  build: 0.112 seconds
+  compile: 0.111 seconds
+  main: 0.594 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/BreakIterator/ExceptionTest.java
+  build: 0.178 seconds
+  compile: 0.178 seconds
+  main: 0.056 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/Collator/Bug5047314.java
+  build: 0.1 seconds
+  compile: 0.1 seconds
+  main: 0.075 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/Collator/Bug6970930.java
+  build: 0.082 seconds
+  compile: 0.082 seconds
+  main: 0.036 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/Collator/Bug7200119.java
+  build: 0.039 seconds
+  compile: 0.039 seconds
+  main: 0.023 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/Format/ChoiceFormat/Bug8001209.java
+  build: 0.209 seconds
+  compile: 0.209 seconds
+  main: 0.008 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/Format/DateFormat/Bug4396385.java
+  build: 0.076 seconds
+  compile: 0.076 seconds
+  main: 0.064 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/Format/DateFormat/Bug4823811.java
+  build: 0.404 seconds
+  compile: 0.404 seconds
+  main: 0.622 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/Format/DateFormat/Bug6609750.java
+  build: 0.04 seconds
+  compile: 0.04 seconds
+  main: 0.015 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/Format/DateFormat/Bug6645292.java
+  build: 0.042 seconds
+  compile: 0.04 seconds
+  main: 0.035 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/Format/DateFormat/Bug6683975.java
+  build: 0.049 seconds
+  compile: 0.049 seconds
+  main: 0.051 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/Format/DateFormat/Bug7130335.java
+  build: 0.045 seconds
+  compile: 0.045 seconds
+  main: 0.015 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/Format/DateFormat/ContextMonthNamesTest.java
+  build: 0.032 seconds
+  compile: 0.032 seconds
+  main: 0.014 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/Format/DateFormat/ISO8601ZoneTest.java
+  build: 0.137 seconds
+  compile: 0.136 seconds
+  main: 0.034 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/Format/DateFormat/WeekDateTest.java
+  build: 0.062 seconds
+  compile: 0.062 seconds
+  main: 0.058 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/Format/DecimalFormat/Bug7196316.java
+  build: 0.057 seconds
+  compile: 0.056 seconds
+  main: 0.043 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/Format/DecimalFormat/FormatMicroBenchmark.java
+  build: 0.21 seconds
+  compile: 0.21 seconds
+  main: 0.014 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/Format/DecimalFormat/RoundingAndPropertyTest.java
+  build: 0.784 seconds
+  compile: 0.784 seconds
+  main: 0.05 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/Format/DecimalFormat/TieRoundingTest.java
+  build: 0.146 seconds
+  compile: 0.146 seconds
+  main: 0.024 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/Format/MessageFormat/Bug7003643.java
+  build: 0.036 seconds
+  compile: 0.035 seconds
+  main: 1.474 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: java/text/Format/NumberFormat/MultipleNumberScriptTest.java
+  build: 0.031 seconds
+  compile: 0.031 seconds
+  main: 0.022 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/text/resources/Collator/Bug4248694.java
+  build: 0.032 seconds
+  compile: 0.03 seconds
+  main: 0.023 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/text/resources/Collator/Bug4804273.java
+  build: 0.031 seconds
+  compile: 0.031 seconds
+  main: 0.022 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/text/resources/Collator/Bug4848897.java
+  build: 0.04 seconds
+  compile: 0.039 seconds
+  main: 0.035 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/text/resources/Collator/Bug6755060.java
+  build: 0.04 seconds
+  compile: 0.039 seconds
+  main: 0.027 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/text/resources/Format/Bug4395196.java
+  build: 0.035 seconds
+  compile: 0.035 seconds
+  main: 0.032 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/text/resources/Format/Bug4442855.java
+  build: 0.042 seconds
+  compile: 0.041 seconds
+  main: 0.049 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/text/resources/Format/Bug4621320.java
+  build: 0.028 seconds
+  compile: 0.027 seconds
+  main: 0.006 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/text/resources/Format/Bug4651568.java
+  build: 0.042 seconds
+  compile: 0.042 seconds
+  main: 0.008 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/text/resources/Format/Bug4685470.java
+  build: 0.052 seconds
+  compile: 0.052 seconds
+  main: 0.025 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/text/resources/Format/Bug4762201.java
+  build: 0.026 seconds
+  compile: 0.025 seconds
+  main: 0.004 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/text/resources/Format/Bug4807540.java
+  build: 0.044 seconds
+  compile: 0.044 seconds
+  main: 0.01 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/text/resources/Format/Bug4810032.java
+  build: 0.027 seconds
+  compile: 0.027 seconds
+  main: 0.038 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/text/resources/Format/Bug4994312.java
+  build: 0.043 seconds
+  compile: 0.043 seconds
+  main: 0.006 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/text/resources/Format/Bug5096553.java
+  build: 0.108 seconds
+  compile: 0.108 seconds
+  main: 0.015 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+TEST: sun/text/resources/LocaleDataTest.java
+  build: 0.231 seconds
+  compile: 0.231 seconds
+  main: 1.36 seconds
+TEST RESULT: Passed. Execution successful
+--------------------------------------------------
+Test results: passed: 47
+Report written to /Users/swami/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_text/JTreport/html/report.html
+Results written to /Users/swami/sources/jdk8_tl/jdk/build/macosx-i586/testoutput/jdk_text/JTwork
+Summary: jdk_text
+TEST STATS: name=jdk_text  run=47  pass=47  fail=0  excluded=0
+EXIT CODE: 0
+EXIT CODE: 0
