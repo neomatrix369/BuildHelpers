@@ -42,7 +42,7 @@ set -eu
 ##################################################################################################################
 
 # Default platform is 32 bits
-PLATFORM=32
+PLATFORM="32"
 
 # Go to the Downloads folder
 echo "Navigating to the Downloads folder."
@@ -57,27 +57,31 @@ MACHINE_HARDWARE_NAME=$(uname -m)
 
 # If it contains _x64, its a 64-bit system.
 if echo "$MACHINE_HARDWARE_NAME" | grep -q "_64"; then
-   PLATFORM=64;
+   PLATFORM="64";
 fi
 
 echo "Platform: $PLATFORM-bits system detected."
 
-if [ "$PLATFORM" == "32" ]; then
+if [ "$PLATFORM" == "32" ]
+then
    echo "Downloading $PLATFORM-bits binary package of Eclipse Juno for Ubuntu 12.04."
    wget http://mirrors.ibiblio.org/eclipse/technology/epp/downloads/release/juno/SR1/eclipse-cpp-juno-SR1-linux-gtk.tar.gz
-else if [ "$PLATFORM" == "64" ]; then
+elif [ $PLATFORM == 64 ]
+then
    echo "Downloading $PLATFORM-bits binary package of Eclipse Juno for Ubuntu 12.04."
    wget http://mirrors.ibiblio.org/eclipse/technology/epp/downloads/release/juno/SR1/eclipse-cpp-juno-SR1-linux-gtk-x86_64.tar.gz
 fi
 echo "Download finished."
 
 # Untar the downloaded file
-if [ "$PLATFORM" == "32" ]; then
+if [ "$PLATFORM" == "32" ]
+then
    echo "Untar-ing the $PLATFORM-bits downloaded binary."
    tar -zxvf eclipse-cpp-juno-SR1-linux-gtk.tar.gz
-else if [ "$PLATFORM" == "64" ]; then
+elif [ "$PLATFORM" == "64" ]
+then
    echo "Untar-ing the $PLATFORM-bits downloaded binary."
-   tar -zxvf eclipse-cpp-juno-SR1-linux-gtk-x86_64.tar.gz</blockquote>
+   tar -zxvf eclipse-cpp-juno-SR1-linux-gtk-x86_64.tar.gz
 fi
 echo "Untar-ing of binary successful."
 
