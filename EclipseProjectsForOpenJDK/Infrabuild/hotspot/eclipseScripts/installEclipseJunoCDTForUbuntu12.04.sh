@@ -65,11 +65,11 @@ echo "Platform: $PLATFORM-bits system detected."
 if [ "$PLATFORM" == "32" ]
 then
    echo "Downloading $PLATFORM-bits binary package of Eclipse Juno for Ubuntu 12.04."
-   wget http://mirrors.ibiblio.org/eclipse/technology/epp/downloads/release/juno/SR1/eclipse-cpp-juno-SR1-linux-gtk.tar.gz
+   wget http://mirrors.ibiblio.org/eclipse/technology/epp/downloads/release/juno/SR2/eclipse-cpp-juno-SR2-linux-gtk.tar.gz
 elif [ $PLATFORM == 64 ]
 then
    echo "Downloading $PLATFORM-bits binary package of Eclipse Juno for Ubuntu 12.04."
-   wget http://mirrors.ibiblio.org/eclipse/technology/epp/downloads/release/juno/SR1/eclipse-cpp-juno-SR1-linux-gtk-x86_64.tar.gz
+   wget http://mirrors.ibiblio.org/eclipse/technology/epp/downloads/release/juno/SR2/eclipse-cpp-juno-SR2-linux-gtk-x86_64.tar.gz
 fi
 echo "Download finished."
 
@@ -77,11 +77,11 @@ echo "Download finished."
 if [ "$PLATFORM" == "32" ]
 then
    echo "Untar-ing the $PLATFORM-bits downloaded binary."
-   tar -zxvf eclipse-cpp-juno-SR1-linux-gtk.tar.gz
+   tar -zxvf eclipse-cpp-juno-SR2-linux-gtk.tar.gz
 elif [ "$PLATFORM" == "64" ]
 then
    echo "Untar-ing the $PLATFORM-bits downloaded binary."
-   tar -zxvf eclipse-cpp-juno-SR1-linux-gtk-x86_64.tar.gz
+   tar -zxvf eclipse-cpp-juno-SR2-linux-gtk-x86_64.tar.gz
 fi
 echo "Untar-ing of binary successful."
 
