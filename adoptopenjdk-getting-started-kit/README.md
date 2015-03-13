@@ -12,3 +12,6 @@ Shortened link to the Adopt OpenJDK Getting Started Kit: http://bit.ly/17ovGUB
 Please read and implement the below when attending the presentation or hands-on session!
 
 ---
+
+```
+```
