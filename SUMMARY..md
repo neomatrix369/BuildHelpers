@@ -1,4 +1,4 @@
 # Summary
 
-* Adopt OpenJDK - Getting started
+* Table of contents
 
