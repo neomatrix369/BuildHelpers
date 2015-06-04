@@ -22,9 +22,9 @@ RUN \
   sh ./get_source.sh 
 
 RUN \
-  apt-get install -y unzip wget \
-  wget http://download.oracle.com/otn-pub/java/jdk/8u45-b14/jdk-8u45-linux-x64.tar.gz \
-  unzip jdk-8u45-linux-x64.tar.gz -d /opt/jdk1.8.0 \
+  apt-get install -y wget && \
+  wget --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u45-b14/jdk-8u45-linux-x64.tar.gz && \
+  tar zxvf jdk-8u45-linux-x64.tar.gz -C /opt/jdk1.8.0
 
 RUN \
   bash ./configure --with-cacerts-file=/etc/ssl/certs/java/cacerts --with-boot-jdk=/opt/jdk1.8.0
