@@ -23,22 +23,26 @@ RUN \
 
 RUN \
   apt-get install -y wget && \
-  wget --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u45-b14/jdk-8u45-linux-x64.tar.gz && \
-  tar zxvf jdk-8u45-linux-x64.tar.gz -C /opt/jdk1.8.0
+  wget --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u45-b14/jdk-8u45-linux-x64.tar.gz
 
 RUN \
-  bash ./configure --with-cacerts-file=/etc/ssl/certs/java/cacerts --with-boot-jdk=/opt/jdk1.8.0
+  tar zxvf jdk-8u45-linux-x64.tar.gz -C /opt 
+
+RUN \
+  cd /tmp/openjdk9 && \
+  bash ./configure --with-cacerts-file=/etc/ssl/certs/java/cacerts --with-boot-jdk=/opt/jdk1.8.0_45
 
 RUN \  
-  make clean images && \
-  cp -a build/linux-x86_64-normal-server-release/images/j2sdk-image \
+  cd /tmp/openjdk9 && \
+  make clean images
+
+RUN \  
+  cd /tmp/openjdk9 && \
+  cp -a build/linux-x86_64-normal-server-release/images/jdk \
     /opt/openjdk9 
 
-RUN \
-  apt-get purge -y --auto-remove mercurial ca-certificates-java build-essential openjdk-7-jdk default-jre && \
-  rm -rf /var/lib/apt/lists/* 
-
 RUN \  
+  cd /tmp/openjdk9 && \
   find /opt/openjdk9 -type f -exec chmod a+r {} + && \
   find /opt/openjdk9 -type d -exec chmod a+rx {} +
 
