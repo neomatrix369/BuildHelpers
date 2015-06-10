@@ -1,19 +1,6 @@
-FROM phusion/baseimage:latest
+FROM base-image/openjdk9:latest
 
-MAINTAINER Mani Sarkar (from @adoptopenjdk)
-
-RUN \
-  apt-get update && \
-  apt-get install -y \
-    libxt-dev zip pkg-config libX11-dev libxext-dev \
-    libxrender-dev libxtst-dev libasound2-dev libcups2-dev libfreetype6-dev && \
-  rm -rf /var/lib/apt/lists/*
-
-RUN \
-  apt-get update
-
-RUN \
-  apt-get install -y mercurial ca-certificates-java build-essential
+MAINTAINER @adoptopenjdk
   
 RUN \
   cd /tmp && \
