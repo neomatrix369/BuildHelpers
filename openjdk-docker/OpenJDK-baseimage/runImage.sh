@@ -2,7 +2,7 @@
 
 set -eu
 
-DOCKER_IMAGE="neomatrix369/openjdk9-full-image:latest"
+DOCKER_IMAGE="neomatrix369/openjdk-base-image:latest"
 
 echo "Checking for running docker container by name $DOCKER_IMAGE."
 CONTAINER_ID=$(docker ps -a | grep $DOCKER_IMAGE | awk '{print $1}')
