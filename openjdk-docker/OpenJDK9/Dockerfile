@@ -1,4 +1,4 @@
-FROM base-image/openjdk9:latest
+FROM base-image/openjdk:latest
 
 MAINTAINER @adoptopenjdk
   
