@@ -2,7 +2,7 @@
 
 set -eu
 
-DOCKER_IMAGE="adoptopenjdk/openjdk-base-image:latest"
+DOCKER_IMAGE="adoptopenjdk/openjdk9-valhalla-full-image:latest"
 
 echo "Checking for running docker container by name $DOCKER_IMAGE."
 CONTAINER_ID=$(docker ps -a | grep $DOCKER_IMAGE | awk '{print $1}')
