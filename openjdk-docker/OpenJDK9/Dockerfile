@@ -1,4 +1,4 @@
-FROM base-image/openjdk:latest 
+FROM neomatrix369/openjdk-base-image:latest 
 
 MAINTAINER @adoptopenjdk
   
