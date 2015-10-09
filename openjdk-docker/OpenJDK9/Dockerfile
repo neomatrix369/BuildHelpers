@@ -1,4 +1,4 @@
-FROM base-image/openjdk:latest
+FROM neomatrix369/openjdk-base-image
 
 MAINTAINER @adoptopenjdk
   
@@ -34,4 +34,4 @@ RUN \
   find /opt/openjdk9 -type d -exec chmod a+rx {} +
 
 ENV PATH /opt/openjdk9/bin:$PATH
-ENV JAVA_HOME /opt/openjdk9 
+ENV JAVA_HOME /opt/openjdk9
